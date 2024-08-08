@@ -1,0 +1,54 @@
+main:
+  - title: "Math"
+    url: /math/
+  - title: "Coding"
+    url: /coding/
+  - title: "Finance"
+    url: /finance/
+  - title: "Blogs"
+    url: /posts/
+  - title: "Category"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "About Me"
+    url: /about-me/
+
+
+python-basic:
+  - title: "Basic"
+    children:
+      - title: "Python Basic"
+        url: /coding/python-basic/
+      - title: "Understanding coding"
+        url: /coding/python-basic/understanding-coding/
+      - title: "Install Python"
+        url: /coding/python-basic/install-python/
+  - title: "Syntax"
+    children:
+      - title: "Data Structure"
+        url: /coding/python-basic/data-structure/
+      - title: "Operators"
+        url: /coding/python-basic/operators/
+      - title: "Control Flow"
+        url: /coding/python-basic/control-flow/
+      - title: "Function"
+        url: /coding/python-basic/function/
+      - title: "Module"
+        url: /coding/python-basic/module/
+      - title: "Class"
+        url: /coding/python-basic/class/
+      - title: "File I/O"
+        url: /coding/python-basic/file-io/
+      - title: "Exception"
+        url: /coding/python-basic/exception/
+  - title: "Package"
+    children:
+      - title: "Numpy"
+        url: /coding/python-basic/numpy/
+      - title: "Pandas"
+        url: /coding/python-basic/pandas/
+      - title: "Matplotlib"
+        url: /coding/python-basic/matplotlib/
+      - title: "SQLite and SQLAlchemy"
+        url: /coding/python-basic/sqlite-and-sqlalchemy/
