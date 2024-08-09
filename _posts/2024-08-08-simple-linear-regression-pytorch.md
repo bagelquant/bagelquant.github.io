@@ -42,7 +42,7 @@ plt.xlabel('X')
 plt.ylabel('y')
 ```
 
-![sample linear data](assets/post_img/sample%20linear%20data.png)
+![sample linear data](/assets/post_img/sample%20linear%20data.png)
 
 ## How Machine Learning Works
 
@@ -178,7 +178,7 @@ plt.scatter(X, y)
 plt.plot(X, predict_y.detach().numpy(), color='red')
 ```
 
-![Result](assets/post_img/linear%20pytorch%20model.png)
+![Result](/assets/post_img/linear%20pytorch%20model.png)
 
 ## Conclusion
 
