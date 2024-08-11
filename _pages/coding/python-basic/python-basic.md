@@ -22,7 +22,8 @@ Python is often the first choice for quantitative analysts and data scientists. 
 
 ### Basics
 - [Understanding Coding](https://bagelquant.github.io/coding/python-basic/understanding-coding/)
-- Install Python
+- [Install Python](https://bagelquant.github.io/coding/python-basic/install-python/)
+- [Run Python](https://bagelquant.github.io/coding/python-basic/run-python/)
 
 ### Syntax
 

@@ -69,7 +69,7 @@ Using homebrew install all my apps
   - karabiner-elements
 
 ```shell
-brew install --cask miniconda iterm2 Raycast zoom itsycal qt-creator karabiner-elements logitech-options obsidian
+brew install --cask miniconda iterm2 Raycast zoom itsycal qt-creator karabiner-elements logitech-options obsidian pdf-expert
 ```
 
 ## Packages

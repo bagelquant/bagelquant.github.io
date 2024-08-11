@@ -24,6 +24,8 @@ python-basic:
         url: /coding/python-basic/understanding-coding/
       - title: "Install Python"
         url: /coding/python-basic/install-python/
+      - title: "Run Python"
+        url: /coding/python-basic/run-python/
   - title: "Syntax"
     children:
       - title: "Data Structure"
