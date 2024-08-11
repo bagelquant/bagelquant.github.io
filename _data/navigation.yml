@@ -28,8 +28,8 @@ python-basic:
         url: /coding/python-basic/run-python/
   - title: "Syntax"
     children:
-      - title: "Data Structure"
-        url: /coding/python-basic/data-structure/
+      - title: "Data Types and Data Structure"
+        url: /coding/python-basic/data-types-and-data-structure/
       - title: "Operators"
         url: /coding/python-basic/operators/
       - title: "Control Flow"

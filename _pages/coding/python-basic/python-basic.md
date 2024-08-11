@@ -27,7 +27,7 @@ Python is often the first choice for quantitative analysts and data scientists. 
 
 ### Syntax
 
-- Data Structures
+- [Data Types and Data Structure](https://bagelquant.github.io/coding/python-basic/data-types-and-data-structure/)
 - Operators
 - Control flow
 - Function
