@@ -27,7 +27,9 @@ as we uncover the secrets behind the numbers and equations that shape the financ
 Free tutorials around key topics in the field of quantitative finance.
 
 - [Math](https://bagelquant.github.io/math/)
+  - [Calculus](https://bagelquant.github.io/math/calculus/)
 - [Coding](https://bagelquant.github.io/coding/)
+  - [Python basics](https://bagelquant.github.io/coding/python-basic/)
 - [Finance](https://bagelquant.github.io/finance/)
 
 My personal blogs and thoughts -> [Blog](https://bagelquant.github.io/posts/)

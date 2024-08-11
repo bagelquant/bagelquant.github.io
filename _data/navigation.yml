@@ -54,3 +54,35 @@ python-basic:
         url: /coding/python-basic/matplotlib/
       - title: "SQLite and SQLAlchemy"
         url: /coding/python-basic/sqlite-and-sqlalchemy/
+
+calculus:
+  - title: "Calculus"
+    url: /math/calculus/
+    children:
+      - title: "Introduction to Calculus"
+        url: /math/calculus/introduction-to-calculus/
+      - title: "Review of Basic Algebra"
+        url: /math/calculus/review-of-basic-algebra/
+  - title: "Derivatives"
+    children:
+      - title: "Introduction to Derivatives"
+        url: /math/calculus/introduction-to-derivatives/
+      - title: "Product and Chain Rule"
+        url: /math/calculus/product-and-chain-rule/
+      - title: "Graph, Maximum, and Minimum"
+        url: /math/calculus/graph-maximum-and-minimum/
+  - title: "Integrals"
+    children:
+      - title: "Area Under the Curve"
+        url: /math/calculus/area-under-the-curve/
+      - title: "Numerical Analysis"
+        url: /math/calculus/numerical-analysis/
+      - title: "Diagonalizing and SVD"
+        url: /math/calculus/diagonalizing-and-svd/
+  - title: "Partial Derivatives"
+    children:
+      - title: "Partial Derivatives"
+        url: /math/calculus/partial-derivatives/
+      - title: "Steepest Descent"
+        url: /math/calculus/steepest-descent/
+

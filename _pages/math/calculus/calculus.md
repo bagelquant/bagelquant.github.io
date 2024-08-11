@@ -1,6 +1,8 @@
 ---
 title: Calculus
 permalink: /math/calculus/
+sidebar:
+    nav: calculus
 ---
 
 A fundamental understanding of calculus is necessary. 
@@ -12,7 +14,7 @@ as it is used in optimization problems - a common occurrence in quantitative fin
 
 ## Introduction
 
-- introduction-to-calculus
+- [Introduction to Calculus](https://bagelquant.github.io/math/calculus/introduction-to-calculus/)
 - Review of Basic Algebra
 
 ## Derivatives
