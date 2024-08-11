@@ -97,9 +97,16 @@ python --version
 
 You should see the version of Python you installed.
 
-## Summary
+## Key Takeaways
 
-In this article, we learned how to install Python on your computer using `conda`. We also learned about environments and why they are important.
-
-In the next article, we will learn how to write and run Python scripts.
+- **Python Script**: A plain text file with `.py` extension.
+- **Python Interpreter**: A program that translates Python scripts into binary code.
+- **IDE**, **Code Editor**: Software that helps you write and run Python scripts.
+- **Terminal**: A command-line interface where you can run Python scripts and interact with the computer.
+- **Environment**: A separate room where you can install different versions of Python and packages.
+- **Conda**: A package manager that allows you to create and manage different environments.
+- **Miniconda**: A minimal version of `conda` that only includes `conda` and Python.
+- **Anaconda**: A full version of `conda` that includes `conda`, Python, and many other packages.
+- **Install Python**: Install Python in your environment using `conda`.
+- **Check Python**: Check if Python is installed correctly using `python --version`.    
 

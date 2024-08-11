@@ -180,9 +180,7 @@ print(person['name'])  # Output: Alice
 print(person['age'])  # Output: 30
 ```
 
-## Summary
-
-In this article, we learned about different data types and data structures in Python. We covered:
+## Key Takeaways
 
 - Basic data types in Python, such as integers, floats, strings, and booleans.
 - How to perform arithmetic operations on integers and floats.
