@@ -82,7 +82,7 @@ Here is some main package I use:
 - pandoc
 
 ```shell
-brew install nvim thefuck gh pyright zsh-syntax-highlighting zsh-autosuggestions mysql font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf
+brew install nvim thefuck gh pyright zsh-syntax-highlighting zsh-autosuggestions mysql font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm
 ```
 
 Use command below to add zsh-syntax-highlighting and zsh-autosuyggestions to `.zshrc` file
@@ -94,4 +94,17 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ```shell
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
+
+## Install packer nvim
+
+In order to use nvim packer, we need to install it first:
+
+```shell
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
+## Install aerospace
+
+[Install Aerospace](https://bagelquant.github.io/mac%20setup/aerospace-window-management/)
 
