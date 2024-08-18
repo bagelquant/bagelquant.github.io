@@ -28,9 +28,9 @@ Python is often the first choice for quantitative analysts and data scientists. 
 ### Syntax
 
 - [Data Types and Data Structure](data-type-and-data-structure.md)
-- [Operators](/_pages/coding/python-basic/operators.md)
+- [Operators](operators.md)
 - [Control-flow](control-flow.md)
-- Function
+- [Function](function.md)
 - Module
 - Class
 - File I/O
