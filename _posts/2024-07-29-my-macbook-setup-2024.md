@@ -82,7 +82,7 @@ Here is some main package I use:
 - pandoc
 
 ```shell
-brew install nvim thefuck gh pyright zsh-syntax-highlighting zsh-autosuggestions mysql font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm
+brew install nvim thefuck gh pyright zsh-syntax-highlighting zsh-autosuggestions mysql font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget
 ```
 
 Use command below to add zsh-syntax-highlighting and zsh-autosuyggestions to `.zshrc` file
