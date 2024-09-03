@@ -74,5 +74,5 @@ use = "catppuccin-macchiato"
 
 ## Demo
 
-![yazi-demo](../assets/post_img/yazi-demo.png)
+![yazi-demo](/assets/post_img/yazi-demo.png)
 
