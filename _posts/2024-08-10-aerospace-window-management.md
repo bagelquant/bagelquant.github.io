@@ -19,7 +19,7 @@ brew install --cask nikitabobko/tap/aerospace
 
 Aerospace is configured using a toml file. The default configuration file is located at `~/.config/aerospace/aerospace.toml`. You can edit this file to customize the behavior of Aerospace.
 
-[Defualt Configuration](https://nikitabobko.github.io/AeroSpace/config-examples#default-config)
+[Default Configuration](https://nikitabobko.github.io/AeroSpace/guide#config-samples)
 
 ## Usage
 

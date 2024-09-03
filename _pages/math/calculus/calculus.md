@@ -15,6 +15,8 @@ as it is used in optimization problems - a common occurrence in quantitative fin
 ## Introduction
 
 - [Introduction to Calculus](https://bagelquant.github.io/math/calculus/introduction-to-calculus/)
+- [Introduction to Calculus markdown link](/_pages/math/calculus/introduction-to-calculus.md)
+- [[introduction-to-calculus]]
 - Review of Basic Algebra
 
 ## Derivatives
