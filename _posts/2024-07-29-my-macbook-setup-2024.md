@@ -69,7 +69,7 @@ Using homebrew install all my apps
   - karabiner-elements
 
 ```shell
-brew install --cask miniconda iterm2 Raycast zoom itsycal qt-creator karabiner-elements logi-options-plus obsidian pdf-expert
+brew install --cask miniconda iterm2 Raycast zoom itsycal karabiner-elements logi-options-plus pdf-expert
 ```
 
 ## Packages
@@ -82,7 +82,7 @@ Here is some main package I use:
 - pandoc
 
 ```shell
-brew install nvim thefuck gh pyright zsh-syntax-highlighting zsh-autosuggestions mysql font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget
+brew install nvim thefuck gh pyright zsh-syntax-highlighting zsh-autosuggestions mysql font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget glow gcc yazi
 ```
 
 Use command below to add zsh-syntax-highlighting and zsh-autosuyggestions to `.zshrc` file
