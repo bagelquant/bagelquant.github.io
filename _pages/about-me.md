@@ -1,6 +1,7 @@
 ---
+layout: splash
+title: "Yanzhong(Eric) Huang - 黄沿中"
 permalink: /about-me/
-layout: splas
 excerpt: "M.S. Quantitative Finance at Rutgers Business School"
 header:
   overlay_image: /assets/images/eric-professinal-headshot.png
@@ -8,8 +9,6 @@ header:
     - label: "Download Resume"
       url: "https://bagelquant.github.io/assets/docs/Yanzhong-Huang-Resume.pdf"
 ---
-
-# Yanzhong(Eric) Huang - 黄沿中
 
 I am currently pursuing a Master of Quantitative Finance at Rutgers Business School. With a Master’s degree in Banking and Finance from Monash University and three years of experience as a quantitative analyst and developer in the Fund of Funds (FoF) industry in China, I have developed strong expertise in data analysis, financial modeling, and algorithm development.
 
