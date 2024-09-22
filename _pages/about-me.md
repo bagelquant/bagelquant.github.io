@@ -4,7 +4,7 @@ title: "Yanzhong Huang"
 permalink: /about-me/
 excerpt: "M.S. Quantitative Finance"
 header:
-  overlay_image: /assets/images/eric-huang-headshot.png
+  overlay_image: /assets/images/eric-huang-prohead.png
   actions:
     - label: "Download Resume"
       url: "https://bagelquant.github.io/assets/docs/Yanzhong-Huang-Resume.pdf"
@@ -23,27 +23,23 @@ I am currently pursuing a Master of Quantitative Finance at Rutgers Business Sch
 
 ### RUTGERS, THE STATE UNIVERSITY OF NEW JERSEY
 
-**Rutgers Business School - Newark, NJ**  
-*May 2026*  
+***Rutgers Business School, Newark, NJ - May 2026***  
 Master of Quantitative Finance  
 
 ### MONASH UNIVERSITY
 
-**Melbourne, Australia**
-*Jan 2021*  
+***Melbourne, Australia - Jan 2021***  
 Master of Banking and Finance  
 
 ### CAPITAL UNIVERSITY OF ECONOMICS AND BUSINESS
-**Beijing, China**  
-*Jun 2018*  
+***Beijing, China - Jun 2018***  
 Bachelor of Business Administration with a major in Accounting
 
 ## Experience
 
 ### Sincere Digits Co., Ltd- Beijing, China
 
-***2022 - 2024***  
-***Quantitative Developer***
+***Quantitative Developer, 2022 - 2024***
 
 - led development of Python-based backend APIs for the fund evaluation website at https://quant.sincere-dg.com as 4member backend team leader, covering fund risk-adjusted return analysis, portfolio stimulation, portfolio optimization.
 - Constructed an event-driven backtesting system allows clients to test fund portfolios and offers strategies based on signal generation. It also supports single-factor evaluation, contributing 15 active risk factors since its completion.
@@ -52,8 +48,7 @@ Bachelor of Business Administration with a major in Accounting
 
 ### HongChou Investment Co., Beijing, China
 
-***2021.5 - 2022.9***
-***Quant Analyst***
+***Quant Analyst, 2021 - 2022***
 
 - Devised algorithms to screen all private secondary market funds in China. Used risk metrics to conduct a negative screen. Selected top 300 funds based on a comprehensive score combines several risk-adjusted returns
 - Conducted due diligence on 100+ private quantitative funds, reporting on investment strategies, portfolio managers' backgrounds, company governance policies, asset allocation, and other key fund information

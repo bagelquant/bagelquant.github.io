@@ -57,7 +57,7 @@ plugins:
 
 author:
   name   : "Eric Huang"
-  avatar : "/assets/images/logo.png"
+  avatar : "/assets/images/eric-head-square.png"
   bio    : "Current MQF student at Rutgers Business School. 3 years of FOF experience. Passionate about quant and data science."
   links:
     - label: "Website"
