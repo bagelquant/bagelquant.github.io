@@ -20,5 +20,14 @@ BagelQuant is here to enhance your understanding and appreciation of the fascina
 Embark on this exciting voyage with us 
 as we uncover the secrets behind the numbers and equations that shape the financial landscape.
 
-> **Bagel** is the endearing name of my beloved dog 🐶. You can find her in the header image above.
+> **Bagel** is the name of my beloved dog 🐶. You can find her in the header image above.
+
+This blog is a collection of quant skills, finance knowledge, programming tips, and personal experiences. 
+Aimed at quant enthusiasts, finance professionals, and anyone interested in the world of finance, 
+BagelQuant offers a unique perspective on the industry.
+
+Major topics include:
+
+- [Quantitative Skills](https://bagelquant/quant-skills/): Math, programming, and finance skills essential for a career in quantitative finance.
+- [Posts](https://bagelquant.github.io/posts/): A collection of articles on various topics.
 

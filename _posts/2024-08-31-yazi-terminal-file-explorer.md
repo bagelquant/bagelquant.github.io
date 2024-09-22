@@ -5,8 +5,6 @@ tags:
   - productivity
 ---
 
-# Yazi: Terminal File Explorer
-
 ## Introduction
 
 Yazi is a terminal file explorer written in Rust. I give it a quick try and found it's a good alternative to `ls` and `tree` command. It provides a more intuitive way to navigate files and directories in the terminal.
