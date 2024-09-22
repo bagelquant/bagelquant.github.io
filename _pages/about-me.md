@@ -4,7 +4,7 @@ title: "Yanzhong(Eric) Huang - 黄沿中"
 permalink: /about-me/
 excerpt: "M.S. Quantitative Finance at Rutgers Business School"
 header:
-  overlay_image: /assets/images/eric-professional-headshot.png
+  overlay_image: /assets/images/eric-huang-headshot.png
   actions:
     - label: "Download Resume"
       url: "https://bagelquant.github.io/assets/docs/Yanzhong-Huang-Resume.pdf"
