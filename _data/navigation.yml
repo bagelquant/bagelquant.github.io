@@ -11,6 +11,43 @@ main:
     url: /about-me/
 
 # Math
+quant-skills:
+  - title: "Math Basics"
+    children:
+      - title: "Calculus"
+        # url: /math/basic/calculus/
+      - title: "Linear Algebra"
+        # url: /math/basic/linear-algebra/
+      - title: "Statistics and Probability"
+        # url: /math/basic/statistics-probability/
+      - title: "Differential Equations"
+        # url: /math/basic/differential-equations/
+  - title: "Math Advanced"
+    children:
+      - title: "Advanced Probability Theory"
+        # url: /math/advanced/advanced-probability-theory/
+      - title: "Econometrics"
+        url: /math/advanced/econometrics/
+      - title: "Optimization"
+        # url: /math/advanced/optimization/
+  - title: "Programming"
+    children:
+      - title: "Programming Basic"
+        # url: /programming/programming-basic/
+      - title: "Python"
+        # url: /programming/python/
+      - title: "C++"
+        # url: /programming/c++/
+
+  - title: "Finance"
+    children:
+      - title: "Time Value of Money"
+        # url: /finance/time-value-of-money/
+      - title: "Stock Valuation and Financial Statement Analysis"
+        # url: /finance/stock-valuation-and-financial-statement-analysis/
+      - title: "Derivatives"
+        # url: /finance/derivatives/
+
 # Basic Math
 
 # Advanced Math
