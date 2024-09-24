@@ -17,9 +17,10 @@ main:
 econometrics:
   - title: "Econometrics"
     url: /math/advanced/econometrics/
-  - title: "Univariate Regression"
-    url: /math/advanced/econometrics/univariate-regression/
-  - title: "Multivariate Regression"
-    url: /math/advanced/econometrics/multivariate-regression/
-  - title: "Logistic Regression"
-    url: /math/advanced/econometrics/logistic-regression/
+    children:
+    - title: "Univariate Regression"
+      url: /math/advanced/econometrics/univariate-regression/
+    - title: "Multivariate Regression"
+      url: /math/advanced/econometrics/multivariate-regression/
+    - title: "Logistic Regression"
+      url: /math/advanced/econometrics/logistic-regression/

@@ -3,6 +3,8 @@ title: "Quant Skills"
 permalink: /quant-skills/
 ---
 
+---
+
 A career in quantitative finance is a fusion of mathematics, programming, and finance. 
 It demands not only a foundational understanding of these disciplines 
 but also familiarity with cutting-edge technologies and methodologies. 

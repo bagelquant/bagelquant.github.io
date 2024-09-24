@@ -28,6 +28,6 @@ BagelQuant offers a unique perspective on the industry.
 
 Major topics include:
 
-- [Quantitative Skills](https://bagelquant/quant-skills/): Math, programming, and finance skills essential for a career in quantitative finance.
-- [Posts](https://bagelquant.github.io/posts/): A collection of articles on various topics.
+- [Quantitative Skills](https://bagelquant.com/quant-skills/): Math, programming, and finance skills essential for a career in quantitative finance.
+- [Posts](https://bagelquant.com/posts/): A collection of articles on various topics.
 
