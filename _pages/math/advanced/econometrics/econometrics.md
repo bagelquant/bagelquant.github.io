@@ -17,9 +17,11 @@ This topic also contains a practical component, where we will use Excel and R to
 
 ## Topics
 
+Pre-requisite: Probability and Statistics, Calculus
+
 - [Univariate Regression](univariate-regression.md)
 - [Multivariable Regression](multivariable-regression.md)
 - [Logistic Regression](logistic-regression.md)
 
-Additionally, further topics will be explored in [Time Series Analysis](http://bagelquant.com/math/advanced/time-series-analysis).
+Additionally, further topics will be explored in Time Series Analysis.
 
