@@ -23,11 +23,14 @@ The topics discussed here draw from both my studies and my professional experien
 - Linear Algebra
 - Statistics and probability
 - Differential equations
+- Probability 
 
 ### Advanced
 
+Math in advanced section will be more rigorous and detailed, emphasizing the theoretical foundations of mathematical methods compared to the basic math sections. Even same topics will be examined through the lens of more advanced theories. For example, probability theory will be examined through the lens of measure theory, which provides a rigorous foundation for probability theory. 
+
 - Optimization
-- Econometrics
+- [Econometrics](math/advanced/econometrics/econometrics.md)
 - Advanced probability theory
 
 ## Programming
