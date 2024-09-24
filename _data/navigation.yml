@@ -54,22 +54,20 @@ quant-skills:
 econometrics:
   - title: "Econometrics"
     url: /math/advanced/econometrics/
+  - title: "Univariate Regression"
+    url: /math/advanced/econometrics/univariate-regression/
     children:
-    - title: "Univariate Regression"
-      url: /math/advanced/econometrics/univariate-regression/
-      children:
-        - title: "Notation"
-          url: /math/advanced/econometrics/univariate-regression/#Notation
-        - title: "Best fitting line"
-          url: /math/advanced/econometrics/univariate-regression/#Best-fitting-line
-        - title: "OLS"
-          url: /math/advanced/econometrics/univariate-regression/#OLS
-        - title: "Assumptions"
-          url: /math/advanced/econometrics/univariate-regression/#Assumptions
-        - title: "MLE Approach"
-          url: /math/advanced/econometrics/univariate-regression/#MLE-Approach
-
-    - title: "Multivariate Regression"
-      url: /math/advanced/econometrics/multivariate-regression/
-    - title: "Logistic Regression"
-      url: /math/advanced/econometrics/logistic-regression/
+      - title: "Notation"
+        url: /math/advanced/econometrics/univariate-regression/#Notation
+      - title: "Best fitting line"
+        url: /math/advanced/econometrics/univariate-regression/#Best-fitting-line
+      - title: "OLS"
+        url: /math/advanced/econometrics/univariate-regression/#OLS
+      - title: "Assumptions"
+        url: /math/advanced/econometrics/univariate-regression/#Assumptions
+      - title: "MLE Approach"
+        url: /math/advanced/econometrics/univariate-regression/#MLE-Approach
+  - title: "Multivariate Regression"
+    url: /math/advanced/econometrics/multivariate-regression/
+  - title: "Logistic Regression"
+    url: /math/advanced/econometrics/logistic-regression/
