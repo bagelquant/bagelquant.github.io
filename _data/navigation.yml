@@ -56,13 +56,13 @@ econometrics:
     url: /math/advanced/econometrics/
   - title: "Univariate Regression"
     children:
-      - title: "Univariate Regression Basics"
+      - title: "Basics"
         url: /math/advanced/econometrics/univariate-regression/
-      - title: "Properties for Univariate Regression"
+      - title: "Properties"
         # url: /math/advanced/econometrics/properties-for-univariate-regression/
-      - title: "Hypothesis Testing for Univariate Regression"
+      - title: "Hypothesis Testing"
         # url: /math/advanced/econometrics/hypothesis-testing-for-univariate-regression/
-      - title: "Excel example for Univariate Regression"
+      - title: "Excel example"
         # url: /math/advanced/econometrics/excel-example-for-univariate-regression/
   - title: "Multivariate Regression"
     url: /math/advanced/econometrics/multivariate-regression/
