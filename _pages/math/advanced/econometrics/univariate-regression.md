@@ -15,9 +15,7 @@ Univariate regression is a fundamental econometric method that models the relati
 
 The univariate regression model seeks to estimate the relationship between the dependent variable $Y$ and the independent variable $X$. The model assumes a linear relationship between the variables, where the dependent variable is a function of the independent variable and an error term:
 
-```math
-Y = \beta_0 + \beta_1 X + \epsilon
-```
+$$Y = \beta_0 + \beta_1 X + \epsilon$$
 
 Notice, We assume the model exists for observations, but we never can obtain the true model. Therefore, we cannot find the true values of $\beta_0$ and $\beta_1$.
 

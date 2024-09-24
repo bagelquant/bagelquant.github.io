@@ -55,18 +55,15 @@ econometrics:
   - title: "Econometrics"
     url: /math/advanced/econometrics/
   - title: "Univariate Regression"
-    url: /math/advanced/econometrics/univariate-regression/
     children:
-      - title: "Notation"
-        url: /math/advanced/econometrics/univariate-regression/#Notation
-      - title: "Best fitting line"
-        url: /math/advanced/econometrics/univariate-regression/#Best-fitting-line
-      - title: "OLS"
-        url: /math/advanced/econometrics/univariate-regression/#OLS
-      - title: "Assumptions"
-        url: /math/advanced/econometrics/univariate-regression/#Assumptions
-      - title: "MLE Approach"
-        url: /math/advanced/econometrics/univariate-regression/#MLE-Approach
+      - title: "Univariate Regression Basics"
+        url: /math/advanced/econometrics/univariate-regression/
+      - title: "Properties for Univariate Regression"
+        # url: /math/advanced/econometrics/properties-for-univariate-regression/
+      - title: "Hypothesis Testing for Univariate Regression"
+        # url: /math/advanced/econometrics/hypothesis-testing-for-univariate-regression/
+      - title: "Excel example for Univariate Regression"
+        # url: /math/advanced/econometrics/excel-example-for-univariate-regression/
   - title: "Multivariate Regression"
     url: /math/advanced/econometrics/multivariate-regression/
   - title: "Logistic Regression"
