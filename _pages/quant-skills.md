@@ -27,7 +27,8 @@ The topics discussed here draw from both my studies and my professional experien
 ### Advanced
 
 - Optimization
-- Econometric
+- Econometrics
+- Advanced probability theory
 
 ## Programming
 

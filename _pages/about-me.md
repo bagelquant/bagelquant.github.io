@@ -12,12 +12,15 @@ header:
 
 ## Yanzhong(Eric) Huang
 
-I am currently pursuing a Master of Quantitative Finance at Rutgers Business School. With a Master’s degree in Banking and Finance from Monash University and three years of experience as a quantitative analyst and developer in the Fund of Funds (FoF) industry in China, I have developed strong expertise in data analysis, financial modeling, and algorithm development.
+- Current Master of Quantitative Finance at Rutgers Business School
+- Master’s degree in Banking and Finance from Monash University
+- three years of experience as a quantitative analyst and developer in the Fund of Funds (FoF) industry in China
 
-- Email: <eric.yanzhong.huang@outlook.com>
-- Github: <https://github.com/bagelquant>
-- Linkedin: <https://www.linkedin.com/in/eric-huang-506185181/>
-- X: <https://x.com/EricYanzhongH>
+**Contact me:**  
+Email: <eric.yanzhong.huang@outlook.com>  
+Github: <https://github.com/bagelquant>  
+Linkedin: <https://www.linkedin.com/in/eric-huang-506185181/>  
+X: <https://x.com/EricYanzhongH>  
 
 ## Education
 
