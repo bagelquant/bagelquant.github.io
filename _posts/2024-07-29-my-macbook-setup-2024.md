@@ -76,7 +76,7 @@ brew install --cask miniconda iterm2 Raycast zoom itsycal karabiner-elements log
 
 Here is some main package I use:
 
-- nvim --> [My Neovim journey](https://bagelquant.github.io/neovim/neovim-journey/)
+- nvim 
 - thefuck
 - gh --> [gh - A GitHub CLI tool](https://bagelquant.github.io/mac%20setup/gh-github-cli-tool/)
 - pandoc
