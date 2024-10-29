@@ -1,11 +1,8 @@
 ---
 title: "GitHub CLI Tool"
 author: "Eric"
-categories:
-  - Mac Setup
 tags:
-  - productivity
-  - copilot
+  - setup
 ---
 
 Github provides a CLI tool for Copilot. This tool can be used to interact with Copilot from the command line. This tool is useful for automating Copilot workflows and integrating Copilot with other tools.

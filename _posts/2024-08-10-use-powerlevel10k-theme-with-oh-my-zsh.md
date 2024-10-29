@@ -1,11 +1,8 @@
 ---
 title: "Use Powerlevel10k Theme with Oh My Zsh"
 date: 2024-08-08
-categories:
-  - Mac Setup
 tags:
-  - terminal
-  - theme
+  - setup
 ---
 
 I used to use the default terminal theme that comes with Oh My Zsh. However, I recently switched to the Powerlevel10k theme, which is highly customizable anIn this post, I will show you how to install and configure the Powerlevel10k theme with Oh My Zsh.

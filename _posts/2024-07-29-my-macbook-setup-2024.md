@@ -1,10 +1,7 @@
 ---
 title: "My MacBook Setup 2024" 
-categories:
-  - Mac Setup
 tags:
-  - productivity
-  - MacOS
+  - setup
 ---
 
 Windows has been my preferred desktop operating system since primary school, offering a wide array of apps, particularly games.

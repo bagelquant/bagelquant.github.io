@@ -1,9 +1,7 @@
 ---
 title: "Miniconda Setting on macOS"
-categories:
-  - Mac Setup
 tags:
-  - productivity
+  - setup
 ---
 
 ## Install Miniconda

@@ -1,8 +1,6 @@
 ---
-categories: 
-  - terminal 
 tags:
-  - productivity
+  - setup
 ---
 
 ## Introduction

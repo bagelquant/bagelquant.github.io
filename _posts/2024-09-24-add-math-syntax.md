@@ -1,5 +1,8 @@
 ---
 title: "Add Math Syntax to Minimal Mistakes Theme Github Page"
+tags:
+    - tips
+    - github-pages
 ---
 
 I noticed that the Minimal Mistakes theme does not support Math syntax by default. I want to add Math syntax to my Github page. 

@@ -1,11 +1,8 @@
 ---
 title: "Pandoc 中文字符无法显示"
 date: 2024-07-30
-categories:
-  - terminal
 tags:
-  - writing
-  - productivity
+  - pandoc
 ---
 
 将 markdown 文件转换为 pdf 文件时，中文字符无法显示，这是因为 pandoc 默认使用的字体不支持中文字符。解决方法是使用支持中文字符的字体。

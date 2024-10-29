@@ -1,7 +1,7 @@
 ---
 title: "MacBook Setup Fall 2024" 
 tags:
-  - productivity
+  - setup
 ---
 
 ## System Settings
