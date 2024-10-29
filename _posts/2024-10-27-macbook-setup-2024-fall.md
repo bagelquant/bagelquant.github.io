@@ -62,8 +62,16 @@ git config --global user.email ""
 ## Packages
 
 ```shell
-brew install nvim thefuck gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi r
+brew install nvim thefuck gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi r 
 ```
+
+yazi dependencies(previews):
+
+```shell
+brew install ffmpegthumbnailer poppler 
+```
+
+> imagemagick (for yazi img preview) already install
 
 ## Dot configs
 
