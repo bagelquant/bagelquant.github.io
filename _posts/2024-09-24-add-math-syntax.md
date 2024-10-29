@@ -1,7 +1,6 @@
 ---
 title: "Add Math Syntax to Minimal Mistakes Theme Github Page"
 tags:
-    - tips
     - github-pages
 ---
 
