@@ -1,5 +1,4 @@
 ---
-title: "Miniconda Setting on macOS"
 tags:
   - setup
 ---
@@ -30,3 +29,6 @@ conda init zsh
 conda config --set auto_activate_base false
 ```
 
+## Usage
+
+[How to use miniconda](posts/2024-11-11-how-to-use-miniconda.md)

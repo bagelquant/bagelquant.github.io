@@ -51,7 +51,7 @@ brew install --cask nikitabobko/tap/aerospace
 ```
 ## Git configs
 
-- Config gh: [gh - A GitHub CLI tool](https://bagelquant.github.io/mac%20setup/gh-github-cli-tool/)
+- Config gh: [gh - A GitHub CLI tool](posts/2024-07-29-gh-github-cli-tool.md)
 - config user name and email
 
 ```shell
