@@ -31,4 +31,4 @@ conda config --set auto_activate_base false
 
 ## Usage
 
-[How to use miniconda](2024-11-11-how-to-use-miniconda.md)
+[How to use miniconda](how-to-use-miniconda.md)

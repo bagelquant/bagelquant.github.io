@@ -75,7 +75,7 @@ Here is some main package I use:
 
 - nvim 
 - thefuck
-- gh --> [gh - A GitHub CLI tool](2024-07-29-gh-github-cli-tool.md)
+- gh --> [gh - A GitHub CLI tool](gh-github-cli-tool.md)
 - pandoc
 
 ```shell
@@ -103,5 +103,5 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 ## Install aerospace
 
-[Install Aerospace](2024-10-27-macos-aerospace.md)
+[Install Aerospace](macos-aerospace.md)
 
