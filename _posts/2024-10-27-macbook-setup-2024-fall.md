@@ -51,7 +51,7 @@ brew install --cask nikitabobko/tap/aerospace
 ```
 ## Git configs
 
-- Config gh: [gh - A GitHub CLI tool](../2024-07-29-gh-github-cli-tool.md)
+- Config gh: [gh - A GitHub CLI tool](../2024-07-29-gh-github-cli-tool)
 - config user name and email
 
 ```shell
