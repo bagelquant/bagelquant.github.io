@@ -1,6 +1,6 @@
 ---
 title: "Econometrics"
-permalink: /math/advanced/econometrics/
+permalink: /econometrics/
 sidebar:
   nav: "econometrics"
 ---

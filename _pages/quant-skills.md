@@ -19,23 +19,8 @@ I am currently pursuing a [Master of Quantitative Finance at Rutgers Business Sc
 The topics discussed here draw from both my studies and my professional experience. I hope you find this information valuable.
 
 
-## Math
-
-### Basic
-
-- Calculus
-- Linear Algebra
-- Statistics and probability
-- Differential equations
-- Probability 
-
-### Advanced
-
-Math in advanced section will be more rigorous and detailed, emphasizing the theoretical foundations of mathematical methods compared to the basic math sections. Even same topics will be examined through the lens of more advanced theories. For example, probability theory will be examined through the lens of measure theory, which provides a rigorous foundation for probability theory. 
-
-- Advanced probability theory
-- [Econometrics](math/advanced/econometrics/econometrics.md)
-- Optimization
+- [Econometrics](econometrics/econometrics.md)
+- [Optimization Models in Finance ](optimization/optimization.md)
 
 ## Programming
 
