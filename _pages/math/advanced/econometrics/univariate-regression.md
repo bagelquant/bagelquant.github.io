@@ -25,15 +25,15 @@ This model express the linear relationship between $x$ and $y$, but we don't kno
 
 ## 1.1 How to find beta_0 and beta_1
 
-### First try
+**First try**:
 
 We could minimize the sum of residuals: $\sum_{i=1}^{n} \epsilon_i$, but this would not be a good approach because the residuals could cancel each other out. 
 
-### Second try
+**Second try**:
 
 In order to avoid the problem of residuals cancelling each other out, we could minimize the absolute value of the residuals: $\sum_{i=1}^{n} \|\epsilon_i\|$. However, this would lead to a non-differentiable function, making it difficult to find the optimal solution.
 
-### Third try
+**Best approach**:
 
 The most common approach is to minimize the sum of squared residuals, which is known as the Ordinary Least Squares (OLS) method. The sum of squared residuals is given by:
 
