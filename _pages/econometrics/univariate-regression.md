@@ -5,8 +5,6 @@ sidebar:
   nav: "econometrics"
 ---
 
-## Introduction
-
 Univariate regression is a fundamental econometric method that models the relationship between a single independent variable and a dependent variable. It serves as the building block for more complex regression models, such as multivariable regression and logistic regression. By examining the linear relationship between variables, univariate regression provides insights into the impact of the independent variable on the dependent variable.
 
 For random variables $x$ and $y$, the univariate regression model can be expressed as:
@@ -343,7 +341,7 @@ Constructing of the Q-Q plot:
 3. Theorical quantile: $z_{(i)} = \Phi^{-1}((i - 0.5)/n)$.
 4. Plot the theoretical quantiles against the residuals.
 
-## 1.13 Statistic test on assumptions
+## 1.13 Statistic tests on assumptions
 
 ### Durbin-Watson Test for Assumption 3
 
