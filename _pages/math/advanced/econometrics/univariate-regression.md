@@ -9,147 +9,106 @@ sidebar:
 
 Univariate regression is a fundamental econometric method that models the relationship between a single independent variable and a dependent variable. It serves as the building block for more complex regression models, such as multivariable regression and logistic regression. By examining the linear relationship between variables, univariate regression provides insights into the impact of the independent variable on the dependent variable.
 
-## Basic Notation Concepts and Assumptions
+For random variables $x$ and $y$, the univariate regression model can be expressed as:
 
-### Basic Concepts
+$$y = \beta_0 + \beta_1x + \epsilon$$
 
-The univariate regression model seeks to estimate the relationship between the dependent variable $Y$ and the independent variable $X$. The model assumes a linear relationship between the variables, where the dependent variable is a function of the independent variable and an error term:
+where:
 
-$$Y = \beta_0 + \beta_1 X + \epsilon$$
+- $y$ is the dependent variable.
+- $x$ is the independent variable.
+- $\beta_0$ is the intercept.
+- $\beta_1$ is the slope.
+- $\epsilon$ is the error term.
 
-Notice, We assume the model exists for observations, but we never can obtain the true model. Therefore, we cannot find the true values of $\beta_0$ and $\beta_1$.
+This model express the linear relationship between $x$ and $y$, but we don't know the true values of $\beta_0$ and $\beta_1$. Our goal is to estimate these parameters using sample data and construct a regression line that best fits the data.
 
-We use the date to **estimate** the values of $\beta_0$ and $\beta_1$, use hat on the intercept and the slope: $\hat{\beta_0}$ and $\hat{\beta_1}$ to distinguish the estimated values from the true values.
+## 1.1 How to find beta_0 and beta_1
 
-In general, the goal of regression analysis is to find the **best-fitting line** (best-fitting $\hat{\beta_0}$ and $\hat{\beta_1}$) of the data points.
+### First try
 
-> What is the best-fitting line? How do we find it?
+We could minimize the sum of residuals: $\sum_{i=1}^{n} \epsilon_i$, but this would not be a good approach because the residuals could cancel each other out. 
 
-### Notation
+### Second try
 
-Variable:
+In order to avoid the problem of residuals cancelling each other out, we could minimize the absolute value of the residuals: $\sum_{i=1}^{n} |\epsilon_i|$. However, this would lead to a non-differentiable function, making it difficult to find the optimal solution.
 
-- $Y$: Dependent variable
-- $X$: Independent variable
+### Third try
 
-Real Model(We can never know):
+The most common approach is to minimize the sum of squared residuals, which is known as the Ordinary Least Squares (OLS) method. The sum of squared residuals is given by:
 
-- $\beta_0$: Intercept for the real model
-- $\beta_1$: Slope for the real model
-- $\epsilon$: Error term
+$$\sum_{i=1}^{n} \epsilon_i^2 = \sum_{i=1}^{n} (y_i - \beta_0 - \beta_1x_i)^2$$
 
-Estimated Model(Derived from the data):
-- $\hat{\beta_0}$: Intercept for the estimated model
-- $\hat{\beta_1}$: Slope for the estimated model
-- $n$: Number of observations
-- $y_i$: Dependent variable value for observation $i$
-- $x_i$: Independent variable value for observation $i$
-- $\hat{y_i}$: Predicted value of $\hat{y_i}$ = $\hat{\beta_0} + \hat{\beta_1}x_i$
-- $\epsilon_i$: Residual term for observation $i$
+> Notice the hat on $\hat\beta_0$ and $\hat\beta_1$ to indicate that they are estimators of the true parameters $\beta_0$ and $\beta_1$. We will never truly know the $\beta_0$ and $\beta_1$ values, but we can estimate them using the OLS method.
 
-> Difference between **Error** and **Redidual**? 
-> - **Error** is the difference between the true value and the **true model prediction**, we can never know.
-> - **Residual** is the difference between the true value and the **estimated model prediction**, is derived from the data.
+> Same for $\hat{\epsilon_i}$, which is the residual for the $i$-th observation, not the true error term $\epsilon$.
 
+## 1.2 OLS Estimation
 
-### Best-fitting line
+$\hat{\beta_0}$ and $\hat{\beta_1}$ are the OLS estimators of $\beta_0$ and $\beta_1$, respectively. They are obtained by minimizing the sum of squared residuals:
 
-Naturally, we want the line to be as close as possible to all the data points. The most obvious way to measure it is to sum up all the **distance** between the line and the data points:
+$$\text{min } S(\beta_0, \beta_1) = \sum_{i=1}^{n} \epsilon_i = \sum_{i=1}^{n} (y_i - \beta_0 - \beta_1x_i)^2$$
 
-$$ \sum_{i=1}^{n} (y_i - \hat{y_i}) 
-= \sum_{i=1}^{n} (y_i - \hat{\beta_0} - \hat{\beta_1}x_i) 
-= \sum_{i=1}^{n} (\epsilon_i) $$
+The solution for this problem is:
 
-However, the distance can be positive or negative, and they can cancel each other out. Minimalizing the sum of the distance is not a good idea.
-
-How about we use absolute value?
-
-$$ \sum_{i=1}^{n} |y_i - \hat{y_i}|$$
-
-It is a good idea, but it is not differentiable. Later, we will use differentiable functions to minimize the distance. 
-
-The most common way to measure the distance is to use the **squared distance**:
-
-$$ \sum_{i=1}^{n} (y_i - \hat{y_i})^2
-
-= \sum_{i=1}^{n} (y_i - \hat{\beta_0} - \hat{\beta_1}x_i)^2$$
-
-The problem of finding the best-fitting line is converted to:
-
-1. Minimize the sum of the squared residuals
-2. The squared residuals can be seen as a function of two variables: $\hat{\beta_0}$ and $\hat{\beta_1}$, because data set $x_i$ and $y_i$ are given.
-
-
-### OLS
-
-Our goal: Minimize function $S(\hat{\beta_0}, \hat{\beta_1}) = \sum_{i=1}^{n} (y_i - \hat{\beta_0} - \hat{\beta_1}x_i)^2$
-
-Solution:
-
-1. Take the partial derivative of $S$ with respect to $\hat{\beta_0}$ and $\hat{\beta_1}$, and set them to zero.
-
-$$ \begin{cases}
-\frac{\partial S}{\partial \hat{\beta_0}} = -2 \sum_{i=1}^{n} (y_i - \hat{\beta_0} - \hat{\beta_1}x_i) = 0 \\ 
-\frac{\partial S}{\partial \hat{\beta_1}} = -2 \sum_{i=1}^{n} x_i(y_i - \hat{\beta_0} - \hat{\beta_1}x_i) = 0 
+$$\begin{cases}
+\hat{\beta_0} &= \bar{y} - \hat{\beta_1}\bar{x} \\
+\hat{\beta_1} &= \frac{\bar{x}\bar{y} - \overline{xy}}{\bar{x}^2 - \overline{x^2}} = \frac{cov(x, y)}{var(x)}
 \end{cases}$$
 
-2. Solve the system of equations to find $\hat{\beta_0}$ and $\hat{\beta_1}$.
+where:
+
+- $\bar{x}$ is the mean of the independent variable $x$.
+- $\bar{y}$ is the mean of the dependent variable $y$.
+- $\overline{xy}$ is the mean of the product of $x$ and $y$.
+- $\overline{x^2}$ is the mean of the square of $x$.
+- $cov(x, y)$ is the covariance between $x$ and $y$.
+- $var(x)$ is the variance of $x$.
+
+> The OLS estimators $\hat{\beta_0}$ and $\hat{\beta_1}$ are unbiased and consistent estimators of the true parameters $\beta_0$ and $\beta_1$.
+
+### Proof of OLS Estimators
+
+$$ min \sum_{i=1}^{n} \epsilon_i^2 = min \sum_{i=1}^{n} (y_i - \beta_0 - \beta_1x_i)^2 $$
+
+Taking the partial derivatives with respect to $\beta_0$ and $\beta_1$:
 
 $$ \begin{cases}
-n\hat{\beta_0} + \hat{\beta_1} \sum_{i=1}^{n} x_i = \sum_{i=1}^{n} y_i \\
-\hat{\beta_0} \sum_{i=1}^{n} x_i + \hat{\beta_1} \sum_{i=1}^{n} x_i^2 = \sum_{i=1}^{n} x_i y_i
-\end{cases}$$
+\frac{\partial S}{\partial \beta_0} &= -2 \sum_{i=1}^{n} (y_i - \beta_0 - \beta_1x_i) = 0 \\
+\frac{\partial S}{\partial \beta_1} &= -2 \sum_{i=1}^{n} x_i(y_i - \beta_0 - \beta_1x_i) = 0
+\end{cases} $$
 
-$$ \begin{cases}
-\hat{\beta_1} = \frac{\sum_{i=1}^{n} x_i y_i - \hat{\beta_0} \sum_{i=1}^{n} x_i}{\sum_{i=1}^{n} x_i^2} \\
-\hat{\beta_0} = \frac{\sum_{i=1}^{n} y_i - \hat{\beta_1} \sum_{i=1}^{n} x_i}{n}
-\end{cases}$$
+$$ 
+\begin{cases}
+n\bar{y} - n\beta_0 - \bar{x} \beta_1 = 0 \\
+n\overline{xy} - n\beta_0\bar{x} - n\overline{x^2}\beta_1 = 0
+\end{cases}
+$$
 
-$$ \begin{cases}
-\hat{\beta_1} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^{n} (x_i - \bar{x})^2} \\
-\hat{\beta_0} = \bar{y} - \hat{\beta_1}\bar{x}
-\end{cases}$$
+Solving for $\beta_0$ and $\beta_1$:
 
-where $\bar{x}$ and $\bar{y}$ are the sample means of $x$ and $y$ respectively.
+$$
+\begin{cases}
+\beta_0 &= \bar{y} - \beta_1\bar{x} \\
+\beta_1 &= \frac{\overline{xy} - \bar{x}\bar{y}}{\overline{x^2} - \bar{x}^2}
+\end{cases}
+$$
 
-The solution is called the Ordinary Least Squares (OLS) estimator, which minimizes the sum of the squared residuals and provides the best-fitting line for the
 
-### Assumptions
 
-1. **Linearity**: The relationship between the dependent variable and the independent variable is linear in term of $\beta_0$ and $\beta_1$.
-2. **Inadmisible variables**: The independent variable $X$ is not a perfect linear function of another variable, which would cause multicollinearity.
-3. **Independence**: The error term $\epsilon$ is independent of the independent variable $X$.
-4. **Zero conditional mean**: The expected value of the error term $\epsilon$ given the independent variable $X$ is zero.
-5. **Homoscedasticity**: The variance of the error term $\epsilon$ is constant across all values of the independent variable $X$.
-6. **Normality**: The error term $\epsilon$ follows a normal distribution.
 
-> Combination of assumptions 3, 4, and 5 is called the **[Gauss-Markov theorem](https://en.wikipedia.org/wiki/Gauss–Markov_theorem)**.
 
-Why do we need these assumptions? The assumptions ensure that the OLS estimator is the Best Linear Unbiased Estimator (BLUE), meaning it is unbiased, has the smallest variance among all linear unbiased estimators, and is consistent. Violation of these assumptions can lead to biased and inconsistent estimators.
 
-We will discuss unbiased estimators later.
 
-### MLE approach
 
-Another way to estimate the parameters is to use the Maximum Likelihood Estimation (MLE) approach. The MLE approach assumes that the error term $\epsilon$ follows a normal distribution with mean 0 and variance $\sigma^2$:
 
-$$ \epsilon \sim N(0, \sigma^2)$$
 
-> The assumption follows the normality assumption in the OLS assumptions.
 
-The likelihood function is defined as the probability density function of the error term, by assumption 3, we can multiply the probability density function of each observation:
 
-$$ L(\beta_0, \beta_1, \sigma^2) = \prod_{i=1}^{n} \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{\epsilon_i^2}{2\sigma^2}\right)$$
-$$= \frac{1}{(2\pi\sigma^2)^{n/2}} \exp\left(-\frac{1}{2\sigma^2} \sum_{i=1}^{n} \epsilon_i^2\right)$$
-$$= \frac{1}{(2\pi\sigma^2)^{n/2}} \exp\left(-\frac{1}{2\sigma^2} \sum_{i=1}^{n} (y_i - \hat{\beta_0} - \hat{\beta_1}x_i)^2\right)$$
 
-The MLE approach seeks to maximize the likelihood function with respect to the parameters $\beta_0$, $\beta_1$, and $\sigma^2$. The maximization process involves taking the partial derivatives of the likelihood function with respect to the parameters and setting them to zero.
 
-Solution, find maximum likelihood estimators:
 
-$$ \ln{L} = -\frac{n}{2} \ln{2\pi} - \frac{n}{2} \ln{\sigma^2} - \frac{1}{2\sigma^2} \sum_{i=1}^{n} (y_i - \hat{\beta_0} - \hat{\beta_1}x_i)^2$$
 
-Now, we can easily find the last term of the equation, $\sum_{i=1}^{n} (y_i - \hat{\beta_0} - \hat{\beta_1}x_i)^2$ is the same as the sum of the squared residuals in the OLS approach.
 
-We can see that the MLE approach is equivalent to the OLS approach, and the OLS estimator is the Maximum Likelihood Estimator under the normality assumption.
+
 
