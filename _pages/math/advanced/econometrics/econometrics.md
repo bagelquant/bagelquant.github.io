@@ -20,8 +20,8 @@ This topic also contains a practical component, where we will use Excel and R to
 Pre-requisite: Probability and Statistics, Calculus
 
 - [Univariate Regression](univariate-regression)
-    - [How to find beta_0 and beta_1](univariate-regression/#1.1-how-to-find-beta_0-and-beta_1)
-    - [OLS Estimation](univariate-regression/#1.2-ols-estimation)
+    - How to find $\beta_0 and $\beta_1
+    - OLS Estimation
 - [Multivariable Regression](multivariable-regression)
 - [Logistic Regression](logistic-regression)
 
