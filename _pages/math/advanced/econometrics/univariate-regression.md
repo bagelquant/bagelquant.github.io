@@ -31,7 +31,7 @@ We could minimize the sum of residuals: $\sum_{i=1}^{n} \epsilon_i$, but this wo
 
 ### Second try
 
-In order to avoid the problem of residuals cancelling each other out, we could minimize the absolute value of the residuals: $\sum_{i=1}^{n} |\epsilon_i|$. However, this would lead to a non-differentiable function, making it difficult to find the optimal solution.
+In order to avoid the problem of residuals cancelling each other out, we could minimize the absolute value of the residuals: $\sum_{i=1}^{n} \|\epsilon_i\|$. However, this would lead to a non-differentiable function, making it difficult to find the optimal solution.
 
 ### Third try
 
