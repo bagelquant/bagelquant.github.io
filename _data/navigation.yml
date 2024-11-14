@@ -27,6 +27,9 @@ econometrics:
           url: /econometrics/multivariable-regression/
         - title: "Logistic Regression"
           url: /econometrics/logistic-regression/
+        - title: "Basic Time Series Process"
+          url: /econometrics/basic-time-series-process/
+
 
 optimization:
     - title: "Introduction"
