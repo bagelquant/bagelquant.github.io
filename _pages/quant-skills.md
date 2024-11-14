@@ -1,10 +1,10 @@
 ---
+layout: splash
 title: "Quant Skills"
 permalink: /quant-skills/
-sidebar:
-    nav: "quant-skills" 
----
-
+excerpt: "Essential quantitative skills for a career in finance."
+header:
+  overlay_image: /assets/images/eric-huang-prohead.png
 ---
 
 A career in quantitative finance is a fusion of mathematics, programming, and finance. 
