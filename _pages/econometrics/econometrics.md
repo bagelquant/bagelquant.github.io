@@ -31,7 +31,24 @@ Pre-requisite: Probability and Statistics, Calculus
 
 ## 2. [Multivariable Regression](multivariable-regression)
 
+- 2.1 OLS Estimators
+- 2.2 F-test
+- 2.3 Gauss-Markov Assumptions
+- 2.4 Violation of Gauss-Markov Assumptions
+- 2.5 Generalized Least Squares
+- 2.6 Overfitting
+- 2.7 R-squared and Adjusted R-squared
+- 2.8 Categorical data
+
 ## 3. [Logistic Regression](logistic-regression)
 
+- 3.1 Sigmoid Function
+- 3.2 Regression Model
+- 3.3 Maximum Likelihood Estimation
+- 3.4 M Categories of Y
+
+## 4. [Basic Time-Series Process](basic-time-series-process)
+
 Additionally, further topics will be explored in Time Series Analysis.
+
 
