@@ -18,14 +18,15 @@ quant-skills:
 
 
 econometrics:
-    - title: "Introduction"
+    - title: "Econometrics"
       url: /econometrics/
-    - title: "Univariate Regression"
-      url: /econometrics/univariate-regression/
-    - title: "Multivariate Regression"
-      url: /econometrics/multivariate-regression/
-    - title: "Logistic Regression"
-      url: /econometrics/logistic-regression/
+      children:
+        - title: "Univariate Regression"
+          url: /econometrics/univariate-regression/
+        - title: "Multivariable Regression"
+          url: /econometrics/multivariable-regression/
+        - title: "Logistic Regression"
+          url: /econometrics/logistic-regression/
 
 optimization:
     - title: "Introduction"
