@@ -210,7 +210,7 @@ where:
 
 The GLS estimators are more efficient than the OLS estimators when the error term is not homoscedastic.
 
-## 2.6 Onverfitting
+## 2.6 Overfitting
 
 - if $n = k + 1$, the model is perfectly fitted to the data, $R^2 = 1$. But the model is overfitted, you should not use this model to predict new data.
 - if $n < k + 1$, the model is overfitting.
