@@ -49,6 +49,16 @@ Pre-requisite: Probability and Statistics, Calculus
 
 ## 4. [Basic Time-Series Process](basic-time-series-process)
 
+- 4.1 Basic Definitions
+- 4.2 Example of non-stationary process
+- 4.3 Lag operator
+- 4.4 Autoregressive Process
+- 4.5 Moving Average Process
+- 4.6 ARMA Process
+- 4.7 Tests for Stationarity
+- 4.8 Conversion of Non-stationary to Stationary
+- 4.9 ARIMA-GARCH Model
+
 Additionally, further topics will be explored in Time Series Analysis.
 
 

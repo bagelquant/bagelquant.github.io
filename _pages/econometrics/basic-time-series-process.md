@@ -168,7 +168,7 @@ $$
 y_t = \epsilon_t + \beta_1 \epsilon_{t-1}.
 $$
 
-### ARMA Process
+## 4.6 ARMA Process
 
 The autoregressive moving average process of order p and q, denoted as $ARMA(p, q)$, is defined as:
 
@@ -181,7 +181,7 @@ where $a(L)$ is of order p, and $b(L)$ is of order q.
 
 > For all this models, an intercept term could be added.
 
-## 4.6 Tests for Stationarity
+## 4.7 Tests for Stationarity
 
 ### DF(ADF) Test
 
@@ -231,7 +231,7 @@ where $S_t$ is the cumulative sum of the time series, and $\hat{\sigma}^2$ is th
 
 > Theses tests could conflict with each other, so it is recommended to use both tests to check the stationarity of the time series.
 
-## 4.7 Conversion of Non-Stationary to Stationary
+## 4.8 Conversion of Non-Stationary to Stationary
 
 ### Differencing
 
@@ -257,7 +257,7 @@ $$
 \text{dif}(\text{dif}(y_t)) = (y_t - y_{t-1}) - (y_{t-1} - y_{t-2}) = y_t - 2y_{t-1} + y_{t-2}.
 $$
 
-## 4.8 ARIMA-GARCH Model
+## 4.9 ARIMA-GARCH Model
 
 The Autoregressive Integrated Moving Average-Generalized Autoregressive Conditional Heteroskedasticity (ARIMA-GARCH) model is a combination of the ARIMA model and the GARCH model. The ARIMA model is used to model the time series, and the GARCH model is used to model the volatility of the time series.
 
