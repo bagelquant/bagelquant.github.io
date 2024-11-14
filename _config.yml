@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: BagelQuant
-email: eric.yanzhong.huang@outlook.com
+email: eric.yanzhong.huang@gmail.com
 description: Your go-to spot for all things quirky and quant!
   
 twitter_username: EricYanzhongH
@@ -69,7 +69,10 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/bagelquant"
-    - label: "Instagram"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/yanzhong-huang-506185181/"
+    # - label: "Instagram"
       # icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
 
@@ -77,13 +80,16 @@ footer:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:eric.yanzhong.huang@outlook.com"
+      url: "mailto:eric.yanzhong.huang@gmail.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/EricYanzhongH"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/bagelquant"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/yanzhong-huang-506185181/"
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/"
