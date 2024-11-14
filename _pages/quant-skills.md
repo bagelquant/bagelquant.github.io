@@ -19,5 +19,10 @@ I am currently pursuing a [Master of Quantitative Finance at Rutgers Business Sc
 The topics discussed here draw from both my studies and my professional experience. I hope you find this information valuable.
 
 - [Econometrics](econometrics/econometrics.md)
-- [Optimization Models in Finance ](optimization/optimization.md)
+- [Optimization Models in Finance](optimization/optimization.md)
+
+- [Derivatives](derivatives/derivatives.md)
+- [Fixed Income](fixed-income/fixed-income.md)
+
+- [C++](cpp/cpp.md)
 

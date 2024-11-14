@@ -17,7 +17,7 @@ header:
 - three years of experience as a quantitative analyst and developer in the Fund of Funds (FoF) industry in China
 
 **Contact me:**  
-Email: <eric.yanzhong.huang@outlook.com>  
+Email: <eric.yanzhong.huang@gmail.com>  
 Github: <https://github.com/bagelquant>  
 Linkedin: <https://www.linkedin.com/in/eric-huang-506185181/>  
 X: <https://x.com/EricYanzhongH>  
