@@ -331,7 +331,7 @@ where:
 2. **Variability in the Independent Variable**: Check if the independent variable $x$ has non-zero variance. If the independent variable does not vary, it cannot explain the variability in the dependent variable.
 3. **Independence and Randomness of Error Terms**: We used residuals to check this assumption. We can plot the residuals against the independent variable $x$ to see if there is any pattern or correlation, if there is a trend, the assumption is violated.
 4. **Zero Conditional Mean of Error Terms**: We used residuals to check this assumption, the OLS has zero conditional mean by construction.
-5. **Homoscedasticity of Error Terms**: We used residuals to check this assumption. We can plot the residuals against the fitted values to see if the variance of the residuals is constant across all values of the independent variable.
+5. **Homoscedasticity**: We used residuals to check this assumption. We can plot the residuals against the fitted values to see if the variance of the residuals is constant across all values of the independent variable.
 6. **Normality of Error Terms**: We used residuals to check this assumption. We can plot a Q-Q plot (Normal Probability Plot) of the residuals to see if they follow a normal distribution, if the points lie on a straight line, the residuals are normally distributed.
 
 Constructing of the Q-Q plot:
