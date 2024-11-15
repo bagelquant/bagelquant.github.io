@@ -86,11 +86,11 @@ $$
 
 The lag operator could be used to simplify the notation of time series models, it has the following properties:
 
-1. **Power the lag operator**
+**Power the lag operator**
 
 $$L^2 y_t = L(L y_t) = L y_{t-1} = y_{t-2}.$$
 
-2. **Polynomials in the lag operator**
+**Polynomials in the lag operator**
 
 $$
 a(L) = a_0 + a_1 L + a_2 L^2 + ... + a_n L^n.
@@ -100,13 +100,13 @@ $$
 a(L) y_t = a_0 y_t + a_1 y_{t-1} + a_2 y_{t-2} + ... + a_n y_{t-n}.
 $$
 
-3. products of polynomials in the lag operator
+**products of polynomials in the lag operator**
 
 $$
 a(L) b(L) = (a_0 + a_1 L + a_2 L^2 + ... + a_p L^p)(b_0 + b_1 L + b_2 L^2 + ... + b_q L^q).
 $$
 
-4. Some lag operators can be inverted, we define the $(1 - L)^{-1}$ operator as:
+**Some lag operators can be inverted, we define the $(1 - L)^{-1}$ operator as**:
 
 $$
 (1 - L)^{-1} (1 - L) = (1 - L)(1 - L)^{-1} = 1.

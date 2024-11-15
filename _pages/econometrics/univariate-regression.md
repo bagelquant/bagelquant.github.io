@@ -96,19 +96,19 @@ $$
 
 ### Properties of OLS Estimators
 
-1. **Unbiasedness**: The OLS estimators are unbiased, meaning that their expected values are equal to the true parameters:
+- **Unbiasedness**: The OLS estimators are unbiased, meaning that their expected values are equal to the true parameters:
 
 $$E(\hat{\beta_0}) = \beta_0, E(\hat{\beta_1}) = \beta_1.$$
 
-2. **Consistency**: The OLS estimators are consistent, meaning that they converge in probability to the true parameters as the sample size increases:
+- **Consistency**: The OLS estimators are consistent, meaning that they converge in probability to the true parameters as the sample size increases:
 
 $$\hat{\beta_0} \xrightarrow{p} \beta_0, \ \hat{\beta_1} \xrightarrow{p} \beta_1.$$
 
-3. **Efficiency**: The OLS estimators are efficient, meaning that they have the smallest variance among all unbiased estimators:
+- **Efficiency**: The OLS estimators are efficient, meaning that they have the smallest variance among all unbiased estimators:
 
 $$var(\hat{\beta_0}) \leq var(\tilde{\beta_0}), var(\hat{\beta_1}) \leq var(\tilde{\beta_1}).$$
 
-4. **Normality**: Under certain conditions, the OLS estimators are normally distributed:
+- **Normality**: Under certain conditions, the OLS estimators are normally distributed:
 
 $$\hat{\beta_0} \sim N(\beta_0, \sigma^2_{\beta_0}), \hat{\beta_1} \sim N(\beta_1, \sigma^2_{\beta_1}).$$
 
@@ -121,12 +121,12 @@ Other properties include:
 
 The Gauss-Markov theorem outlines the conditions under which the OLS estimator is the Best Linear Unbiased Estimator (BLUE). The assumptions are:
 
-1. **Linearity**: The relationship between the dependent variable $y$ and the independent variable $x$ is linear.
-2. **Variability in the Independent Variable**: The independent variable $x$ has non-zero variance.
-3. **Independence and Randomness of error terms**.
-4. **Zero Conditional Mean of Error Terms**: $E(\epsilon_i | x_i) = 0, i = 1, 2, ..., n$.
-5. **Homoscedasticity of Error Terms**: $var(\epsilon_i | x_i) = \sigma^2, i = 1, 2, ..., n$.
-6. **Normality of Error Terms**: The error terms $\epsilon_i$ are normally distributed, with mean zero and $\sigma^2$ variance, $\epsilon_i \sim N(0, \sigma^2)$.
+- **(1)Linearity**: The relationship between the dependent variable $y$ and the independent variable $x$ is linear.
+- **(2)Variability in the Independent Variable**: The independent variable $x$ has non-zero variance.
+- **(3)Independence and Randomness of error terms**.
+- **(4)Zero Conditional Mean of Error Terms**: $E(\epsilon_i \| x_i) = 0, i = 1, 2, ..., n$.
+- **(5)Homoscedasticity of Error Terms**: $var(\epsilon_i \| x_i) = \sigma^2, i = 1, 2, ..., n$.
+- **(6)Normality of Error Terms**: The error terms $\epsilon_i$ are normally distributed, with mean zero and $\sigma^2$ variance, $\epsilon_i \sim N(0, \sigma^2)$.
 
 If these assumptions are met, the OLS estimator is the Best Linear Unbiased Estimator (BLUE), meaning that it is unbiased, has the smallest variance among all linear unbiased estimators, and is normally distributed.
 

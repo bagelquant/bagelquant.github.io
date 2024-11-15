@@ -124,11 +124,11 @@ Procedure to check the Gauss-Markov assumptions is same as the univariable regre
 
 ## 2.4 Violation of Gauss-Markov Assumptions
 
-1. **Linearity in parameters**
+- **Linearity in parameters**
 
 If the relationship between the dependent variable and the independent variables is not linear, we should consider change the model to a non-linear model.
 
-2. **No perfect multicollinearity**
+- **No perfect multicollinearity**
 
 If there is perfect multicollinearity, we should remove one of the independent variables that are linearly dependent on others.
 
@@ -138,7 +138,7 @@ In real-world data, it is rare to have perfect multicollinearity. However, we ma
 - Use principal component analysis (PCA) to reduce the dimensionality of the independent variables,
 - Remove one or more independent variables that are highly correlated with others.
 
-3. **Independence and randomness of the error term**
+- **Independence and randomness of the error term**
 
 If the error term is not independent and random, the estimators will be biased and inconsistent. 
 
@@ -147,11 +147,11 @@ We could consider:
 - Change the model,
 - Instead of standard errors, use robust standard errors.
 
-4. **Zero conditional mean**
+- **Zero conditional mean**
 
 We use residual to check this assumption. The expected value of the residual is always zero by OLS construction.
 
-5. **Homoscedasticity**
+- **Homoscedasticity**
 
 If the variance of the error term is not constant, the estimators will be biased and inconsistent.
 
@@ -160,7 +160,7 @@ We could consider:
 - Instead of standard errors, use robust standard errors,
 - Instead of OLS, use Generalized Ordinary Least Squares (GLS) to estimate the model.
 
-6. **Normality of the error term**
+- **Normality of the error term**
 
 If the error term is not normally distributed, all inference based on the normality assumption will be biased.
 
