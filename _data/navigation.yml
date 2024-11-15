@@ -34,3 +34,24 @@ econometrics:
 optimization:
     - title: "Introduction"
       url: /optimization/
+      children:
+        - title: "Introduction to Optimization"
+          url: /optimization/introduction-to-optimization/
+        - title: "Convex Sets and Functions"
+          url: /optimization/convex-sets-and-functions/
+        - title: "Linear Programming"
+          url: /optimization/linear-programming/
+        - title: "Duality in Linear Programming"
+          url: /optimization/duality-in-linear-programming/
+        - title: "Nonlinear Programming"
+          url: /optimization/nonlinear-programming/
+        - title: "Duality in Nonlinear Programming"
+          url: /optimization/duality-in-nonlinear-programming/
+        - title: "Mean-Variance Portfolio Optimization"
+          url: /optimization/mean-variance-portfolio-optimization/
+        - title: "Value at Risk (VaR)"
+          url: /optimization/value-at-risk-var/
+        - title: "AVaR and Coherent Risk Measures"
+          url: /optimization/avar-and-coherent-risk-measures/
+
+
