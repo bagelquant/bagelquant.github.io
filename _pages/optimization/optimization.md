@@ -11,13 +11,21 @@ I am particularly passionate about this topic in the MQF program at Rutgers Busi
 
 This topic will explore optimization models in finance, focusing on the following key areas:
 
-1. [Introduction to Optimization](introduction-to-optimization)
-2. [Convex Sets and Functions](convex-sets-and-functions)
-3. [Linear Programming](linear-programming)
-4. [Duality in Linear Programming](duality-in-linear-programming)
-5. [Nonlinear Programming](nonlinear-programming)
-6. [Duality in Nonlinear Programming](duality-in-nonlinear-programming)
-7. [Mean-Variance Portfolio Optimization](mean-variance-portfolio-optimization)
-8. [Value at Risk (VaR)](value-at-risk) 
-9. [AVaR and Coherent Risk Measures](avar-and-coherent-risk-measures) 
+## Introduction
+
+- [Introduction to Optimization](introduction-to-optimization)
+
+## Theoretical Foundations
+
+- [Convex Sets and Functions](convex-sets-and-functions)
+- [Linear Programming](linear-programming)
+- [Duality in Linear Programming](duality-in-linear-programming)
+- [Nonlinear Programming](nonlinear-programming)
+- [Duality in Nonlinear Programming](duality-in-nonlinear-programming)
+
+## Applications in Finance
+
+- [Mean-Variance Portfolio Optimization](mean-variance-portfolio-optimization)
+- [Value at Risk (VaR)](value-at-risk) 
+- [AVaR and Coherent Risk Measures](avar-and-coherent-risk-measures) 
 
