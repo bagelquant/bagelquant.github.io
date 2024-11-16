@@ -20,7 +20,7 @@ where:
 
 - $X$ is the feasible set,
 - $f \to \mathbb{R}$ is the objective function,
-- $x \in X$ is the element of the feasible set.
+- $x \in X$ is the element of the feasible set,
 - $\hat{x}$ is the optimal solution.
 
 At this level of generality, the problem is too broad, very little can be said about it. Therefore, we will focus on $X$ is a subset of a finite-dimensional Euclidean space $\mathbb{R}^n$.
@@ -37,7 +37,7 @@ At this level of generality, the problem is too broad, very little can be said a
 - **Global minimum**: A point $\hat{x}$ satisfying the relation $(1)$ is called a global minimum.
 - **Local minimum**: If a point $\tilde{x}$ satisfies for some $\epsilon > 0$ that 
 
-$$f(\tilde{x}) \leq f(x) \text{ for all } x \in X \text{ such that } \|\|x - \tilde{x}\|\| < \epsilon,$$
+$$f(\tilde{x}) \leq f(x) \text{ for all } x \in X \text{ such that } ||x - \tilde{x}|| < \epsilon,$$
 
 then $\tilde{x}$ is called a local minimum.
 

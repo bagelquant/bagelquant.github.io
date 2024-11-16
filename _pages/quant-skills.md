@@ -20,9 +20,7 @@ The topics discussed here draw from both my studies and my professional experien
 
 - [Econometrics](econometrics/econometrics.md)
 - [Optimization Models in Finance](optimization/optimization.md)
-
 - [Derivatives](derivatives/derivatives.md)
 - [Fixed Income](fixed-income/fixed-income.md)
-
 - [C++](cpp/cpp.md)
 
