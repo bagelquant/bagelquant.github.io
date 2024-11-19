@@ -41,7 +41,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ## Apps
 
 ```shell
-brew install --cask miniconda iterm2 Raycast zoom itsycal karabiner-elements pdf-expert cmake
+brew install --cask miniconda iterm2 Raycast zoom itsycal karabiner-elements pdf-expert r
 ```
 
 The window manage app:
@@ -62,7 +62,7 @@ git config --global user.email ""
 ## Packages
 
 ```shell
-brew install nvim thefuck gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi r 
+brew install nvim thefuck gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi
 ```
 
 yazi dependencies(previews):
