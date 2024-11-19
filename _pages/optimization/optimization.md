@@ -13,19 +13,19 @@ This topic will explore optimization models in finance, focusing on the followin
 
 ## Introduction
 
-- [Introduction to Optimization](introduction-to-optimization)
+- [Introduction to Optimization](introduction-to-optimization.md)
 
 ## Theoretical Foundations
 
-- [Convex Sets and Functions](convex-sets-and-functions)
-- [Linear Programming](linear-programming)
-- [Duality in Linear Programming](duality-in-linear-programming)
-- [Nonlinear Programming](nonlinear-programming)
-- [Duality in Nonlinear Programming](duality-in-nonlinear-programming)
+- [Convex Sets and Functions](convex-sets-and-functions.md)
+- [Linear Programming](linear-programming.md)
+- [Duality in Linear Programming](duality-in-linear-programming.md)
+- [Nonlinear Programming](nonlinear-programming.md)
+- [Duality in Nonlinear Programming](duality-in-nonlinear-programming.md)
 
 ## Applications in Finance
 
-- [Mean-Variance Portfolio Optimization](mean-variance-portfolio-optimization)
-- [Value at Risk (VaR)](value-at-risk) 
-- [AVaR and Coherent Risk Measures](avar-and-coherent-risk-measures) 
+- [Mean-Variance Portfolio Optimization](mean-variance-portfolio-optimization.md)
+- [Value at Risk (VaR)](value-at-risk.md) 
+- [AVaR and Coherent Risk Measures](avar-and-coherent-risk-measures.md) 
 
