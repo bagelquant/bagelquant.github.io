@@ -62,7 +62,7 @@ git config --global user.email ""
 ## Packages
 
 ```shell
-brew install nvim thefuck gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi
+brew install nvim gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi lazygit tmux
 ```
 
 yazi dependencies(previews):
@@ -82,4 +82,11 @@ All dot files configs stored in Github Repo
 - Aeropace
 - nvim
 - .zshrc
+
+## New methodologies
+
+Now followign the unix philosophy, each tool should do one thing and do it well. I seperate some plugins in nvim to their own tools:
+
+- git plugins to [laztgit](../lazy-git)
+- nvim tree to [yazi](yazi-terminal-file-explorer)
 
