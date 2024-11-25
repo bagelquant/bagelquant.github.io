@@ -91,7 +91,7 @@ spam-eggs/
 
 ```
 
-## Useing `build` and `twine` to build and upload the package
+## Using `build` and `twine` to build and upload the package
 
 `build` is a package that provides a simple interface to build and package your project. You can install it with `pip install build`.
 
