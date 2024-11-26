@@ -9,7 +9,7 @@ header:
 
 ## Bagel Series
 
-`Bagel` is a series of projects that aim to provide a comprehensive quant research and trading platform. The projects are written in Python and are open-source. 
+bagelquant provides a series of projects that aim to provide a comprehensive quant research and trading platform. The projects are written in Python and are open-source. 
 
 The projects are designed to be modular and can be used independently or together. Separate the concerns of data, strategy, and execution, the projects provide a clear separation of concerns, making it easy to develop and extend the platform.
 

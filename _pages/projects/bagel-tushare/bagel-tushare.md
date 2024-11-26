@@ -1,18 +1,22 @@
-# bagel-tushare
-
+---
+title: ""
+permalink: /projects/bagel-tushare/
+nav: projects
+---
 A Python wrapper for Tushare, a Chinese financial data provider. The project provides a simple and easy-to-use automation tool for **downloading** financial data from Tushare, and **storing** the data in a local mysql database.
 
-Full documents please refer to: [BagelQuant](https://bagelquant.com/bageltushare)
+- [GitHub repository](https://github.com/bagelquant/bagel-tushare)
 
-# Installation
+
+## Installation
 
 ```bash
 pip install bagelTushare
 ```
 
-# Usage
+## Usage
 
-## Quick start
+### Quick start
 
 ```python
 from bageltushare import MySQL, create_log_table, update_and_replace
@@ -56,11 +60,11 @@ The `update_and_replace` function utilizes the tushare API to download data, whi
     - this is where the data is stored
 - `api_name: str` , the tushare API name. For more information, please refer to the tushare documents [Tushare Doc](https://tushare.pro/document/2)
 
-## Loop update
+### Loop update
 
 This package provides two methods for multi-threaded looping downloads:
 
-### `date_loop_update`
+#### `date_loop_update`
 
 ```python
 def date_loop_update(token: str,
@@ -107,7 +111,7 @@ def daily_update():
                          api_name=api_name)
 ```
 
-### `code_loop_api_names`
+#### `code_loop_api_names`
 
 ```python
 def code_loop_update(token: str,
@@ -156,7 +160,7 @@ def monthly_update():
                          api_name=api_name)
 ```
 
-### Usage of Loop Update
+#### Usage of Loop Update
 
 - The loop update method will automatically update data to the present day.
 - Both methods use multi-threading; this may exceed Tushare API usage limits per minute. If limits are exceeded, the looping will pause for one minute and then continue.
