@@ -1,6 +1,8 @@
 main:
   - title: "Quant Skills"
     url: /quant-skills/
+  - title: "Projects"
+    url: /projects/
   - title: "Posts"
     url: /posts/
   # - title: "Category"
@@ -29,6 +31,8 @@ econometrics:
           url: /econometrics/logistic-regression/
         - title: "Basic Time Series Process"
           url: /econometrics/basic-time-series-process/
+        - title: "R basic"
+          url: /econometrics/r-basics/
 
 
 optimization:
