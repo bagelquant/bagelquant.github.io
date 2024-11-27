@@ -1,7 +1,8 @@
 ---
 title: ""
 permalink: /projects/bagel-tushare/
-nav: projects
+sidebar:
+  nav: "projects"
 ---
 A Python wrapper for Tushare, a Chinese financial data provider. The project provides a simple and easy-to-use automation tool for **downloading** financial data from Tushare, and **storing** the data in a local mysql database.
 
