@@ -41,7 +41,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ## Apps
 
 ```shell
-brew install --cask miniconda iterm2 Raycast zoom itsycal karabiner-elements pdf-expert r
+brew install --cask miniconda iterm2 Raycast zoom itsycal karabiner-elements pdf-expert r rstudio keyclu
 ```
 
 The window manage app:
