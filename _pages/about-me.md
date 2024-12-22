@@ -26,7 +26,7 @@ X: <https://x.com/EricYanzhongH>
 
 ### RUTGERS, THE STATE UNIVERSITY OF NEW JERSEY
 
-***Rutgers Business School, Newark, NJ - May 2026***  
+***Rutgers Business School, Newark, NJ - Dec 2025***  
 Master of Quantitative Finance  
 
 ### MONASH UNIVERSITY
@@ -44,25 +44,37 @@ Bachelor of Business Administration with a major in Accounting
 
 ***Quantitative Developer, 2022 - 2024***
 
-- led development of Python-based backend APIs for the fund evaluation website at https://quant.sincere-dg.com as 4member backend team leader, covering fund risk-adjusted return analysis, portfolio stimulation, portfolio optimization.
-- Constructed an event-driven backtesting system allows clients to test fund portfolios and offers strategies based on signal generation. It also supports single-factor evaluation, contributing 15 active risk factors since its completion.
-- Built portfolio risk evaluation APIs, including VaR, factor analysis, expected shortfall, and maximum drawdown.created a risk management interface to generate reports then automatically sent to 162 customers.
-- Collaborated with the marketing team to oversee a series of internal seminars on the principles of the Multi-Factor Model. Enhanced the sales team's marketing materials for four marketing events and eight internal panels.
+- ***Python-based backend APIs***: led the development of APIs responsible for all algorithms related to fund selection and portfolio construction as the leader of a four-member backend development team. These APIs are central to our core business and assist over 500 clients in selecting funds and optimizing portfolios, as detailed below.
+- ***Fund performance evaluation***: risk-adjusted ratios, factor-based exposure analysis, and risk metrics such as AVaR, VaR, and drawdown.
+- ***Event-driven back-testing system***: served both internal single-factor construction and external clients by providing visualized performance back-testing results.
+- ***Portfolio Optimizer***: provided mean-risk optimization algorithms allow clients to choose from various risk measures, including variance, AVaR, and a combined approach, while imposing constraints on drawdown and factor exposure.
+- ***Data cleaning***: constructed a separate database for cleaned data and applied several logic rules to fill or remove data entries based on different needs.
 
 ### HongChou Investment Co., Beijing, China
 
-***Quant Analyst, 2021 - 2022***
+***Fund Analyst, 2021 - 2022***
 
-- Devised algorithms to screen all private secondary market funds in China. Used risk metrics to conduct a negative screen. Selected top 300 funds based on a comprehensive score combines several risk-adjusted returns
-- Conducted due diligence on 100+ private quantitative funds, reporting on investment strategies, portfolio managers' backgrounds, company governance policies, asset allocation, and other key fund information
-- Provided comprehensive analysis report to support asset allocation, portfolio optimization, and fund pool management decisions, assisted the investment committee in constructing a pool of 50 investment-ready funds
-- Maintained 6 fund indexes, each index including top private funds with same strategy categories. It supported Macro analysis team, asset allocation team, and marketing team
-- Constructed quantitative solutions for asset allocation using a rolling mean-variance optimization to establish the asset allocation boundary based on customer utility preferences curve.
-- Developed a Microsoft Excel VBA-based program to manage all outstanding funds. The program automatically fetches data provided by brokers and visualizes key information.
+- ***Portfolio management***: managed a China Construction Bank collaborative FoF portfolio from July 2021 to September 2022, overseeing assets of 500 million CNY and achieving a 5.47% excess return against the benchmark of CSI Aggregate Bond Index.
+- ***Data mining***: designed a workflow includes sampling, classification, clustering, sequential patterns, and frequent subgraph mining for 4,000 private fund datasets from China.
+- ***Risk measurement***: built a comprehensive score-based risk measurement system negatively screens all funds to create a pool of 300 funds ready for further investigation.
+- ***VBA fund managing tool***: developed a Microsoft Excel VBA-based program to manage all outstanding funds. The program automatically fetches data provided by brokers and visualizes key information.
 
 ## Skills
 
-- Programming: Python (scikit-learn, Tensorflow, Keras, PyTorch, tkinter, PySide/PyQT), C++, R, SQL, VBA, Linux, Lua
-- Other: MySQL, PostgreSQL, SQLite, Git, GitHub, Vim, PyCharm, MS Office, Latex
-- Knowledge Areas: Multi-factor Models, Portfolio Optimization, Machine Learning, Web Scraping, Data Analysis
+- Programming: Python (scikit-learn, TensorFlow, PyTorch, tkinter, PySide/PyQT), C++, R, SQL, VBA, Lua, Git
+- Knowledge Areas: Multi-factor Models, Portfolio Optimization, Data Mining, Regression
+
+## Projects
+
+### McGill International Portfolio Challenge
+
+- Case study proposing a liquidity-integrated pension fund plan for the Florida Department of Financial Services. Developed an income projection model, portfolio allocation plan, and a comprehensive customer engagement strategy. Advanced to the semi-finals.
+
+### BagelQuant Blog
+
+- https://bagelquant.com, a personal blog sharing quant methods, tips and projects.
+
+### TushareDownloader (Python)
+
+- Created a Python package to download China A market stock data leveraging tushare-apis, and automatically store to a local MySQL database using sqlalchemy package. 
 
