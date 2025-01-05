@@ -848,10 +848,6 @@ gui:
     'docs': '#11aaff' # use a light blue for branches beginning with 'docs/'
 ```
 
-## Example Coloring
-
-![border example](../../assets/colored-border-example.png)
-
 ## Display Nerd Fonts Icons
 
 If you are using [Nerd Fonts](https://www.nerdfonts.com), you can display icons.
@@ -980,9 +976,6 @@ git:
   branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"
 ```
 
-Result:
-
-![](https://i.imgur.com/Nibq35B.png)
 
 ## Launching not in a repository behaviour
 
