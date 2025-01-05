@@ -1,6 +1,5 @@
 ---
 title: "GitHub CLI Tool"
-author: "Eric"
 tags:
   - setup
 ---

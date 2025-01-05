@@ -43,7 +43,31 @@ $$Z = cX + dY$$
 
 is convex.
 
+### Convex combination
+
+A point $x$ is called a convex combination of points $x^1, x^2, ..., x^k$ if there exist $\alpha_1, \alpha_2, ..., \alpha_k$ such that:
+
+$$
+x = \alpha_1 x^1 + \alpha_2 x^2 + ... + \alpha_k x^k, \quad \text{where} \quad \alpha_i \geq 0, \quad \sum_{i=1}^{k} \alpha_i = 1.
+$$
+
+### Convex hull
+
+The convex hull of a set $X \subset \mathbb{R}^n$ is the set of all convex combinations of points in $X$:
+
+$$\text{conv}(X) = \{\sum_{i=1}^{k} \alpha_i x^i \mid x^i \in X, \alpha_i \geq 0, \sum_{i=1}^{k} \alpha_i = 1\}.$$
 
 
+> [!NOTE]
+> The relation between convex combination and convex hull lead to next lemma.
 
+**lemma**: The set conv$(X)$ is is the set of all convex combinations of points in $X$.
+
+### Caratheodory's Lemma
+
+**Lemma:** If $X \subset \mathbb{R}^n$, then every point in conv$(X)$ can be represented as a convex combination of at most $n+1$ points in $X$.
+
+## 2.3 Projection
+
+**Definition:** The projection of a point $x \in \mathbb{R}^n$ onto a set $X \subset \mathbb{R}^n$ is the point in $X$ that is closest to $x$.
 
