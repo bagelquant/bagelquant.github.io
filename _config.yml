@@ -97,11 +97,11 @@ footer:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: wide
-      toc: true
+      toc: false
       toc_sticky: true
       author_profile: true
       read_time: true
@@ -122,6 +122,7 @@ defaults:
       share: true
       mathjax: true
       related: true
+      search: true
 
 category_archive:
   type: liquid
