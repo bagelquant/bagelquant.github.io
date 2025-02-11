@@ -100,14 +100,14 @@ defaults:
       path: "_posts"
       type: posts
     values:
-      layout: wide
-      toc: false
+      layout: single
+      toc: true
       toc_sticky: true
       author_profile: true
       read_time: true
       share: true
       related: true
-      comments: true
+      comments: false
       mathjax: true
   # _pages
   - scope:
@@ -121,7 +121,7 @@ defaults:
       # read_time: true
       share: true
       mathjax: true
-      related: true
+      related: false
       search: true
 
 category_archive:
