@@ -71,7 +71,7 @@ author:
       url: "https://github.com/bagelquant"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/yanzhong-huang-506185181/"
+      url: "https://www.linkedin.com/in/yanzhonghuang"
     # - label: "Instagram"
       # icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -100,6 +100,7 @@ defaults:
       path: "_posts"
       type: posts
     values:
+      show_date: true
       layout: single
       toc: true
       toc_sticky: true
