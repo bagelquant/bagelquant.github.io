@@ -12,12 +12,6 @@ main:
   - title: "About Me"
     url: /about-me/
 
-quant-skills:
-    - title: "Econometrics"
-      url: /econometrics/
-    - title: "Optimization"
-      url: /optimization/
-
 econometrics:
     - title: "Econometrics"
       url: /econometrics/
@@ -32,7 +26,6 @@ econometrics:
           url: /econometrics/basic-time-series-process/
         - title: "R basic"
           url: /econometrics/r-basics/
-
 
 optimization:
     - title: "Introduction"
@@ -57,17 +50,17 @@ optimization:
         - title: "AVaR and Coherent Risk Measures"
           url: /optimization/avar-and-coherent-risk-measures/
 
-  bagel-tushare:
+bagel-tushare:
     - title: "bagel-tushare"
-      url: /projects/bagel-tushare/
+      url: /bagel-tushare/
       children:
         - title: "Introduction"
-          url: /projects/bagel-tushare/introduction/
+          url: /bagel-tushare/introduction/
         - title: "Installation"
-          url: /projects/bagel-tushare/installation/
+          url: /bagel-tushare/installation/
         - title: "Usage"
-          url: /projects/bagel-tushare/usage/
+          url: /bagel-tushare/usage/
         - title: "API Reference"
-          url: /projects/bagel-tushare/api-reference/
+          url: /bagel-tushare/api-reference/
 
 
