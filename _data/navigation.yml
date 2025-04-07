@@ -18,22 +18,6 @@ quant-skills:
     - title: "Optimization"
       url: /optimization/
 
-projects:
-    - title: "projects"
-      url: /projects/
-    - title: "bagel-tushare"
-      url: /projects/bagel-tushare/
-    - title: "bagel-datatype"
-      url: /projects/bagel-datatype/
-    - title: "bagel-eval"
-      url: /projects/bagel-eval/
-    - title: "bagel-bt"
-      url: /projects/bagel-bt/
-    - title: "bagel-factor"
-      url: /projects/bagel-factor/
-    - title: "bagel-opt-portfolio"
-      url: /projects/bagel-opt-portfolio/
-
 econometrics:
     - title: "Econometrics"
       url: /econometrics/
@@ -72,5 +56,18 @@ optimization:
           url: /optimization/value-at-risk-var/
         - title: "AVaR and Coherent Risk Measures"
           url: /optimization/avar-and-coherent-risk-measures/
+
+  bagel-tushare:
+    - title: "bagel-tushare"
+      url: /projects/bagel-tushare/
+      children:
+        - title: "Introduction"
+          url: /projects/bagel-tushare/introduction/
+        - title: "Installation"
+          url: /projects/bagel-tushare/installation/
+        - title: "Usage"
+          url: /projects/bagel-tushare/usage/
+        - title: "API Reference"
+          url: /projects/bagel-tushare/api-reference/
 
 
