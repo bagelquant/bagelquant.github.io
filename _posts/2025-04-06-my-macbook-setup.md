@@ -24,10 +24,6 @@ However, since graduating from college, I have gradually transitioned all my dig
 
 Set up keyboard repeat rate and delay until repeat
 
-```shell
-defaults write -g ApplePressAndHoldEnabled 0
-```
-
 Productivity tip: Prefer keyboard over mouse or trackpad. Navigating with a keyboard is quicker than moving the cursor. I use numerous keyboard shortcuts and prefer VIM mode when writing and coding. Wondering how to navigate using a keyboard? An app called Raycast can be extremely useful. Introduction provided below.
 
 
@@ -48,19 +44,13 @@ Homebrew
 Casks
 
 ```shell
-brew install --cask miniconda iterm2 Raycast zoom itsycal pdf-expert r rstudio google-chrome microsoft-teams 
+brew install --cask miniconda Raycast zoom itsycal pdf-expert r rstudio google-chrome microsoft-teams visual-studio-code
 ```
 
 Formulas
 
 ```shell
-brew install nvim gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi lazygit ffmpegthumbnailer poppler
-```
-
-## MySQL
-
-```shell
-brew install mysql
+brew install gh zsh-syntax-highlighting zsh-autosuggestions pandoc mysql
 ```
 
 ## Conda
@@ -68,14 +58,3 @@ brew install mysql
 ```shell
 conda config --set auto_activate_base false
 ```
-
-## Packer
-
-In order to use nvim packer, we need to install it first:
-
-```shell
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-
