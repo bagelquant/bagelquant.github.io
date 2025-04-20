@@ -50,7 +50,7 @@ brew install --cask miniconda Raycast zoom itsycal pdf-expert r rstudio google-c
 Formulas
 
 ```shell
-brew install gh zsh-syntax-highlighting zsh-autosuggestions pandoc mysql
+brew install gh zsh-syntax-highlighting zsh-autosuggestions pandoc mysql texlive
 ```
 
 ## Conda
