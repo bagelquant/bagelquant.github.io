@@ -3,11 +3,7 @@ title: "My MacBook Setup"
 tags:
     - setup
 ---
----
-title: "My MacBook Setup"
-tags:
-    - setup
----
+
 Windows has been my preferred desktop operating system since primary school, offering a wide array of apps, particularly games.
 
 However, since graduating from college, I have gradually transitioned all my digital devices to the Apple ecosystem. I switched from Android to iOS, and from Windows to MacOS. The cohesive experience of MacOS, especially when used in conjunction with other Apple devices, has truly impressed me. Here's my productivity setup for MacOS.
