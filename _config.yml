@@ -108,7 +108,7 @@ defaults:
       read_time: true
       share: true
       related: true
-      comments: false
+      comments: true
       mathjax: true
   # _pages
   - scope:
@@ -124,6 +124,15 @@ defaults:
       mathjax: true
       related: false
       search: true
+      comments: true
+
+comments:
+  provider: disqus
+  disqus:
+    shortname: bagelquant
+    identifier: "{{ page.id }}"
+    url: "{{ page.url | absolute_url }}"
+    title: "{{ page.title }}"
 
 category_archive:
   type: liquid
