@@ -24,10 +24,37 @@ as we uncover the secrets behind the numbers and equations that shape the financ
 
 This blog is a collection of quant skills, finance knowledge, programming tips, and personal experiences. 
 Aimed at quant enthusiasts, finance professionals, and anyone interested in the world of finance, 
-BagelQuant offers a unique perspective on the industry.
+BagelQuant offers a unique perspective on the industry. Here is a map of the quant world:
 
-Major topics include:
+![Quant Map](assets/images/quant_map.png)
 
-- [Quantitative Skills](https://bagelquant.com/quant-skills/): Math, programming, and finance skills essential for a career in quantitative finance.
-- [Posts](https://bagelquant.com/posts/): A collection of articles on various topics.
+## Topic lists:
+
+Math Basics:
+
+- Linear Algebra
+- Calculus
+- Probability
+- Statistics
+
+Math Advanced:
+
+- Optimization
+- Stochastic Calculus
+- [Econometrics]()
+- Financial Time Series
+- Machine Learning
+
+Quant Models:
+
+- Utility Theory
+- Mean-Variance Optimization(Modern Portfolio Theory)
+- Consumption-based Asset Pricing
+- Factor Models
+- Black-Scholes Model
+- Binomial Tree
+- Interest Rate Models
+- Monte Carlo Simulation
+- Algorithmic Trading
+- Risk Management
 

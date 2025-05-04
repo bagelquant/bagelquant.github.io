@@ -1,6 +1,4 @@
 main:
-  - title: "Quant Skills"
-    url: /quant-skills/
   - title: "Projects"
     url: /projects/
   - title: "Posts"
