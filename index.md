@@ -16,7 +16,7 @@ This blog is a collection of quant skills, finance knowledge, programming tips, 
 Aimed at quant enthusiasts, finance professionals, and anyone interested in the world of finance, 
 BagelQuant offers a unique perspective on the industry. Here is a map of the quant world:
 
-![Quant World](assets/images/quant_world.png)
+![Quant World](assets/images/quant_map.png)
 
 ## Topic lists:
 
