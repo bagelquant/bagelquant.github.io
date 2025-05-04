@@ -12,6 +12,10 @@ header:
 
 ## Welcome to BagelQuant!
 
+This blog is a collection of quant skills, finance knowledge, programming tips, and personal experiences. 
+Aimed at quant enthusiasts, finance professionals, and anyone interested in the world of finance, 
+BagelQuant offers a unique perspective on the industry. Here is a map of the quant world:
+
 ![Quant Map](assets/images/quant_map.png)
 
 ## Topic lists:
@@ -25,9 +29,9 @@ Math Basics:
 
 Math Advanced:
 
-- Optimization
+- [Optimization](_pages/math_advanced/optimization/optimization.md)
 - Stochastic Calculus
-- [Econometrics]()
+- [Econometrics](_pages/math_advanced/econometrics/econometrics.md)
 - Financial Time Series
 - Machine Learning
 
@@ -44,4 +48,3 @@ Quant Models:
 - Algorithmic Trading
 - Risk Management
 
-> **Bagel** is the name of my beloved dog 🐶. You can find her in the header image above.
