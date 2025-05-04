@@ -23,14 +23,6 @@ However, since graduating from college, I have gradually transitioned all my dig
     - Enable clicking on wallpaper to reveal desktop, only in stage manager
     - Hide dock use `Cmd + Option + D` to toggle
 
-Set up keyboard repeat rate and delay until repeat
-
-```shell
-defaults write -g ApplePressAndHoldEnabled 0
-```
-
-Productivity tip: Prefer keyboard over mouse or trackpad. Navigating with a keyboard is quicker than moving the cursor. I use numerous keyboard shortcuts and prefer VIM mode when writing and coding. Wondering how to navigate using a keyboard? An app called Raycast can be extremely useful. Introduction provided below.
-
 
 ## Configs
 
@@ -49,7 +41,11 @@ Homebrew
 Casks
 
 ```shell
-brew install --cask miniconda iterm2 Raycast zoom itsycal pdf-expert r rstudio google-chrome microsoft-teams jetbrains-toolbox karabiner-elements logi-options+
+brew install --cask miniconda Raycast zoom itsycal pdf-expert r rstudio google-chrome microsoft-teams karabiner-elements visual-studio-code warp
+```
+
+```shell
+brew install --cask nikitabobko/tap/aerospace
 ```
 
 Formulas
@@ -70,11 +66,3 @@ brew install mysql
 conda config --set auto_activate_base false
 ```
 
-## Packer
-
-In order to use nvim packer, we need to install it first:
-
-```shell
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
