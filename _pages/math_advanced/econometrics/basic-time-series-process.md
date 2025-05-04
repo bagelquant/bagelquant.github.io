@@ -257,32 +257,3 @@ $$
 \text{dif}(\text{dif}(y_t)) = (y_t - y_{t-1}) - (y_{t-1} - y_{t-2}) = y_t - 2y_{t-1} + y_{t-2}.
 $$
 
-## 4.9 ARIMA-GARCH Model
-
-The Autoregressive Integrated Moving Average-Generalized Autoregressive Conditional Heteroskedasticity (ARIMA-GARCH) model is a combination of the ARIMA model and the GARCH model. The ARIMA model is used to model the time series, and the GARCH model is used to model the volatility of the time series.
-
-The ARIMA-GARCH model is defined as:
-
-$$
-y_t = x_t + \epsilon_t,
-$$
-
-where:
-
-- {$y_t$} is the time series,
-- {$x_t$} mean reverting process,
-- {$\epsilon_t$} is the error term,
-
-and:
-
-$$
-\epsilon_t = \sigma_t z_t, \quad z_t \sim D(0, 1),
-$$
-
-- $D(0, 1)$ is a distribution with mean 0 and variance 1, e.g., the standard normal distribution,
-- $\sigma_t$ is the time-varying volatility that follows ARMA model,
-
-$$
-\sigma_t^2 = \omega + \alpha_1 \epsilon_{t-1}^2 + \alpha_2 \epsilon_{t-2}^2 + ... + \beta_1 \sigma_{t-1}^2 + \beta_2 \sigma_{t-2}^2 + ....
-$$
-

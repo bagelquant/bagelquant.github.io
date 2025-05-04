@@ -1,8 +1,7 @@
 ---
 title: "Optimization Models in Finance"
+layout: splash
 permalink: /optimization/
-sidebar:
-    nav: "optimization"
 ---
 
 Optimization has been a fundamental topic throughout human history. In ancient times, classic geometric problems, such as maximizing the area of a rectangle inscribed in a circle, exemplified this discipline. Today, optimization plays a crucial role across various fields, including physics, economics, engineering, and finance, serving as a powerful tool for identifying the best solutions from a set of feasible options.
