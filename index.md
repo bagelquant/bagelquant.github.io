@@ -20,31 +20,15 @@ BagelQuant offers a unique perspective on the industry. Here is a map of the qua
 
 ## Topic lists:
 
-Math Basics:
-
-- Linear Algebra
-- Calculus
-- Probability
-- Statistics
-
-Math Advanced:
-
-- [Optimization](_pages/math_advanced/optimization/optimization.md)
-- Stochastic Calculus
-- [Econometrics](_pages/math_advanced/econometrics/econometrics.md)
-- Financial Time Series
-- Machine Learning
-
-Quant Models:
-
-- Utility Theory
-- Mean-Variance Optimization(Modern Portfolio Theory)
-- Consumption-based Asset Pricing
-- Factor Models
-- Black-Scholes Model
-- Binomial Tree
-- Interest Rate Models
-- Monte Carlo Simulation
-- Algorithmic Trading
-- Risk Management
-
+| **Math Basics**     | **Math Advanced**                                                                 | **Quant Models**                          |
+|---------------------|-----------------------------------------------------------------------------------|-------------------------------------------|
+| Linear Algebra       | [Optimization](_pages/math_advanced/optimization/optimization.md)               | Utility Theory                             |
+| Calculus             | Stochastic Calculus                                                              | Mean-Variance Optimization (Modern Portfolio Theory) |
+| Probability          | [Econometrics](_pages/math_advanced/econometrics/econometrics.md)               | Consumption-based Asset Pricing            |
+| Statistics           | Financial Time Series                                                            | Factor Models                              |
+|                     | Machine Learning                                                                 | Black-Scholes Model                        |
+|                     |                                                                                   | Binomial Tree                              |
+|                     |                                                                                   | Interest Rate Models                       |
+|                     |                                                                                   | Monte Carlo Simulation                     |
+|                     |                                                                                   | Algorithmic Trading                        |
+|                     |                                                                                   | Risk Management                            |
