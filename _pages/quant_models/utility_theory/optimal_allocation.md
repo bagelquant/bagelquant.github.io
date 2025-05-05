@@ -8,7 +8,7 @@ sidebar:
 With the utility function, we can now discuss the optimal decision-making. We could link utilty with certain decision-making activities, such as asset allocation or investment strategies. The goal is to maximize the expected utility of the decision. Obviously, the decision-making effects the wealth(Wealth is a function of certain decision-making process), wealth effects the utility(Utility is a function of wealth), therefore:
 
 $$
-u(W)] = u(W(x)),
+u(W) = u(W(x)),
 $$
 
 where:
