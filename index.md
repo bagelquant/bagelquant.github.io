@@ -22,7 +22,7 @@ BagelQuant offers a unique perspective on the industry. Here is a map of the qua
 
 | **Math Basics**     | **Math Advanced**                                                                 | **Quant Models**                              | **Finance**         |
 |---------------------|-----------------------------------------------------------------------------------|-----------------------------------------------|---------------------|
-| Linear Algebra       | [Optimization](_pages/math_advanced/optimization/optimization.md)               | Utility Theory                                 | Basic Finance       |
+| Linear Algebra       | [Optimization](_pages/math_advanced/optimization/optimization.md)               | [Utility Theory](_pages/quant_models/utility_theory/utility_theory.md)                                 | Basic Finance       |
 | Calculus             | Stochastic Calculus                                                              | Mean-Variance Optimization (Modern Portfolio Theory) | Stocks              |
 | Probability          | [Econometrics](_pages/math_advanced/econometrics/econometrics.md)               | Consumption-based Asset Pricing                | Fixed Income        |
 | Statistics           | Financial Time Series                                                            | Factor Models                                  | Derivatives         |
