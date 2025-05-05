@@ -61,4 +61,31 @@ bagel-tushare:
         - title: "API Reference"
           url: /bagel-tushare/api-reference/
 
+utility-theory:
+    - title: "Utility Theory"
+      url: /utility-theory/
+      children:
+        - title: "Utility Function"
+          url: /utility-theory/utility-function/
+        - title: "Optimal Allocation"
+          url: /utility-theory/optimal-allocation/
+        - title: "Absolute and Relative Risk Aversion"
+          url: /utility-theory/absolute-and-relative-risk-aversion/
+        - title: "Stochastic Dominance"
+          url: /utility-theory/stochastic-dominance/
+
+mean-variance:
+    - title: "Mean-Variance Analysis"
+      url: /mean-variance/
+      children:
+        - title: "From Optimaized Utility to Mean-Variance Analysis"
+          url: /mean-variance/from-optimized-utility-to-mean-variance-analysis/
+        - title: "Mean-Variance Analysis without Risk-Free Asset"
+          url: /mean-variance/mean-variance-analysis-without-risk-free-asset/
+        - title: "Efficient Frontier without Risk-Free Asset"
+          url: /mean-variance/efficient-frontier-without-risk-free-asset/
+        - title: "Mean-Variance Analysis with Risk-Free Asset"
+          url: /mean-variance/mean-variance-analysis-with-risk-free-asset/
+        - title: "Market Portfolio and Security Market Line"
+          url: /mean-variance/market-portfolio-and-security-market-line/
 
