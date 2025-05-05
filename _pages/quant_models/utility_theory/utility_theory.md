@@ -15,6 +15,5 @@ In this section, we first introduce the utility function, which is a mathematica
 1. [Utility Function](utility_function.md)
 2. [Optimal Allocation](optimal_allocation.md)
 3. [Absolute and Relative Risk Aversion](absolute_and_relative_risk_aversion.md)
-4. [Stochastic Dominance](stochastic_dominance.md)
 
 The utility optimization is closely related to the pricing models in finance. Since the price of any asset could considered as the wealth allocation of the overall "market" (the combination of all rational investors). We could further utilize this concept in [mean-variance portfolio optimization](../mean_variance/mean_variance.md), and [comsumption-based asset pricing models](../consumption_based_pricing/consumption_based_pricing.md).
