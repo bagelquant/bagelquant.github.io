@@ -1,4 +1,6 @@
 main:
+  - title: "About Me"
+    url: /about-me/
   - title: "Projects"
     url: /projects/
   - title: "Posts"
@@ -7,8 +9,6 @@ main:
   #   url: /categories/
   # - title: "Tags"
   #   url: /tags/
-  - title: "About Me"
-    url: /about-me/
 
 econometrics:
     - title: "Econometrics"
