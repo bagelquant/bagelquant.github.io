@@ -14,13 +14,13 @@ We can use the concept of utility to measure the "interest" of a decision. Utili
 Example:
 
 $$
-u(W) = \ln(W)
+u(W) = \ln(W),
 $$
 
 Where $W$ is the wealth of the individual. The logical assumption should be that, the more wealth you have, the more utility you have. A rational person should always choose the option that maximizes their expectated utility, therefore:
 
 $$
-\text{maximize } E[u(W)]
+\text{maximize } E[u(W)].
 $$
 
 Utility functions are "imaginary" functions, it not only could have different forms, every individual could have different utility functions. The utility function is a subjective measure of satisfaction, and it can vary from person to person.
@@ -33,8 +33,8 @@ Risk aversion is a concept in economics and finance that describes an individual
 
 $$
 \begin{align*}
-\text{Gamble} & : \text{Win } 100 \text{ with probability } 0.5 \\
-& \text{Lose } 100 \text{ with probability } 0.5
+\text{Gamble} & : \text{Win } 100 \text{ with probability } 0.5, \\
+& \text{Lose } 100 \text{ with probability } 0.5.
 \end{align*}
 $$
 
@@ -44,8 +44,8 @@ Writing the gamble in variable $\tilde x$ form (Binomial variable):
 
 $$
 \tilde x = \begin{cases}
-100 & \text{with probability } 0.5 \\
--100 & \text{with probability } 0.5
+100 & \text{with probability } 0.5, \\
+-100 & \text{with probability } 0.5.
 \end{cases}
 $$
 
@@ -54,7 +54,7 @@ $$
 Suppose you have initial wealth $W_0 = 1000$, then the expected wealth after the gamble is:
 
 $$
-E[W] = 0.5 \cdot (W_0 + 100) + 0.5 \cdot (W_0 - 100) = W_0
+E[W] = 0.5 \cdot (W_0 + 100) + 0.5 \cdot (W_0 - 100) = W_0.
 $$
 
 If you are **unwilling** to accept the gamble, then you are **risk averse**. You should have higher utility with certainty than with the gamble, then:
