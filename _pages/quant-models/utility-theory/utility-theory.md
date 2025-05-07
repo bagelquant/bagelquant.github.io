@@ -3,7 +3,7 @@ title: "Utility Theory"
 permalink: /utility-theory/
 layout: splash
 header:
-  overlay_image: /assets/images/quant-skills-header.png
+  overlay_image: /assets/images/radio-telescope.png
 ---
 
 A rational decision maker should always choose the option that maximizes their "interest". If we could quantify individuals' "interest" in a decision-making activity, we could use simple optimization methods like calculus to find the best decision. This is where utility theory comes into play.
