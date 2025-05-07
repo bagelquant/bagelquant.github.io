@@ -73,8 +73,6 @@ utility-theory:
           url: /utility-theory/optimal-allocation/
         - title: "Absolute and Relative Risk Aversion"
           url: /utility-theory/absolute-and-relative-risk-aversion/
-        - title: "Stochastic Dominance"
-          url: /utility-theory/stochastic-dominance/
 
 mean-variance:
     - title: "Mean-Variance Analysis"
