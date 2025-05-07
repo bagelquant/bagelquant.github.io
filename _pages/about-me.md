@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Yanzhong Huang"
+title: "Yanzhong(Eric) Huang"
 permalink: /about-me/
 excerpt: "M.S. Quantitative Finance"
 header:
@@ -9,8 +9,6 @@ header:
     - label: "Download Resume"
       url: "https://bagelquant.github.io/assets/docs/Yanzhong-Huang-Resume.pdf"
 ---
-
-## Yanzhong(Eric) Huang
 
 - Current Master of Quantitative Finance at Rutgers Business School
 - Master’s degree in Banking and Finance from Monash University
