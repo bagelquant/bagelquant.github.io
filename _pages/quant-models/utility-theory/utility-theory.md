@@ -12,8 +12,8 @@ We use the concept of "utility" to measure the "interest" of a decision. Utility
 
 In this section, we first introduce the utility function, which is a mathematical representation of this concept, assigning a numerical value to each possible outcome based on the individual's preferences. We then explore the implications of risk aversion and how it affects decision-making under uncertainty. Finally, we discuss stochastic dominance, a method for comparing different risky prospects.
 
-1. [Utility Function](utility_function.md)
-2. [Optimal Allocation](optimal_allocation.md)
-3. [Absolute and Relative Risk Aversion](absolute_and_relative_risk_aversion.md)
+1. [Utility Function](utility-function.md)
+2. [Optimal Allocation](optimal-allocation.md)
+3. [Absolute and Relative Risk Aversion](absolute-and-relative-risk-aversion.md)
 
-The utility optimization is closely related to the pricing models in finance. Since the price of any asset could considered as the wealth allocation of the overall "market" (the combination of all rational investors). We could further utilize this concept in [mean-variance portfolio optimization](../mean_variance/mean_variance.md), and [comsumption-based asset pricing models](../consumption_based_pricing/consumption_based_pricing.md).
+The utility optimization is closely related to the pricing models in finance. Since the price of any asset could considered as the wealth allocation of the overall "market" (the combination of all rational investors). We could further utilize this concept in [mean-variance portfolio optimization](../mean-variance/mean-variance.md), and [comsumption-based asset pricing models](../consumption-based-pricing/consumption-based-pricing.md).

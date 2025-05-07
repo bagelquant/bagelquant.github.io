@@ -27,4 +27,4 @@ This topic will provide a comprehensive understanding of mean-variance portfolio
 
 Note: this section are math focused, since this is a quant blog. We will delve into the math details of the mean-variance analysis.
 
-For more contentes optimization methods, please refer to [Optimization Models in Finance](../../math_advanced/optimization/optimization.md).
+For more contentes optimization methods, please refer to [Optimization Models in Finance](../../math-advanced/optimization/optimization.md).
