@@ -78,8 +78,8 @@ mean-variance:
       children:
         - title: "From Optimaized Utility to Mean-Variance Analysis"
           url: /mean-variance/from-optimized-utility-to-mean-variance-analysis/
-        - title: "Mean-Variance Analysis without Risk-Free Asset"
-          url: /mean-variance/mean-variance-analysis-without-risk-free-asset/
+        - title: "Solution to the Mean-Variance Optimization Problem"
+          url: /mean-variance/solution-to-the-mean-variance-optimization-problem/
         - title: "Efficient Frontier without Risk-Free Asset"
           url: /mean-variance/efficient-frontier-without-risk-free-asset/
         - title: "Mean-Variance Analysis with Risk-Free Asset"
