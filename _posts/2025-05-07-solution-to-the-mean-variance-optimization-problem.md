@@ -78,7 +78,7 @@ where:
 - $\boldsymbol g = \frac{1}{D} \left( B \cdot \boldsymbol V^{-1} \boldsymbol 1 - A \cdot \boldsymbol V^{-1} \boldsymbol \mu \right)$, $N \times 1$ vector
 - $\boldsymbol h = \frac{1}{D} \left( C \cdot \boldsymbol V^{-1} \boldsymbol \mu - A \cdot \boldsymbol V^{-1} \boldsymbol 1 \right)$, $N \times 1$ vector
 
-It is seems like a complex formula, but if we ignore all computation details, $\bold g$ and $\boldsymbol h$ are just two vectors we already known (given $\boldsymbol V$ and $\boldsymbol \mu$), and the optimal weights are just a simple linear function.
+It is seems like a complex formula, but if we ignore all computation details, $\boldsymbol g$ and $\boldsymbol h$ are just two vectors we already known (given $\boldsymbol V$ and $\boldsymbol \mu$), and the optimal weights are just a simple linear function.
 
 ## Minimum Variance Portfolio (MVP)
 
