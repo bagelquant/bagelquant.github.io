@@ -16,13 +16,14 @@ The target is really simple, for target expected return $E[\tilde r_p]$ (Expecte
 
 $$
 \begin{align*}
-\min_{{\boldsymbol W}}  \frac{1}{2} (\boldsymbol W^T \boldsymbol V \boldsymbol W), \\
+\min_{\boldsymbol W}  \frac{1}{2} (\boldsymbol W^T \boldsymbol V \boldsymbol W), \\
 \text{s.t. } \boldsymbol W^T \boldsymbol 1 = 1, \\
 \boldsymbol W^T \boldsymbol \mu = E[\tilde r_p], \\
 \end{align*}
 $$
 
 where:
+
 - $\boldsymbol W$ is the weight vector of the portfolio
 - $\boldsymbol V$ is the covariance matrix of the asset returns
 - $\boldsymbol \mu$ is the vector of expected returns
