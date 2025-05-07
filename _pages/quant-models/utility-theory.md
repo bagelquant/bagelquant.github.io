@@ -2,7 +2,6 @@
 title: "Utility Theory"
 permalink: /utility-theory/
 layout: splash
-search: true
 header:
   overlay_image: /assets/images/radio-telescope.png
 ---
@@ -13,8 +12,8 @@ We use the concept of "utility" to measure the "interest" of a decision. Utility
 
 In this section, we first introduce the utility function, which is a mathematical representation of this concept, assigning a numerical value to each possible outcome based on the individual's preferences. We then explore the implications of risk aversion and how it affects decision-making under uncertainty. Finally, we discuss stochastic dominance, a method for comparing different risky prospects.
 
-1. [Utility Function](utility-function.md)
-2. [Optimal Allocation](optimal-allocation.md)
-3. [Absolute and Relative Risk Aversion](absolute-and-relative-risk-aversion.md)
+1. [Utility Function](https://bagelquant.com/utility-theory/utility-function)
+2. [Optimal Allocation](https://bagelquant.com/utility-theory/optimal-allocation)
+3. [Absolute and Relative Risk Aversion](https://bagelquant.com/utility-theory/absolute-and-relative-risk-aversion)
 
-The utility optimization is closely related to the pricing models in finance. Since the price of any asset could considered as the wealth allocation of the overall "market" (the combination of all rational investors). We could further utilize this concept in [mean-variance portfolio optimization](../mean-variance/mean-variance.md), and [comsumption-based asset pricing models](../consumption-based-pricing/consumption-based-pricing.md).
+The utility optimization is closely related to the pricing models in finance. Since the price of any asset could considered as the wealth allocation of the overall "market" (the combination of all rational investors). We could further utilize this concept in [mean-variance portfolio optimization](https://bagelquant.com/mean-variance), and [comsumption-based asset pricing models](https://bagelquant.com/comsumption-based-pricing).

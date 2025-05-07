@@ -12,14 +12,14 @@ The mean-variance optimization framework is based on the following assumptions: 
 
 We will explore the following topics in this section:
 
-1. [From Optimized Utility to Mean-Variance Analysis](from-optimized-utility-to-mean-variance-analysis.md)
-2. [Mean-Variance Analysis without Risk-Free Asset](mean-variance-analysis-without-risk-free-asset.md)
-3. [Efficient Frontier without Risk-Free Asset](efficient-frontier-without-risk-free-asset.md)
-4. [Mean-Variance Analysis with Risk-Free Asset](mean-variance-analysis-with-risk-free-asset.md)
-5. [Market Portfolio and Security Market Line](market-portfolio-and-security-market-line.md)
+1. [From Optimized Utility to Mean-Variance Analysis](https://bagelquant.com/mean-variance/from-optimized-utility-to-mean-variance-analysis/)
+2. [Solution to the Mean-Variance Optimization Problem](https://bagelquant.com/mean-variance/solution-to-the-mean-variance-optimization-problem/)
+3. [Efficient Frontier without Risk-Free Asset](https://bagelquant.com/mean-variance/efficient-frontier-without-risk-free-asset/)
+4. [Solution to the Mean-Variance Optimization Problem with Risk-Free Asset](https://bagelquant.com/mean-variance/solution-to-the-mean-variance-optimization-problem-with-risk-free-asset/)
+5. [Market Portfolio and Security Market Line](https://bagelquant.com/mean-variance/market-portfolio-and-security-market-line/)
 
 This topic will provide a comprehensive understanding of mean-variance portfolio optimization and its applications in finance. It further relates to the CAPM (Capital Asset Pricing Model) and APT (Arbitrage Pricing Theory), which are essential concepts in modern finance.
 
 Note: this section are math focused, since this is a quant blog. We will delve into the math details of the mean-variance analysis.
 
-For more contentes optimization methods, please refer to [Optimization Models in Finance](../../math-advanced/optimization/optimization.md).
+For more contentes optimization methods, please refer to [Optimization Models in Finance](https://bagelquant.com/optimization/).

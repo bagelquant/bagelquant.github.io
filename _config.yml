@@ -21,7 +21,6 @@ twitter_username: EricYanzhongH
 github_username: bagelquant
 minimal_mistakes_skin: dirt 
 search: true
-search_full_content: true
 
 # Build settings
 markdown: kramdown
@@ -57,9 +56,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Eric Huang"
+  name   : "Yanzhong(Eric) Huang"
   avatar : "/assets/images/eric-head-square.png"
-  bio    : "Current MQF student at Rutgers Business School. 3 years of FOF experience. Passionate about quant and data science."
+  bio    : "MQF student at Rutgers Business School. 3 years of FOF experience. Passionate about quant and data science."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -124,7 +123,6 @@ defaults:
       share: true
       mathjax: true
       related: false
-      search: true
       comments: true
 
 # code block
