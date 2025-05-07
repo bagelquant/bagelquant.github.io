@@ -74,13 +74,13 @@ where:
 - $\pi$ is the risk premium
 - $W_0 - \pi$ is the certainty equivalent
 
-![Certainty equivalent](attachments/risk_aversion.png)
+![Certainty equivalent](/assets/post_img/risk_aversion.png)
 
 Source: [Risk Aversion](https://en.wikipedia.org/wiki/Risk_aversion)
 
 With Jensen's inequality, we can prove that a risk averse person will always have a **concave** utility function.
 
-![Different utility functions](attachments/risk_aversion_2.png)
+![Different utility functions](/assets/post_img/risk_aversion_2.png)
 
 Source: [Certainty Equivalent](https://breakingdownfinance.com/finance-topics/behavioural-finance/certainty-equivalent/)
 
