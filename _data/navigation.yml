@@ -24,8 +24,6 @@ econometrics:
           url: /econometrics/logistic-regression/
         - title: "Basic Time Series Process"
           url: /econometrics/basic-time-series-process/
-        - title: "R basic"
-          url: /econometrics/r-basics/
 
 optimization:
     - title: "Optimization"
