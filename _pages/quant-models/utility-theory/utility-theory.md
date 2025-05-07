@@ -2,6 +2,7 @@
 title: "Utility Theory"
 permalink: /utility-theory/
 layout: splash
+search: true
 header:
   overlay_image: /assets/images/radio-telescope.png
 ---

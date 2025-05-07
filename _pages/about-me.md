@@ -3,6 +3,7 @@ layout: splash
 title: "Yanzhong(Eric) Huang"
 permalink: /about-me/
 excerpt: "M.S. Quantitative Finance"
+search: true
 header:
   overlay_image: /assets/images/eric-huang-prohead.png
   actions:
