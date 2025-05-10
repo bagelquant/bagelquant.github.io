@@ -14,19 +14,19 @@ This topic will explore optimization models in finance, focusing on the followin
 
 ## Introduction
 
-- [Introduction to Optimization](https://bagelquant.com/optimization/introduction-to-optimization)
+- [Introduction to Optimization](introduction-to-optimization.md)
 
 ## Theoretical Foundations
 
-- [Convex Sets and Functions](https://bagelquant.com/optimization/convex-sets-and-functions)
-- [Linear Programming](https://bagelquant.com/optimization/linear-programming)
-- [Duality in Linear Programming](https://bagelquant.com/optimization/duality-in-linear-programming)
-- [Nonlinear Programming](https://bagelquant.com/optimization/nonlinear-programming)
-- [Duality in Nonlinear Programming](https://bagelquant.com/optimization/duality-in-nonlinear-programming)
+- [Convex Sets and Functions](convex-sets-and-functions.md)
+- [Linear Programming](linear-programming.md)
+- [Duality in Linear Programming](duality-in-linear-programming.md)
+- [Nonlinear Programming](nonlinear-programming.md)
+- [Duality in Nonlinear Programming](duality-in-nonlinear-programming.md)
 
 ## Applications in Finance
 
 - [Mean-Variance Portfolio Optimization](https://bagelquant.com/mean-variance/)
-- [Value at Risk (VaR)](https://bagelquant.com/optimization/value-at-risk)
-- [AVaR and Coherent Risk Measures](https://bagelquant.com/optimization/avar-and-coherent-risk-measures)
+- [Value at Risk (VaR)](value-at-risk.md)
+- [AVaR and Coherent Risk Measures](avar-and-coherent-risk-measures.md)
 

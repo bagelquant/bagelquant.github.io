@@ -13,10 +13,10 @@ This topic also contains a practical component, where we will use Excel and R to
 
 Pre-requisite: Probability and Statistics, Calculus
 
-1. [Univariate Regression](https://bagelquant.com/econometrics/univariate-regression)
-2. [Multivariable Regression](https://bagelquant.com/econometrics/multivariable-regression)
-3. [Logistic Regression](https://bagelquant.com/econometrics/logistic-regression)
-4. [Basic Time-Series Process](https://bagelquant.com/econometrics/basic-time-series-process)
+1. [Univariate Regression](univariable-regression.md)
+2. [Multivariable Regression](multivariable-regression.md)
+3. [Logistic Regression](logistic-regression.md)
+4. [Basic Time-Series Process](basic-time-series-process.md)
 
 Additionally, further topics will be explored in Time Series Analysis.
 

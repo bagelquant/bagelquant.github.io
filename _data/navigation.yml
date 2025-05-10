@@ -42,7 +42,7 @@ optimization:
         - title: "Duality in Nonlinear Programming"
           url: /optimization/duality-in-nonlinear-programming/
         - title: "Mean-Variance Portfolio Optimization"
-          url: /optimization/mean-variance-portfolio-optimization/
+          url: /mean-variance/
         - title: "Value at Risk (VaR)"
           url: /optimization/value-at-risk-var/
         - title: "AVaR and Coherent Risk Measures"
