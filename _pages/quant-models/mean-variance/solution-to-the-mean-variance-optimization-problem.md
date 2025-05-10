@@ -4,7 +4,6 @@ permalink: /mean-variance/solution-to-the-mean-variance-optimization-problem/
 sidebar:
     nav: "mean-variance"
 ---
-
 The mean-variance optimization problem:
 
 - Minimize the portfolio's variance
@@ -115,7 +114,7 @@ $$
 \end{align*}
 $$
 
-where $C = \boldsymbol 1^T \boldsymbol V^{-1} \boldsymbol 1$. The optimal weights $\boldsymbol W$ are a linear function of the inverse of the covariance matrix and the vector of ones. 
+where $C = \boldsymbol 1^T \boldsymbol V^{-1} \boldsymbol 1$. The optimal weights $\boldsymbol W$ are a linear function of the inverse of the covariance matrix and the vector of ones. The variance of the minimum variance portfolio equalt to $\gamma = \frac{1}{C}$ (Will explore it in the next section).
 
 > We could obtain the same result by analyzing the variance and expected return of all optimal portfolios, and find the minimum variance portfolio(MVP). You could find the details in the next section [Efficient Frontier without Risk-Free Asset](https://bagelquant.com/mean-variance/efficient-frontier-without-risk-free-asset/).
 
@@ -126,30 +125,4 @@ We found:
 
 - Weights of the optimal portfolio for any given expected return
 - Weights of the minimum variance portfolio (MVP)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
