@@ -38,7 +38,7 @@ $$
 
 **Proof:**
 
-Since $\boldsymbol W^*_1$ and $\boldsymbol W^*_2$ are optimal portfolios, we have:
+Since they are optimal portfolios, we could write them as:
 
 $$
 \begin{align*}
