@@ -26,11 +26,11 @@ where:
 - $\boldsymbol g = \frac{1}{D} \left( B \cdot \boldsymbol V^{-1} \boldsymbol 1 - A \cdot \boldsymbol V^{-1} \boldsymbol \mu \right)$, $N \times 1$ vector
 - $\boldsymbol h = \frac{1}{D} \left( C \cdot \boldsymbol V^{-1} \boldsymbol \mu - A \cdot \boldsymbol V^{-1} \boldsymbol 1 \right)$, $N \times 1$ vector
 
-Clearly, all the optimal weights are a linear function of the target expected return $E[\tilde r_p]$. With a different target expected return, we could find a different optimal weight vector $\boldsymbol W^*$. All the optimal portfolios weights $\boldsymbol W_1^*$, $\boldsymbol W_2^*$, $\dots$ are on the same line in the weight space $\mathbb{R}^N$. Since they are on a straight line, we could use any two optimal portfolios to construct the other optimal portfolios. This is the ***Two Fund Theorem***.
+Clearly, all the optimal weights are a linear function of the target expected return $E[\tilde r_p]$. With a different target expected return, we could find a different optimal weight vector $\boldsymbol W^*$. All the optimal portfolios weights are on the same line in the weight space $\mathbb{R}^N$. Since they are on a straight line, we could use any two optimal portfolios to construct the other optimal portfolios. This is the ***Two Fund Theorem***.
 
 **Claim:**
 
-For any two optimal portfolios $\boldsymbol W_1^*$ and $\boldsymbol W_2^*$, the linear combination of them is also an optimal portfolio:
+For any two optimal portfolios, the linear combination of them is also an optimal portfolio:
 
 $$
 \boldsymbol W^* = \alpha \boldsymbol W^*_1 + (1 - \alpha) \boldsymbol W^*_2, \quad \forall \alpha \in [0, 1]
