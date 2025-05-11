@@ -82,8 +82,8 @@ mean-variance:
           url: /mean-variance/solution-to-the-mean-variance-optimization-problem/
         - title: "Efficient Frontier without Risk-Free Asset"
           url: /mean-variance/efficient-frontier-without-risk-free-asset/
-        - title: "Mean-Variance Analysis with Risk-Free Asset"
-          url: /mean-variance/mean-variance-analysis-with-risk-free-asset/
+        - title: "Frontier with Risk-Free Asset"
+          url: /mean-variance/frontier-with-risk-free-asset/
         - title: "Market Portfolio and Security Market Line"
           url: /mean-variance/market-portfolio-and-security-market-line/
 

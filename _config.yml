@@ -60,11 +60,11 @@ plugins:
 author:
   name   : "Yanzhong(Eric) Huang"
   avatar : "/assets/images/eric-head-square.png"
-  bio    : "MQF student at Rutgers Business School. 3 years of FOF experience. Passionate about quant and data science."
+  bio    : "- MQF of Rutgers Business School. \n- 3 years of FOF experience. \n- Passionate about quant and data science."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://bagelquant.com"
+    # - label: "Website"
+    #   icon: "fas fa-fw fa-link"
+    #   url: "https://bagelquant.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/EricYanzhongH"
@@ -121,7 +121,7 @@ defaults:
       toc: true
       toc_sticky: true
       author_profile: true
-      read_time: true
+      # read_time: true
       share: true
       mathjax: true
       related: true
