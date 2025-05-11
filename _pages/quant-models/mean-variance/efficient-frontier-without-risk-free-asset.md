@@ -87,31 +87,31 @@ $$
 \end{align*}
 $$
 
-The variance ($\sigma^2_p$) is a quadratic function of the expected return ($E[\tilde r_p]$), if we plot the expected return and variance on a 2D graph, we could find the relationship between them is a parabola. The minimum variance portfolio (MVP) is the point on the parabola with the minimum variance. 
+The variance ($\sigma^2_p$) is a quadratic function of the expected return ($E[\tilde r_p]$), if we plot the expected return and variance on a 2D graph, we could find the relationship between them is a hyperbola. The minimum variance portfolio (MVP) is the point on the hyperbola with the minimum variance. 
 
 ![Mean-Variance Frontier](attachments/mean-variance-frontier.png)
 
 ### Minimum Variance Portfolio (MVP)
 
-The minimum variance portfolio (mvp) is the point on the parabola with the minimum variance. Clearly, it has the expected return $E[\tilde r_{mvp}] = \frac{A}{C}$ and variance $\sigma^2_{mvp} = \frac{1}{C}$. 
+The minimum variance portfolio (mvp) is the point on the hyperbola with the minimum variance. Clearly, it has the expected return $E[\tilde r_{mvp}] = \frac{A}{C}$ and variance $\sigma^2_{mvp} = \frac{1}{C}$. 
 
 ### Efficient Frontier
 
-Recall the utility theory, if we assume only the mean and variance of the wealth are relevant for decision-making, any rational investor would choose the portfolio with highest expected return at given level of variance. (Top left corner of the mean-variance space). Therefore, the lower half of the parabola is not desirable, and the upper half of the parabola is the ***efficient frontier***. In summary:
+Recall the utility theory, if we assume only the mean and variance of the wealth are relevant for decision-making, any rational investor would choose the portfolio with highest expected return at given level of variance. (Top left corner of the mean-variance space). Therefore, the lower half of the hyperbola is not desirable, and the upper half of the hyperbola is the ***efficient frontier***. In summary:
 
 - **Frontier Portfolios**
-    - All parabolas are frontier portfolios
+    - All hyperbolas are frontier portfolios
     - All frontier portfolios is the lowest variance portfolio for a given expected return
     - The frontier is the edge of all feasible portfolios
     - Any two frontier portfolios could be combined to form another frontier portfolio
 - **Minimum Variance Portfolio (MVP)**
-    - The pivot point of the parabola
+    - The pivot point of the hyperbola
     - The MVP is the lowest variance portfolio of all portfolios
 - **Efficient Frontier**
-    - The upper half of the parabola
+    - The upper half of the hyperbola
     - Higher than the MVP ($E(\tilde r_p > E(\tilde r_{mvp}) = \frac{A}{C}$)
 - **Inefficient Portfolios**
-    - The lower half of the parabola
+    - The lower half of the hyperbola
     - Higher than the MVP ($E(\tilde r_p < E(\tilde r_{mvp}) = \frac{A}{C}$)
     - Not desirable
 
@@ -253,8 +253,8 @@ Key takeaways from this section:
 
 - The optimal weights $\boldsymbol W^*$ are a linear function of the target expected return $E[\tilde r_p]$.
 - The variance of the portfolio $\sigma^2_p$ is a quadratic function of the target expected return $E[\tilde r_p]$.
-- The minimum variance portfolio (MVP) is the point on the parabola with the minimum variance.
-- The efficient frontier is the upper half of the parabola, and the lower half is the inefficient portfolios.
+- The minimum variance portfolio (MVP) is the point on the hyperbola with the minimum variance.
+- The efficient frontier is the upper half of the hyperbola, and the lower half is the inefficient portfolios.
 - The covariance between any portfolio (not necessarily frontier portfolio) and the minimum variance portfolio (MVP) is equal to variance of the minimum variance portfolio (MVP).
 - The covariance between any two frontier portfolios is given by the covariance matrix $V$.
 - For any frontier portfolio $p$, except for the minimum variance portfolio (MVP), there exists a unique frontier portfolio $zc(p)$ such that the covariance between $p$ and $zc(p)$ is zero.

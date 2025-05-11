@@ -15,7 +15,7 @@ We will explore the following topics in this section:
 1. [From Optimized Utility to Mean-Variance Analysis](from-optimized-utility-to-mean-variance-analysis.md)
 2. [Solution to the Mean-Variance Optimization Problem](solution-to-the-mean-variance-optimization-problem.md)
 3. [Efficient Frontier without Risk-Free Asset](efficient-frontier-without-risk-free-asset.md)
-4. [Solution to the Mean-Variance Optimization Problem with Risk-Free Asset](solution-to-the-mean-variance-optimization-problem-with-risk-free-asset.md)
+4. [Frontier With Risk-Free Asset](frontier-with-risk-free-asset.md)
 5. [Market Portfolio and Security Market Line](market-portfolio-and-security-market-line.md)
 
 This topic will provide a comprehensive understanding of mean-variance portfolio optimization and its applications in finance. It further relates to the CAPM (Capital Asset Pricing Model) and APT (Arbitrage Pricing Theory), which are essential concepts in modern finance.
