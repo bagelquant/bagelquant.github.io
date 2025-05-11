@@ -6,20 +6,35 @@ header:
   overlay_image: /assets/images/radio-telescope.png
 ---
 
-Mean-variance portfolio optimization is the core of modern portfolio theory, which was introduced by Harry Markowitz in 1952. The main idea is to construct an optimal portfolio that maximizes the expected return for a given level of risk or minimizes the risk for a given level of expected return. And using variance as a measure of risk.
+Mean-variance portfolio optimization is the foundation of modern portfolio theory, introduced by Harry Markowitz in 1952. The central idea is to construct an optimal portfolio that either **maximizes expected return for a given level of risk** or **minimizes risk for a given expected return**, using **variance** as the measure of risk.
 
-The mean-variance optimization framework is based on the following assumptions: Investors are rational and risk-averse, meaning they prefer higher returns for a given level of risk. Investors have a one-period investment horizon. No transaction costs or taxes are involved in buying and selling assets. Only the mean and variance of asset returns are relevant for decision-making. (Explained in the first section below)
+This framework relies on several key assumptions:
 
-We will explore the following topics in this section:
+- Investors are rational and risk-averse, preferring higher returns for the same level of risk.  
+- Investment decisions are made over a single-period horizon.  
+- There are no transaction costs or taxes.  
+- Only the **mean** and **variance** of asset returns are considered relevant for portfolio selection.  
+(These assumptions will be discussed in detail in the first section below.)
 
-1. [From Optimized Utility to Mean-Variance Analysis](from-optimized-utility-to-mean-variance-analysis.md)
-2. [Solution to the Mean-Variance Optimization Problem](solution-to-the-mean-variance-optimization-problem.md)
-3. [Efficient Frontier without Risk-Free Asset](efficient-frontier-without-risk-free-asset.md)
-4. [Frontier With Risk-Free Asset](frontier-with-risk-free-asset.md)
-5. [Market Portfolio and Security Market Line](market-portfolio-and-security-market-line.md)
+When I first encountered modern portfolio theory in a traditional finance program, it was taught in a rather abstract way. We began by plotting two risky assets in the mean-variance space, constructing a frontier hyperbola, and introducing the concepts of the **efficient frontier** and the **market portfolio**. While this provided a strong conceptual foundation—particularly intuitive for finance students—it lacked mathematical rigor.
 
-This topic will provide a comprehensive understanding of mean-variance portfolio optimization and its applications in finance. It further relates to the CAPM (Capital Asset Pricing Model) and APT (Arbitrage Pricing Theory), which are essential concepts in modern finance.
+I later revisited this topic in **Professor [Yangru Wu](https://www.business.rutgers.edu/faculty/yangru-wu)’s Financial Modeling** course, which significantly deepened my understanding. His approach framed mean-variance analysis from a mathematical perspective, filling in the theoretical gaps and offering a more comprehensive rationale for its application. This section draws upon Professor Wu’s course materials and my own reflections. All accompanying plots are derived from his lectures. I am sincerely grateful to Professor Wu for his insights.
 
-Note: this section are math focused, since this is a quant blog. We will delve into the math details of the mean-variance analysis.
 
-For more contentes optimization methods, please refer to [Optimization Models in Finance](https://bagelquant.com/optimization/).
+## Topics Covered in This Section
+
+1. [From Optimized Utility to Mean-Variance Analysis](from-optimized-utility-to-mean-variance-analysis.md)  
+2. [Solution to the Mean-Variance Optimization Problem](solution-to-the-mean-variance-optimization-problem.md)  
+3. [Efficient Frontier without a Risk-Free Asset](efficient-frontier-without-risk-free-asset.md)  
+4. [Frontier with a Risk-Free Asset](frontier-with-risk-free-asset.md)  
+5. [Market Portfolio and the Security Market Line](market-portfolio-and-security-market-line.md)
+
+
+This section provides a rigorous and structured understanding of mean-variance portfolio optimization and its foundational role in finance. It also lays the groundwork for deeper discussions of the **Capital Asset Pricing Model (CAPM)** and **Arbitrage Pricing Theory (APT)**—both essential to modern financial theory.
+
+> **Note:** This is a math-focused series, aligned with the quant orientation of this blog. We will explore the detailed mathematical derivations and insights behind mean-variance optimization.
+
+For additional topics on optimization techniques in finance, visit:  
+
+👉 [Optimization Models in Finance](https://bagelquant.com/optimization/)
+
