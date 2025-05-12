@@ -29,6 +29,7 @@ I later revisited this topic in **Professor [Yangru Wu](https://www.business.rut
 4. [Frontier with a Risk-Free Asset](frontier-with-risk-free-asset.md)  
 5. [Market Portfolio and the Security Market Line](market-portfolio-and-security-market-line.md)
 
+For the calculation appearing in the above sections, I create a simple Python package called [bagel-mean-variance](https://github.com/bagelquant/bagel-mean-variance). It is designed to calculate optimal portfolio weights using we learned in this section. The package is implemented using pure matrix operations, avoiding the use of optimization libraries. It is simple, efficient, and flexible, making it ideal for financial analysis and portfolio management tasks.
 
 This section provides a rigorous and structured understanding of mean-variance portfolio optimization and its foundational role in finance. It also lays the groundwork for deeper discussions of the **Capital Asset Pricing Model (CAPM)** and **Arbitrage Pricing Theory (APT)**—both essential to modern financial theory.
 
