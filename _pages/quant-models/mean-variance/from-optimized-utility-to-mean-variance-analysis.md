@@ -36,6 +36,8 @@ Before we solve the optimization problem, there is a question remains: why using
 
 ## Taylor Expansion of Utility Function
 
+Utility function is a mathematical representation of an investor's preferences over different levels of wealth, "utility" is a measure of satisfaction or happiness derived from wealth, a risk averse investor would have a increasing concave utility function, the optimal choice for the investor is to maximize the expected utility of wealth. The utility function is a key concept in economics and finance, as it helps to explain how individuals make decisions under uncertainty. Details of the utility function and its properties are discussed in the [Utility Theory](https://bagelquant.com/quant-models/utility-theory/) section. 
+
 Consider the Taylor expansion of the utility function around the mean wealth level $E[\tilde W]$:
 
 $$
