@@ -87,3 +87,11 @@ mean-variance:
         - title: "Market Portfolio and Security Market Line"
           url: /mean-variance/market-portfolio-and-security-market-line/
 
+
+factor-models:
+    - title: "Factor Models"
+      url: /factor-models/
+      children:
+        - title: "Dirive CAPM"
+          url: /factor-models/derive-capm/
+
