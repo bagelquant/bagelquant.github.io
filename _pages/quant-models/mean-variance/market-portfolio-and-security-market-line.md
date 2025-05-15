@@ -13,7 +13,7 @@ For an individual investor, he or she could achieve the optimal portfolio by com
 
 From previous discussion, we know the two fontier portfolios (with risk-free asset or not) cound generate another frontier portfolio, a investor could achieve any point on the frontier by combining two distinct frontier portfolios, that is a two-fund separation. 
 
-If the frontier does not exist, for example, there is only one risky asset and risk-free, and ($\r_f > \mu$), then the investor could only invest in the risk-free asset, since it has zero variance and higher return. This case, all investor would only choose the risk-free asset, that is a One-fund separation. 
+If the frontier does not exist, for example, there is only one risky asset and risk-free, and ($r_f > \mu$), then the investor could only invest in the risk-free asset, since it has zero variance and higher return. This case, all investor would only choose the risk-free asset, that is a One-fund separation. 
 
 Formal difinition of one-fund separation is: A vector of asset returns $\tilde r$ exhibits one-fund separation if there exists a feasible portfolio $\alpha$ such that every risk-averse investor will prefers portfolio $\alpha$ to any other feasible portfolio.
 
