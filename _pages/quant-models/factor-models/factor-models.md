@@ -57,6 +57,19 @@ The Fama-French 3-factor model is an extension of the CAPM, which adds two addit
 
 ## Sections 
 
-- [Derive CAPM](derive-capm.md)
+In the following sections
 
-
+- CAPM
+    - [Derive CAPM](derive-capm.md)
+    - [Empircal Test of CAPM](empirical-test-capm.md)
+- Factor Models
+    - [APT and Factor Models](apt-factor-models.md)
+    - [How to identify a factor](how-to-identify-a-factor.md)
+    - [Well known factors](well-known-factors.md)
+- Market Anomalies
+    - [Market Anomalies](market-anomalies.md)
+- Usage of Factor Models
+    - [Portfolio Construction](portfolio-construction.md)
+    - [Risk Management](risk-management.md)
+    - [Performance Evaluation](performance-evaluation.md)
+    
