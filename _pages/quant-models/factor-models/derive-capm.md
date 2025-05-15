@@ -137,8 +137,8 @@ This is the CAPM! We have derived the CAPM from utility maximization directly, w
 
 Note, Interpretation of terms:
 
-- $(sum_{i=1}^N \theta_{i}^{-1})^{-1}$ is the market absolute risk aversion, is the harmonic mean of all investors' absoulte risk aversion.
-- $W_0 (sum_{i=1}^N \theta_{i}^{-1})^{-1}$ can be interpreted as the aggregate relative risk aversion of the market.
+- $(\sum_{i=1}^N \theta_{i}^{-1})^{-1}$ is the market absolute risk aversion, is the harmonic mean of all investors' absoulte risk aversion.
+- $W_0 (\sum_{i=1}^N \theta_{i}^{-1})^{-1}$ can be interpreted as the aggregate relative risk aversion of the market.
 
 Summarize of the assumptions:
 
