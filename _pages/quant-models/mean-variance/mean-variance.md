@@ -20,7 +20,6 @@ When I first encountered modern portfolio theory in a traditional finance progra
 
 I later revisited this topic in **Professor [Yangru Wu](https://www.business.rutgers.edu/faculty/yangru-wu)’s Financial Modeling** course, which significantly deepened my understanding. His approach framed mean-variance analysis from a mathematical perspective, filling in the theoretical gaps and offering a more comprehensive rationale for its application. This section draws upon Professor Wu’s course materials and my own reflections. All accompanying plots are derived from his lectures. I am sincerely grateful to Professor Wu for his insights.
 
-
 ## Topics Covered in This Section
 
 1. [From Optimized Utility to Mean-Variance Analysis](from-optimized-utility-to-mean-variance-analysis.md)  
@@ -38,4 +37,3 @@ This section provides a rigorous and structured understanding of mean-variance p
 For additional topics on optimization techniques in finance, visit:  
 
 👉 [Optimization Models in Finance](https://bagelquant.com/optimization/)
-

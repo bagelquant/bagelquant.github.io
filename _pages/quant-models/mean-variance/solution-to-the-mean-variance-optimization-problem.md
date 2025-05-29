@@ -21,15 +21,16 @@ $$
 $$
 
 Where:
+
 - $\boldsymbol W$ is the weight vector of the portfolio
 - $\boldsymbol V$ is the covariance matrix of the asset returns
 - $\boldsymbol \mu$ is the vector of expected returns
 - $\boldsymbol 1$ is a vector of ones
 - $E[\tilde r_p]$ is the target expected return of the portfolio
 
-> Note: $\frac{1}{2}$ is used to simplify the derivative calculation, it will not affect the optimization result.
+Note: $\frac{1}{2}$ is used to simplify the derivative calculation, it will not affect the optimization result.  
 
-> Note: We use boldface to denote vectors and matrices, and we use the transpose operator $T$ to denote the transpose of a vector or matrix.
+Note: We use boldface to denote vectors and matrices, and we use the transpose operator $T$ to denote the transpose of a vector or matrix.
 
 ## Lagrange Multiplier Method
 
@@ -118,11 +119,9 @@ where $C = \boldsymbol 1^T \boldsymbol V^{-1} \boldsymbol 1$. The optimal weight
 
 > We could obtain the same result by analyzing the variance and expected return of all optimal portfolios, and find the minimum variance portfolio(MVP). You could find the details in the next section [Efficient Frontier without Risk-Free Asset](https://bagelquant.com/mean-variance/efficient-frontier-without-risk-free-asset/).
 
-
 ## Conclusion
 
-We found: 
+We found:
 
 - Weights of the optimal portfolio for any given expected return
 - Weights of the minimum variance portfolio (MVP)
-
