@@ -1,6 +1,6 @@
 ---
-title: "Derive CAPM"
-permalink: /factor-models/derive-capm/
+title: "APT and Factor Models"
+permalink: /factor-models/apt-and-factor-models/
 sidebar:
     nav: "factor-models"
 ---
