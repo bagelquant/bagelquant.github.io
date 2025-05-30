@@ -7,7 +7,7 @@ sidebar:
 
 ## What is a Factor?
 
-As previously discussed, a *factor* is a variable that helps explain the returns of an asset. While the concept is intuitive, it is difficult to define precisely. Consider the **book-to-market (BM) ratio**—often referred to as the **value factor**. We hypothesize that firms with a high BM ratio tend to outperform those with a low BM ratio. If BM is the only factor in our model, the expected return of asset $begin:math:text$ i $end:math:text$ can be expressed as:
+As previously discussed, a *factor* is a variable that helps explain the returns of an asset. While the concept is intuitive, it is difficult to define precisely. Consider the **book-to-market (BM) ratio**—often referred to as the **value factor**. We hypothesize that firms with a high BM ratio tend to outperform those with a low BM ratio. If BM is the only factor in our model, the expected return of asset $$i$$ can be expressed as:
 
 $$
 E(r_i) = r_f + \beta_{i} \lambda_{BM}
@@ -72,6 +72,7 @@ r_i = \alpha + \beta_{i} \lambda_{BM} + \epsilon_i
 $$
 
 where:
+
 - $r_i$ is the return of asset $i$.
 - $\alpha$ is the intercept.
 - $\beta_{i}$ is the factor loading of asset $i$.
