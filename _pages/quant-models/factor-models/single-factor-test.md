@@ -26,7 +26,7 @@ This creates a classic chicken-and-egg problem!
 
 To address this, there are two main approaches:
 
-1. Estimate $E\lambda_{BM}$ first, then estimate $\beta_{i}$ using regression.
+1. Estimate $\lambda_{BM}$ first, then estimate $\beta_{i}$ using regression.
 2. Or, estimate $\beta_{i}$ first, then estimate $\lambda_{BM}$ using regression.
 
 ## Estimating Factor Return First Using the Sorting Technique
@@ -94,6 +94,8 @@ H_0: \alpha_1 = \alpha_2 = ... = \alpha_i = ... = \alpha_n = 0
 $$
 
 This test checks the validity of the model (rejecting the null hypothesis means the model is not valid).
+
+In practice, we could have some data preprocessing before running the regression, such as removing outliers, normalizing the data, or adjusting for autocorrelation and heteroscedasticity.
 
 >[!NOTE]
 >Black, Jensen, and Scholes used this time-series approach to estimate the unconditional CAPM model, where the market beta is the only factor. They could not reject the null hypothesis that the intercept is zero, indicating the CAPM model was valid in their sample.

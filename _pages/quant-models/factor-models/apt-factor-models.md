@@ -9,9 +9,7 @@ sidebar:
 
 Either mean-variance analysis or CAPM is an equilibrium model, which means that it assumes that all investors are rational and risk-averse, and they all have the same information and act in their own best interest, and the market will achieve certain equilibrium.
 
-This approach is logically sound, but it requires a lot of strong assumptions, such as some distributional assumptions, or some assumptions about the investors' utility functions, it could lead to some problems in practice. For example, here are some of the potential problems with the CAPM:
-
-1. Existence of transaction cost and other trading frictions
+This approach is logically sound, but it requires a lot of strong assumptions, such as some distributional assumptions, or some assumptions about the investors' utility functions, it could lead to some problems in practice. For example, here are some of the potential problems with the CAPM: 1. Existence of transaction cost and other trading frictions
 2. Existence of non-tradable assets, e.g. human capital
 3. Market portfolio is hard to identify, and it is not a well-defined concept
 
@@ -45,7 +43,7 @@ We should have:
 - $E(\tilde \epsilon_i) = 0$, which means the idiosyncratic risk has no expected return.
 - $\tilde f_z$ has a zero mean and variance of 1, $E(\tilde f_z) = 0$ and $E(\tilde f_z^2) = 1$, which means the factors are standardized.
 - $E(\tilde epsilon_i \tilde f_z) = 0$, which means the idiosyncratic risk is uncorrelated with the factors.
-- $E(\tilde \epsilon_i \tilde \epsilon_j) = 0$, $i \nq j$ which means the idiosyncratic risks of different assets are uncorrelated.
+- $E(\tilde \epsilon_i \tilde \epsilon_j) = 0$, $i \neq j$ which means the idiosyncratic risks of different assets are uncorrelated.
 - $E(\tilde f_z \tilde f_w) = 0$, $z \neq w$ which means the factors are uncorrelated.
 - $E(\tilde epsilon_i ^2) \equiv s_i^2 < S^2 < \infty$, which means the idiosyncratic risk of asset $i$ is finite and positive, and it is less than some upper bound $S^2$.
 - $E(\tilde r_i \tilde r_j) \equiv \sigma_{ij}$
