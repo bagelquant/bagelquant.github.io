@@ -42,7 +42,7 @@ We should have:
 
 - $E(\tilde \epsilon_i) = 0$, which means the idiosyncratic risk has no expected return.
 - $\tilde f_z$ has a zero mean and variance of 1, $E(\tilde f_z) = 0$ and $E(\tilde f_z^2) = 1$, which means the factors are standardized.
-- $E(\tilde epsilon_i \tilde f_z) = 0$, which means the idiosyncratic risk is uncorrelated with the factors.
+- $E(\tilde \epsilon_i \tilde f_z) = 0$, which means the idiosyncratic risk is uncorrelated with the factors.
 - $E(\tilde \epsilon_i \tilde \epsilon_j) = 0$, $i \neq j$ which means the idiosyncratic risks of different assets are uncorrelated.
 - $E(\tilde f_z \tilde f_w) = 0$, $z \neq w$ which means the factors are uncorrelated.
 - $E(\tilde epsilon_i ^2) \equiv s_i^2 < S^2 < \infty$, which means the idiosyncratic risk of asset $i$ is finite and positive, and it is less than some upper bound $S^2$.
