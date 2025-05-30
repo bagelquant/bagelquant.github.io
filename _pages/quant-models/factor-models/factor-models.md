@@ -54,22 +54,21 @@ where:
 
 The Fama-French 3-factor model is an extension of the CAPM, which adds two additional factors to explain the expected return of an asset. The model suggests that small firms and value firms tend to outperform large firms and growth firms, respectively.
 
-
-## Sections 
+## Sections
 
 In the following sections
 
 - CAPM
-    - [Derive CAPM](derive-capm.md)
-    - [Empircal Test of CAPM](empirical-test-capm.md)
+  - [Derive CAPM](derive-capm.md)
+  - [Empircal Test of CAPM](empirical-test-capm.md)
 - Factor Models
-    - [APT and Factor Models](apt-factor-models.md)
-    - [How to identify a factor](how-to-identify-a-factor.md)
-    - [Well known factors](well-known-factors.md)
+  - [APT and Factor Models](apt-factor-models.md)
+  - [Single Factor Test](single-factor-test.md)
+  - [Empirical Test of Factor Models](empirical-test-factor-models.md)
+  - [Well known factors and Factor Models](well-known-factors-and-factor-models.md)
 - Market Anomalies
-    - [Market Anomalies](market-anomalies.md)
+  - [Market Anomalies](market-anomalies.md)
 - Usage of Factor Models
-    - [Portfolio Construction](portfolio-construction.md)
-    - [Risk Management](risk-management.md)
-    - [Performance Evaluation](performance-evaluation.md)
-    
+  - [Portfolio Construction](portfolio-construction.md)
+  - [Risk Management](risk-management.md)
+  - [Performance Evaluation](performance-evaluation.md)
