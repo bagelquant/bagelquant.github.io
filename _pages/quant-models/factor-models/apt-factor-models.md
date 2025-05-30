@@ -79,3 +79,25 @@ If we have n assets with weights $W^n = (w_1, w_2, \ldots, w_n)$, an arbitrage o
 2. Certain payoff as $n$ gets large (zero variance), $lim_{n \to \infty} \sum_{i=1}^n \sum_{j=1}^n w_i w_j \sigma_{ij} = 0$.
 3. Positive expected return, $lim_{n \to \infty} \sum_{i=1}^n w_i E(\tilde r_i) > 0$.
 
+## Usage of Factor Models
+
+Now we have a framework to explain the expected return of an asset based on a set of factors, we could:
+
+- Construct out own factor models
+- And we could use the factor models to:
+    - Predict asset returns -> Investment Strategy -> Portfolio Management
+    - Identify mispriced assets -> Arbitrage Opportunities
+    - Evaluate the performance of a portfolio
+    - Risk Management
+    - Construct a well-diversified portfolio
+
+To construct a factor model, we need to identify the factors that drive the returns of the assets. This factors we can found in the literature, reports, or we can construct our own factors based on the data we have. The factors could be macroeconomic variables, industry-specific variables, or company-specific variables.
+
+Normally, we will test:
+
+- Single factor is significant or not,
+- Add it to a multi-factor model, jointly test the significance of all factors.
+
+>[!NOTE]
+>We will discuss the single factor test in next section, and the multi-factor test in the following sections. Once we have a factor model, we can use it to various purposes, we will discuss the usage of factor models in the later sections, such as portfolio construction, risk management, and performance evaluation.
+
