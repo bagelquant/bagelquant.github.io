@@ -6,17 +6,17 @@ header:
   overlay_image: /assets/images/radio-telescope.png
 ---
 
-For asset pricing model, there are two general approaches: equilibrium and arbitrage pricing models. 
+In asset pricing, there are two main approaches: equilibrium models and arbitrage pricing models.
 
-The general idea of equilibrium models if everyone is rational, they will act in their own best interest, the overall market will achieve certain equilibrium, it normally requires some assumptions, and based on the assumptions, we can derive the equilibrium price. 
+Equilibrium models are based on the idea that if everyone acts rationally in their own best interest, the market will reach an equilibrium. These models typically require certain assumptions, and under those assumptions, we can derive equilibrium prices.
 
-The arbitrage pricing model is based on the idea that if there is a mispricing in the market, arbitrageurs will take advantage of it, and the price will adjust to eliminate the arbitrage opportunity. A well-known example of an arbitrage pricing model is the Black-Scholes model, which is used to price options.
+Arbitrage pricing models, on the other hand, are founded on the principle that if there is a mispricing in the market, arbitrageurs will exploit it, causing prices to adjust and eliminate the arbitrage opportunity. A well-known example is the Black-Scholes model, which is used to price options.
 
-In this section, we will start will an equilibrium approach to derive the Capital Asset Pricing Model (CAPM), and then we will discuss the Arbitrage Pricing Theory (APT) and moved on to Factor Models. The model itself is quite simple and easy to understand. But as a quant, we need to understand the derivation process and analysis structure behind it, so we can construct our own models, and further implement them in the real world portfolio management.
+In this section, we begin with the equilibrium approach to derive the Capital Asset Pricing Model (CAPM), then discuss the Arbitrage Pricing Theory (APT), and finally move on to factor models. While the models themselves are conceptually straightforward, as quants, it is important to understand the derivation process and analytical structure behind them. This knowledge enables us to construct our own models and implement them in real-world portfolio management.
 
-## Short Intro to CAPM
+## Short Introduction to CAPM
 
-The CAPM uses the "market returns" as the only factor to explain the expected return of an asset, written as:
+The CAPM uses the market return as the sole factor to explain the expected return of an asset:
 
 $$
 E(R_i) = R_f + \beta_i (E(R_m) - R_f)
@@ -24,21 +24,21 @@ $$
 
 where $E(R_i)$ is the expected return of asset $i$, $R_f$ is the risk-free rate, $\beta_i$ is the sensitivity of the asset's return to the market return, and $E(R_m)$ is the expected return of the market.
 
-How do we establish this relationship? Why does this model make sense in the first place? In the CAPM section below, we will explore how we derive the CAPM. We are taking an equilibrium approach, and we will also discuss the assumptions behind it.
+How do we establish this relationship? Why does this model make sense? In the CAPM section below, we will explore the derivation of the CAPM using the equilibrium approach and discuss its underlying assumptions.
 
-## Short Intro to Factor Models
+## Short Introduction to Factor Models
 
-Factor models are trying to explain the return of an asset based on a set of factors, if it follows a linear relationship, we can use the linear regression to estimate the parameters as follows:
+Factor models aim to explain the return of an asset based on a set of factors. If the relationship is linear, we can use linear regression to estimate the parameters:
 
 $$
 E(R_i) = \alpha + \beta_1 F_1 + \beta_2 F_2 + ... + \beta_n F_n
 $$
 
-where $E(R_i)$ is the expected return of asset $i$, $\alpha$ is the intercept, $\beta_1, \beta_2, ..., \beta_n$ are the factor loadings, and $F_1, F_2, ..., F_n$ are the factors. 
+where $E(R_i)$ is the expected return of asset $i$, $\alpha$ is the intercept, $\beta_1, \beta_2, ..., \beta_n$ are the factor loadings, and $F_1, F_2, ..., F_n$ are the factors.
 
-> We could treat the CAPM as a special case of factor models, where we only have one factor, the market return.
+> The CAPM can be viewed as a special case of factor models, with the market return as the only factor.
 
-These factors can be macroeconomic variables such as interest rates, inflation rates, or other market indices, or company-specific variables such as earnings growth, dividend yield, or other financial ratios. Here is an example of a factor model, Fama-French 3-factor model(1992):
+These factors can include macroeconomic variables such as interest rates, inflation, or other market indices, as well as company-specific variables like earnings growth, dividend yield, or financial ratios. For example, the Fama-French 3-factor model (1992) is written as:
 
 $$
 E(R_i) = R_f + \beta_1 (E(R_m) - R_f) + \beta_2 SMB + \beta_3 HML
@@ -49,23 +49,24 @@ where:
 - $E(R_i)$ is the expected return of asset $i$.
 - $R_f$ is the risk-free rate.
 - $(E(R_m) - R_f)$ is the market risk premium.
-- $SMB$ (Small minus big) is the size factor, which captures the return difference between small and large firms.
-- $HML$ (High minus low) is the value factor, which captures the return difference between high and low book-to-market firms.
+- $SMB$ (Small minus Big) is the size factor, capturing the return difference between small and large firms.
+- $HML$ (High minus Low) is the value factor, capturing the return difference between high and low book-to-market firms.
 
-The Fama-French 3-factor model is an extension of the CAPM, which adds two additional factors to explain the expected return of an asset. The model suggests that small firms and value firms tend to outperform large firms and growth firms, respectively.
+The Fama-French 3-factor model extends the CAPM by adding two additional factors to better explain expected returns. It suggests that small firms and value firms tend to outperform large firms and growth firms, respectively.
 
 ## Sections
 
-In the following sections
+In the following sections:
 
 - CAPM
   - [Derive CAPM](derive-capm.md)
-  - [Empircal Test of CAPM](empirical-test-capm.md)
+  - [Empirical Test of CAPM](empirical-test-capm.md)
 - Factor Models
   - [APT and Factor Models](apt-factor-models.md)
+  - [Factor Models Construction Process](factor-models-construction-process.md)
   - [Single Factor Test](single-factor-test.md)
   - [Empirical Test of Factor Models](empirical-test-factor-models.md)
-  - [Well known factors and Factor Models](well-known-factors-and-factor-models.md)
+  - [Well-Known Factors and Factor Models](well-known-factors-and-factor-models.md)
 - Market Anomalies
   - [Market Anomalies](market-anomalies.md)
 - Usage of Factor Models

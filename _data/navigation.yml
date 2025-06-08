@@ -100,6 +100,8 @@ factor-models:
       children:
         - title: "APT and Factor Models"
           url: /factor-models/apt-and-factor-models/
+        - title: "Factor Models Construction Process"
+          url: /factor-models/factor-models-construction-process/
         - title: "Single Factor Test"
           url: /factor-models/single-factor-test/
         - title: "Empirical Test of Factor Models"

@@ -93,24 +93,24 @@ $$
 H_0: \alpha_1 = \alpha_2 = ... = \alpha_i = ... = \alpha_n = 0
 $$
 
-This test checks the validity of the model (rejecting the null hypothesis means the model is not valid).
+This test checks the validity of the model—rejecting the null hypothesis means the model is not valid.
 
-In practice, we could have some data preprocessing before running the regression, such as removing outliers, normalizing the data, or adjusting for autocorrelation and heteroscedasticity.
+In practice, it is common to preprocess the data before running the regression. This may include removing outliers, normalizing variables, or adjusting for autocorrelation and heteroscedasticity.
 
 >[!NOTE]
 >Black, Jensen, and Scholes used this time-series approach to estimate the unconditional CAPM model, where the market beta is the only factor. They could not reject the null hypothesis that the intercept is zero, indicating the CAPM model was valid in their sample.
 
-### Disadvantages of the Sorting Technique
+### Limitations of the Sorting Technique
 
-The sorting technique is simple and easy to implement. It was the first method proposed by Fama and MacBeth (1973) to estimate factor returns. However, it has some disadvantages:
+The sorting technique is straightforward and easy to implement. It was the first method proposed by Fama and MacBeth (1973) to estimate factor returns. However, it has several limitations:
 
-- It only works for factors that can be sorted, such as BM ratio, size, momentum, etc. It cannot be used for factors that cannot be sorted, such as interest rates, inflation rates, GDP growth, etc.
-- It only considers one factor at a time. Ideally, our factor mimicking portfolio should be sensitive only to the factor we are estimating and independent of other factors. The univariate sorting technique cannot guarantee this. (Bivariate sorting can address this issue, but it is more complex and has its own limitations.)
-- Grouping is intended to reduce noise in the data, but the choice of the number of groups and group size is subjective and can significantly affect results.
+- It only works for factors that can be sorted, such as BM ratio, size, or momentum. It cannot be used for factors that cannot be ranked, such as interest rates, inflation, or GDP growth.
+- It considers only one factor at a time. Ideally, a factor-mimicking portfolio should be sensitive only to the target factor and independent of others. The univariate sorting technique cannot guarantee this. (Bivariate or multivariate sorting can help, but these approaches are more complex and have their own limitations.)
+- Grouping is intended to reduce noise, but the choice of the number of groups and their sizes is subjective and can significantly affect results.
 
 ## Using Firm Characteristics as Factor Loadings
 
-The second approach is to estimate the factor loading $\beta_{i}$ first. For some style factors, such as the BM ratio, each firm has its own BM ratio—so why not use the BM ratio directly as the factor loading? We can then use a cross-sectional regression at each timestamp to estimate the factor return $\lambda_{BM}$. Suppose we have $n$ companies at timestamp $t$:
+The second approach is to estimate the factor loading $\beta_{i}$ first. For some style factors, such as the BM ratio, each firm has its own BM ratio—so we can use the BM ratio directly as the factor loading. Then, at each timestamp, we run a cross-sectional regression to estimate the factor return $\lambda_{BM}$. Suppose we have $n$ companies at timestamp $t$:
 
 $$
 E(r_{i}) - r_{f} = \alpha + \beta_{i} \lambda_{BM}
@@ -125,21 +125,20 @@ where:
 
 By running this cross-sectional regression at each rebalancing period, we obtain a time series of factor returns $\lambda_{BM}$.
 
-### Testing the Factor Return - Firm Characteristics
+### Evaluating the Factor Return Using Firm Characteristics
 
-Similarly, we can use ICs, ICIR, and t-tests to evaluate the factor return $\lambda_{BM}$.
+As before, we can use ICs, ICIR, and t-tests to evaluate the factor return $\lambda_{BM}$.
 
-This time, ICs are calculated at the stock level (whereas the previous method used group portfolios). We calculate the IC at each timestamp, treat each as an independent observation, and use a t-test to determine if ICs and factor returns $\lambda_{BM}$ are significantly different from zero.
+In this approach, ICs are calculated at the stock level (whereas the previous method used group portfolios). For each timestamp, we compute the IC, treat each as an independent observation, and use a t-test to determine whether the mean IC and the mean factor return $\lambda_{BM}$ are significantly different from zero.
 
 ## Summary
 
-As the number of factors increases, the regression results (factor returns) will differ. In this section, the goal is not to find the "true" factor return, but to determine whether a factor (an effect) is valid.
+As the number of factors increases, the regression results (factor returns) will change. The goal here is not to find the "true" factor return, but to determine whether a factor (or effect) is valid.
 
-By using the sorting technique or firm characteristics as factor loadings, we can implement statistical tests to check if a factor is valid. We can then combine multiple factors to form a factor model and perform statistical tests to assess the validity of the model.
+By using either the sorting technique or firm characteristics as factor loadings, we can apply statistical tests to assess the validity of a factor. Once validated, multiple factors can be combined into a factor model, and further statistical tests can be performed to evaluate the model as a whole.
 
-For practical application, here is an example of how to construct a factor model:
+For practical application, here is a typical process for constructing a factor model:
 
 1. **Propose an idea**: Identify a potential factor based on economic theory or empirical evidence.
 2. **Single Factor Test**: Use the sorting technique or firm characteristics as factor loadings to test whether the factor has predictive power.
-3. **Add it to the existing factor model**: If the factor is valid, add it to the existing factor model and test the overall model.
-
+3. **Add to the existing factor model**: If the factor is valid, incorporate it into the existing factor model and test the overall model.
