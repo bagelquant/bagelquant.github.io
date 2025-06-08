@@ -5,39 +5,38 @@ sidebar:
     nav: "mean-variance"
 ---
 
-The final topic of the mean-variance analysis is the **Market Portfolio** and **Security Market Line** (SML). Before we dive into the details, let's go back to the investor behavior a little bit to fully understand the concept of market portfolio, since market is the combination of all investors' portfolios.
+The final topic in mean-variance analysis is the **Market Portfolio** and the **Security Market Line (SML)**. Before diving into the details, let's revisit investor behavior to better understand the concept of the market portfolio, since the market is ultimately the aggregation of all investors' portfolios.
 
 ## Two-Fund Separation
 
-For an individual investor, he or she could achieve the optimal portfolio by combining two funds, it is called two-fund separation.
+An individual investor can achieve an optimal portfolio by combining two funds—this is known as two-fund separation.
 
-From previous discussion, we know the two fontier portfolios (with risk-free asset or not) cound generate another frontier portfolio, a investor could achieve any point on the frontier by combining two distinct frontier portfolios, that is a two-fund separation. 
+From previous discussions, we know that any two frontier portfolios (with or without a risk-free asset) can be combined to generate another frontier portfolio. Thus, an investor can reach any point on the frontier by combining two distinct frontier portfolios. This is the essence of two-fund separation.
 
-If the frontier does not exist, for example, there is only one risky asset and risk-free, and ($r_f > \mu$), then the investor could only invest in the risk-free asset, since it has zero variance and higher return. This case, all investor would only choose the risk-free asset, that is a One-fund separation. 
+If the frontier does not exist (for example, if there is only one risky asset and the risk-free rate $r_f > \mu$), then the investor will only invest in the risk-free asset, as it offers zero variance and a higher return. In this case, all investors would choose the risk-free asset—this is called one-fund separation.
 
-Formal difinition of one-fund separation is: A vector of asset returns $\tilde r$ exhibits one-fund separation if there exists a feasible portfolio $\alpha$ such that every risk-averse investor will prefers portfolio $\alpha$ to any other feasible portfolio.
+Formally, a vector of asset returns $\tilde r$ exhibits one-fund separation if there exists a feasible portfolio $\alpha$ such that every risk-averse investor prefers $\alpha$ to any other feasible portfolio.
 
 ## Market Portfolio
 
-The market portfolio is a theoretical portfolio of the whole market, it could treat as all investors' portfolios combined together. It is a convex combination of all individual portfolios.
+The market portfolio is a theoretical portfolio representing the entire market; it can be viewed as the aggregation of all investors' portfolios. It is a convex combination of all individual portfolios.
 
-In equilibrium, market portfolio's weight times the total wealth of the market is equal to each value of security (company) in the market.
+In equilibrium, the market portfolio's weights, multiplied by the total market wealth, equal the market value of each security (company) in the market.
 
-In short:
+In summary:
 
-- In equilibrium, the market portfolio is the market value of all risky assets. (Like a market cap of a company or value weighted index)
+- In equilibrium, the market portfolio represents the market value of all risky assets (like a market-cap-weighted index).
 - It is also a convex combination of all individual portfolios.
 
-This two properties together could result an interesting result, if the two-fund separation holds, then every investor will only choose efficient portfolios on the efficient frontier, and the market portfolio is also on the efficient frontier, since it is a convex combination of all individual portfolios. In the mean time, the market portfolio is also having zero allocation to the risk-free asset, since it is a combination of all risky assets. Then it must be the tangential point of the efficient frontier and hyperbola!
+These two properties lead to an important result: if two-fund separation holds, every investor will choose efficient portfolios on the efficient frontier, and the market portfolio—being a convex combination of all individual portfolios—must also lie on the efficient frontier. At the same time, the market portfolio has zero allocation to the risk-free asset, as it is composed entirely of risky assets. Therefore, it must be the tangency point between the efficient frontier and the hyperbola.
 
 ![Market Portfolio](attachments/rf_frontier.png)
 
-> Market portfolio is the tangent portfolio $e$, if in equilibrium and the two-fund separation holds.
-
+> The market portfolio is the tangent portfolio $e$ when the market is in equilibrium and two-fund separation holds.
 
 ## Security Market Line
 
-Recall in the discussion of zero-covariance portfolio, we could express any portfolio using a frontier portfolio (except MVP) and its zero-covariance portfolio, using the following equation:
+Recall from the discussion of zero-covariance portfolios: any portfolio can be expressed using a frontier portfolio (except the MVP) and its zero-covariance portfolio, as follows:
 
 $$
 \begin{align*}
@@ -46,41 +45,38 @@ E[\tilde r_j] &= E[\tilde r_{zc(p)}] + \beta_{jp} (E[\tilde r_p] - E[\tilde r_{z
 \end{align*}
 $$
 
-If we choose market portfolio as the frontier portfolio, its zero-covariance portfolio's expected return $E[\tilde r_{zc(m)}] = r_f$, then we could rewrite the equation as:
+If we choose the market portfolio as the frontier portfolio, its zero-covariance portfolio has expected return $E[\tilde r_{zc(m)}] = r_f$. We can then rewrite the equation as:
 
 $$
 \begin{align*}
 E[\tilde r_j] &= r_f + \beta_{jm} (E[\tilde r_m] - r_f) \\
-&or \\
-E[\tilde r_j] - r_f &= \beta_{jm} (E[\tilde r_m] - r_f) \\
+E[\tilde r_j] - r_f &= \beta_{jm} (E[\tilde r_m] - r_f)
 \end{align*}
 $$
 
-- $E[\tilde r_j] - r_f$: risk premium of the portfolio $j$.
-- $E[\tilde r_m] - r_f$: risk premium of the market portfolio.
-- $\beta_{jm}$: the sensitivity of the portfolio $j$ to the market portfolio $m$, it is also called the systematic risk of the portfolio, $\beta_{jm} = \frac{Cov(\tilde r_j, \tilde r_m)}{Var(\tilde r_m)}$.
+- $E[\tilde r_j] - r_f$: risk premium of portfolio $j$
+- $E[\tilde r_m] - r_f$: risk premium of the market portfolio
+- $\beta_{jm}$: sensitivity of portfolio $j$ to the market portfolio (systematic risk), $\beta_{jm} = \frac{Cov(\tilde r_j, \tilde r_m)}{Var(\tilde r_m)}$
 
-**Interpretation**: 
+**Interpretation:**
 
-The risk premium of the portfolio $j$ is determined by how much exposure $\beta_{jm}$ it has to the market portfolio. The more exposure it has, the higher the risk premium, if we plot the risk premium against the beta, we will get a straight line, it is called the Security Market Line (SML):
+The risk premium of portfolio $j$ is determined by its exposure $\beta_{jm}$ to the market portfolio. The greater the exposure, the higher the risk premium. If we plot the risk premium against beta, we obtain a straight line—the Security Market Line (SML):
 
 ![Security Market Line](attachments/sml.png)
 
-Although CML and SML essentially come from the same equation, they are different in the following aspects:
+Although the CML and SML are derived from similar equations, they differ in important ways:
 
-- CML is plot on mean-variance space, it is the efficient frontier with risk-free asset.
-- SML is plot on mean-beta space, it is the risk premium against beta.
+- The CML is plotted in mean-variance space and represents the efficient frontier with a risk-free asset.
+- The SML is plotted in mean-beta space and shows the relationship between risk premium and beta.
 
-
-This concept will further lead to the Capital Asset Pricing Model (CAPM), which is a model that describes the relationship between systematic risk ($\beta$) and expected return for assets, particularly stocks. CAPM is widely used in finance for pricing risky securities and generating expected returns for assets given the risk of those assets and cost of capital. We will discuss CAPM and Factor Models in other sections.
+This concept leads directly to the Capital Asset Pricing Model (CAPM), which describes the relationship between systematic risk ($\beta$) and expected return for assets, especially stocks. CAPM is widely used in finance for pricing risky securities and estimating expected returns given an asset's risk and the cost of capital. CAPM and factor models are discussed in detail in other sections.
 
 ## Conclusion
 
 Key takeaways from this section:
 
-- Market portfolio is the tangent portfolio of the efficient frontier and hyperbola.
-- Market portfolio is the market value of all risky assets.
-- Market portfolio is a convex combination of all individual portfolios.
-- Security Market Line (SML) is the risk premium against beta.
-- SML is a straight line, it is the relationship between systematic risk and expected return.
-
+- The market portfolio is the tangency point of the efficient frontier and the hyperbola.
+- The market portfolio represents the market value of all risky assets.
+- The market portfolio is a convex combination of all individual portfolios.
+- The Security Market Line (SML) shows the relationship between risk premium and beta.
+- The SML is a straight line, representing the link between systematic risk and expected return.

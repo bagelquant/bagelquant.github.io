@@ -71,11 +71,11 @@ Time-series regression only provides an estimate of $\beta$s. However, the CAPM 
 2. Sort stocks into $m$ portfolios, then estimate the portfolio betas (same as in the time-series approach).
 3. Using the estimated betas as independent variables, run a cross-sectional regression for each timestamp $t$:
 
-$$
-r_{i, t} - r_{f, t} = \gamma_{0,t} + \gamma_{1,t}\beta_i + \gamma_{2,t} \beta_i^2 + \gamma_{3,t}s_i + \epsilon_{i, t},
-$$
+    $$
+    r_{i, t} - r_{f, t} = \gamma_{0,t} + \gamma_{1,t}\beta_i + \gamma_{2,t} \beta_i^2 + \gamma_{3,t}s_i + \epsilon_{i, t},
+    $$
 
-for $i = 1, 2, ..., m$.
+    for $i = 1, 2, ..., m$.
 
 4. Repeat steps (1)–(3) for each timestamp $t$. This yields multiple observations for hypothesis testing (each timestamp is an observation):
 

@@ -43,9 +43,9 @@ With this, we have derived the CAPM from the mean-variance framework. The key as
 
 - Investors are rational and risk-averse (i.e., have increasing, concave utility functions).
 - Only mean and variance matter for utility optimization, which holds if:
-    - Returns are normally distributed, or
-    - Investors have quadratic utility functions.
-    - See [From Optimized Utility to Mean-Variance Analysis](https://bagelquant.com/mean-variance/from-optimized-utility-to-mean-variance-analysis/) for more.
+  - Returns are normally distributed, or
+  - Investors have quadratic utility functions.
+  - See [From Optimized Utility to Mean-Variance Analysis](https://bagelquant.com/mean-variance/from-optimized-utility-to-mean-variance-analysis/) for more.
 - The two-fund separation holds (see [Market Portfolio and Security Market Line](https://bagelquant.com/mean-variance/market-portfolio-and-security-market-line/)).
 - The market is in equilibrium.
 
@@ -142,4 +142,3 @@ Summary of assumptions:
 
 - Investors are rational and risk-averse (increasing, concave utility functions).
 - Risky assets are jointly normally distributed (required for Stein's Lemma).
-

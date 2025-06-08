@@ -5,17 +5,17 @@ sidebar:
     nav: "mean-variance"
 ---
 
-Now we have the solution to the mean-variance optimization problem, for every target expected return $E[\tilde r_p]$, we could find the optimal weights $\boldsymbol W^*$, and the corresponding variance $\sigma^2_p$ and expected return $E[\tilde r_p]$. We could explore:
+With the solution to the mean-variance optimization problem in hand, we can, for any target expected return $E[\tilde r_p]$, determine the optimal weights $\boldsymbol W^*$, as well as the corresponding variance $\sigma^2_p$ and expected return $E[\tilde r_p]$. This allows us to explore three core features of mean-variance optimization:
 
-- The weight vector $\boldsymbol W^*$ for different target expected returns $E[\tilde r_p]$. (Two Fund Theorem)
-- The relationship between the expected return $E[\tilde r_p]$ and the variance $\sigma^2_p$. (Efficient Frontier)
-- Covariance (covariance with minimum variance portfolio (MVP), zero covariance portfolio, etc.)
+- The weight vector $\boldsymbol W^*$ for different target expected returns $E[\tilde r_p]$ (**Two Fund Theorem**)
+- The relationship between expected return $E[\tilde r_p]$ and variance $\sigma^2_p$ (**Efficient Frontier**)
+- Covariance properties (e.g., with the minimum variance portfolio (MVP), zero covariance portfolios, etc.)
 
-These three are the core features of the mean-variance optimization. We will explore them one by one.
+Let's examine each in turn.
 
 ## Two Fund Theorem
 
-From previous section, we have the optimal weight vector $\boldsymbol W^*$ for a given target expected return $E[\tilde r_p]$:
+From the previous section, the optimal weight vector $\boldsymbol W^*$ for a given target expected return $E[\tilde r_p]$ is:
 
 $$
 \boldsymbol W^* = \boldsymbol g + \boldsymbol h \cdot E[\tilde r_p],
@@ -23,14 +23,14 @@ $$
 
 where:
 
-- $\boldsymbol g = \frac{1}{D} \left( B \cdot \boldsymbol V^{-1} \boldsymbol 1 - A \cdot \boldsymbol V^{-1} \boldsymbol \mu \right)$, $N \times 1$ vector
-- $\boldsymbol h = \frac{1}{D} \left( C \cdot \boldsymbol V^{-1} \boldsymbol \mu - A \cdot \boldsymbol V^{-1} \boldsymbol 1 \right)$, $N \times 1$ vector
+- $\boldsymbol g = \frac{1}{D} \left( B \cdot \boldsymbol V^{-1} \boldsymbol 1 - A \cdot \boldsymbol V^{-1} \boldsymbol \mu \right)$
+- $\boldsymbol h = \frac{1}{D} \left( C \cdot \boldsymbol V^{-1} \boldsymbol \mu - A \cdot \boldsymbol V^{-1} \boldsymbol 1 \right)$
 
-Clearly, all the optimal weights are a linear function of the target expected return $E[\tilde r_p]$. With a different target expected return, we could find a different optimal weight vector. All the optimal portfolios weights are on the same line in the $\mathbb{R}^N$ weight space . Since they are on a straight line, we could use any two optimal portfolios to construct the other optimal portfolios. This is the ***Two Fund Theorem***.
+All optimal weights are linear functions of the target expected return $E[\tilde r_p]$. As $E[\tilde r_p]$ varies, so does the optimal weight vector, but all such vectors lie on a straight line in $\mathbb{R}^N$ (the weight space). This means any two optimal portfolios can be combined to construct any other optimal portfolio—a result known as the **Two Fund Theorem**.
 
 **Claim:**
 
-For any two optimal portfolios, the linear combination of them is also an optimal portfolio:
+For any two optimal portfolios, any linear combination of them is also an optimal portfolio:
 
 $$
 \boldsymbol W^* = \alpha \boldsymbol W^*_1 + (1 - \alpha) \boldsymbol W^*_2, \quad \forall \alpha \in [0, 1]
@@ -38,7 +38,7 @@ $$
 
 **Proof:**
 
-Since they are optimal portfolios, we could write them as:
+Since both are optimal portfolios, we can write:
 
 $$
 \begin{align*}
@@ -47,14 +47,14 @@ $$
 \end{align*}
 $$
 
-where $\boldsymbol g_1, \boldsymbol h_1$ are the optimal weights for portfolio 1, and $\boldsymbol g_2, \boldsymbol h_2$ are the optimal weights for portfolio 2. We could rewrite the linear combination of them as:
+where $\boldsymbol g_1, \boldsymbol h_1$ and $\boldsymbol g_2, \boldsymbol h_2$ are the optimal weights for portfolios 1 and 2, respectively. The linear combination is:
 
 $$
 \begin{align*}
 \boldsymbol W^* &= \alpha \boldsymbol W^*_1 + (1 - \alpha) \boldsymbol W^*_2 \\
-&= \alpha (\boldsymbol g_1 + \boldsymbol h_1 \cdot E[\tilde r_1]) + (1 - \alpha) (\boldsymbol g_2 + \boldsymbol h_2 \cdot E[\tilde r_2]) \\
-&= \alpha \boldsymbol g_1 + (1 - \alpha) \boldsymbol g_2 + \alpha \boldsymbol h_1 \cdot E[\tilde r_1] + (1 - \alpha) \boldsymbol h_2 \cdot E[\tilde r_2] \\
-&= \boldsymbol g + \boldsymbol h \cdot E[\tilde r_p]
+&= \alpha (\boldsymbol g_1 + \boldsymbol h_1 E[\tilde r_1]) + (1 - \alpha)(\boldsymbol g_2 + \boldsymbol h_2 E[\tilde r_2]) \\
+&= \alpha \boldsymbol g_1 + (1 - \alpha) \boldsymbol g_2 + \alpha \boldsymbol h_1 E[\tilde r_1] + (1 - \alpha) \boldsymbol h_2 E[\tilde r_2] \\
+&= \boldsymbol g + \boldsymbol h E[\tilde r_p]
 \end{align*}
 $$
 
@@ -63,100 +63,94 @@ where:
 - $\boldsymbol g = \alpha \boldsymbol g_1 + (1 - \alpha) \boldsymbol g_2$
 - $\boldsymbol h = \alpha \boldsymbol h_1 + (1 - \alpha) \boldsymbol h_2$
 - $E[\tilde r_p] = \alpha E[\tilde r_1] + (1 - \alpha) E[\tilde r_2]$
-- $\boldsymbol W^*$ is the optimal portfolio for target expected return $E[\tilde r_p]$.
 
-Thus, we have proved that the linear combination of any two optimal portfolios is also an optimal portfolio. This is the ***Two Fund Theorem***.
+Thus, any linear combination of two optimal portfolios is also optimal. This is the **Two Fund Theorem**.
 
-> Note: The optimal portfolios are also called ***frontier portfolios***, see below Efficient Frontier section.
+> Note: Optimal portfolios are also called **frontier portfolios** (see the Efficient Frontier section below).
 
-## Frontier without Risk-Free Asset
+## Efficient Frontier (Without Risk-Free Asset)
 
-Now we know weights $\boldsymbol W^*$ are a straight line in the weight space $\mathbb{R}^N$. 
+Since $\boldsymbol W^*$ traces a straight line in weight space, what does this look like in mean-variance space ($\mu, \sigma^2$) or mean-standard deviation space ($\mu, \sigma$)?
 
-How about in the mean-variance space ($\mu, \sigma^2$)? or mean-standard deviation space ($\mu, \sigma$)? 
-
-We know that the optimal weights $\boldsymbol W^*$ are a linear function of the target expected return $E[\tilde r_p]$, the variance of portfolio $\sigma^2_p$ is a function of the weights ($\sigma^2_p = W^T_p V W_p$), where V is the covariance matrix of the asset returns. Clearly, we could find the relationship between the expected return $E[\tilde r_p]$ and the variance $\sigma^2_p$.
-
-The variance of the portfolio is given by:
+Recall that $\boldsymbol W^*$ is a linear function of $E[\tilde r_p]$, and the portfolio variance $\sigma^2_p = \boldsymbol W_p^T V \boldsymbol W_p$. The relationship between $E[\tilde r_p]$ and $\sigma^2_p$ is:
 
 $$
 \begin{align*}
 \sigma^2_p &= \boldsymbol W^T \boldsymbol V \boldsymbol W \\
-&= \left( \boldsymbol g + \boldsymbol h \cdot E[\tilde r_p] \right)^T \boldsymbol V \left( \boldsymbol g + \boldsymbol h \cdot E[\tilde r_p] \right) \\
-&= \frac{C}{D} [E(\tilde r_p)] - \frac{A}{C}]^2 + \frac{1}{C} \\
+&= (\boldsymbol g + \boldsymbol h E[\tilde r_p])^T \boldsymbol V (\boldsymbol g + \boldsymbol h E[\tilde r_p]) \\
+&= \frac{C}{D} [E(\tilde r_p) - \frac{A}{C}]^2 + \frac{1}{C}
 \end{align*}
 $$
 
-The variance ($\sigma^2_p$) is a quadratic function of the expected return ($E[\tilde r_p]$), if we plot the expected return and variance on a 2D graph, we could find the relationship between them is a hyperbola. The minimum variance portfolio (MVP) is the point on the hyperbola with the minimum variance. 
+Thus, $\sigma^2_p$ is a quadratic function of $E[\tilde r_p]$. Plotting expected return against variance yields a hyperbola. The minimum variance portfolio (MVP) is the point on the hyperbola with the lowest variance.
 
 ![Mean-Variance Frontier](attachments/mean-variance-frontier.png)
 
 ### Minimum Variance Portfolio (MVP)
 
-The minimum variance portfolio (mvp) is the point on the hyperbola with the minimum variance. Clearly, it has the expected return $E[\tilde r_{mvp}] = \frac{A}{C}$ and variance $\sigma^2_{mvp} = \frac{1}{C}$. 
+The MVP is the point on the hyperbola with minimum variance. It has expected return $E[\tilde r_{mvp}] = \frac{A}{C}$ and variance $\sigma^2_{mvp} = \frac{1}{C}$.
 
 ### Efficient Frontier
 
-Recall the utility theory, if we assume only the mean and variance of the wealth are relevant for decision-making, any rational investor would choose the portfolio with highest expected return at given level of variance. (Top left corner of the mean-variance space). Therefore, the lower half of the hyperbola is not desirable, and the upper half of the hyperbola is the ***efficient frontier***. In summary:
+According to utility theory, if only the mean and variance of wealth matter, any rational investor would choose the portfolio with the highest expected return for a given level of variance (the top left of the mean-variance space). Thus, only the upper half of the hyperbola is desirable—the **efficient frontier**. In summary:
 
 - **Frontier Portfolios**
-    - All hyperbolas are frontier portfolios
-    - All frontier portfolios is the lowest variance portfolio for a given expected return
-    - The frontier is the edge of all feasible portfolios
-    - Any two frontier portfolios could be combined to form another frontier portfolio
+  - All points on the hyperbola are frontier portfolios
+  - Each is the lowest variance portfolio for a given expected return
+  - The frontier is the edge of all feasible portfolios
+  - Any two frontier portfolios can be combined to form another frontier portfolio
 - **Minimum Variance Portfolio (MVP)**
-    - The pivot point of the hyperbola
-    - The MVP is the lowest variance portfolio of all portfolios
+  - The pivot point of the hyperbola
+  - The MVP is the lowest variance portfolio of all portfolios
 - **Efficient Frontier**
-    - The upper half of the hyperbola
-    - Higher than the MVP ($E(\tilde r_p > E(\tilde r_{mvp}) = \frac{A}{C}$)
+  - The upper half of the hyperbola
+  - Corresponds to $E(\tilde r_p) > E(\tilde r_{mvp}) = \frac{A}{C}$
 - **Inefficient Portfolios**
-    - The lower half of the hyperbola
-    - Higher than the MVP ($E(\tilde r_p < E(\tilde r_{mvp}) = \frac{A}{C}$)
-    - Not desirable
+  - The lower half of the hyperbola
+  - Corresponds to $E(\tilde r_p) < E(\tilde r_{mvp}) = \frac{A}{C}$
+  - Not desirable
 
-### Mean-Standard Deviation space
+### Mean-Standard Deviation Space
 
 ![Mean-Standard Deviation Frontier](attachments/mean-std-frontier.png)
 
-
-Asymptotes:
+The asymptotes are given by:
 
 $$
 E[\tilde r_p] = \frac{A}{C} + \sqrt{\frac{D}{C}} \cdot \sigma_p
 $$
 
-## Explore Covariance
+## Covariance Properties
 
-### Covariance
+### Covariance Between Portfolios
 
-The covariance between any portfolios could be calculated using the covariance matrix $V$:
+The covariance between any two portfolios can be calculated using the covariance matrix $V$:
 
 $$
-Cov(\tilde r_p, \tilde r_q) = \boldsymbol W^T_p \boldsymbol V \boldsymbol W_q
+Cov(\tilde r_p, \tilde r_q) = \boldsymbol W_p^T \boldsymbol V \boldsymbol W_q
 $$
 
 where $\boldsymbol W_p$ and $\boldsymbol W_q$ are the weight vectors of the two portfolios.
 
 ### Covariance of Frontier Portfolios
 
-Recall the variance of the frontier portfolio is given by:
+Recall the variance of a frontier portfolio:
 
 $$
-\sigma^2_p = \frac{C}{D} [E(\tilde r_p)] - \frac{A}{C}]^2 + \frac{1}{C} \\
+\sigma^2_p = \frac{C}{D} [E(\tilde r_p) - \frac{A}{C}]^2 + \frac{1}{C}
 $$
 
-With the same logic, we could find the covariance between any two frontier portfolios is given by:
+Similarly, the covariance between any two frontier portfolios is:
 
 $$
-Cov(\tilde r_p, \tilde r_q) = \frac{C}{D} [E(\tilde r_p)] - \frac{A}{C}] \cdot [E(\tilde r_q)] - \frac{A}{C}] + \frac{1}{C} \\
+Cov(\tilde r_p, \tilde r_q) = \frac{C}{D} [E(\tilde r_p) - \frac{A}{C}] [E(\tilde r_q) - \frac{A}{C}] + \frac{1}{C}
 $$
 
-### Covariance with Minimum Variance Portfolio (MVP)
+### Covariance with the Minimum Variance Portfolio (MVP)
 
 **Claim:**
 
-The covariance between any portfolio (not necessarily frontier portfolio) and the minimum variance portfolio (MVP) is equal to variance of the minimum variance portfolio (MVP):
+The covariance between any portfolio (not necessarily a frontier portfolio) and the MVP is equal to the variance of the MVP:
 
 $$
 Cov(\tilde r_p, \tilde r_{mvp}) = \sigma^2_{mvp}
@@ -164,99 +158,82 @@ $$
 
 **Proof:**
 
-Consider the following portfolio: $\alpha \tilde r_p + (1 - \alpha) \tilde r_{mvp}$, where $\alpha$ is a constant. The variance of this portfolio is given by:
+Consider the portfolio $\alpha \tilde r_p + (1 - \alpha) \tilde r_{mvp}$, where $\alpha$ is a constant. The variance is:
 
 $$
 \begin{align*}
 Var(\alpha \tilde r_p + (1 - \alpha) \tilde r_{mvp}) &= \alpha^2 Var(\tilde r_p) + (1 - \alpha)^2 Var(\tilde r_{mvp}) + 2\alpha(1 - \alpha) Cov(\tilde r_p, \tilde r_{mvp}) \\
-&= \alpha^2 \sigma^2_p + (1 - \alpha)^2 \sigma^2_{mvp} + 2\alpha(1 - \alpha) Cov(\tilde r_p, \tilde r_{mvp}) \\
-&= \alpha^2 \sigma^2_p + (1 - \alpha)^2 \sigma^2_{mvp} + 2\alpha(1 - \alpha) \sigma^2_{mvp} \\
+&= \alpha^2 \sigma^2_p + (1 - \alpha)^2 \sigma^2_{mvp} + 2\alpha(1 - \alpha) Cov(\tilde r_p, \tilde r_{mvp})
 \end{align*}
 $$
 
-The solution of: 
-
-$$
-\min_{\alpha} Var(\alpha \tilde r_p + (1 - \alpha) \tilde r_{mvp}),
-$$ 
-
-should be $\alpha = 0$, since the mvp is the lowest variance portfolio. The First Order Condition (FOC) is given by:
+The minimum variance is achieved at $\alpha = 0$ (since the MVP is the lowest variance portfolio). The first-order condition (FOC) is:
 
 $$
 \begin{align*}
-\frac{\partial Var(\alpha \tilde r_p + (1 - \alpha) \tilde r_{mvp})}{\partial \alpha} &= 2\alpha \sigma^2_p + 2(1 - \alpha) \sigma^2_{mvp} + 2\alpha Cov(\tilde r_p, \tilde r_{mvp}) - 2(1 - \alpha) Cov(\tilde r_p, \tilde r_{mvp}) = 0 \\
+\frac{\partial Var(\alpha \tilde r_p + (1 - \alpha) \tilde r_{mvp})}{\partial \alpha} &= 2\alpha \sigma^2_p + 2(1 - \alpha) \sigma^2_{mvp} + 2\alpha Cov(\tilde r_p, \tilde r_{mvp}) - 2(1 - \alpha) Cov(\tilde r_p, \tilde r_{mvp}) = 0
 \end{align*}
 $$
 
-plugging in $\alpha = 0$, we have:
+Plugging in $\alpha = 0$:
 
 $$
 \begin{align*}
-2(1 - 0) \sigma^2_{mvp} + 2(0) Cov(\tilde r_p, \tilde r_{mvp}) - 2(1 - 0) Cov(\tilde r_p, \tilde r_{mvp}) &= 0 \\
-Cov(\tilde r_p, \tilde r_{mvp}) &= \sigma^2_{mvp} \\
+2 \sigma^2_{mvp} - 2 Cov(\tilde r_p, \tilde r_{mvp}) = 0 \\
+Cov(\tilde r_p, \tilde r_{mvp}) = \sigma^2_{mvp}
 \end{align*}
 $$
 
-Thus, we have proved that the covariance between any portfolio (not necessarily frontier portfolio) and the minimum variance portfolio (MVP) is equal to variance of the minimum variance portfolio (MVP).
+Thus, the covariance between any portfolio and the MVP equals the variance of the MVP.
 
 ### Zero Covariance Portfolio
 
 **Claim:**
 
-For any frontier portfolio $p$, except for the minimum variance portfolio (MVP), there exists a unique frontier portfolio $zc(p)$ such that the covariance between $p$ and $zc(p)$ is zero.
+For any frontier portfolio $p$ (except the MVP), there exists a unique frontier portfolio $zc(p)$ such that the covariance between $p$ and $zc(p)$ is zero.
 
 **Proof:**
 
-We set 
+Set
+
+$$
+Cov(\tilde r_p, \tilde r_q) = \boldsymbol W_p^T \boldsymbol V \boldsymbol W_q
+$$
+
+where $\boldsymbol W_p$ and $\boldsymbol W_q$ are the weights of portfolios $p$ and $q$. Using the definitions of $\lambda$ and $\gamma$ for $p$:
 
 $$
 \begin{align*}
-Cov(\tilde r_p, \tilde r_q) &= W^T_p \boldsymbol V W_q \\
-&= (\lambda \boldsymbol V^{-1} \boldsymbol \mu + \gamma \boldsymbol V^{-1} \boldsymbol 1)^T \boldsymbol V W_q \\
-&= \lambda \mu^T V^{-1} V W_q + \gamma \boldsymbol 1^T V^{-1}V W_q \\
-&= \lambda \mu^T W_q + \gamma \boldsymbol 1^T W_q \\
-&= \lambda E[\tilde r_q] + \gamma.
+\lambda &= \frac{C E[\tilde r_p] - A}{D} \\
+\gamma &= \frac{B - A E[\tilde r_p]}{D}
 \end{align*}
 $$
 
-Using the definition of $\lambda$ and $\gamma$:
+We can show:
 
 $$
-\begin{align*}
-\lambda &= \frac{C \cdot E[\tilde r_p] - A}{D}, \\
-\gamma &= \frac{B - A \cdot E[\tilde r_p]}{D},
-\end{align*}
+E[\tilde r_q] = E[\tilde r_{zc(p)}] + \frac{Cov(\tilde r_p, \tilde r_q)}{\sigma^2_{p}} \{E[\tilde r_p] - E[\tilde r_{zc(p)}]\}
 $$
 
-we could obtain:
-
-$$
-\begin{align*}
-E[\tilde r_q] &= E[\tilde r_{zc(p)}] + \frac{cov(\tilde r_p, \tilde r_q)}{\sigma^2_{p}} \cdot \{E[\tilde r_p] - E[\tilde r_{zc(p)}]\} \\
-&= E[\tilde r_{zc(p)}] + \beta_{qp} \cdot \{E[\tilde r_p] - E[\tilde r_{zc(p)}]\}.
-\end{align*}
-$$
-
-Where $\beta_{qp} = \frac{cov(\tilde r_p, \tilde r_q)}{\sigma^2_{p}}$ is the beta of portfolio $q$ with respect to portfolio $p$.
+where $\beta_{qp} = \frac{Cov(\tilde r_p, \tilde r_q)}{\sigma^2_{p}}$ is the beta of portfolio $q$ with respect to $p$.
 
 **Interpretation:**
 
-Any portfolio $q$ that is not the minimum variance portfolio (MVP) could be **expressed** or **explained** or **constructed** by the a frontier portfolio $p$ and its zero covariance portfolio $zc(p)$.
+Any portfolio $q$ (not the MVP) can be expressed, explained, or constructed from a frontier portfolio $p$ and its zero covariance portfolio $zc(p)$.
 
-This give us a new perspective of how to explain the expected return of a portfolio. In the mean-variance setup, we explain the expected return by the variance (measure the relationship between the mean and variance). Now we could explain the expected return by the $\beta_{qp}$, higher the beta, higher the expected return. 
+This provides a new perspective for explaining expected returns. In the mean-variance framework, we relate expected return to variance. Now, we can also relate expected return to $\beta_{qp}$: higher beta implies higher expected return.
 
-Later, we will introduce the **Market Portfolio**, which is a special case of the equation above, substituting the market portfolio for $p$ will give us the a line called **Security Market Line** (SML). And it will further lead us to the **Capital Asset Pricing Model** (CAPM). We will discuss this in the next section.
+Later, we will introduce the **Market Portfolio**, a special case where substituting the market portfolio for $p$ yields the **Security Market Line** (SML), which leads to the **Capital Asset Pricing Model** (CAPM). This will be discussed in the next section.
 
 ## Conclusion
 
 Key takeaways from this section:
 
-- The optimal weights $\boldsymbol W^*$ are a linear function of the target expected return $E[\tilde r_p]$.
-- The variance of the portfolio $\sigma^2_p$ is a quadratic function of the target expected return $E[\tilde r_p]$.
-- The minimum variance portfolio (MVP) is the point on the hyperbola with the minimum variance.
-- The efficient frontier is the upper half of the hyperbola, and the lower half is the inefficient portfolios.
-- The covariance between any portfolio (not necessarily frontier portfolio) and the minimum variance portfolio (MVP) is equal to variance of the minimum variance portfolio (MVP).
+- The optimal weights $\boldsymbol W^*$ are linear functions of the target expected return $E[\tilde r_p]$.
+- The portfolio variance $\sigma^2_p$ is a quadratic function of $E[\tilde r_p]$.
+- The minimum variance portfolio (MVP) is the point on the hyperbola with the lowest variance.
+- The efficient frontier is the upper half of the hyperbola; the lower half is inefficient.
+- The covariance between any portfolio and the MVP equals the variance of the MVP.
 - The covariance between any two frontier portfolios is given by the covariance matrix $V$.
-- For any frontier portfolio $p$, except for the minimum variance portfolio (MVP), there exists a unique frontier portfolio $zc(p)$ such that the covariance between $p$ and $zc(p)$ is zero.
-- Any portfolio $q$ that is not the minimum variance portfolio (MVP) could be expressed or explained or constructed by the a frontier portfolio $p$ and its zero covariance portfolio $zc(p)$.
-
+- For any frontier portfolio $p$ (except the MVP), there exists a unique frontier portfolio $zc(p)$ with zero covariance with $p$.
+- Any portfolio $q$ (not the MVP) can be expressed or constructed from a frontier portfolio $p$ and its zero covariance portfolio $zc(p)$.
