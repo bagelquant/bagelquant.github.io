@@ -6,11 +6,11 @@ header:
   overlay_image: /assets/images/radio-telescope.png
 ---
 
-Optimization has been a fundamental topic throughout human history. In ancient times, classic geometric problems, such as maximizing the area of a rectangle inscribed in a circle, exemplified this discipline. Today, optimization plays a crucial role across various fields, including physics, economics, engineering, and finance, serving as a powerful tool for identifying the best solutions from a set of feasible options.
+Optimization has been a cornerstone of human progress for centuries. From ancient geometric puzzles—like maximizing the area of a rectangle inscribed in a circle—to modern applications, optimization underpins advancements in physics, economics, engineering, and especially finance. It provides systematic methods for identifying the best solution among many feasible alternatives.
 
-I am particularly passionate about this topic in the MQF program at Rutgers Business School, where I have the privilege of learning from [Professor Andrzej Ruszczyński](https://www.business.rutgers.edu/faculty/andrzej-ruszczynski). He is renowned for his expertise in optimizing nonlinear stochastic systems and excels at breaking down complex concepts into simple, intuitive explanations. His detailed and constructive lectures make the subject even more engaging.
+I am especially passionate about this subject in the MQF program at Rutgers Business School, where I have the privilege of learning from [Professor Andrzej Ruszczyński](https://www.business.rutgers.edu/faculty/andrzej-ruszczynski). Professor Ruszczyński is internationally recognized for his expertise in nonlinear stochastic optimization and is renowned for making complex ideas accessible through clear, intuitive explanations. His engaging and detailed lectures make the study of optimization both rigorous and enjoyable.
 
-This topic will explore optimization models in finance, focusing on the following key areas:
+This section explores optimization models in finance, focusing on the following key areas:
 
 ## Introduction
 
@@ -29,4 +29,3 @@ This topic will explore optimization models in finance, focusing on the followin
 - [Mean-Variance Portfolio Optimization](https://bagelquant.com/mean-variance/)
 - [Value at Risk (VaR)](value-at-risk.md)
 - [AVaR and Coherent Risk Measures](avar-and-coherent-risk-measures.md)
-
