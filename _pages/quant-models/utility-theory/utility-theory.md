@@ -6,14 +6,12 @@ header:
   overlay_image: /assets/images/radio-telescope.png
 ---
 
-A rational decision maker should always choose the option that maximizes their "interest". If we could quantify individuals' "interest" in a decision-making activity, we could use simple optimization methods like calculus to find the best decision. This is where utility theory comes into play.
+A rational decision maker should always choose the option that maximizes their "interest." If we can quantify an individual's "interest" in a decision-making scenario, we can use optimization techniques—such as calculus—to find the best possible choice. This is the foundation of utility theory.
 
-We use the concept of "utility" to measure the "interest" of a decision. Utility is a measure of the satisfaction or benefit that an individual derives from consuming goods and services. 
-
-In this section, we first introduce the utility function, which is a mathematical representation of this concept, assigning a numerical value to each possible outcome based on the individual's preferences. We then explore the implications of risk aversion and how it affects decision-making under uncertainty. Finally, we discuss stochastic dominance, a method for comparing different risky prospects.
+The concept of "utility" measures the satisfaction or benefit an individual derives from consuming goods and services. In this section, we first introduce the utility function—a mathematical representation that assigns a numerical value to each possible outcome based on an individual's preferences. We then explore the implications of risk aversion and how it shapes decision-making under uncertainty. Finally, we discuss stochastic dominance, a method for comparing different risky prospects.
 
 1. [Utility Function](utility-function.md)
 2. [Optimal Allocation](optimal-allocation.md)
 3. [Absolute and Relative Risk Aversion](absolute-and-relative-risk-aversion.md)
 
-The utility optimization is closely related to the pricing models in finance. Since the price of any asset could considered as the wealth allocation of the overall "market" (the combination of all rational investors). We could further utilize this concept in [mean-variance portfolio optimization](https://bagelquant.com/mean-variance), and [comsumption-based asset pricing models](https://bagelquant.com/comsumption-based-pricing).
+Utility optimization is closely related to pricing models in finance. The price of any asset can be viewed as the result of wealth allocation across the entire "market" (the aggregation of all rational investors). This concept is fundamental to [mean-variance portfolio optimization](https://bagelquant.com/mean-variance) and [consumption-based asset pricing models](https://bagelquant.com/consumption-based-pricing).
