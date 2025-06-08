@@ -108,16 +108,3 @@ factor-models:
           url: /factor-models/empirical-test-factor-models/
         - title: "Well known factors and factor models"
           url: /factor-models/well-known-factors-and-factor-models/
-    - title: "Market Anomalies"
-      children:
-        - title: "Market Anomalies"
-          url: /factor-models/market-anomalies/
-    - title: "Usage of Factor Models"
-      children:
-        - title: "Portfolio Construction"
-          url: /factor-models/portfolio-construction/
-        - title: "Risk Management"
-          url: /factor-models/risk-management/
-        - title: "Performance Evaluation"
-          url: /factor-models/performance-evaluation/
-

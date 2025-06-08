@@ -67,9 +67,3 @@ In the following sections:
   - [Single Factor Test](single-factor-test.md)
   - [Empirical Test of Factor Models](empirical-test-factor-models.md)
   - [Well-Known Factors and Factor Models](well-known-factors-and-factor-models.md)
-- Market Anomalies
-  - [Market Anomalies](market-anomalies.md)
-- Usage of Factor Models
-  - [Portfolio Construction](portfolio-construction.md)
-  - [Risk Management](risk-management.md)
-  - [Performance Evaluation](performance-evaluation.md)
