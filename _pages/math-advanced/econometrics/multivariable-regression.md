@@ -5,7 +5,7 @@ sidebar:
   nav: "econometrics"
 ---
 
-Comparing to univariable regression, multivariable regression is adding more independent variables to the model. The model is still linear, but the number of independent variables is more than one. The model is as follows:
+Compared to univariable regression, multivariable regression incorporates multiple independent variables into the model. The relationship remains linear, but now more than one independent variable is considered. The general form is:
 
 $$
 y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \ldots + \beta_nx_n + \epsilon,
@@ -18,7 +18,7 @@ where:
 - $\beta_0, \beta_1, \ldots, \beta_n$ are the coefficients,
 - $\epsilon$ is the error term.
 
-The model can be written in matrix form as:
+This model can be expressed in matrix notation as:
 
 $$
 y = X\beta + \epsilon,
@@ -26,13 +26,13 @@ $$
 
 where:
 
-- $y$ is the dependent variable,
-- $X$ is the vector of independent variables and the constant term, $X \in \mathbb{R}^{k+1}$,
-- $\beta$ is the vector of coefficients, $\beta \in \mathbb{R}^{k+1}$,
+- $y$ is the vector of dependent variable values,
+- $X$ is the matrix of independent variables (including a column of ones for the intercept), $X \in \mathbb{R}^{n \times (k+1)}$,
+- $\beta$ is the vector of coefficients, $\beta \in \mathbb{R}^{k+1}$.
 
 ## 2.1 OLS Estimators
 
-The OLS estimators for the multivariable regression model are:
+The ordinary least squares (OLS) estimators for the multivariable regression model are:
 
 $$
 \hat{\beta} = (X^T X)^{-1}X^Ty,
@@ -41,158 +41,105 @@ $$
 where:
 
 - $\hat{\beta}$ is the vector of OLS estimators,
-- $X$ is the matrix of independent variables and the constant term, observations in rows and variables in columns, $X \in \mathbb{R}^{n \times (k+1)}$,
-- $y$ is the vector of dependent variable, $y \in \mathbb{R}^{n}$.
+- $X$ is the matrix of independent variables (with intercept),
+- $y$ is the vector of observed dependent variable values.
 
-### Proof of OLS Estimators
+### Derivation of OLS Estimators
 
-We can obtain the OLS estimators utilizing the same technique as in univariable regression. The objective is to minimize the sum of squared errors:
-
-$$
-\text{min } S(\beta_0, \beta_1, \ldots, \beta_n) = \sum_{i=1}^{n} (y_i - \beta_0 - \beta_1x_{i1} - \ldots - \beta_nx_{in})^2.
-$$
-
-Taking the derivative of the sum of squared errors with respect to each coefficient and setting them to zero, we can obtain the OLS estimators by solving a system of linear equations.
-
-In matrix form, the solution will be more concise, the objective becomes:
+The OLS method minimizes the sum of squared errors:
 
 $$
-\text{min } S(\beta) = (y - X\beta)^T(y - X\beta),
+\min S(\beta) = \sum_{i=1}^{n} (y_i - \beta_0 - \beta_1x_{i1} - \ldots - \beta_nx_{in})^2.
 $$
 
-$$
-= y^Ty - 2y^TX\beta + \beta^TX^TX\beta.
-$$
-
-Taking the derivative of the sum of squared errors with respect to $\beta$ and setting it to zero, we can obtain the OLS estimators:
+In matrix form, this becomes:
 
 $$
-\frac{\partial S(\beta)}{\partial \beta} = -2X^Ty + 2X^TX\beta = 0,
+\min S(\beta) = (y - X\beta)^T(y - X\beta) = y^Ty - 2y^TX\beta + \beta^TX^TX\beta.
+$$
+
+Taking the derivative with respect to $\beta$ and setting it to zero yields:
+
+$$
+\frac{\partial S(\beta)}{\partial \beta} = -2X^Ty + 2X^TX\beta = 0
 $$
 
 $$
-X^TX\beta = X^Ty,
+X^TX\beta = X^Ty
 $$
 
 $$
-\hat{\beta} = (X^TX)^{-1}X^Ty.
+\hat{\beta} = (X^TX)^{-1}X^Ty
 $$
 
 ## 2.2 F-test
 
-The F-test for the multivariable regression model is to test the joint significance of the independent variables. The null hypothesis is:
+The F-test evaluates the joint significance of the independent variables. The hypotheses are:
 
 $$
-H_0: \beta_1 = \beta_2 = \ldots = \beta_n = 0.
+H_0: \beta_1 = \beta_2 = \ldots = \beta_n = 0
 $$
 
 $$
-H_1: \text{At least one } \beta_i \neq 0, i = 1, 2, \ldots, n.
+H_1: \text{At least one } \beta_i \neq 0, \quad i = 1, 2, \ldots, n
 $$
 
-The test statistic is:
+The F-statistic is:
 
 $$
-F = \frac{MSE}{MSR} = \frac{SSE/k}{SSR/(n-k-1)},
+F = \frac{MSE}{MSR} = \frac{SSE/k}{SSR/(n-k-1)}
 $$
 
 where:
 
-- $MSE$ is the mean squared estimation,
+- $MSE$ is the mean squared error,
 - $MSR$ is the mean squared residual,
-- $SSE$ is the sum of squared estimation,
-- $SSR$ is the sum of squared residual.
+- $SSE$ is the sum of squared errors (explained),
+- $SSR$ is the sum of squared residuals.
 
-The F-test is a one-tailed test, and we can reject the null hypothesis if the calculated F-statistic is greater than the critical value.
+The F-test is one-tailed; reject $H_0$ if the calculated F-statistic exceeds the critical value.
 
-> The relationship between the F-test and the t-test is that the F-test is equivalent to multiple t-tests. The F-test is used to test the joint significance of the independent variables, while the t-test is used to test the significance of each independent variable individually.
-
-> Sometimes, the results from the F-test and the t-test may be conflicting. 
+> The F-test checks the joint significance of all independent variables, while the t-test checks the significance of each variable individually. Sometimes, their results may conflict.
 
 ## 2.3 Gauss-Markov Assumptions
 
-The Gauss-Markov assumptions for the multivariable regression model are the same as the univariable regression model. Except for the assumption of no multicollinearity, which is switched to the assumption of variability in the independent variables.
+The Gauss-Markov assumptions for multivariable regression are similar to those for univariable regression, with an added focus on the variability of independent variables (no perfect multicollinearity):
 
-1. **Linearity in parameters**: The model is linear in the parameters.
-2. **No perfect multicollinearity**: No independent variable can be a linear function of one or more other independent variables. Otherwise, the matrix $X^TX$ will not be invertible, and the OLS estimators will not exist.
-3. **Independence and randomness of the error term**: The error term is independent and random.
-4. **Zero conditional mean**: The expected value of the error term is zero given the independent variables. 
-5. **Homoscedasticity**: The variance of the error term is constant.
-6. **Normality of the error term**: The error term is normally distributed.
+1. **Linearity in parameters**: The model is linear in the coefficients.
+2. **No perfect multicollinearity**: No independent variable is a perfect linear combination of others. Otherwise, $X^TX$ is not invertible and OLS estimators do not exist.
+3. **Independence and randomness of errors**: The error term is independent and random.
+4. **Zero conditional mean**: The expected value of the error term is zero given the independent variables.
+5. **Homoscedasticity**: The error term has constant variance.
+6. **Normality of errors**: The error term is normally distributed.
 
-Procedure to check the Gauss-Markov assumptions is same as the univariable regression model.
+The procedure for checking these assumptions is the same as in univariable regression.
 
-## 2.4 Violation of Gauss-Markov Assumptions
+## 2.4 Violations of Gauss-Markov Assumptions
 
-- **Linearity in parameters**
+- **Linearity in parameters**: If the relationship is not linear, consider a nonlinear model.
+- **No perfect multicollinearity**: If present, remove one of the linearly dependent variables. In practice, high (but not perfect) multicollinearity can be addressed by normalizing variables, using principal component analysis (PCA), or removing highly correlated variables.
+- **Independence and randomness of errors**: If violated, estimators are biased and inconsistent. Consider changing the model or using robust standard errors.
+- **Zero conditional mean**: This is checked using residuals; by OLS construction, the mean residual is always zero.
+- **Homoscedasticity**: If violated, use robust standard errors or Generalized Least Squares (GLS).
+- **Normality of errors**: If violated, inference based on normality may be biased.
 
-If the relationship between the dependent variable and the independent variables is not linear, we should consider change the model to a non-linear model.
+## 2.5 Generalized Least Squares (GLS)
 
-- **No perfect multicollinearity**
+> This section is supplementary and was not covered in the course, but GLS is useful when errors are not homoscedastic.
 
-If there is perfect multicollinearity, we should remove one of the independent variables that are linearly dependent on others.
-
-In real-world data, it is rare to have perfect multicollinearity. However, we may have multicollinearity (det<sup>2</sup>$(X^TX) \approx 0$), we could:
-
-- Normalize the independent variables,
-- Use principal component analysis (PCA) to reduce the dimensionality of the independent variables,
-- Remove one or more independent variables that are highly correlated with others.
-
-- **Independence and randomness of the error term**
-
-If the error term is not independent and random, the estimators will be biased and inconsistent. 
-
-We could consider:
-
-- Change the model,
-- Instead of standard errors, use robust standard errors.
-
-- **Zero conditional mean**
-
-We use residual to check this assumption. The expected value of the residual is always zero by OLS construction.
-
-- **Homoscedasticity**
-
-If the variance of the error term is not constant, the estimators will be biased and inconsistent.
-
-We could consider:
-
-- Instead of standard errors, use robust standard errors,
-- Instead of OLS, use Generalized Ordinary Least Squares (GLS) to estimate the model.
-
-- **Normality of the error term**
-
-If the error term is not normally distributed, all inference based on the normality assumption will be biased.
-
-## 2.5 Generalized Ordinary Least Squares (GLS)
-
-> This section was not covered in the course, but it is a useful method to estimate the model when the error term is not homoscedastic.
-
-Generalized Ordinary Least Squares (GLS) is a method to estimate the model when the error term is not homoscedastic. The model is:
+GLS estimates the model when the error term has non-constant variance:
 
 $$
-y = X\beta + \epsilon,
+y = X\beta + \epsilon
 $$
 
-where:
-
-- $y$ is the dependent variable,
-- $X$ is the matrix of independent variables and the constant term, $X \in \mathbb{R}^{n \times (k+1)}$,
-- $\beta$ is the vector of coefficients, $\beta \in \mathbb{R}^{k+1}$,
-- $\epsilon$ is the error term.
-
-The GLS estimators are:
+The GLS estimator is:
 
 $$
-\hat{\beta}_{GLS} = (X^TWX)^{-1}X^TWy,
+\hat{\beta}_{GLS} = (X^TWX)^{-1}X^TWy
 $$
 
-where:
-
-- $\hat{\beta}_{GLS}$ is the vector of GLS estimators,
-- $W$ is the weight matrix, $W \in \mathbb{R}^{n \times n}$.
-
-The weight matrix $W$ is a diagonal matrix with the inverse of the variance of the error term on the diagonal. The weight matrix $W$ is:
+where $W$ is a diagonal weight matrix with the inverse of the error variances on the diagonal:
 
 $$
 W =
@@ -201,78 +148,66 @@ W =
 0 & \frac{1}{\sigma_2^2} & \ldots & 0 \\
 \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & \ldots & \frac{1}{\sigma_n^2}
-\end{bmatrix},
+\end{bmatrix}
 $$
 
-where:
-
-- $\sigma_1^2, \sigma_2^2, \ldots, \sigma_n^2$ are the variance of the error term.
-
-The GLS estimators are more efficient than the OLS estimators when the error term is not homoscedastic.
+GLS estimators are more efficient than OLS when errors are heteroscedastic.
 
 ## 2.6 Overfitting
 
-- if $n = k + 1$, the model is perfectly fitted to the data, $R^2 = 1$. But the model is overfitted, you should not use this model to predict new data.
-- if $n < k + 1$, the model is overfitting.
+- If $n = k + 1$, the model fits the data perfectly ($R^2 = 1$), but is overfitted and should not be used for prediction.
+- If $n < k + 1$, the model is overfitted and not valid.
 
-## 2.7 R-squared and Adjusted R-squared
+## 2.7 $R^2$ and Adjusted $R^2$
 
-Adding independent variables to the model will always increase the $R^2$ value. The $R^2$ value is not a good measure to compare models with different numbers of independent variables. 
-
-Why? Because adding one or more independent variables always can achieve at least the same minimum sum of squared errors, by using the same independent variables as the model with fewer independent variables, adding more independent variables can only improve the $R^2$ value.
-
-The adjusted $R^2$ value is a better measure to compare models with different numbers of independent variables. The adjusted $R^2$ value is:
+Adding more independent variables always increases $R^2$, so it is not suitable for comparing models with different numbers of variables. The adjusted $R^2$ is a better metric:
 
 $$
-R^2_{adj} = 1 - \frac{(1 - R^2)(n - 1)}{n - k - 1},
+R^2_{adj} = 1 - \frac{(1 - R^2)(n - 1)}{n - k - 1}
 $$
 
 where:
 
-- $R^2_{adj}$ is the adjusted $R^2$ value,
-- $R^2$ is the $R^2$ value,
+- $R^2_{adj}$ is the adjusted $R^2$,
+- $R^2$ is the coefficient of determination,
 - $n$ is the number of observations,
 - $k$ is the number of independent variables.
 
-The adjusted $R^2$ value penalizes the $R^2$ value for adding more independent variables to the model.
+Adjusted $R^2$ penalizes the addition of unnecessary variables. It is mainly used for model comparison, not for direct interpretation.
 
-However, adjusted $R^2$ value does not have a direct interpretation as $R^2$ value. We use it to compare models with different numbers of independent variables.
+> When comparing models, always check that assumptions are met and that individual t-tests for variables are significant.
 
-> When comparing models, we should also check all assumptions are met, and individual t-tests for indepent variables are significant.
+## 2.8 Categorical Data
 
-## 2.8 Categorical data
+Categorical variables represent categories. There are two common ways to encode them:
 
-Categorical data is data that represents categories, typically we use one of binary coding to represent categorical data in the model.
+### Option 1: Computer Science / Machine Learning
 
-**Option 1: In CS, ML**
+Assign each category a number from $0$ to $n-1$ (where $n$ is the number of categories), then use binary coding.
 
-Assign each category from 0 to $n-1$, where $n$ is the number of categories. Then convert to binary coding.
+- *Advantage*: Saves memory.
 
-- Advantage: save computor memory.
+### Option 2: Econometrics
 
-**Option 2: In Econometrics**
+Use binary (dummy) variables, with the first category as the base. Each other category gets its own indicator variable.
 
-Convert to binary coding directly, assume the first category is the base category, assign one's to each category.
+- *Advantage*: Easier interpretation.
 
-> See handwritten notes for an example.
-
-- Advantage: easy to interpret.
-
-### Interpretation of the categorical data
+### Interpreting Categorical Variables
 
 Consider the model:
 
 $$
-y = \beta_0 + \beta_1x_1,
+y = \beta_0 + \beta_1x_1
 $$
 
-where:
+where
+
 $$
 x_1 = \begin{cases}
 1 & \text{if the category is A}, \\
-0 & \text{Otherwise}.
+0 & \text{otherwise}
 \end{cases}
 $$
 
-$\hat{\beta_1}$: It's estimated that the dependent variable with category A is $\hat{\beta_1}$ higher opposed to the base category, given all other factors are same.
-
+$\hat{\beta}_1$ estimates the difference in the dependent variable for category A compared to the base category, holding all else constant.
