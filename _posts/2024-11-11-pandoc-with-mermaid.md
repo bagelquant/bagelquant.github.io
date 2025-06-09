@@ -27,4 +27,3 @@ brew install texlive
 ```shell
 pandoc SAMPLE.md -o SAMPLE.pdf --pdf-engine=xelatex -F mermaid-filter
 ```
-

@@ -1,9 +1,8 @@
 ---
+title: "Yazi: A Terminal File Explorer"
 tags:
   - setup
 ---
-
-## Introduction
 
 Yazi is a terminal file explorer written in Rust. I give it a quick try and found it's a good alternative to `ls` and `tree` command. It provides a more intuitive way to navigate files and directories in the terminal.
 
@@ -41,8 +40,8 @@ ratio = [1, 2, 5]
 
 [opener]
 edit = [
-	{ run = 'nvim "$@"', block = true, for = "unix" },
-	{ run = "nvim %*",   block = true, for = "windows" },
+ { run = 'nvim "$@"', block = true, for = "unix" },
+ { run = "nvim %*",   block = true, for = "windows" },
 ]
 
 [plugin]
@@ -71,4 +70,3 @@ use = "catppuccin-macchiato"
 ## Demo
 
 ![yazi-demo](/assets/post_img/yazi-demo.png)
-

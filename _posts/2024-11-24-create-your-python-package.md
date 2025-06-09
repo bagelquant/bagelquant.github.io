@@ -1,16 +1,16 @@
 ---
-titlle: "Create your own python package"
+title: "Create your own Python package"
 tags:
     - python
 ---
 
-I used use `twine` to upload my package to PyPI with a `setup.py` file to build the package. Recently, I swap to `pyproject.toml` to manage my project and build the package. It is more consice and easier to manage in my opinion. With one file, you can manage your project, build the package, and upload it to PyPI. 
+In the past, I used `twine` to upload my packages to PyPI, building them with a `setup.py` file. Recently, I switched to using `pyproject.toml` for project management and package building. In my experience, it is more concise and much easier to maintain. With a single file, you can manage your project, build your package, and upload it to PyPI.
 
-Here is the [Official Python Packaging Guide](https://packaging.python.org/en/latest/guides/section-build-and-publish/).
+For reference, see the [Official Python Packaging Guide](https://packaging.python.org/en/latest/guides/section-build-and-publish/).
 
-## Write a `pyproject.toml` file
+## Writing a `pyproject.toml` File
 
-Here is the full example from the official guide:
+Here is a full example from the official guide:
 
 ```toml
 [build-system]
@@ -69,11 +69,11 @@ spam-gui = "spam:main_gui"
 tomatoes = "spam:main_tomatoes"
 ```
 
-You can see in this file, it contains all the information about the project, dependencies, authors, maintainers, description, license, keywords, classifiers, optional dependencies, urls, scripts, gui-scripts, and entry-points. And really easy to read and manage.
+This file contains all the essential information about your project: dependencies, authors, maintainers, description, license, keywords, classifiers, optional dependencies, URLs, scripts, GUI scripts, and entry points. It is easy to read and manage.
 
-## Project structure
+## Project Structure Example
 
-Sample project structure:
+A typical project structure might look like this:
 
 ```plaintext
 spam-eggs/
@@ -88,37 +88,29 @@ spam-eggs/
 │       └── tomatoes.py
 └── tests/
     └── test_spam.py
-
 ```
 
-## Using `build` and `twine` to build and upload the package
+## Building and Uploading Your Package with `build` and `twine`
 
-`build` is a package that provides a simple interface to build and package your project. You can install it with `pip install build`.
+- `build` is a tool for building and packaging your project. Install it with `pip install build`.
+- `twine` is used to securely upload your package to PyPI. Install it with `pip install twine`.
 
-`twine` is a package that provides a simple interface to upload your package to PyPI. You can install it with `pip install twine`.
-
-To build the package, you can run `python -m build` in the root of your project. It will create a `dist` folder with the package in it.
-
-To upload the package to PyPI, you can run `twine upload dist/*` in the root of your project. It will upload the package to PyPI.
-
-That's it. It is really easy to manage your project and build the package with `pyproject.toml` file. 
-
-**build command:**
+To build your package, run:
 
 ```shell
 python3 -m build
 ```
 
-**upload command to test:**
+To upload your package to TestPyPI (for testing):
 
 ```shell
 python3 -m twine upload --repository testpypi dist/*
 ```
 
-**upload command to production:**
+To upload your package to the official PyPI:
 
 ```shell
 python3 -m twine upload --repository pypi dist/*
 ```
 
-
+With `pyproject.toml`, managing, building, and publishing your Python package is simple and efficient.

@@ -10,19 +10,19 @@ Github provides a CLI tool for Copilot. This tool can be used to interact with C
 
 ## Installation
 
-1. install gh, a command-line tool that makes it easy to work with GitHub from the command line.
+Install gh, a command-line tool that makes it easy to work with GitHub from the command line.
 
 ```shell
 brew install gh
 ```
 
-2. Authenticate with GitHub
+Authenticate with GitHub
 
 ```shell
 gh auth login
 ```
 
-3. Install the Copilot CLI
+Install the Copilot CLI
 
 ```shell
 gh extension install github/gh-copilot
@@ -30,15 +30,14 @@ gh extension install github/gh-copilot
 
 ## Usage
 
-1. Explain
+Explain
 
 ```shell
 gh copilot explain "<COMMAND>"
 ```
 
-2. Suggest
+Suggest
 
 ```shell
 gh copilot suggest "<COMMAND>"
 ```
-

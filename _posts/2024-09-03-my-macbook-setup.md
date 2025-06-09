@@ -11,18 +11,17 @@ However, since graduating from college, I have gradually transitioned all my dig
 ## System Settings
 
 - Keyboard
-    - Increase key repeat rates
-    - Reduce delay until repeat - Both changes are particularly helpful in VIM mode
-    - Remap `Capslock` key to `ESC`
+  - Increase key repeat rates
+  - Reduce delay until repeat - Both changes are particularly helpful in VIM mode
+  - Remap `Capslock` key to `ESC`
 - Trackpad
-    - Increase speed
-    - Enable touch to tap
-    - Enable three-finger dragging
+  - Increase speed
+  - Enable touch to tap
+  - Enable three-finger dragging
 - Desktop and Dock
-    - Minimize windows using scale effect for quicker animation
-    - Enable clicking on wallpaper to reveal desktop, only in stage manager
-    - Hide dock use `Cmd + Option + D` to toggle
-
+  - Minimize windows using scale effect for quicker animation
+  - Enable clicking on wallpaper to reveal desktop, only in stage manager
+  - Hide dock use `Cmd + Option + D` to toggle
 
 ## Configs
 
@@ -65,4 +64,3 @@ brew install mysql
 ```shell
 conda config --set auto_activate_base false
 ```
-

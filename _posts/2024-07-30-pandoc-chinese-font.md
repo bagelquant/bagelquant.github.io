@@ -30,4 +30,3 @@ pandoc SAMPLE.md -o SAMPLE.pdf --pdf-engine=xelatex
 ```shell
 pandoc SAMPLE.md -o SAMPLE.pdf --pdf-engine=xelatex -V mainfont="PingFang SC"
 ```
-

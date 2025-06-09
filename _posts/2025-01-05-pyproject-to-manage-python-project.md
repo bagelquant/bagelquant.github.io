@@ -4,18 +4,17 @@ tags:
     - python
 ---
 
-Python project could be a mess if you don't have a clear structure. `pyproject.toml` is a file that helps you manage your Python project. It is a configuration file that contains information about your project, such as dependencies, build system, and other project metadata.
+A Python project can quickly become disorganized without a clear structure. The `pyproject.toml` file is a modern configuration file that helps you manage your Python project efficiently. It centralizes information about your project, such as dependencies, build system, and metadata.
 
-Combined with environment management tools like `poetry`, `pipenv` or `conda`, `pyproject.toml` can help you manage your Python project more efficiently.
-
+When combined with environment management tools like `poetry`, `pipenv`, or `conda`, `pyproject.toml` makes managing your Python project much easier and more reliable.
 
 ## What is pyproject.toml?
 
-`pyproject.toml` is a configuration file that contains information about your Python project. It is used to specify the build system, dependencies, and other project metadata. It is a replacement for the `setup.py` file and is recommended by the Python Packaging Authority (PyPA) as the preferred way to manage Python projects. 
+`pyproject.toml` is a standardized configuration file for Python projects. It specifies the build system, dependencies, and other project metadata. It is intended to replace the older `setup.py` file and is now recommended by the Python Packaging Authority (PyPA) as the preferred way to manage Python projects.
 
-- [The official document](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/)
+- [Official documentation](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/)
 
-Sample `pyproject.toml`:
+### Example: pyproject.toml
 
 ```toml
 [build-system]
@@ -74,7 +73,7 @@ spam-gui = "spam:main_gui"
 tomatoes = "spam:main_tomatoes"
 ```
 
-## A short sample for personal project
+## Minimal Example for a Personal Project
 
 ```toml
 [build-system]

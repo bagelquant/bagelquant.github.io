@@ -32,4 +32,3 @@ Here are some common options you can use with `rsync`:
 ## Use Case
 
 For example, if you have a folder stored as notes, you want to sync to a github page folder to publish your notes. You can sync your notes folder to the github page folder using `rsync`.
-
