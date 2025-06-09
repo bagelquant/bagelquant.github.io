@@ -7,7 +7,7 @@ header:
   overlay_image: /assets/images/eric-huang-prohead.png
   actions:
     - label: "Download Resume"
-      url: "https://bagelquant.github.io/assets/docs/Yanzhong-Huang-Resume.pdf"
+      url: "https://bagelquant.github.io/assets/docs/Yanzhong-Huang-Resume-2025-06-09.pdf"
 ---
 
 - Current Master of Quantitative Finance at Rutgers Business School
