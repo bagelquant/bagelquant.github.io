@@ -104,6 +104,7 @@ defaults:
     values:
       show_date: true
       layout: single
+      classes: wide
       toc: true
       toc_sticky: true
       author_profile: true
