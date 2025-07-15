@@ -7,7 +7,7 @@ header:
   overlay_image: /assets/images/eric-huang-prohead.png
   actions:
     - label: "Download Resume"
-      url: "https://bagelquant.github.io/assets/docs/Yanzhong-Huang-Resume-2025-06-09.pdf"
+      url: "https://bagelquant.github.io/assets/docs/Yanzhong-Huang-Resume-2025-07-15.pdf"
 ---
 
 - Current Master of Quantitative Finance at Rutgers Business School
@@ -33,6 +33,7 @@ Master of Quantitative Finance
 Master of Banking and Finance  
 
 ### CAPITAL UNIVERSITY OF ECONOMICS AND BUSINESS
+
 ***Beijing, China - Jun 2018***  
 Bachelor of Business Administration with a major in Accounting
 
