@@ -62,5 +62,5 @@ brew install mysql
 ## Conda
 
 ```shell
-conda config --set auto_activate_base false
+conda config --set auto_activate false
 ```
