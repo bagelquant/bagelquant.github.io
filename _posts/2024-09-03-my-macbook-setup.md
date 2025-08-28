@@ -1,7 +1,5 @@
 ---
-title: "My MacBook Setup"
-tags:
-    - setup
+title: "My MacBook Setup" tags: - setup
 ---
 
 Windows has been my preferred desktop operating system since primary school, offering a wide array of apps, particularly games.
@@ -40,17 +38,13 @@ Homebrew
 Casks
 
 ```shell
-brew install --cask miniconda zoom itsycal pdf-expert r rstudio google-chrome microsoft-teams warp chatgpt
-```
-
-```shell
-brew install --cask nikitabobko/tap/aerospace
+brew install --cask miniconda zoom itsycal pdf-expert r-app rstudio google-chrome microsoft-teams warp chatgpt tencent-meeting visual-studio-code
 ```
 
 Formulas
 
 ```shell
-brew install nvim gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi lazygit ffmpegthumbnailer poppler deno
+brew install nvim gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi lazygit ffmpegthumbnailer poppler deno pkg-config
 ```
 
 ## MySQL
