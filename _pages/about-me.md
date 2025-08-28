@@ -7,7 +7,7 @@ header:
   overlay_image: /assets/images/eric-huang-prohead.png
   actions:
     - label: "Download Resume"
-      url: "https://bagelquant.github.io/assets/docs/Yanzhong-Huang-Resume-2025-07-15.pdf"
+      url: "https://bagelquant.github.io/assets/docs/Yanzhong-Huang-Resume-2025-08-28.pdf"
 ---
 
 Hi — I’m Yanzhong (Eric) Huang, a quantitative researcher and developer currently pursuing my Master of Quantitative Finance at Rutgers Business School (Class of 2024). My work bridges finance, data science, and software engineering, with a focus on systematic investing and quantitative research.
