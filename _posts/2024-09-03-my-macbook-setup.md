@@ -38,7 +38,7 @@ Homebrew
 Casks
 
 ```shell
-brew install --cask miniconda zoom itsycal pdf-expert r-app rstudio google-chrome microsoft-teams warp chatgpt tencent-meeting visual-studio-code
+brew install --cask miniconda zoom itsycal pdf-expert r-app rstudio google-chrome microsoft-teams warp chatgpt visual-studio-code
 ```
 
 Formulas
