@@ -1,5 +1,7 @@
 ---
-title: "My MacBook Setup" tags: - setup
+title: "My MacBook Setup" 
+tags: 
+  - setup
 ---
 
 Windows has been my preferred desktop operating system since primary school, offering a wide array of apps, particularly games.
