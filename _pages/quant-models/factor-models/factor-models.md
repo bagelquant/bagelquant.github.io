@@ -53,4 +53,11 @@ where:
 
 The Fama-French 3-factor model extends the CAPM by adding two additional factors to better explain expected returns. It suggests that small firms and value firms tend to outperform large firms and growth firms, respectively.
 
+This section provides a comprehensive overview of factor models from academic and theoretical perspectives. It covers the key concepts, methodologies, and empirical findings related to factor models, offering a solid foundation for understanding their application in finance.
+
 You could navigate all topics at left sidebar.
+
+Other related reads:
+
+1. A more practical approach example of factor model implementation can be found in the [Factor Model in China Stock Market](https://bagelquant.com/factor-model-in-china/) project.
+2. A comprehensive literature review on factor models can be found in the [Factor Models Literature Review](https://bagelquant.com/factor-models-literature-review/) post.
