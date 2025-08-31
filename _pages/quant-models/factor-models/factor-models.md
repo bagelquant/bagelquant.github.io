@@ -53,16 +53,4 @@ where:
 
 The Fama-French 3-factor model extends the CAPM by adding two additional factors to better explain expected returns. It suggests that small firms and value firms tend to outperform large firms and growth firms, respectively.
 
-## Sections
-
-In the following sections:
-
-- CAPM
-  - [Derive CAPM](derive-capm.md)
-  - [Empirical Test of CAPM](empirical-test-capm.md)
-- Factor Models
-  - [APT and Factor Models](apt-factor-models.md)
-  - [Factor Models Construction Process](factor-models-construction-process.md)
-  - [Single Factor Test](single-factor-test.md)
-  - [Empirical Test of Factor Models](empirical-test-factor-models.md)
-  - [Well-Known Factors and Factor Models](well-known-factors-and-factor-models.md)
+You could navigate all topics at left sidebar.

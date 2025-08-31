@@ -8,8 +8,6 @@ A rational decision maker should always choose the option that maximizes their "
 
 The concept of "utility" measures the satisfaction or benefit an individual derives from consuming goods and services. In this section, we first introduce the utility function—a mathematical representation that assigns a numerical value to each possible outcome based on an individual's preferences. We then explore the implications of risk aversion and how it shapes decision-making under uncertainty. Finally, we discuss stochastic dominance, a method for comparing different risky prospects.
 
-1. [Utility Function](utility-function.md)
-2. [Optimal Allocation](optimal-allocation.md)
-3. [Absolute and Relative Risk Aversion](absolute-and-relative-risk-aversion.md)
-
 Utility optimization is closely related to pricing models in finance. The price of any asset can be viewed as the result of wealth allocation across the entire "market" (the aggregation of all rational investors). This concept is fundamental to [mean-variance portfolio optimization](https://bagelquant.com/mean-variance) and [consumption-based asset pricing models](https://bagelquant.com/consumption-based-pricing).
+
+You could navigate all topics at left sidebar.

@@ -19,19 +19,13 @@ When I first encountered modern portfolio theory in a traditional finance progra
 
 My understanding deepened significantly in **Professor [Yangru Wu](https://www.business.rutgers.edu/faculty/yangru-wu)’s Financial Modeling** course. His approach framed mean-variance analysis from a mathematical perspective, filling in theoretical gaps and providing a more comprehensive rationale for its application. This section draws on Professor Wu’s course materials and my own reflections. All accompanying plots are derived from his lectures. I am sincerely grateful to Professor Wu for his insights.
 
-## Topics Covered in This Section
-
-1. [From Optimized Utility to Mean-Variance Analysis](from-optimized-utility-to-mean-variance-analysis.md)
-2. [Solution to the Mean-Variance Optimization Problem](solution-to-the-mean-variance-optimization-problem.md)
-3. [Efficient Frontier without a Risk-Free Asset](efficient-frontier-without-risk-free-asset.md)
-4. [Frontier with a Risk-Free Asset](frontier-with-risk-free-asset.md)
-5. [Market Portfolio and the Security Market Line](market-portfolio-and-security-market-line.md)
-
 For the calculations in these sections, I created a simple Python package called [bagel-mean-variance](https://github.com/bagelquant/bagel-mean-variance). It is designed to calculate optimal portfolio weights using the methods discussed here. The package is implemented with pure matrix operations, avoiding optimization libraries. It is simple, efficient, and flexible—ideal for financial analysis and portfolio management tasks.
 
 This section provides a rigorous and structured understanding of mean-variance portfolio optimization and its foundational role in finance. It also lays the groundwork for deeper discussions of the **Capital Asset Pricing Model (CAPM)** and **Arbitrage Pricing Theory (APT)**—both essential to modern financial theory.
 
 > **Note:** This is a math-focused series, aligned with the quant orientation of this blog. We will explore the detailed mathematical derivations and insights behind mean-variance optimization.
+
+You could navigate all topics at left sidebar.
 
 For additional topics on optimization techniques in finance, visit:
 
