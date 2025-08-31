@@ -2,7 +2,9 @@
 layout: splash
 title: "BagelQuant Projects"
 permalink: /projects/
-header: overlay_image: /assets/images/quant-skills-header.png
+excerpt: "All projects and code samples from BagelQuant."
+header: 
+    overlay_image: /assets/images/quant-skills-header.png
 ---
 
 Projects list:
