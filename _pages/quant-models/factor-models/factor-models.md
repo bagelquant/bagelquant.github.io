@@ -1,9 +1,8 @@
 ---
 title: "Factor Models"
 permalink: /factor-models/
-layout: splash
-header:
-  overlay_image: /assets/images/radio-telescope.png
+sidebar:
+    nav: "factor-models"
 ---
 
 In asset pricing, there are two main approaches: equilibrium models and arbitrage pricing models.

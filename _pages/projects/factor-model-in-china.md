@@ -1,14 +1,11 @@
 ---
-title: "Factor Model in China Stock Market"
-permalink: /factor-models-in-china/
-layout: splash
-header:
-  overlay_image: /assets/images/radio-telescope.png
+title: "Factor Models Construction Process"
+permalink: /factor-model-in-china/
+sidebar:
+    nav: "factor-model-in-china"
 ---
 
-This project aims to build a **stock scoring and backtesting system** based on classical factor investing techniques. The goal is to start simple, generate interpretable results, and gradually expand into more sophisticated methods.  
-
----
+This project aims to build a **stock scoring and backtesting system** based on classical factor investing techniques. The goal is to start simple, generate interpretable results, and gradually expand into more sophisticated methods.
 
 ## Project Settings  
 
@@ -18,8 +15,6 @@ This project aims to build a **stock scoring and backtesting system** based on c
 - **Frequency**: Monthly  
 - **Data Source**: [Tushare](https://tushare.pro/) via [bagel-tushare](https://github.com/bagelquant/bagel-tushare) (local MySQL database)  
 - **Strategy Type**: Long-only, holding top 20–50 stocks  
-
----
 
 ## Factor Library  
 
@@ -35,8 +30,6 @@ The initial factor set will cover standard categories (all oriented so that *hig
 
 A detailed factor dictionary (definitions, formulas, and data fields) will be maintained in a separate file.  
 
----
-
 ## Factor Evaluation  
 
 Each factor will be tested individually using:  
@@ -45,8 +38,6 @@ Each factor will be tested individually using:
 - **Rank IC** > 0.5  
 - **Quantile Analysis**: IC across quantile portfolios  
 - **Correlation Check**: pairwise correlation < 0.8 (to reduce redundancy)  
-
----
 
 ## Validation Methodology (Walk-Forward)  
 
@@ -78,8 +69,6 @@ To better mimic real-time investing, I will use **walk-forward validation** rath
    - Keep preprocessing parameters fixed within each train window.  
    - Always log data availability dates to prevent look-ahead.  
 
----
-
 ## Stock Scoring Framework  
 
 Scores will be calculated as a **linear combination** of selected factors. Initial methods to test:  
@@ -87,8 +76,6 @@ Scores will be calculated as a **linear combination** of selected factors. Initi
 1. Equal weights  
 2. IC-weighted  
 3. ICIR-weighted  
-
----
 
 ## Portfolio Construction  
 
@@ -99,15 +86,10 @@ Scores will be calculated as a **linear combination** of selected factors. Initi
 
 Future improvements: test alternative rebalancing frequencies, sector neutrality, and more sophisticated transaction cost modeling (e.g., volume-based slippage or market impact).  
 
----
-
 ## Roadmap  
 
 1. **Phase 1**: Build factor library and run baseline equal-weight backtests.  
 2. **Phase 2**: Add IC/ICIR weighting, factor correlation pruning, and walk-forward validation.  
 3. **Phase 3**: Expand portfolio construction with turnover control, transaction costs, and risk adjustments.  
 
----
-
 ✅ **Deliverable**: For each rebalance date, generate factor scores, stock rankings, and portfolio backtest results — published as a series of blog posts tracking progress.  
-

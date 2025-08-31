@@ -1,11 +1,9 @@
 ---
 title: "Utility Theory"
 permalink: /utility-theory/
-layout: splash
-header:
-  overlay_image: /assets/images/radio-telescope.png
+sidebar:
+    nav: "utility-theory"
 ---
-
 A rational decision maker should always choose the option that maximizes their "interest." If we can quantify an individual's "interest" in a decision-making scenario, we can use optimization techniques—such as calculus—to find the best possible choice. This is the foundation of utility theory.
 
 The concept of "utility" measures the satisfaction or benefit an individual derives from consuming goods and services. In this section, we first introduce the utility function—a mathematical representation that assigns a numerical value to each possible outcome based on an individual's preferences. We then explore the implications of risk aversion and how it shapes decision-making under uncertainty. Finally, we discuss stochastic dominance, a method for comparing different risky prospects.

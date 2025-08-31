@@ -37,5 +37,4 @@ Key Features
 
 This project aims to build a **stock scoring and backtesting system** based on classical factor investing techniques. The goal is to start simple, generate interpretable results, and gradually expand into more sophisticated methods.
 
-Link: [Factor Model in China Stock Market](https://bagelquant.com/factor-models-in-china/)
-
+Link: [Factor Model in China Stock Market](https://bagelquant.com/factor-model-in-china/)
