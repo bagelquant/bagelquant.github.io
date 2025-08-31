@@ -108,3 +108,7 @@ factor-models:
           url: /factor-models/empirical-test-factor-models/
         - title: "Well known factors and factor models"
           url: /factor-models/well-known-factors-and-factor-models/
+
+factor-model-in-china:
+    - title: "Factor Models in China Stock Market"
+      url: /factor-model-in-china/
