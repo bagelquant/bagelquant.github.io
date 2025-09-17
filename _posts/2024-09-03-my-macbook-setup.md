@@ -40,7 +40,7 @@ Homebrew
 Casks
 
 ```shell
-brew install --cask miniconda zoom itsycal pdf-expert r-app rstudio google-chrome microsoft-teams warp chatgpt visual-studio-code
+brew install --cask miniconda zoom itsycal pdf-expert raycast r-app rstudio google-chrome microsoft-teams iterm2 chatgpt visual-studio-code blackhole-16ch
 ```
 
 Formulas
