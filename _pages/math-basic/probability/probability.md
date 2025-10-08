@@ -7,9 +7,7 @@ Probability theory forms the foundation of quantitative finance. It provides the
 
 Below is a concise walkthrough of key concepts and formulas in probability theory, structured to aid quick reference and understanding.
 
-Link to handwritten notes: [probability-handwritten.pdf](probability.pdf)
-
----
+Link to handwritten notes: [probability-handwritten.pdf](Probability.pdf)
 
 ## 1. Combinatorial Analysis
 
@@ -58,8 +56,6 @@ $$
 x_1^{n_1}\cdots x_r^{n_r}.
 $$
 
----
-
 ## 2. Axioms of Probability
 
 ### 2.1 Basics
@@ -88,8 +84,6 @@ $$
 P(AB)=P(A)P(B).
 $$
 
----
-
 ## 2.3 Random Variables and Distributions
 
 CDF:
@@ -116,8 +110,6 @@ Independence of random variables:
 $$
 f_{X,Y}(x,y) = f_X(x)\,f_Y(y).
 $$
-
----
 
 ## 2.4 Expectation, Variance, Covariance
 
@@ -154,8 +146,6 @@ $$
 \sqrt{\operatorname{Var}(X)\,\operatorname{Var}(Y)}}.
 $$
 
----
-
 ## 2.5 Inequalities and Laws of Large Numbers
 
 Markov (for nonnegative $X$ and $a>0$):
@@ -177,8 +167,6 @@ Strong Law of Large Numbers (i.i.d. mean $\mu$):
 $$
 \frac{1}{n}\sum_{k=1}^{n} X_k \ \xrightarrow{\text{a.s.}}\ \mu.
 $$
-
----
 
 ## 3. Discrete Distributions
 
@@ -225,8 +213,6 @@ E[X]=\frac{nN}{N+M}, \qquad
 \operatorname{Var}(X)=\frac{nNM}{(N+M)^2}\left(1-\frac{n-1}{N+M-1}\right).
 $$
 
----
-
 ## 4. Continuous Distributions
 
 ### 4.1 Uniform on $(a,b)$
@@ -267,8 +253,6 @@ Then
 $$
 N(t+s)-N(t) \sim \text{Poisson}\!\left(m(t+s)-m(t)\right).
 $$
-
----
 
 ## 5. Conditional Expectation and Variance
 
