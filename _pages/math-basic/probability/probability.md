@@ -3,10 +3,6 @@ title: "Probability"
 permalink: /probability/
 ---
 
-# Probability Theory Cheatsheet
-
-## Introduction
-
 Probability theory forms the foundation of quantitative finance. It provides the mathematical framework to model uncertainty, evaluate risk, and make informed decisions in environments dominated by randomness. From pricing derivatives and evaluating portfolios to designing trading algorithms and conducting statistical inference, probability plays a central role in the toolkit of a quant. 
 
 Below is a concise walkthrough of key concepts and formulas in probability theory, structured to aid quick reference and understanding.
