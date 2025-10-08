@@ -11,7 +11,7 @@ Probability theory forms the foundation of quantitative finance. It provides the
 
 Below is a concise walkthrough of key concepts and formulas in probability theory, structured to aid quick reference and understanding.
 
-Link to handwritten notes: [probability-handwritten.pdf](probability-handwritten.pdf)
+Link to handwritten notes: [probability-handwritten.pdf](probability.pdf)
 
 ---
 
