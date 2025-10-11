@@ -10,4 +10,8 @@ The concept of "utility" measures the satisfaction or benefit an individual deri
 
 Utility optimization is closely related to pricing models in finance. The price of any asset can be viewed as the result of wealth allocation across the entire "market" (the aggregation of all rational investors). This concept is fundamental to [mean-variance portfolio optimization](https://bagelquant.com/mean-variance) and [consumption-based asset pricing models](https://bagelquant.com/consumption-based-pricing).
 
-You could navigate all topics at left sidebar.
+## Topics
+
+- [Utility Function](utility-function.md)
+- [Optimal Allocation](optimal-allocation.md)
+- [Absolute and Relative Risk Aversion](absolute-and-relative-risk-aversion.md)

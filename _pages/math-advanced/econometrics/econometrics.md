@@ -11,6 +11,13 @@ I was fortunate to study econometrics with **[Professor Mariya Naumova](https://
 
 **Prerequisites:** Probability and Statistics, Calculus
 
-You could navigate all topics at left sidebar.
+## Topics
+
+- [univariate regression](univariate-regression.md)
+- [multivariable regression](multivariable-regression.md)
+- [logistic regression](logistic-regression.md)
+- [basic time series process](basic-time-series-process.md)
+
+> You could navigate through the topics using the sidebar.
 
 Additional topics will be explored in Time Series Analysis.

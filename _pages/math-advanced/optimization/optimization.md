@@ -10,4 +10,9 @@ Optimization has been a cornerstone of human progress for centuries. From ancien
 
 I am especially passionate about this subject in the MQF program at Rutgers Business School, where I have the privilege of learning from [Professor Andrzej Ruszczyński](https://www.business.rutgers.edu/faculty/andrzej-ruszczynski). Professor Ruszczyński is internationally recognized for his expertise in nonlinear stochastic optimization and is renowned for making complex ideas accessible through clear, intuitive explanations. His engaging and detailed lectures make the study of optimization both rigorous and enjoyable.
 
-You could navigate all topics at left sidebar.
+## Topics
+
+- [introduction to optimization](introduction-to-optimization.md)
+- [convex sets and functions](convex-sets-and-functions.md)
+
+> You could navigate all topics at left sidebar.

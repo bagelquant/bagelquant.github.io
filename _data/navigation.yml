@@ -76,7 +76,7 @@ mean-variance:
     - title: "Mean-Variance Analysis"
       url: /mean-variance/
       children:
-        - title: "From Optimaized Utility to Mean-Variance Analysis"
+        - title: "From Optimized Utility to Mean-Variance Analysis"
           url: /mean-variance/from-optimized-utility-to-mean-variance-analysis/
         - title: "Solution to the Mean-Variance Optimization Problem"
           url: /mean-variance/solution-to-the-mean-variance-optimization-problem/
@@ -92,7 +92,7 @@ factor-models:
       url: /factor-models/
     - title: "CAPM"
       children:
-        - title: "Dirive CAPM"
+        - title: "Derive CAPM"
           url: /factor-models/derive-capm/
         - title: "Empirical Test of CAPM"
           url: /factor-models/empirical-test-capm/

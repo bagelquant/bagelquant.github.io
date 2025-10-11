@@ -3,7 +3,7 @@ title: "Probability"
 permalink: /probability/
 ---
 
-Probability theory forms the foundation of quantitative finance. It provides the mathematical framework to model uncertainty, evaluate risk, and make informed decisions in environments dominated by randomness. From pricing derivatives and evaluating portfolios to designing trading algorithms and conducting statistical inference, probability plays a central role in the toolkit of a quant. 
+Probability theory forms the foundation of quantitative finance. It provides the mathematical framework to model uncertainty, evaluate risk, and make informed decisions in environments dominated by randomness. From pricing derivatives and evaluating portfolios to designing trading algorithms and conducting statistical inference, probability plays a central role in the toolkit of a quant.
 
 Below is a concise walkthrough of key concepts and formulas in probability theory, structured to aid quick reference and understanding.
 
@@ -12,6 +12,7 @@ Link to handwritten notes: [probability-handwritten.pdf](Probability.pdf)
 ## 1. Combinatorial Analysis
 
 ### 1.1 Permutations
+
 For n distinct objects, the number of permutations is
 $$
 n! = n(n-1)(n-2)\cdots 1.
@@ -28,6 +29,7 @@ $$
 $$
 
 ### 1.2 Combinations
+
 Number of ways to choose $r$ from $n$:
 $$
 \binom{n}{r} = \frac{n!}{(n-r)!\,r!}.
@@ -59,6 +61,7 @@ $$
 ## 2. Axioms of Probability
 
 ### 2.1 Basics
+
 $$
 0 \le P(A) \le 1, \qquad P(\Omega)=1.
 $$
@@ -69,6 +72,7 @@ P\!\left(\bigcup_{i} A_i\right) = \sum_{i} P(A_i).
 $$
 
 ### 2.2 Conditional Probability and Independence
+
 Conditional probability:
 $$
 P(A \mid B) = \frac{P(AB)}{P(B)}.
@@ -87,43 +91,62 @@ $$
 ## 2.3 Random Variables and Distributions
 
 CDF:
+
 $$
 F(x) = P(X \le x).
 $$
 
 Discrete (PMF) and continuous (PDF):
+
 $$
 p(x)=P(X=x), \qquad \sum_{x} p(x)=1;
 $$
+
 $$
 P(X \in C)=\int_{C} f(x)\,dx, \qquad
 F(x)=\int_{-\infty}^{x} f(s)\,ds.
 $$
 
 Joint distributions:
+
 $$
 F_{X,Y}(x,y)=P(X\le x,\ Y\le y)
 = \int_{-\infty}^{x}\!\!\int_{-\infty}^{y} f(u,v)\,du\,dv.
 $$
 
 Independence of random variables:
+
 $$
 f_{X,Y}(x,y) = f_X(x)\,f_Y(y).
 $$
 
 ## 2.4 Expectation, Variance, Covariance
 
-Expectation:
+Expectation
+
+Discrete:
+
 $$
-E[X] = \sum_{i} x_i\,p(x_i) \quad \text{(discrete)},
-\qquad
+E[X] = \sum_{i} x_i\,p(x_i) \quad \text{(discrete)}.
+$$
+
+Continuous:
+
+$$
 E[X] = \int_{-\infty}^{\infty} x f(x)\,dx \quad \text{(continuous)}.
 $$
 
 For a function $g$:
+
+Discrete:
+
 $$
-E[g(X)] = \sum_{i} g(x_i)\,p(x_i)
-\quad \text{or} \quad
+E[g(X)] = \sum_{i} g(x_i)\,p(x_i).
+$$
+
+Continuous:
+
+$$
 E[g(X)] = \int_{-\infty}^{\infty} g(x)\,f(x)\,dx.
 $$
 
@@ -171,6 +194,7 @@ $$
 ## 3. Discrete Distributions
 
 ### 3.1 Binomial
+
 $$
 P(X=i)=\binom{n}{i} p^{\,i} (1-p)^{\,n-i}, \quad i=0,1,\ldots,n.
 $$
@@ -179,6 +203,7 @@ E[X]=np, \qquad \operatorname{Var}(X)=np(1-p).
 $$
 
 ### 3.2 Poisson
+
 $$
 P(X=i)=e^{-\lambda}\frac{\lambda^{i}}{i!}, \quad i=0,1,2,\ldots
 $$
@@ -188,6 +213,7 @@ $$
 Limit of Binomial: $n\to\infty$, $p\to 0$, $np=\lambda$.
 
 ### 3.3 Geometric (first success on trial $n$)
+
 $$
 P(X=n)=(1-p)^{\,n-1}p, \quad n=1,2,\ldots
 $$
@@ -196,6 +222,7 @@ E[X]=\frac{1}{p}, \qquad \operatorname{Var}(X)=\frac{1-p}{p^{2}}.
 $$
 
 ### 3.4 Negative Binomial (trials until $r$-th success)
+
 $$
 P(X=n)=\binom{n-1}{r-1} p^{\,r} (1-p)^{\,n-r}, \quad n=r,r+1,\ldots
 $$
@@ -204,6 +231,7 @@ E[X]=\frac{r}{p}, \qquad \operatorname{Var}(X)=\frac{r(1-p)}{p^{2}}.
 $$
 
 ### 3.5 Hypergeometric (without replacement)
+
 Population has $N+M$ items, $N$ of type A and $M$ of type B. Draw $n$.
 $$
 P(X=i)=\frac{\binom{N}{i}\,\binom{M}{\,n-i\,}}{\binom{N+M}{n}}.
@@ -216,6 +244,7 @@ $$
 ## 4. Continuous Distributions
 
 ### 4.1 Uniform on $(a,b)$
+
 $$
 f(x)=\frac{1}{b-a}, \quad a<x<b; \qquad
 F(x)=\frac{x-a}{b-a} \ \ (a\le x\le b).
@@ -225,12 +254,14 @@ E[X]=\frac{a+b}{2}, \qquad \operatorname{Var}(X)=\frac{(b-a)^2}{12}.
 $$
 
 ### 4.2 Normal
+
 $$
 f(x)=\frac{1}{\sqrt{2\pi}\,\sigma}\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right).
 $$
 Standard normal: $Z\sim N(0,1)$, CDF $\Phi\!\left(\frac{x-\mu}{\sigma}\right)$.
 
 ### 4.3 Exponential
+
 $$
 f(x)=\lambda e^{-\lambda x}, \quad x>0; \qquad
 E[X]=\frac{1}{\lambda}, \quad \operatorname{Var}(X)=\frac{1}{\lambda^2}.
@@ -238,6 +269,7 @@ $$
 Memoryless: $P(X>s+t\mid X>s)=P(X>t)$.
 
 ### 4.4 Poisson Process and Gamma
+
 Homogeneous Poisson process with rate $\lambda$:
 $$
 N(t) \sim \text{Poisson}(\lambda t).
@@ -245,6 +277,7 @@ $$
 Interarrival times are i.i.d. exponential$(\lambda)$; the sum of $n$ such interarrivals is gamma$(n,\lambda)$.
 
 ### 4.5 Nonhomogeneous Poisson Process
+
 Time-varying rate $\lambda(t)$, mean value function
 $$
 m(t)=\int_{0}^{t} \lambda(s)\,ds.
@@ -275,4 +308,3 @@ Law of total variance:
 $$
 \operatorname{Var}(X)=E\!\left[\operatorname{Var}(X\mid Y)\right] + \operatorname{Var}\!\left(E[X\mid Y]\right).
 $$
-

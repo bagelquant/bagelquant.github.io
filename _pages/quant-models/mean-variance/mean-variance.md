@@ -25,7 +25,15 @@ This section provides a rigorous and structured understanding of mean-variance p
 
 > **Note:** This is a math-focused series, aligned with the quant orientation of this blog. We will explore the detailed mathematical derivations and insights behind mean-variance optimization.
 
-You could navigate all topics at left sidebar.
+## Topics
+
+- [From Optimized Utility to Mean-Variance Analysis](from-optimized-utility-to-mean-variance-analysis.md)
+- [Solution to the Mean-Variance Optimization Problem](solution-to-the-mean-variance-optimization-problem.md)
+- [Efficient Frontier without Risk-Free Asset](efficient-frontier-without-risk-free-asset.md)
+- [Frontier with Risk-Free Asset](frontier-with-risk-free-asset.md)
+- [Market Portfolio and Security Market Line](market-portfolio-and-security-market-line.md)
+
+> You could navigate all topics at left sidebar.
 
 For additional topics on optimization techniques in finance, visit:
 
