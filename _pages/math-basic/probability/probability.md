@@ -9,6 +9,12 @@ Below is a concise walkthrough of key concepts and formulas in probability theor
 
 Link to handwritten notes: [probability-handwritten.pdf](Probability.pdf)
 
+Additional topics in probability:
+
+- Moment Generating Functions
+- Characteristic Functions
+- [General Probability Theory](general-probability-theory.md) (A more advanced treatment of probability theory)
+
 ## 1. Combinatorial Analysis
 
 ### 1.1 Permutations
