@@ -8,7 +8,6 @@ tags:
 
 Recently I tried to install the mysqlclient Python package using pip, but ran into a frustrating build error. Since this is a common issue for macOS developers, I’m recording the problem and solution here for future reference.
 
-⸻
 ## The Problem
 
 Running:
@@ -38,7 +37,6 @@ Command 'pkg-config --exists mysqlclient' returned non-zero exit status 127.
 This was the real culprit — the pkg-config tool was missing.
 ```
 
-
 ## Why pkg-config Matters
 
 mysqlclient is a Python wrapper around the native MySQL client library. To build it from source, the compiler needs to know:
@@ -47,7 +45,6 @@ mysqlclient is a Python wrapper around the native MySQL client library. To build
 - which libraries to link against
 
 The tool that provides this information is pkg-config. If it isn’t installed, the build fails because pip can’t locate MySQL’s development files.
-
 
 ## The Solution
 
@@ -70,4 +67,3 @@ pip install mysqlclient
 ```
 
 This time, the build completed successfully.
-

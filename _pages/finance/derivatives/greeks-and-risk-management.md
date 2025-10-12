@@ -1,6 +1,6 @@
 ---
 title: "Greeks and Risk Management"
-permalink: /derivatives/greeks-and-risk-management
+permalink: /derivatives/greeks-and-risk-management/
 sidebar:
   nav: "derivatives"
 ---

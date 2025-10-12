@@ -1,6 +1,6 @@
 ---
 title: "Options Pricing: Binomial Model"
-permalink: /derivatives/options-pricing-binomial-model
+permalink: /derivatives/options-pricing-binomial-model/
 sidebar:
   nav: "derivatives"
 ---

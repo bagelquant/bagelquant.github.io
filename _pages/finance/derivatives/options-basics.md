@@ -1,6 +1,6 @@
 ---
 title: "Options: Basics and Put–Call Parity"
-permalink: /derivatives/options-basics
+permalink: /derivatives/options-basics/
 sidebar:
   nav: "derivatives"
 ---

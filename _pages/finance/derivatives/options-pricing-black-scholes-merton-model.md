@@ -1,6 +1,6 @@
 ---
 title: "Options Pricing: Black–Scholes–Merton Model"
-permalink: /derivatives/options-pricing-black-scholes-merton-model
+permalink: /derivatives/options-pricing-black-scholes-merton-model/
 sidebar:
   nav: "derivatives"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Forwards and Futures"
-permalink: /derivatives/forwards-and-futures
+permalink: /derivatives/forwards-and-futures/
 sidebar:
   nav: "derivatives"
 ---

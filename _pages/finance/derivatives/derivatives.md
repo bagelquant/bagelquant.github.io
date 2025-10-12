@@ -21,3 +21,8 @@ In this section, we will cover the basic options topics. The derivations and mat
 - [Greeks and Risk Management](greeks-and-risk-management.md)
 - [Volatility Surface and Smile](volatility-surface-and-smile.md)
 - [Exotic Options](exotic-options.md)
+
+Additional resources:
+
+- [Investopedia: Derivatives](https://www.investopedia.com/terms/d/derivative.asp)
+- [Post: Quant interview FAQ - Derivatives](https://www.bagelquant.com/posts/quant-interview-faq-derivatives/)

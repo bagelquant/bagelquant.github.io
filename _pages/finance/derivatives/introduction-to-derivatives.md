@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Derivatives"
-permalink: /derivatives/introduction-to-derivatives
+permalink: /derivatives/introduction-to-derivatives/
 sidebar:
   nav: "derivatives"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Exotic Options"
-permalink: /derivatives/exotic-options
+permalink: /derivatives/exotic-options/
 sidebar:
   nav: "derivatives"
 ---

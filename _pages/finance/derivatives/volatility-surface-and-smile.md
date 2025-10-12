@@ -1,6 +1,6 @@
 ---
 title: "Volatility Surface and Smile"
-permalink: /derivatives/volatility-surface-and-smile
+permalink: /derivatives/volatility-surface-and-smile/
 sidebar:
   nav: "derivatives"
 ---
