@@ -9,6 +9,8 @@ Derivatives are financial instruments whose value is derived from the value of a
 
 Some quant even argue that if you don't understand derivatives, you are not a real quant. This is because quant fields started from pricing derivatives, and many advanced quantitative techniques are developed in the context of derivatives pricing and risk management. Although today quant roles are more diverse, understanding derivatives remains a fundamental skill for quants.
 
+In this section, we will cover the basic options topics. The derivations and mathematical details will be covered in [stochastic calculus](../../math-advanced/stochastic-calculus/stochastic-calculus.md). Some derivatives topics such as interest rate and models are covered in [fixed income](../fixed-income/fixed-income.md).
+
 ## Topics
 
 - [Introduction to Derivatives](introduction-to-derivatives.md)

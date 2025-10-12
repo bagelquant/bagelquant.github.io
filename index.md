@@ -10,12 +10,11 @@ header:
       url: "https://bagelquant.github.io/about-me/"
 ---
 
-This blog is a collection of quant skills, finance knowledge, programming tips, and personal experiences. Aimed at quant enthusiasts, finance professionals, and anyone interested in the world of finance, BagelQuant offers a unique perspective on the industry. Here is a map of the quant world:
+This blog is a collection of quant skills, finance knowledge, programming tips, and personal experiences. Aimed at quant enthusiasts, finance professionals, and anyone interested in the world of finance, BagelQuant offers a unique perspective on the industry. Here is a map of the quant world
 
 ![Quant Map](assets/images/quant-map.png)
 
-## Topic lists:
-
+## Topic lists
 
 | **Math Basics**     | **Math Advanced**                                                                 | **Quant Models**                              | **Finance**         |
 |---------------------|-----------------------------------------------------------------------------------|-----------------------------------------------|---------------------|

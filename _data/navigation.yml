@@ -129,11 +129,13 @@ derivatives:
         url: /finance/derivatives/introduction-to-derivatives/
       - title: "Forwards & Futures"
         url: /finance/derivatives/forwards-and-futures/
-      - title: "Options"
-        url: /finance/derivatives/options/
-      - title: "Swaps"
-        url: /finance/derivatives/swaps/
-      - title: "Credit Derivatives"
-        url: /finance/derivatives/credit-derivatives/
-      - title: "Exotic Derivatives"
-        url: /finance/derivatives/exotic-derivatives/
+      - title: "Options Pricing: Binomial Model"
+        url: /finance/derivatives/options-pricing-binomial-model/
+      - title: "Options Pricing: Black-Scholes-Merton Model"
+        url: /finance/derivatives/options-pricing-black-scholes-merton-model/
+      - title: "Greeks and Risk Management"
+        url: /finance/derivatives/greeks-and-risk-management/
+      - title: "Volatility Surface and Smile"
+        url: /finance/derivatives/volatility-surface-and-smile/
+      - title: "Exotic Options"
+        url: /finance/derivatives/exotic-options/
