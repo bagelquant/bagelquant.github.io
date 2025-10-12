@@ -1,5 +1,5 @@
 ---
-title: "Solution to the Mean-Variance Optimization Problem"
+title: "Mean-Variance Optimization"
 permalink: /mean-variance/
 sidebar:
     nav: "mean-variance"
