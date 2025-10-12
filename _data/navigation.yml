@@ -123,19 +123,19 @@ probability:
 
 derivatives:
   - title: "Derivatives"
-    url: /finance/derivatives/
+    url: /derivatives/
     children:
       - title: "Introduction to Derivatives"
-        url: /finance/derivatives/introduction-to-derivatives/
+        url: /derivatives/introduction-to-derivatives/
       - title: "Forwards & Futures"
-        url: /finance/derivatives/forwards-and-futures/
+        url: /derivatives/forwards-and-futures/
       - title: "Options Pricing: Binomial Model"
-        url: /finance/derivatives/options-pricing-binomial-model/
+        url: /derivatives/options-pricing-binomial-model/
       - title: "Options Pricing: Black-Scholes-Merton Model"
-        url: /finance/derivatives/options-pricing-black-scholes-merton-model/
+        url: /derivatives/options-pricing-black-scholes-merton-model/
       - title: "Greeks and Risk Management"
-        url: /finance/derivatives/greeks-and-risk-management/
+        url: /derivatives/greeks-and-risk-management/
       - title: "Volatility Surface and Smile"
-        url: /finance/derivatives/volatility-surface-and-smile/
+        url: /derivatives/volatility-surface-and-smile/
       - title: "Exotic Options"
-        url: /finance/derivatives/exotic-options/
+        url: /derivatives/exotic-options/
