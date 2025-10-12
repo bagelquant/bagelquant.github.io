@@ -91,3 +91,5 @@ E[\tilde r_j - r_f] \leq 0, \quad \forall j = 1, 2, ..., n
 $$
 
 Therefore, an individual will not invest in risky assets if and only if all expected risk premia are less than or equal to zero. If at least one asset has a positive expected risk premium, the individual will invest in risky assets.
+
+Next up: [Absolute and Relative Risk Aversion](absolute-and-relative-risk-aversion.md)

@@ -164,3 +164,5 @@ Key takeaways:
 - The solution to the mean-variance optimization problem with a risk-free asset
 - The Capital Market Line (CML) and its interpretation
 - The tangent (optimal risky) portfolio
+
+Next up: [Market Portfolio and Security Market Line](market-portfolio-and-security-market-line.md)

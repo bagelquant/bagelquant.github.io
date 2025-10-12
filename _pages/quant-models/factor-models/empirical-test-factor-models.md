@@ -49,3 +49,5 @@ Several statistical methods can be used to evaluate these aspects:
 - **Mean–Variance Spanning:** Huberman and Kandel (1987)
 - **$\alpha$-Testing**
 - **Bayesian Methods:** Barillas and Shanken (2018)
+
+Next up: [Well known factors and factor models](well-known-factors-and-factor-models.md)

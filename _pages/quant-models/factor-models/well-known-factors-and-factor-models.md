@@ -55,3 +55,8 @@ The table below summarizes some of the most influential factor models in the lit
 | Hou-Xue-Zhang 5-Factor Model  | Market, Size, Value, Profitability, Investment | 2017 |
 
 Although each new factor model aims to improve upon its predecessors, debate continues over which model is best. The choice of factor model often depends on the specific context, asset class, and research question at hand.
+
+## Literature Review
+
+- [Factor Models in Asset Pricing: A Comprehensive Literature Review(Up to 2024)](https://bagelquant.com/literature-review-factor-models/)
+- [Evolution of Alpha Signals in Asset Pricing: A Literature Review](https://bagelquant.com/literature-review-alphas/)

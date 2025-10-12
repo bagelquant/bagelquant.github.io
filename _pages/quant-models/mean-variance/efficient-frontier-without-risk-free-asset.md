@@ -237,3 +237,5 @@ Key takeaways from this section:
 - The covariance between any two frontier portfolios is given by the covariance matrix $V$.
 - For any frontier portfolio $p$ (except the MVP), there exists a unique frontier portfolio $zc(p)$ with zero covariance with $p$.
 - Any portfolio $q$ (not the MVP) can be expressed or constructed from a frontier portfolio $p$ and its zero covariance portfolio $zc(p)$.
+
+Next up: [Frontier with Risk-Free Asset](frontier-with-risk-free-asset.md)

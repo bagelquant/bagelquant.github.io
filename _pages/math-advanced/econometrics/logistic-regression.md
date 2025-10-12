@@ -187,3 +187,5 @@ where:
 - $y_{ij}$ is the observed value indicating $Y_i = j$.
 
 Solving $(k+1)(M-1)$ nonlinear equations yields the maximum likelihood estimates of the parameters, typically using numerical methods.
+
+Next up: [Basic Time Series Process](basic-time-series-process.md)

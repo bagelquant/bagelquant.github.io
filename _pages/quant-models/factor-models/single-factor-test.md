@@ -142,3 +142,5 @@ For practical application, here is a typical process for constructing a factor m
 1. **Propose an idea**: Identify a potential factor based on economic theory or empirical evidence.
 2. **Single Factor Test**: Use the sorting technique or firm characteristics as factor loadings to test whether the factor has predictive power.
 3. **Add to the existing factor model**: If the factor is valid, incorporate it into the existing factor model and test the overall model.
+
+Next up: [Emperical Test of Factor Models](empirical-test-factor-models.md)

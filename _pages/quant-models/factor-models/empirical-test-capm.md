@@ -91,3 +91,5 @@ Their results:
 - There is a trade-off between return and risk ($\gamma_1 > 0$).
 - The linearity assumption cannot be rejected ($\gamma_2 = 0$).
 - The hypothesis that the market portfolio is the only systematic risk for stock returns cannot be rejected.
+
+Next up: [APT and Factor Models](apt-factor-models.md)

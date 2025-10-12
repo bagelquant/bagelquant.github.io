@@ -381,3 +381,5 @@ Reject $H_0$ if $WT_{stat}$ exceeds the critical value.
 ## Conclusion
 
 Univariate regression is a powerful tool for analyzing the relationship between a single independent and dependent variable. By estimating the slope and intercept using OLS, we obtain a regression line that best fits the data. Under the Gauss-Markov assumptions, OLS estimators are unbiased, consistent, and efficient. We can test the significance of coefficients using t- and F-tests, and check model assumptions with diagnostic tests. Univariate regression provides a solid foundation for more advanced econometric models and is widely used in economics, finance, and beyond.
+
+Next up: [multivariable regression](multivariable-regression.md)

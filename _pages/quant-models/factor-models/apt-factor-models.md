@@ -83,11 +83,11 @@ Now we have a framework to explain the expected return of an asset based on a se
 
 - Construct out own factor models
 - And we could use the factor models to:
-    - Predict asset returns -> Investment Strategy -> Portfolio Management
-    - Identify mispriced assets -> Arbitrage Opportunities
-    - Evaluate the performance of a portfolio
-    - Risk Management
-    - Construct a well-diversified portfolio
+  - Predict asset returns -> Investment Strategy -> Portfolio Management
+  - Identify mispriced assets -> Arbitrage Opportunities
+  - Evaluate the performance of a portfolio
+  - Risk Management
+  - Construct a well-diversified portfolio
 
 To construct a factor model, we need to identify the factors that drive the returns of the assets. This factors we can found in the literature, reports, or we can construct our own factors based on the data we have. The factors could be macroeconomic variables, industry-specific variables, or company-specific variables.
 
@@ -99,3 +99,4 @@ Normally, we will test:
 >[!NOTE]
 >We will discuss the single factor test in next section, and the multi-factor test in the following sections. Once we have a factor model, we can use it to various purposes, we will discuss the usage of factor models in the later sections, such as portfolio construction, risk management, and performance evaluation.
 
+Next up: [factor models construction process](factor-models-construction-process.md)

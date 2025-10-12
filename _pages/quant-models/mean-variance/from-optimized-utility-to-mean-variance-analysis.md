@@ -101,3 +101,5 @@ Again, $E[R_3] = 0$, so mean-variance optimization is justified.
 In summary, mean-variance optimization is reasonable when the utility function is quadratic or wealth is normally distributed. In these cases, higher-order moments do not affect expected utility, and the mean-variance approach is accurate. In other situations, higher-order moments matter and mean-variance optimization may not be precise.
 
 In practice, neither of these assumptions is strictly satisfied. However, higher-order effects are usually small, so mean-variance optimization remains a good approximation and is widely used in real-world portfolio management.
+
+Next up: [Solution to the Mean-Variance Optimization Problem](solution-to-the-mean-variance-optimization-problem.md)

@@ -211,3 +211,5 @@ x_1 = \begin{cases}
 $$
 
 $\hat{\beta}_1$ estimates the difference in the dependent variable for category A compared to the base category, holding all else constant.
+
+Next up: [logistic regression](logistic-regression.md)

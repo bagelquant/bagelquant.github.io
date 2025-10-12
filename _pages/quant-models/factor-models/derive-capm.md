@@ -142,3 +142,5 @@ Summary of assumptions:
 
 - Investors are rational and risk-averse (increasing, concave utility functions).
 - Risky assets are jointly normally distributed (required for Stein's Lemma).
+
+Next up: [Empirical Test of CAPM](empirical-test-capm.md)

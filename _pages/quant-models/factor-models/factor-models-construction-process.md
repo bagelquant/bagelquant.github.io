@@ -34,3 +34,5 @@ A typical process for constructing industry factor models includes:
 7. **Deployment**: Implement the model in live trading, continuously monitoring and adjusting as needed.
 
 In the next two sections, we will discuss steps 3 and 4 in detail, focusing on the academic approach. For factor selection, we will cover single-factor testing—a common method for evaluating factor usefulness. For model training, we will use a linear model to empirically test the factor model.
+
+Next up: [Single Factor Test](single-factor-test.md)

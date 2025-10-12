@@ -126,3 +126,5 @@ In summary:
 
 - We derived the weights of the optimal portfolio for any given expected return
 - We derived the weights of the minimum variance portfolio (MVP)
+
+Next up: [Efficient Frontier without Risk-Free Asset](efficient-frontier-without-risk-free-asset.md)

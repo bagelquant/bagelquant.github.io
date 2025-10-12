@@ -1,6 +1,8 @@
 ---
 title: "General Probability Theory"
-permalink: /general-probability-theory/
+permalink: probability/general-probability-theory/
+sidebar:
+    nav: probability
 ---
 
 This section provides a more advanced treatment of probability theory, building on the basics covered in the main [Probability Theory](probability.md) page. It includes topics such as measure-theoretic foundations, advanced probability distributions, and limit theorems.
@@ -17,7 +19,6 @@ We can still define outcomes set as $\Omega$, events as subsets of $\Omega$.
 But in each case, with infinitely many possible outcomes, each individual outcome has a probability of zero. If we still define a probability measure on individual outcomes, we would end up with any event having a probability of zero, and total probability would not sum to 1.
 
 We need a definition of probability on sets of outcomes (events) that can handle infinite sample spaces. This is where $\sigma$-algebras and measure theory come in.
-
 
 ## $\sigma$-Algebras/$\sigma$-Fields Definition
 
@@ -116,20 +117,3 @@ If $\phi: \mathbb{R} \to \mathbb{R}$ is a convex function and $X$ is an integrab
 $$
 \phi(\mathbb{E}[X]) \leq \mathbb{E}[\phi(X)]
 $$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

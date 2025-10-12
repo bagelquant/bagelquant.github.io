@@ -89,3 +89,5 @@ Source: [Certainty Equivalent](https://breakingdownfinance.com/finance-topics/be
 - Every individual may have a different utility function.
 - Utility functions are increasing: $u'(x) > 0$.
 - Risk-averse individuals have concave utility functions: $u''(x) < 0$.
+
+Next up: [Optimal Allocation](optimal-allocation.md)

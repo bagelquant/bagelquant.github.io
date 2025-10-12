@@ -49,3 +49,5 @@ The main purpose of optimization theory is to develop methods for finding the op
 Exhaustive enumeration is impossible for infinite sets and impractical even for large finite sets.
 
 In later chapters, we will learn how to determine whether a given point is optimal without checking every point in the feasible set.
+
+Next up: [Conves Sets and Functions](convex-sets-and-functions.md)
