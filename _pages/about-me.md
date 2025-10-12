@@ -23,4 +23,3 @@ I’m currently looking for full-time opportunities in the U.S. starting in 2025
 Email: <eric.yanzhong.huang@gmail.com>  
 Github: <https://github.com/bagelquant>  
 Linkedin: <https://www.linkedin.com/in/yanzhonghuang/>
-

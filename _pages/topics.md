@@ -30,3 +30,7 @@ Advanced math:
 - [Utility Theory](quant-models/utility-theory/utility-theory.md)
 - [Mean-Variance Analysis](quant-models/mean-variance/mean-variance.md)
 - [Factor Models](quant-models/factor-models/factor-models.md)
+
+## Finance
+
+- [Derivatives](finance/derivatives/derivatives.md)

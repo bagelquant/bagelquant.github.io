@@ -13,107 +13,107 @@ main:
   #   url: /tags/
 
 econometrics:
-    - title: "Econometrics"
-      url: /econometrics/
-      children:
-        - title: "Univariate Regression"
-          url: /econometrics/univariate-regression/
-        - title: "Multivariable Regression"
-          url: /econometrics/multivariable-regression/
-        - title: "Logistic Regression"
-          url: /econometrics/logistic-regression/
-        - title: "Basic Time Series Process"
-          url: /econometrics/basic-time-series-process/
+  - title: "Econometrics"
+    url: /econometrics/
+    children:
+      - title: "Univariate Regression"
+        url: /econometrics/univariate-regression/
+      - title: "Multivariable Regression"
+        url: /econometrics/multivariable-regression/
+      - title: "Logistic Regression"
+        url: /econometrics/logistic-regression/
+      - title: "Basic Time Series Process"
+        url: /econometrics/basic-time-series-process/
 
 optimization:
-    - title: "Optimization"
-      url: /optimization/
-      children:
-        - title: "Introduction to Optimization"
-          url: /optimization/introduction-to-optimization/
-        - title: "Convex Sets and Functions"
-          url: /optimization/convex-sets-and-functions/
-        - title: "Linear Programming"
-          url: /optimization/linear-programming/
-        - title: "Duality in Linear Programming"
-          url: /optimization/duality-in-linear-programming/
-        - title: "Nonlinear Programming"
-          url: /optimization/nonlinear-programming/
-        - title: "Duality in Nonlinear Programming"
-          url: /optimization/duality-in-nonlinear-programming/
-        - title: "Mean-Variance Portfolio Optimization"
-          url: /mean-variance/
-        - title: "Value at Risk (VaR)"
-          url: /optimization/value-at-risk-var/
-        - title: "AVaR and Coherent Risk Measures"
-          url: /optimization/avar-and-coherent-risk-measures/
+  - title: "Optimization"
+    url: /optimization/
+    children:
+      - title: "Introduction to Optimization"
+        url: /optimization/introduction-to-optimization/
+      - title: "Convex Sets and Functions"
+        url: /optimization/convex-sets-and-functions/
+      - title: "Linear Programming"
+        url: /optimization/linear-programming/
+      - title: "Duality in Linear Programming"
+        url: /optimization/duality-in-linear-programming/
+      - title: "Nonlinear Programming"
+        url: /optimization/nonlinear-programming/
+      - title: "Duality in Nonlinear Programming"
+        url: /optimization/duality-in-nonlinear-programming/
+      - title: "Mean-Variance Portfolio Optimization"
+        url: /mean-variance/
+      - title: "Value at Risk (VaR)"
+        url: /optimization/value-at-risk-var/
+      - title: "AVaR and Coherent Risk Measures"
+        url: /optimization/avar-and-coherent-risk-measures/
 
 bagel-tushare:
-    - title: "bagel-tushare"
-      url: /bagel-tushare/
-      children:
-        - title: "Introduction"
-          url: /bagel-tushare/introduction/
-        - title: "Installation"
-          url: /bagel-tushare/installation/
-        - title: "Usage"
-          url: /bagel-tushare/usage/
-        - title: "API Reference"
-          url: /bagel-tushare/api-reference/
+  - title: "bagel-tushare"
+    url: /bagel-tushare/
+    children:
+      - title: "Introduction"
+        url: /bagel-tushare/introduction/
+      - title: "Installation"
+        url: /bagel-tushare/installation/
+      - title: "Usage"
+        url: /bagel-tushare/usage/
+      - title: "API Reference"
+        url: /bagel-tushare/api-reference/
 
 utility-theory:
-    - title: "Utility Theory"
-      url: /utility-theory/
-      children:
-        - title: "Utility Function"
-          url: /utility-theory/utility-function/
-        - title: "Optimal Allocation"
-          url: /utility-theory/optimal-allocation/
-        - title: "Absolute and Relative Risk Aversion"
-          url: /utility-theory/absolute-and-relative-risk-aversion/
+  - title: "Utility Theory"
+    url: /utility-theory/
+    children:
+      - title: "Utility Function"
+        url: /utility-theory/utility-function/
+      - title: "Optimal Allocation"
+        url: /utility-theory/optimal-allocation/
+      - title: "Absolute and Relative Risk Aversion"
+        url: /utility-theory/absolute-and-relative-risk-aversion/
 
 mean-variance:
-    - title: "Mean-Variance Analysis"
-      url: /mean-variance/
-      children:
-        - title: "From Optimized Utility to Mean-Variance Analysis"
-          url: /mean-variance/from-optimized-utility-to-mean-variance-analysis/
-        - title: "Solution to the Mean-Variance Optimization Problem"
-          url: /mean-variance/solution-to-the-mean-variance-optimization-problem/
-        - title: "Efficient Frontier without Risk-Free Asset"
-          url: /mean-variance/efficient-frontier-without-risk-free-asset/
-        - title: "Frontier with Risk-Free Asset"
-          url: /mean-variance/frontier-with-risk-free-asset/
-        - title: "Market Portfolio and Security Market Line"
-          url: /mean-variance/market-portfolio-and-security-market-line/
+  - title: "Mean-Variance Analysis"
+    url: /mean-variance/
+    children:
+      - title: "From Optimized Utility to Mean-Variance Analysis"
+        url: /mean-variance/from-optimized-utility-to-mean-variance-analysis/
+      - title: "Solution to the Mean-Variance Optimization Problem"
+        url: /mean-variance/solution-to-the-mean-variance-optimization-problem/
+      - title: "Efficient Frontier without Risk-Free Asset"
+        url: /mean-variance/efficient-frontier-without-risk-free-asset/
+      - title: "Frontier with Risk-Free Asset"
+        url: /mean-variance/frontier-with-risk-free-asset/
+      - title: "Market Portfolio and Security Market Line"
+        url: /mean-variance/market-portfolio-and-security-market-line/
 
 factor-models:
-    - title: "Factor Models"
-      url: /factor-models/
-    - title: "CAPM"
-      children:
-        - title: "Derive CAPM"
-          url: /factor-models/derive-capm/
-        - title: "Empirical Test of CAPM"
-          url: /factor-models/empirical-test-capm/
-    - title: "APT and Factor Models"
-      children:
-        - title: "APT and Factor Models"
-          url: /factor-models/apt-and-factor-models/
-        - title: "Factor Models Construction Process"
-          url: /factor-models/factor-models-construction-process/
-        - title: "Single Factor Test"
-          url: /factor-models/single-factor-test/
-        - title: "Empirical Test of Factor Models"
-          url: /factor-models/empirical-test-factor-models/
-        - title: "Well known factors and factor models"
-          url: /factor-models/well-known-factors-and-factor-models/
+  - title: "Factor Models"
+    url: /factor-models/
+  - title: "CAPM"
+    children:
+      - title: "Derive CAPM"
+        url: /factor-models/derive-capm/
+      - title: "Empirical Test of CAPM"
+        url: /factor-models/empirical-test-capm/
+  - title: "APT and Factor Models"
+    children:
+      - title: "APT and Factor Models"
+        url: /factor-models/apt-and-factor-models/
+      - title: "Factor Models Construction Process"
+        url: /factor-models/factor-models-construction-process/
+      - title: "Single Factor Test"
+        url: /factor-models/single-factor-test/
+      - title: "Empirical Test of Factor Models"
+        url: /factor-models/empirical-test-factor-models/
+      - title: "Well known factors and factor models"
+        url: /factor-models/well-known-factors-and-factor-models/
 
 factor-model-in-china:
-    - title: "Factor Models in China Stock Market"
-      url: /factor-model-in-china/
-    - title: "Stock Universe"
-      url: /factor-model-in-china/stock-universe/
+  - title: "Factor Models in China Stock Market"
+    url: /factor-model-in-china/
+  - title: "Stock Universe"
+    url: /factor-model-in-china/stock-universe/
 
 probability:
   - title: "Probability"
@@ -121,3 +121,19 @@ probability:
   - title: "General Probability Theory"
     url: /probability/general-probability-theory/
 
+derivatives:
+  - title: "Derivatives"
+    url: /finance/derivatives/
+    children:
+      - title: "Introduction to Derivatives"
+        url: /finance/derivatives/introduction-to-derivatives/
+      - title: "Forwards & Futures"
+        url: /finance/derivatives/forwards-and-futures/
+      - title: "Options"
+        url: /finance/derivatives/options/
+      - title: "Swaps"
+        url: /finance/derivatives/swaps/
+      - title: "Credit Derivatives"
+        url: /finance/derivatives/credit-derivatives/
+      - title: "Exotic Derivatives"
+        url: /finance/derivatives/exotic-derivatives/
