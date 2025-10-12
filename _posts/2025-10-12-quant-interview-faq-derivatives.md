@@ -1,8 +1,11 @@
 ---
 title: "Quant Interview FAQ — Derivatives"
+permalink: /quant-interview-faq-derivatives/
 tags: 
     - derivatives
     - interview
+sidebar:
+    nav: derivatives
 ---
 
 Each question below includes a **Short Answer**, a concrete **Example**, and a **Detailed Explanation** with quant-level depth, including formulas, edge cases, and practical caveats.

@@ -25,4 +25,4 @@ In this section, we will cover the basic options topics. The derivations and mat
 Additional resources:
 
 - [Investopedia: Derivatives](https://www.investopedia.com/terms/d/derivative.asp)
-- [Post: Quant interview FAQ - Derivatives](https://www.bagelquant.com/posts/quant-interview-faq-derivatives/)
+- [Post: Quant interview FAQ - Derivatives](https://bagelquant.com/quant-interview-faq-derivatives/)

@@ -139,3 +139,5 @@ derivatives:
         url: /derivatives/volatility-surface-and-smile/
       - title: "Exotic Options"
         url: /derivatives/exotic-options/
+      - title: "Quant Interview Questions"
+        url: /quant-interview-faq-derivatives/
