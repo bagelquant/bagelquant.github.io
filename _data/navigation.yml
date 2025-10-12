@@ -1,6 +1,6 @@
 main:
   - title: "Topics"
-    url: /Topics/
+    url: /topics/
   - title: "Projects"
     url: /projects/
   - title: "Posts"
@@ -114,3 +114,10 @@ factor-model-in-china:
       url: /factor-model-in-china/
     - title: "Stock Universe"
       url: /factor-model-in-china/stock-universe/
+
+probability:
+  - title: "Probability"
+    url: /probability/
+  - title: "General Probability Theory"
+    url: /probability/general-probability-theory/
+
