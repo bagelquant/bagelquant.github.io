@@ -124,7 +124,7 @@ defaults:
       toc: true
       toc_sticky: true
       author_profile: true
-      read_time: true
+      # read_time: true
       share: true
       mathjax: true
       related: true
