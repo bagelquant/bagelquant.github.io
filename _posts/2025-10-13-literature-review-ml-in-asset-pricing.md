@@ -1,9 +1,13 @@
 ---
-title: "Machine Learning in Empirical Asset Pricing: A Comprehensive Literature Review"
+title: "Machine Learning in Empirical Asset Pricing"
+excerpt: "A Comprehensive Literature Review (Up to 2025)"
 tags:
   - factor models
   - machine learning
   - literature review
+permalink: /literature-review-ml-in-asset-pricing/
+header:
+  overlay_image: /assets/images/headers/ml_header.png
 ---
 
 ## Introduction
