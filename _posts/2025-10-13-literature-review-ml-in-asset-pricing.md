@@ -8,6 +8,7 @@ tags:
 permalink: /literature-review-ml-in-asset-pricing/
 header:
   overlay_image: /assets/images/headers/ml_header_dark.png
+  overlay_filter: 0.5
 ---
 
 ## Introduction
