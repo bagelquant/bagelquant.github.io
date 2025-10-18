@@ -1,6 +1,7 @@
 ---
 title: "Quant Interview FAQ — Stochastic Calculus"
 permalink: /quant-interview-faq-stochastic-calculus/
+excerpt: "A cheat sheet of common stochastic calculus concepts and formulas for quant interviews."
 tags:
     - stochastic-calculus
     - interview
