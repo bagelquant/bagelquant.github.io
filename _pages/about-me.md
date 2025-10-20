@@ -14,7 +14,7 @@ Hi, I’m **Yanzhong (Eric) Huang**—a quantitative finance practitioner who bl
 
 ## Now
 
-- 🎓 **MQF @ Rutgers** (4.0), graduating **December 2025**
+- 🎓 **MQF @ Rutgers** (GPA 4.0), graduating **December 2025**
 - 🔎 Looking for roles in **Quant Research/Analytics**, **Risk/Model Validation**, or **Portfolio Analytics** (NYC preferred)
 - 👨🏻‍💻 Building reusable Python tooling for factor research and portfolio analytics
 
