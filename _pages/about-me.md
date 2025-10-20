@@ -1,14 +1,16 @@
 ---
-title: "About Me"
+layout: splash
+title: "Yanzhong(Eric) Huang"
 permalink: /about-me/
-layout: single
-author_profile: true
-classes: wide
-description: "Yanzhong (Eric) Huang — quantitative finance, factor research, and model-driven investing."
-last_modified_at: 2025-10-20
+excerpt: "M.S. Quantitative Finance"
+header:
+  overlay_image: /assets/images/eric-huang-prohead.png
+  actions:
+    - label: "Download Resume"
+      url: "https://bagelquant.github.io/assets/docs/Yanzhong-Huang-Resume-2025-10-03.pdf"
 ---
 
-Hi, I’m **Yanzhong (Eric) Huang**—a quantitative finance practitioner who blends fundamental intuition with rigorous data science. I’m finishing my **Master of Quantitative Finance at Rutgers Business School (GPA 4.0, Dec 2025)** and I build research pipelines end-to-end: from data engineering and factor design to backtesting, risk, and portfolio construction. I care about clean code, reproducible research, and practical models that survive out-of-sample.
+Hi, I’m **Yanzhong (Eric) Huang**—a quantitative finance practitioner who blends fundamental intuition with rigorous data science. I’m finishing my **Master of Quantitative Finance at Rutgers Business School (Dec 2025)** and I build research pipelines end-to-end: from data engineering and factor design to backtesting, risk, and portfolio construction. I care about clean code, reproducible research, and practical models that survive out-of-sample.
 
 ## Now
 
@@ -19,6 +21,8 @@ Hi, I’m **Yanzhong (Eric) Huang**—a quantitative finance practitioner who bl
 ## What I bring
 
 - **Full-stack quant workflow**: data ingestion/cleaning → factor construction → forecasting → portfolio/risk → reporting
+- **Modeling toolkit**: statistical (OLS, PCA, time-series), ML (Lasso/ENet, RF/GBM, simple NN), risk (VaR/CVaR, stress tests)
+- **Data engineering**: ETL pipelines, SQL databases, data quality checks, automated reporting
 - **Research discipline**: rolling validation, IC/IR diagnostics, robust OOS tests, clear experiment logs
 - **Communication**: translate models into portfolio decisions, attribution, and risk narratives for PMs & stakeholders
 
@@ -44,7 +48,7 @@ Hi, I’m **Yanzhong (Eric) Huang**—a quantitative finance practitioner who bl
 
 ## Projects & Research
 
-- **Research Assistantship**: LLM-based measurement of **analyst–management disagreement** in earnings calls; link to volume, volatility, and returns.  
+- **RA (with Prof. Zhengzi “Sophia” Li, Rutgers, 2025– )**: LLM-based measurement of **analyst–management disagreement** in earnings calls; link to volume, volatility, and returns.  
 - **Time-Series Volatility for Risk-Timing**: GARCH family & LSTM overlays for factor portfolios; validated with RMSE/MAE and trading KPIs.  
 - **Portfolio Exposure Dashboard**: maps Barra/Axioma styles, integrates **Greeks buckets** and vol-surface timers for overlay decisions.  
 - **Open-source (PyPI)**: `bagel-factor` (factor evaluation pipeline) and `bagel-tushare` (robust, multithreaded data ingestion).
@@ -62,9 +66,15 @@ Hi, I’m **Yanzhong (Eric) Huang**—a quantitative finance practitioner who bl
 
 I believe **simple, well-validated models** deployed with reliable data and thoughtful risk controls beat fragile complexity. My north star is **clarity**—in code, in research design, and in how model outputs inform portfolio decisions.
 
+---
+
 ## Elsewhere
 
 - **Email**: <eric.yanzhong.huang@gmail.com>  
 - **LinkedIn**: <https://www.linkedin.com/in/yanzhonghuang>  
 - **GitHub**: <https://github.com/bagelquant>  
 - **Blog**: <https://bagelquant.com/>
+
+---
+
+If you’re building rigorous, practical quant processes—and want someone who ships research **and** production code—let’s talk.
