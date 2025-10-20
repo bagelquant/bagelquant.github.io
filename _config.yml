@@ -133,13 +133,13 @@ defaults:
 # code block
 enable_copy_code_button: true
 
-comments:
-  provider: disqus
-  disqus:
-    shortname: bagelquant
-    identifier: "{{ page.id }}"
-    url: "{{ page.url | absolute_url }}"
-    title: "{{ page.title }}"
+# comments:
+#   provider: disqus
+#   disqus:
+#     shortname: bagelquant
+#     identifier: "{{ page.id }}"
+#     url: "{{ page.url | absolute_url }}"
+#     title: "{{ page.title }}"
 
 category_archive:
   type: liquid
