@@ -34,3 +34,7 @@ Advanced math:
 ## Finance
 
 - [Derivatives](finance/derivatives/derivatives.md)
+
+## Projects
+
+- [Frequent Asked Questions for Quant Interviews](projects-directory/quant-interview-faq.md)
