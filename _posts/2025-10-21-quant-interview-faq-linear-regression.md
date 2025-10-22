@@ -39,8 +39,14 @@ It’s appropriate when the underlying relationship is roughly linear, variables
 1. **Linearity:** Model is linear in parameters.  
 2. **Random Sampling:** Each observation $(x_i, y_i)$ is iid.  
 3. **No Perfect Multicollinearity:** No independent variable is a perfect linear combination of others.  
-4. **Zero Conditional Mean:** $E[\epsilon|X]=0$ ensures unbiasedness.  
-5. **Homoskedasticity:** $Var(\epsilon|X)=\sigma^2$.  
+4. **Zero Conditional Mean:** 
+
+$E[\epsilon|X]=0$ ensures unbiasedness.  
+
+5. **Homoskedasticity:** 
+
+$Var(\epsilon|X)=\sigma^2$.  
+
 6. **Normality (optional):** Needed for valid t and F tests.
 
 **Why it matters:**  
