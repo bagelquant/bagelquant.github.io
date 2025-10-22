@@ -22,6 +22,7 @@ Linear regression models a dependent variable $y$ as a linear function of one or
 
 **Example:**  
 Predicting stock returns based on beta, size, and value exposures:
+
 $$
 R_i = \alpha + \beta_1 \text{MKT} + \beta_2 \text{SMB} + \beta_3 \text{HML} + \epsilon_i
 $$
@@ -36,20 +37,26 @@ It’s appropriate when the underlying relationship is roughly linear, variables
 
 ### 🧩 2. What are the assumptions of OLS and why do they matter?
 
-1. **Linearity:** Model is linear in parameters.  
-2. **Random Sampling:** Each observation $(x_i, y_i)$ is iid.  
-3. **No Perfect Multicollinearity:** No independent variable is a perfect linear combination of others.  
-4. **Zero Conditional Mean:** 
+1 **Linearity:** Model is linear in parameters.    
+2 **Random Sampling:** Each observation $(x_i, y_i)$ is iid.  
+3 **No Perfect Multicollinearity:** No independent variable is a perfect linear combination of others.  
+4 **Zero Conditional Mean:**: eusures unbiasedness.
 
-$E[\epsilon|X]=0$ ensures unbiasedness.  
+$$
+E[\epsilon | X]=0
+$$
 
-5. **Homoskedasticity:** 
 
-$Var(\epsilon|X)=\sigma^2$.  
+5 **Homoskedasticity:** 
 
-6. **Normality (optional):** Needed for valid t and F tests.
+$$
+Var(\epsilon | X)=\sigma^2
+$$
+
+6 **Normality (optional):** Needed for valid t and F tests.
 
 **Why it matters:**  
+
 Violation of these assumptions affects unbiasedness, efficiency, and inference validity. For example, heteroskedasticity invalidates standard errors, and multicollinearity inflates variance of coefficient estimates.
 
 ### 📈 3. How do you interpret $R^2$ and Adjusted $R^2$?
