@@ -53,7 +53,7 @@ Many statistical models (ARIMA, VAR) assume constant mean and variance. Non-stat
 
 **Fixes:** Differencing, log transformation, or detrending.
 
-### 🔁 3. Explain AR, MA, and ARMA models.
+### 🔁 3. Explain AR, MA, and ARMA models
 
 | Model | Equation | Description |
 |:--|:--|:--|
