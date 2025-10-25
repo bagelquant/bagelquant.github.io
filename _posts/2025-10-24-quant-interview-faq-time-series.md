@@ -25,8 +25,6 @@ A time series is a sequence of data points observed over time (e.g., daily retur
 **Quant Implication:**  
 Because of serial dependence, standard OLS assumptions (like iid errors) often fail — requiring specialized models like ARIMA or GARCH.
 
----
-
 ### 📉 2. What is stationarity and why is it important?
 
 **Definition:**  
