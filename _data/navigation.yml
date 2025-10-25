@@ -144,7 +144,9 @@ derivatives:
 
 calculus:
   - title: "Calculus"
-    url: /math-basic/calculus/
+    url: /calculus/
     children:
       - title: "Introduction to Calculus"
-        url: /math-basic/calculus/introduction-to-calculus/
+        url: /calculus/introduction-to-calculus/
+      - title: "Differentiation and Rates of Change"
+        url: /calculus/differentiation-and-rates-of-change/
