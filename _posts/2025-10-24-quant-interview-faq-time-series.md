@@ -5,7 +5,7 @@ tags:
     - econometrics
     - interview
 header:
-  overlay_image: /assets/images/headers/time-series-dark.png
+  overlay_image: /assets/images/headers/time-series-header.png
   overlay_filter: 0.8
 excerpt: "An interview-focused overview of time series analysis — from ARIMA and GARCH models to stationarity, autocorrelation, and forecasting diagnostics."
 ---
