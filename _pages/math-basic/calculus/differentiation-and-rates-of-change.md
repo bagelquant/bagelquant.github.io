@@ -1,6 +1,6 @@
 ---
 title: "Differentiation and Rates of Change"
-permalink: /calculus/differentiation-and-rates-of-change
+permalink: /calculus/differentiation-and-rates-of-change/
 sidebar:
   nav: calculus
 header:

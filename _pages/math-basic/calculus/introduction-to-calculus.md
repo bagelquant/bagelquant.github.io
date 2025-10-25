@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Calculus"
-permalink: /calculus/introduction-to-calculus
+permalink: /calculus/introduction-to-calculus/
 header:
   overlay_image: assets/images/headers/calculus.png
   overlay_opacity: 0.8

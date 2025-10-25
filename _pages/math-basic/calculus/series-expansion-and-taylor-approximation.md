@@ -1,6 +1,6 @@
 ---
 title: "Series Expansion and Taylor Approximation"
-permalink: /calculus/series-expansion-and-taylor-approximation
+permalink: /calculus/series-expansion-and-taylor-approximation/
 sidebar:
   nav: "calculus"
 ---

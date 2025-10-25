@@ -1,6 +1,6 @@
 ---
 title: "Integration and Areas Under Curves"
-permalink: /calculus/integration-and-areas-under-curves
+permalink: /calculus/integration-and-areas-under-curves/
 sidebar:
   nav: "calculus"
 header:

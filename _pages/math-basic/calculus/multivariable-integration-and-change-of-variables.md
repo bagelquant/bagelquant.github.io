@@ -1,6 +1,6 @@
 ---
 title: "Multivariable Integration and Change of Variables"
-permalink: /calculus/multivariable-integration-and-change-of-variables
+permalink: /calculus/multivariable-integration-and-change-of-variables/
 sidebar:
   nav: "calculus"
 header:
