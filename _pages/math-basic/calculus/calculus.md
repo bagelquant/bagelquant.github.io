@@ -1,8 +1,7 @@
 ---
 title: "Calculus"
+layout: splash
 permalink: /calculus/
-sidebar:
-    nav: calculus
 header:
   overlay_image: assets/images/headers/calculus.png
   overlay_opacity: 0.8
