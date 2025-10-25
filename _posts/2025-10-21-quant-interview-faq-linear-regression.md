@@ -37,7 +37,7 @@ It’s appropriate when the underlying relationship is roughly linear, variables
 
 ### 🧩 2. What are the assumptions of OLS and why do they matter?
 
-1 **Linearity:** Model is linear in parameters.    
+1 **Linearity:** Model is linear in parameters.
 2 **Random Sampling:** Each observation $(x_i, y_i)$ is iid.  
 3 **No Perfect Multicollinearity:** No independent variable is a perfect linear combination of others.  
 4 **Zero Conditional Mean:**: eusures unbiasedness.
@@ -46,8 +46,7 @@ $$
 E[\epsilon | X]=0
 $$
 
-
-5 **Homoskedasticity:** 
+5 **Homoskedasticity:**
 
 $$
 Var(\epsilon | X)=\sigma^2
@@ -120,11 +119,13 @@ $$R^2_{adj} = 1 - (1 - R^2)\frac{n-1}{n-k-1}$$
 $$
 \min_\beta \sum (y_i - X_i'\beta)^2 + \lambda \sum \beta_j^2
 $$  
+
 - **Lasso:** L1 penalty, induces sparsity.  
 
 $$
 \min_\beta \sum (y_i - X_i'\beta)^2 + \lambda \sum |\beta_j|
 $$  
+
 - **Elastic Net:** Combination of both.
 
 **Application:** In quant research, used for factor selection or constructing parsimonious alpha models.
