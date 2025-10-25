@@ -154,3 +154,7 @@ calculus:
         url: /calculus/partial-derivatives-and-gradients/
       - title: "Integration and Areas Under Curves"
         url: /calculus/integration-and-areas-under-curves/
+      - title: "Multivariable Integration and Change of Variables"
+        url: /calculus/multivariable-integration-and-change-of-variables/
+      - title: "Series Expansion and Taylor Approximation"
+        url: /calculus/series-expansion-and-taylor-approximation/
