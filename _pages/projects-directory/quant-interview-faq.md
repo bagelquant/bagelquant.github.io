@@ -8,3 +8,4 @@ This page is the post collection of frequently asked questions (FAQs) encountere
 - [Quant Interview FAQ - Derivatives](https://bagelquant.com/quant-interview-faq-derivatives/)
 - [Quant Interview FAQ - Stochastic Calculus](https://bagelquant.com/quant-interview-faq-stochastic-calculus/)
 - [Quant Interview FAQ - Linear Regression](https://bagelquant.com/quant-interview-faq-linear-regression/)
+- [Quant Interview FAQ - Time Series Modeling](https://bagelquant.com/quant-interview-faq-time-series/)
