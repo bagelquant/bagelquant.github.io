@@ -134,6 +134,7 @@ $y = x^x \Rightarrow \ln y = x \ln x \Rightarrow \frac{1}{y}\frac{dy}{dx} = \ln 
 ## 8. Differentiation in Financial Contexts
 
 ### 8.1 Instantaneous Rate of Return
+
 For a continuously compounded return process:
 $$
 r_t = \frac{dS_t}{S_t \, dt}.
@@ -141,19 +142,22 @@ $$
 The derivative here measures instantaneous proportional growth.
 
 ### 8.2 Yield Curve Slope
+
 If $y(T)$ is the zero-coupon yield for maturity $T$,  
 the slope $\frac{dy}{dT}$ measures how yields change with maturity (key rate sensitivity).
 
 ### 8.3 Option Greeks
+
 The option price $V(S, \sigma, t)$ yields:
 $$
-\Delta = \frac{\partial V}{\partial S}, \quad 
-\Gamma = \frac{\partial^2 V}{\partial S^2}, \quad 
+\Delta = \frac{\partial V}{\partial S}, \quad
+\Gamma = \frac{\partial^2 V}{\partial S^2}, \quad
 \nu = \frac{\partial V}{\partial \sigma}.
 $$
 All are applications of partial differentiation and rates of change.
 
 ### 8.4 Duration and Convexity
+
 For bond price $P(y)$ as a function of yield $y$:
 $$
 D = -\frac{1}{P}\frac{dP}{dy}, \quad C = \frac{1}{P}\frac{d^2 P}{dy^2}.

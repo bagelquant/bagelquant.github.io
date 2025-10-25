@@ -150,3 +150,7 @@ calculus:
         url: /calculus/introduction-to-calculus/
       - title: "Differentiation and Rates of Change"
         url: /calculus/differentiation-and-rates-of-change/
+      - title: "Partial Derivatives and Gradients"
+        url: /calculus/partial-derivatives-and-gradients/
+      - title: "Integration and Areas Under Curves"
+        url: /calculus/integration-and-areas-under-curves/
