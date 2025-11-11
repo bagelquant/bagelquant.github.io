@@ -2,7 +2,7 @@
 title: "Quant Interview FAQ — Portfolio Optimization"
 tags: [mean-variance, optimization, black-litterman, risk, robust-optimization, efficient-frontier]
 header:
-  overlay_image: /imgs/headers/portfolio-optimization-dark.png
+  overlay_image: /assets/imgs/headers/portfolio-optimization-dark.png
   overlay_filter: 0.4
 excerpt: "From Markowitz mean–variance theory to Black–Litterman and robust optimization frameworks."
 ---
