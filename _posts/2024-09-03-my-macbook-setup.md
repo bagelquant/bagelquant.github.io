@@ -4,6 +4,8 @@ tags:
   - setup
 ---
 
+Updated on Nov 14, 2025
+
 Windows has been my preferred desktop operating system since primary school, offering a wide array of apps, particularly games.
 
 However, since graduating from college, I have gradually transitioned all my digital devices to the Apple ecosystem. I switched from Android to iOS, and from Windows to MacOS. The cohesive experience of MacOS, especially when used in conjunction with other Apple devices, has truly impressed me. Here's my productivity setup for MacOS.
@@ -40,19 +42,13 @@ Homebrew
 Casks
 
 ```shell
-brew install --cask miniconda zoom itsycal pdf-expert raycast r-app rstudio google-chrome microsoft-teams chatgpt visual-studio-code blackhole-16ch
+brew install --cask miniconda zoom itsycal pdf-expert raycast r-app rstudio google-chrome microsoft-teams chatgpt visual-studio-code blackhole-16ch karabiner-elements pronotes iterm2
 ```
 
 Formulas
 
 ```shell
-brew install nvim gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi lazygit ffmpegthumbnailer poppler deno pkg-config
-```
-
-## MySQL
-
-```shell
-brew install mysql
+brew install nvim gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi lazygit ffmpegthumbnailer poppler deno pkg-config mysql
 ```
 
 ## Conda
