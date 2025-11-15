@@ -11,3 +11,4 @@ This page is the post collection of frequently asked questions (FAQs) encountere
 - [Quant Interview FAQ - Time Series Modeling](https://bagelquant.com/quant-interview-faq-time-series/)
 - [Quant Interview FAQ - Portfolio Optimization](https://bagelquant.com/quant-interview-faq-portfolio-optimization/)
 - [Quant Interview FAQ - Risk Measures](https://bagelquant.com/quant-interview-faq-risk-measures/)
+- [Quant Interview FAQ - Backtesting and Performance Evaluation](https://bagelquant.com/quant-interview-faq-backtesting-performance-evaluation/)
