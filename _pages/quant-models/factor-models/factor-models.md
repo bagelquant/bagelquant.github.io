@@ -61,7 +61,7 @@ This section provides a comprehensive overview of factor models from academic an
   - [Derive CAPM](derive-capm.md)
   - [Empirical Test of CAPM](empirical-test-capm.md)
 - APT and Factor Models
-  - [APT and Factor Models](apt-and-factor-models.md)
+  - [APT and Factor Models](apt-factor-models.md)
   - [Factor Models Construction Process](factor-models-construction-process.md)
   - [Single Factor Test](single-factor-test.md)
   - [Empirical Test of Factor Models](empirical-test-factor-models.md)

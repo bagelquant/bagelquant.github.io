@@ -28,6 +28,3 @@ conda init zsh
 conda config --set auto_activate_base false
 ```
 
-## Usage
-
-[How to use miniconda](how-to-use-miniconda.md)

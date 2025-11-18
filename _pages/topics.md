@@ -23,7 +23,7 @@ Advanced math:
 - [Econometrics](math-advanced/econometrics/econometrics.md)
 - [Stochastic Calculus](math-advanced/stochastic-calculus/stochastic-calculus.md)
 - [Optimization](math-advanced/optimization/optimization.md)
-- [Numerical Methods](math-advanced/numerical-methods/numerical-methods.md)
+- Numerical Methods
 
 ## Quant Models
 
