@@ -2,7 +2,7 @@
 title: "Quant Interview FAQ — Interest Rate Models"
 tags: [vasicek, CIR, hull-white, short-rate-model, fixed-income, term-structure]
 header:
-  overlay_image: /imgs/headers/interest-rate-models-dark.png
+  overlay_image: /assets/images/headers/interest-rate-models-dark.png
   overlay_filter: 0.4
 excerpt: "A technical overview of short-rate interest rate models commonly used in quantitative finance, including Vasicek, CIR, and Hull–White. Covers model intuition, equations, calibration, and typical interview topics."
 ---
