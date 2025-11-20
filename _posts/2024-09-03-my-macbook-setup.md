@@ -48,8 +48,16 @@ brew install --cask miniconda zoom itsycal pdf-expert raycast r-app rstudio goog
 Formulas
 
 ```shell
-brew install nvim gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi lazygit ffmpegthumbnailer poppler deno pkg-config mysql
+brew install nvim gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi lazygit ffmpegthumbnailer poppler deno pkg-config mysql aerospace
 ```
+
+add border to active window
+
+```shell
+brew tap FelixKratz/formulae
+brew install borders
+```
+
 
 ## Conda
 
