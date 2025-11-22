@@ -106,3 +106,29 @@
   })();
 </script>
 
+    <script>
+      // Mobile nav hamburger toggle: keep search visible, collapse other links into a dropdown
+      (function() {
+        document.addEventListener('DOMContentLoaded', function() {
+          var toggle = document.querySelector('.nav-toggle');
+          var headerInner = document.querySelector('.header-inner');
+          var siteNav = document.querySelector('.site-nav');
+          if (!toggle || !headerInner || !siteNav) return;
+
+          toggle.addEventListener('click', function(e) {
+            var expanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!expanded));
+            headerInner.classList.toggle('nav-open');
+          });
+
+          // Close mobile nav when clicking outside
+          document.addEventListener('click', function(e) {
+            if (!headerInner.classList.contains('nav-open')) return;
+            if (siteNav.contains(e.target) || toggle.contains(e.target)) return;
+            headerInner.classList.remove('nav-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      })();
+    </script>
+

@@ -1,0 +1,27 @@
+---
+layout: default
+title: Search
+permalink: /search/
+---
+
+<main class="page__content">
+  <section class="search-page">
+    <h1>Search the site</h1>
+    <p>Enter text to search pages and posts.</p>
+
+    <form id="search-form" role="search" aria-label="Site search">
+      <input id="search-input" class="search-input" type="search" placeholder="Search..." aria-label="Search input" autocomplete="off" />
+    </form>
+
+    <div id="search-status" class="search-status" aria-live="polite"></div>
+    <ul id="search-results" class="search-results"></ul>
+  </section>
+</main>
+
+<link rel="stylesheet" href="{{ "/assets/css/search.css" | relative_url }}">
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>
+  // Provide resolved search.json URL (handles sites with baseurl)
+  window.SEARCH_JSON_URL = {{ "/search.json" | relative_url | jsonify }};
+</script>
+<script src="{{ "/assets/js/search.js" | relative_url }}" defer></script>

@@ -68,13 +68,16 @@ a:hover {
   padding-bottom: 0.25rem;
 }
 
-/* Unified card component for listing/summary pages */
+/* Unified card component for listing/summary pages
+   Card visuals are disabled site-wide to present pages and posts
+   without boxed/card styling. Keep the class available for markup
+   but neutralize visual properties. */
 .card {
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(15,23,42,0.04);
-  padding: 0.9rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
 }
 
 .header-inner {
@@ -84,6 +87,11 @@ a:hover {
   min-height: 60px;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+/* Ensure the navigation sits to the right of the site title inside the header */
+.header-inner .site-nav {
+  margin-left: auto;
 }
 
 .site-title {
@@ -109,11 +117,19 @@ a:hover {
   gap: 1.1rem;
 }
 
+/* Hide mobile nav toggle by default; it becomes visible only on small screens */
+.site-nav .nav-toggle {
+  display: none;
+}
+
 .site-nav .nav-link {
   font-size: 0.98rem;
   color: var(--muted);
   text-decoration: none;
   padding: 0.35rem 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   border-radius: 0.45rem;
   transition: background 0.12s ease, color 0.12s ease, transform 0.08s ease;
 }
@@ -136,6 +152,14 @@ a:hover {
 
 .site-nav .nav-link .nav-title {
   vertical-align: middle;
+}
+
+/* Nudge the search icon so it vertically aligns with nav text across pages */
+.site-nav .nav-link-search svg {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  transform: translateY(2px);
 }
 
 .site-nav .nav-link.is-current {
@@ -226,12 +250,13 @@ a:hover {
 }
 
 .post-item {
+  /* Disable card-like visuals for list items */
   margin: 1.4rem 0;
-  padding: 1.25rem 1.4rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background: linear-gradient(145deg, var(--bg), var(--bg-alt));
-  box-shadow: var(--shadow-soft);
+  padding: 0; /* keep spacing minimal; content blocks control their own padding */
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
 }
 
 .post-item h3 {
@@ -537,11 +562,14 @@ a:hover {
 
 /* --- Post page improvements: title area, meta, TOC, content, nav --- */
 .post-header {
-  background: linear-gradient(180deg, var(--bg), var(--bg-alt));
-  padding: 1.1rem 0;
-  border-radius: 0.9rem;
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(15,23,42,0.04);
+  /* Remove card visuals for header/title area to present a flat layout */
+  background: transparent;
+  /* add vertical spacing so titles are not flush to the top */
+  padding-top: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
 }
 
 .post-header .post-title {
@@ -629,6 +657,23 @@ a:hover {
 .post-content h3 {
   color: var(--text);
   margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Add a subtle divider under level-2 headings inside page/post content */
+.post-content h2::after,
+.page-content h2::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: var(--border);
+  margin-top: 0.6rem;
+  width: 100%;
+  opacity: 1;
+}
+
+.post-content h2 {
+  /* ensure space below the title so divider has breathing room */
   margin-bottom: 0.6rem;
 }
 
@@ -870,6 +915,50 @@ a:hover {
     font-size: 0.92rem;
   }
 
+  /* Mobile nav: hide all nav items except search, show hamburger */
+  .site-nav .nav-toggle {
+    display: inline-block;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+    color: var(--muted);
+  }
+
+  .site-nav .nav-list {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+  }
+
+  /* hide non-search items by default on small screens */
+  .site-nav .nav-list > li:not(.nav-item-search) {
+    display: none;
+  }
+
+  /* when header-inner has .nav-open, show the nav as a dropdown */
+  .header-inner.nav-open .site-nav .nav-list {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 1.25rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+    padding: 0.6rem;
+    box-shadow: 0 8px 30px rgba(15,23,42,0.08);
+    z-index: 1200;
+    width: calc(100% - 2.5rem);
+    max-width: 320px;
+  }
+
+  .header-inner.nav-open .site-nav .nav-list > li {
+    display: block;
+    padding: 0.45rem 0;
+  }
+
+
   /* Reduce hero height on phones so content remains visible above the fold */
   .home-hero .post-header-cover,
   .post-hero .post-header-cover {
@@ -909,9 +998,7 @@ a:hover {
     margin: 1rem 0 0.9rem;
   }
 
-  .archive__item,
-  .post-item,
-  .card {
+  .archive__item {
     padding: 0.8rem;
   }
 
