@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<header class="post-hero home-hero">
+	<div class="post-header-cover">
+		<img src="{{ page.header.overlay_image | default: '/assets/images/header.png' | relative_url }}" alt="{{ page.title | default: site.title }}" loading="lazy" />
+		<div class="post-header-overlay container">
+			<h1 class="post-title">{{ page.title | default: site.title }}</h1>
+			<p class="post-subtitle">{{ page.excerpt | default: site.description }}</p>
+			{% if page.header.actions and page.header.actions[0] %}
+				{% assign action = page.header.actions[0] %}
+				<a class="hero-button" href="{{ action.url }}">{{ action.label }}</a>
+			{% else %}
+				<a class="hero-button" href="{{ '/about-me/' | relative_url }}">About me</a>
+			{% endif %}
+		</div>
+	</div>
+</header>
+
+<main class="home-main">
+	<article class="home-content container">
+		{{ content }}
+	</article>
+</main>
+
