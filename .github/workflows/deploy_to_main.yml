@@ -1,0 +1,62 @@
+name: Build and deploy (overwrite main)
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  build_and_deploy:
+    # Skip if commit message contains the marker to avoid infinite loop
+    if: "!contains(github.event.head_commit.message, '[skip deploy]')"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: Install Bundler and gems
+        run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+
+      - name: Build site with Jekyll
+        run: bundle exec jekyll build --destination _site
+
+      - name: Deploy to main (overwrite repository root, keep .github/.gitignore/CNAME)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Remove all files except .github, .git, .gitignore, CNAME
+          shopt -s dotglob || true
+          for f in * .[^.]*; do
+            if [ "$f" = ".github" ] || [ "$f" = ".git" ] || [ "$f" = ".gitignore" ] || [ "$f" = "CNAME" ]; then
+              continue
+            fi
+            rm -rf "$f"
+          done
+
+          # Copy generated site to repo root
+          cp -a _site/. .
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to deploy"
+            exit 0
+          fi
+
+          git commit -m "[skip deploy] Deploy site from GitHub Actions"
+          git push origin HEAD:main --force
