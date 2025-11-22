@@ -1,8 +1,8 @@
 ---
 title: "Options: Basics and Put–Call Parity"
+layout: page
 permalink: /derivatives/options-basics/
-sidebar:
-  nav: "derivatives"
+nav: "derivatives"
 ---
 
 Options are the most widely known class of derivatives.  

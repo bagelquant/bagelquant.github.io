@@ -1,47 +1,108 @@
-{% if site.footer_scripts %}
-  {% for script in site.footer_scripts %}
-    <script src="{{ script | relative_url }}"></script>
-  {% endfor %}
-{% else %}
-  <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
-{% endif %}
+<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
 
-{% if site.search == true or page.layout == "search" %}
-  {%- assign search_provider = site.search_provider | default: "lunr" -%}
-  {%- case search_provider -%}
-    {%- when "lunr" -%}
-      {% include_cached search/lunr-search-scripts.html %}
-    {%- when "google" -%}
-      {% include_cached search/google-search-scripts.html %}
-    {%- when "algolia" -%}
-      {% include_cached search/algolia-search-scripts.html %}
-  {%- endcase -%}
-{% endif %}
+<script>
+  // Small-screen toggle for generic left sidebars (page + post)
+  (function() {
+    document.addEventListener('DOMContentLoaded', function() {
+      var mq = window.matchMedia('(max-width: 960px)');
+      var initialized = false;
 
-{% include analytics.html %}
-{% include /comments-providers/scripts.html %}
+      function setupToggle() {
+        if (!mq.matches || initialized) return;
+        initialized = true;
 
-{% if site.after_footer_scripts %}
-  {% for script in site.after_footer_scripts %}
-    <script src="{{ script | relative_url }}"></script>
-  {% endfor %}
-{% endif %}
+        var pageSidebar = document.querySelector('.page-sidebar');
+        var postSidebar = document.querySelector('.post-sidebar-left');
 
-{% if page.mathjax %}
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
-    </script>
+        // Prefer a page sidebar if present; otherwise use post sidebar
+        var sidebar = pageSidebar || postSidebar;
+        if (!sidebar) return;
 
-    <script type="text/x-mathjax-config">
-       MathJax.Hub.Config({
-         extensions: ["tex2jax.js"],
-         jax: ["input/TeX", "output/HTML-CSS"],
-         tex2jax: {
-           inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-           displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-           processEscapes: true
-         },
-         "HTML-CSS": { availableFonts: ["TeX"] }
-       });
-    </script>
-{% endif %}
+        // Insert toggle button above the whole three-column layout
+        var layout = document.querySelector('.layout-three-column');
+        if (!layout || layout.parentNode.querySelector('.sidebar-toggle')) return;
+
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'sidebar-toggle';
+        btn.setAttribute('aria-label', 'Toggle navigation');
+        btn.innerHTML = '&#9776;';
+        btn.addEventListener('click', function() {
+          sidebar.classList.toggle('is-open');
+        });
+
+        layout.parentNode.insertBefore(btn, layout);
+      }
+
+      setupToggle();
+      mq.addEventListener('change', function(e) {
+        if (e.matches) setupToggle();
+      });
+    });
+  })();
+</script>
+
+<script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+     extensions: ["tex2jax.js"],
+     jax: ["input/TeX", "output/HTML-CSS"],
+     tex2jax: {
+       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+       processEscapes: true
+     },
+     "HTML-CSS": { availableFonts: ["TeX"] }
+   });
+</script>
+
+<script>
+  (function() {
+    document.addEventListener('DOMContentLoaded', function() {
+      var content = document.querySelector('.post-content');
+      if (!content) return;
+
+      // Allow disabling via `toc: false` in front matter
+      if (!{{ page.toc | default: true | jsonify }}) return;
+
+      var headings = content.querySelectorAll('h2, h3, h4');
+      if (!headings.length) return;
+
+      // Decide which TOC container to use: post or page
+      var tocContainer = document.querySelector('.post-toc .toc-inner') ||
+                         document.querySelector('.page-toc .toc-inner');
+      if (!tocContainer) return;
+
+      // Build TOC header and list (toggle button lives in header)
+      tocContainer.innerHTML = '';
+
+      var headingEl = document.createElement('h2');
+      headingEl.textContent = 'In this article';
+
+      var ul = document.createElement('ul');
+
+      headings.forEach(function(h) {
+        if (!h.id) {
+          h.id = h.textContent.trim().toLowerCase()
+            .replace(/[^\w\- ]+/g, '')
+            .replace(/\s+/g, '-');
+        }
+
+        var li = document.createElement('li');
+        li.className = 'toc-level-' + h.tagName.toLowerCase();
+
+        var a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.textContent = h.textContent;
+
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+
+      tocContainer.appendChild(headingEl);
+      tocContainer.appendChild(ul);
+    });
+  })();
+</script>
+

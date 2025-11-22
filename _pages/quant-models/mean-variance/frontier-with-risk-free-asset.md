@@ -1,8 +1,9 @@
 ---
 title: "Frontier With Risk-Free Asset"
+layout: page
 permalink: /mean-variance/frontier-with-risk-free-asset/
-sidebar:
-    nav: "mean-variance"
+
+nav: "mean-variance"
 ---
 
 Now we introduce the risk-free asset into mean-variance analysis. The risk-free asset is an asset with a certain return and no risk—typically represented by the return on Treasury bills. While the risk-free asset is a theoretical construct, it is a powerful tool in finance. Its properties are:

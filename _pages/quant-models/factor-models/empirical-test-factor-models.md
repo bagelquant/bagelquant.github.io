@@ -1,8 +1,9 @@
 ---
 title: "Empirical Test of Single Factor Models"
+layout: page
 permalink: /factor-models/empirical-test-factor-models/
-sidebar:
-    nav: "factor-models"
+
+nav: "factor-models"
 ---
 
 In industry, factor models are primarily evaluated based on their profitability, with practitioners relying on data-driven approaches such as train-test splits, cross-validation, and other techniques to ensure robustness and generalizability. In contrast, academic research focuses on the theoretical properties of factor models, particularly their ability to explain the cross-sectional variation in asset returns.

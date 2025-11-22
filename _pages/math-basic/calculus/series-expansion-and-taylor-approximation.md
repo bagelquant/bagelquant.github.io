@@ -1,8 +1,8 @@
 ---
 title: "Series Expansion and Taylor Approximation"
 permalink: /calculus/series-expansion-and-taylor-approximation/
-sidebar:
-  nav: "calculus"
+
+nav: "calculus"
 ---
 
 Series expansions allow us to approximate complex nonlinear functions with polynomial terms around a known point.  

@@ -1,8 +1,9 @@
 ---
 title: "Logistic Regression"
+layout: page
 permalink: /econometrics/logistic-regression/
-sidebar:
-  nav: "econometrics"
+
+nav: "econometrics"
 ---
 
 Previously, we discussed cases where the independent variables are categorical. Now, suppose the dependent variable $y$ is binary, i.e., $y = 0$ or $1$. In this scenario, the normality assumption of the residuals does not hold (since there are only two possible values, not a normal distribution), and standard statistical inference is not applicable.

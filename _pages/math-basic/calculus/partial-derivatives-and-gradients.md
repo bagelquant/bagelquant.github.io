@@ -1,8 +1,8 @@
 ---
 title: "Partial Derivatives and Gradients"
 permalink: /calculus/partial-derivatives-and-gradients
-sidebar:
-  nav: "calculus"
+
+nav: "calculus"
 header:
   overlay_image: assets/images/headers/calculus.png
   overlay_opacity: 0.8

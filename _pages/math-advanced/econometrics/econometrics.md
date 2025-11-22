@@ -1,8 +1,9 @@
 ---
 title: "Econometrics"
+layout: topic
 permalink: /econometrics/
-sidebar:
-  nav: "econometrics"
+
+nav: "econometrics"
 ---
 
 Econometrics applies statistical methods to economic data, serving as a vital branch of economics that provides empirical insights into economic relationships. It is a powerful tool for empirical research, enabling economists to test hypotheses, forecast outcomes, and make policy recommendations based on rigorous data analysis.

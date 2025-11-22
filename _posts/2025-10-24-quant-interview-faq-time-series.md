@@ -1,9 +1,6 @@
 ---
 title: "Quant Interview FAQ — Time Series Modeling"
-tags: 
-    - time-series
-    - econometrics
-    - interview
+layout: post
 header:
   overlay_image: /assets/images/headers/time-series-header.png
   overlay_filter: 0.8

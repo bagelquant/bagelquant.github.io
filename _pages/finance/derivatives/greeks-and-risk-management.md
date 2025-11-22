@@ -1,8 +1,8 @@
 ---
 title: "Greeks and Risk Management"
+layout: page
 permalink: /derivatives/greeks-and-risk-management/
-sidebar:
-  nav: "derivatives"
+nav: "derivatives"
 ---
 
 The **Greeks** are the sensitivities of an option’s value to changes in underlying variables.  

@@ -1,6 +1,6 @@
 ---
 title: "How to Build a Point-In-Time (PIT) Equity Database"
-tags: [finance, data-engineering, quantitative-research]
+layout: post
 ---
 
 A comprehensive, production-grade guide for constructing a fully leakage-free, survivorship-free, revision-aware PIT database for equity research and quantitative trading.

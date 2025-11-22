@@ -1,8 +1,9 @@
 ---
 title: "Efficient Frontier without Risk-Free Asset"
+layout: page
 permalink: /mean-variance/efficient-frontier-without-risk-free-asset/
-sidebar:
-    nav: "mean-variance"
+
+nav: "mean-variance"
 ---
 
 With the solution to the mean-variance optimization problem in hand, we can, for any target expected return $E[\tilde r_p]$, determine the optimal weights $\boldsymbol W^*$, as well as the corresponding variance $\sigma^2_p$ and expected return $E[\tilde r_p]$. This allows us to explore three core features of mean-variance optimization:

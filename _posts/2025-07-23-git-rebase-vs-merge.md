@@ -1,9 +1,6 @@
 ---
 title: "Git Rebase vs Merge"
-tags: 
-    - git
-    - version control
-    - software development
+layout: post
 ---
 
 If you’ve worked with Git for even a short while, you’ve probably encountered two powerful commands: `merge` and `rebase`. Both are used to integrate changes from one branch into another — but they do so in fundamentally different ways.

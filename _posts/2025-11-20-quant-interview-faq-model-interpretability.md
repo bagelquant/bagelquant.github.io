@@ -1,6 +1,6 @@
 ---
 title: "Quant Interview FAQ — Model Interpretability"
-tags: [interpretability, shap, feature-importance, overfitting, model-risk]
+layout: post
 header:
   overlay_image: /assets/images/headers/model-interpretability-dark.png
   overlay_filter: 0.4

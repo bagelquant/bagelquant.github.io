@@ -1,8 +1,8 @@
 ---
 title: "Forwards and Futures"
+layout: page
 permalink: /derivatives/forwards-and-futures/
-sidebar:
-  nav: "derivatives"
+nav: "derivatives"
 ---
 
 Among all derivatives, **forwards** and **futures** are the simplest.  

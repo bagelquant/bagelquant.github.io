@@ -1,8 +1,8 @@
 ---
 title: "Volatility Surface and Smile"
+layout: page
 permalink: /derivatives/volatility-surface-and-smile/
-sidebar:
-  nav: "derivatives"
+nav: "derivatives"
 ---
 
 **Implied volatility (IV)** is the volatility input that, when used in the Black–Scholes–Merton (BSM) formula, reproduces a market option price.  

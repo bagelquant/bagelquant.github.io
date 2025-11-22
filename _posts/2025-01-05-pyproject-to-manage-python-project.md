@@ -1,7 +1,6 @@
 ---
 title: "Use pyproject.toml to manage your Python project"
-tags:
-    - python
+layout: post
 ---
 
 A Python project can quickly become disorganized without a clear structure. The `pyproject.toml` file is a modern configuration file that helps you manage your Python project efficiently. It centralizes information about your project, such as dependencies, build system, and metadata.

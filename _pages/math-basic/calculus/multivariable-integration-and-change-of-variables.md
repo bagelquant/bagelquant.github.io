@@ -1,8 +1,9 @@
 ---
+layout: page
 title: "Multivariable Integration and Change of Variables"
 permalink: /calculus/multivariable-integration-and-change-of-variables/
-sidebar:
-  nav: "calculus"
+
+nav: "calculus"
 header:
   overlay_image: assets/images/headers/calculus.png
   overlay_opacity: 0.8

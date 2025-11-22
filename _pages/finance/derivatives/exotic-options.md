@@ -1,8 +1,8 @@
 ---
 title: "Exotic Options"
+layout: page
 permalink: /derivatives/exotic-options/
-sidebar:
-  nav: "derivatives"
+nav: "derivatives"
 ---
 
 **Exotic options** extend beyond standard European calls and puts by modifying payoffs, paths, or conditions of exercise.  

@@ -1,8 +1,9 @@
 ---
 title: "Market Portfolio and Security Market Line"
+layout: page
 permalink: /mean-variance/market-portfolio-and-security-market-line/
-sidebar:
-    nav: "mean-variance"
+
+nav: "mean-variance"
 ---
 
 The final topic in mean-variance analysis is the **Market Portfolio** and the **Security Market Line (SML)**. Before diving into the details, let's revisit investor behavior to better understand the concept of the market portfolio, since the market is ultimately the aggregation of all investors' portfolios.

@@ -4,8 +4,7 @@ permalink: /calculus/introduction-to-calculus/
 header:
   overlay_image: assets/images/headers/calculus.png
   overlay_opacity: 0.8
-sidebar:
-  nav: "calculus"
+nav: "calculus"
 ---
 
 Calculus is the mathematical foundation of continuous change.  

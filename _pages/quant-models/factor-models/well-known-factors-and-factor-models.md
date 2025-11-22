@@ -1,8 +1,9 @@
 ---
 title: "Well-Known Factors and Factor Models"
+layout: page
 permalink: /factor-models/well-known-factors-and-factor-models/
-sidebar:
-    nav: "factor-models"
+
+nav: "factor-models"
 ---
 
 ## Well-Known Factors

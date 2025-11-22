@@ -2,10 +2,7 @@
 title: "Quant Interview FAQ — Linear Regression & Statistical Modeling"
 permalink: /quant-interview-faq-linear-regression/
 excerpt: "A cheat sheet of common linear regression and statistical modeling concepts for quant interviews."
-tags:
-    - linear-regression
-    - statistical-modeling
-    - interview
+layout: post
 header:
   overlay_image: /assets/images/headers/linear-regression-faq-header.png
   overlay_filter: 0.8

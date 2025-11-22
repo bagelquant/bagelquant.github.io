@@ -1,8 +1,9 @@
 ---
 title: "Basic Time Series Process"
+layout: page
 permalink: /econometrics/basic-time-series-process/
-sidebar:
-  nav: "econometrics"
+
+nav: "econometrics"
 ---
 
 Econometrics can be divided into two main branches: cross-sectional data analysis and time-series data analysis. We have already discussed cross-sectional data analysis in previous topics. When working with cross-sectional data, issues such as lack of independence or randomness in error terms (especially autocorrelation) and heteroscedasticity may arise. Time-series data analysis provides tools to address these challenges.

@@ -1,7 +1,6 @@
 ---
 title: Miniconda Setting on macOS
-tags:
-  - setup
+layout: post
 ---
 
 Use Homebrew to install Miniconda.

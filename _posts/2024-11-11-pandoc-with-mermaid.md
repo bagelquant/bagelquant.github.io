@@ -1,7 +1,6 @@
 ---
 title: "Integrating Mermaid with Pandoc"
-tags: 
-    - pandoc
+layout: post
 ---
 
 When converting a markdown file to a pdf file, the mermaid diagram is not rendered. This is because the default pandoc markdown engine does not support mermaid diagrams. The solution is to use a markdown engine that supports mermaid diagrams.

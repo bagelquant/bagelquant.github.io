@@ -1,0 +1,85 @@
+---
+layout: default
+---
+
+{% if page.header and page.header.overlay_image %}
+  <header class="post-hero">
+    <div class="post-header-cover">
+      <img src="{{ page.header.overlay_image | relative_url }}" alt="{{ page.title }}" loading="lazy" />
+      <div class="post-header-overlay container">
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.excerpt %}
+          <p class="post-subtitle">{{ page.excerpt | strip_html }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+{% endif %}
+
+<div class="layout-three-column post-layout">
+  <aside class="page-sidebar">
+    <div class="sidebar-inner">
+      {% assign nav_key = page.nav | default: page.category %}
+      {% assign nav_items = site.data.navigation[nav_key] %}
+
+      {% if nav_items %}
+        <h2>Navigation</h2>
+        <ul class="sidebar-nav">
+          {% for item in nav_items %}
+            <li>
+              {% if item.url %}
+                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% else %}
+                {{ item.title }}
+              {% endif %}
+
+              {% if item.children %}
+                <div class="sidebar-nav-separator"></div>
+                <ul class="sidebar-nav-children">
+                  {% for child in item.children %}
+                    <li>
+                      <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </aside>
+
+  <main class="post-main">
+    {% assign segments = page.url | split:'/' %}
+    {% assign path = '' %}
+    {% if segments.size > 1 %}
+      <nav class="breadcrumb">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        {% for segment in segments %}
+          {% unless segment == '' or segment contains '.html' %}
+            {% assign path = path | append:'/' | append:segment %}
+            &nbsp;/&nbsp;
+            <a href="{{ path | append:'/' | relative_url }}">{{ segment | replace:'-',' ' | capitalize }}</a>
+          {% endunless %}
+        {% endfor %}
+      </nav>
+    {% endif %}
+
+    <article class="post">
+      {% unless page.header and page.header.overlay_image %}
+        <header class="post-header">
+          <h1 class="post-title">{{ page.title }}</h1>
+        </header>
+      {% endunless %}
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+    </article>
+  </main>
+
+  <aside class="page-toc">
+    <div class="toc-inner"></div>
+  </aside>
+</div>

@@ -1,8 +1,9 @@
 ---
 title: "Utility Theory"
+layout: topic
 permalink: /utility-theory/
-sidebar:
-    nav: "utility-theory"
+
+nav: "utility-theory"
 ---
 A rational decision maker should always choose the option that maximizes their "interest." If we can quantify an individual's "interest" in a decision-making scenario, we can use optimization techniques—such as calculus—to find the best possible choice. This is the foundation of utility theory.
 

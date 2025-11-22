@@ -1,8 +1,8 @@
 ---
 title: "General Probability Theory"
 permalink: probability/general-probability-theory/
-sidebar:
-    nav: probability
+
+nav: probability
 ---
 
 This section provides a more advanced treatment of probability theory, building on the basics covered in the main [Probability Theory](probability.md) page. It includes topics such as measure-theoretic foundations, advanced probability distributions, and limit theorems.

@@ -1,8 +1,9 @@
 ---
 title: "Derive CAPM"
+layout: page
 permalink: /factor-models/empirical-test-capm/
-sidebar:
-    nav: "factor-models"
+
+nav: "factor-models"
 ---
 
 The CAPM model states:

@@ -1,8 +1,8 @@
 ---
 title: "Factor Models Construction Process"
+layout: page
 permalink: /factor-model-in-china/
-sidebar:
-    nav: "factor-model-in-china"
+nav: "factor-model-in-china"
 ---
 
 This project aims to build a **stock scoring and backtesting system** based on classical factor investing techniques. The goal is to start simple, generate interpretable results, and gradually expand into more sophisticated methods.

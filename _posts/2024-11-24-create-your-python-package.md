@@ -1,7 +1,6 @@
 ---
 title: "Create your own Python package"
-tags:
-    - python
+layout: post
 ---
 
 In the past, I used `twine` to upload my packages to PyPI, building them with a `setup.py` file. Recently, I switched to using `pyproject.toml` for project management and package building. In my experience, it is more concise and much easier to maintain. With a single file, you can manage your project, build your package, and upload it to PyPI.

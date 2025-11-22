@@ -1,8 +1,8 @@
 ---
 title: "Introduction to Derivatives"
+layout: page
 permalink: /derivatives/introduction-to-derivatives/
-sidebar:
-  nav: "derivatives"
+nav: "derivatives"
 ---
 
 Financial derivatives are contracts whose value depends on an underlying asset, rate, or index.  

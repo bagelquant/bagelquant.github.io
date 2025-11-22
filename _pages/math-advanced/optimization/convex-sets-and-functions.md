@@ -1,8 +1,9 @@
 ---
 title: "Convex Sets and Functions"
+layout: page
 permalink: /optimization/convex-sets-and-functions/
-sidebar:
-    nav: "optimization"
+
+nav: "optimization"
 ---
 
 ## 2.1 Definition of Convex Sets

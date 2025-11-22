@@ -1,6 +1,6 @@
 ---
 title: "Optimization Models in Finance"
-layout: splash
+layout: topic
 permalink: /optimization/
 header:
   overlay_image: /assets/images/radio-telescope.png

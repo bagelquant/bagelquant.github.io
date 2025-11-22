@@ -1,6 +1,6 @@
 ---
 title: "Edit Python in Neovim, Run in Jupyter: A Clean Jupytext Paired Workflow"
-tags: [Neovim, Jupytext, Jupyter, Python, Workflow]
+layout: post
 ---
 
 In quantitative research and data science, we often use Jupyter notebooks for the **interactive execution and visualization of code**. However, jupyter notebooks have some limitations:

@@ -1,6 +1,6 @@
 ---
 title: "Jupynium: Enhancing Jupyter Notebook Workflow in Neovim"
-tags: [Neovim, Jupytext, Jupyter, Python, Workflow]
+layout: post
 ---
 
 In the previous post regard [jupytext](2025-11-08-neovim-jupyternotebook.md), we explored how to use Jupytext to synchronize Jupyter notebooks with `.py` files for better version control and editing in Neovim. 

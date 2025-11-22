@@ -1,6 +1,6 @@
 ---
 title: "Quant Interview FAQ — Interest Rate Models"
-tags: [vasicek, CIR, hull-white, short-rate-model, fixed-income, term-structure]
+layout: post
 header:
   overlay_image: /assets/images/headers/interest-rate-models-dark.png
   overlay_filter: 0.4

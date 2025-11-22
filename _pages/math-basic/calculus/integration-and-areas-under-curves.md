@@ -1,8 +1,8 @@
 ---
 title: "Integration and Areas Under Curves"
 permalink: /calculus/integration-and-areas-under-curves/
-sidebar:
-  nav: "calculus"
+
+nav: "calculus"
 header:
   overlay_image: assets/images/headers/calculus.png
   overlay_opacity: 0.8

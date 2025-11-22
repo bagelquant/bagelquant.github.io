@@ -1,8 +1,8 @@
 ---
 title: "Derivatives"
+layout: topic
 permalink: /derivatives/
-sidebar:
-    nav: derivatives
+nav: derivatives
 ---
 
 Derivatives are financial instruments whose value is derived from the value of an underlying asset, index, or rate. Common types of derivatives include options, futures, forwards, and swaps. They are widely used for hedging risk, speculation, and arbitrage.

@@ -1,8 +1,6 @@
 ---
 title: "Sync Two Folders in Terminal"
-date: 2024-07-31
-tags:
-  - terminal
+layout: post
 ---
 
 If you want to sync two folders in the terminal, you can use the `rsync` command. `rsync` is a fast and versatile file-copying tool that can be used to sync files and directories between two locations.

@@ -1,5 +1,6 @@
 ---
 title: "Frequent Asked Questions for Quant Interviews"
+layout: topic
 permalink: /quant-interview-faq/
 ---
 

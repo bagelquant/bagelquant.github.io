@@ -1,8 +1,8 @@
 ---
 title: "Options Pricing: Black–Scholes–Merton Model"
+layout: page
 permalink: /derivatives/options-pricing-black-scholes-merton-model/
-sidebar:
-  nav: "derivatives"
+nav: "derivatives"
 ---
 
 The **Black–Scholes–Merton (BSM) model** provides a continuous-time framework for valuing options and other derivatives.  

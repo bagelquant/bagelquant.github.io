@@ -1,8 +1,9 @@
 ---
 title: "Optimal Allocation"
+layout: page
 permalink: /utility-theory/optimal-allocation/
-sidebar:
-    nav: "utility-theory"
+
+nav: "utility-theory"
 ---
 
 With the utility function in hand, we can now discuss optimal decision-making. Utility can be linked to various choices, such as asset allocation or investment strategies. The goal is to maximize the expected utility of the decision. Clearly, decision-making affects wealth (wealth is a function of the decision process), and wealth, in turn, determines utility (utility is a function of wealth). Thus:

@@ -1,8 +1,9 @@
 ---
 title: "Introduction to Optimization"
+layout: page
 permalink: /optimization/introduction-to-optimization/
-sidebar:
-    nav: "optimization"
+
+nav: "optimization"
 ---
 
 ## 1.1 General Optimization Problem

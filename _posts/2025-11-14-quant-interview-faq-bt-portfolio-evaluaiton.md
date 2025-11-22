@@ -1,6 +1,6 @@
 ---
 title: "Quant Interview FAQ — Backtesting & Performance Evaluation"
-tags: [backtest, slippage, turnover, alpha-decay, performance-evaluation, execution]
+layout: post
 header:
   overlay_image: /assets/images/headers/backtesting-dark.png
   overlay_filter: 0.4

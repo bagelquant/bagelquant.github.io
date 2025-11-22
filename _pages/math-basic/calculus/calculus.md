@@ -1,6 +1,6 @@
 ---
 title: "Calculus"
-layout: splash
+layout: topic
 permalink: /calculus/
 header:
   overlay_image: assets/images/headers/calculus.png

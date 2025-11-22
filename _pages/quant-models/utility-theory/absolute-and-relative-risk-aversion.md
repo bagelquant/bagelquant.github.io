@@ -1,8 +1,9 @@
 ---
 title: "Absolute and Relative Risk Aversion"
+layout: page
 permalink: /utility-theory/absolute-and-relative-risk-aversion/
-sidebar:
-    nav: "utility-theory"
+
+nav: "utility-theory"
 ---
 
 We have established that a risk-averse individual should have an increasing and concave utility function. Building on the concepts of certainty equivalent and risk premium, it is clear that the more "concave" the utility function, the more risk averse the individual. We can quantify risk aversion using two key measures:

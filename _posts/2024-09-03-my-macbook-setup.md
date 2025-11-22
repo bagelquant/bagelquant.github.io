@@ -1,7 +1,6 @@
 ---
 title: "My MacBook Setup" 
-tags: 
-  - setup
+layout: post
 ---
 
 Updated on Nov 14, 2025

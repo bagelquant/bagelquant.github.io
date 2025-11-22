@@ -1,8 +1,9 @@
 ---
 title: "Single Factor Test"
+layout: page
 permalink: /factor-models/single-factor-test/
-sidebar:
-    nav: "factor-models"
+
+nav: "factor-models"
 ---
 
 ## What is a Factor?

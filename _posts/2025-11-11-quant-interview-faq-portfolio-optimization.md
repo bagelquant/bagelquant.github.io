@@ -1,6 +1,6 @@
 ---
 title: "Quant Interview FAQ — Portfolio Optimization"
-tags: [mean-variance, optimization, black-litterman, risk, robust-optimization, efficient-frontier]
+layout: post
 header:
   overlay_image: /assets/images/headers/portfolio-optimization-dark.png
   overlay_filter: 0.8

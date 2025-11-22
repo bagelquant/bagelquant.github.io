@@ -1,8 +1,9 @@
 ---
 title: "APT and Factor Models"
+layout: topic
 permalink: /factor-models/apt-and-factor-models/
-sidebar:
-    nav: "factor-models"
+
+nav: "factor-models"
 ---
 
 ## Arbitrage Pricing Theory (APT)

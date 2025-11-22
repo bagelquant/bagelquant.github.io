@@ -1,8 +1,9 @@
 ---
 title: "Derive CAPM"
+layout: page
 permalink: /factor-models/derive-capm/
-sidebar:
-    nav: "factor-models"
+
+nav: "factor-models"
 ---
 
 The Capital Asset Pricing Model (CAPM) is a foundational model in finance that describes the relationship between an asset's expected return and its risk, as measured by beta:

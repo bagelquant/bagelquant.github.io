@@ -1,8 +1,6 @@
 ---
 title: "Evolution of Alpha Signals in Asset Pricing: A Literature Review"
-tags:
-  - factor models
-  - literature review
+layout: post
 ---
 
 ## Introduction

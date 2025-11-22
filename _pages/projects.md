@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: topic
 title: "BagelQuant Projects"
 permalink: /projects/
 excerpt: "All projects and code samples from BagelQuant."

@@ -1,8 +1,8 @@
 ---
 title: "Differentiation and Rates of Change"
 permalink: /calculus/differentiation-and-rates-of-change/
-sidebar:
-  nav: calculus
+
+nav: calculus
 header:
   overlay_image: assets/images/headers/calculus.png
   overlay_opacity: 0.8

@@ -1,6 +1,6 @@
 ---
 title: "Quant Interview FAQ — Risk Measures"
-tags: [VaR, CVaR, Sharpe, Sortino, Drawdown, Kelly, risk-metrics]
+layout: post
 header:
   overlay_image: /assets/images/headers/risk-measures-dark.png
   overlay_filter: 0.4

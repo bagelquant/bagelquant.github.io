@@ -1,8 +1,6 @@
 ---
 title: "Setup MySQL secure_file_priv for File Output"
-tags: 
-    - mysql
-    - database
+layout: post
 ---
 
 secure_file_priv in MySQL is a server variable that restricts where LOAD DATA INFILE and SELECT ... INTO OUTFILE can read/write files.

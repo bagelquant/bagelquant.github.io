@@ -1,8 +1,9 @@
 ---
 title: "Univariate Regression"
+layout: page
 permalink: /econometrics/univariate-regression/
-sidebar:
-  nav: "econometrics"
+
+nav: "econometrics"
 ---
 
 Univariate regression is a foundational econometric technique that models the relationship between a single independent variable and a dependent variable. It forms the basis for more advanced models, such as multivariable and logistic regression. By analyzing the linear association between variables, univariate regression reveals how changes in the independent variable affect the dependent variable.

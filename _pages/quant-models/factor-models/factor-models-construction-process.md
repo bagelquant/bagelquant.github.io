@@ -1,8 +1,9 @@
 ---
 title: "Factor Models Construction Process"
+layout: page
 permalink: /factor-models/factor-models-construction-process/
-sidebar:
-    nav: "factor-models"
+
+nav: "factor-models"
 ---
 
 Factor models are widely used in finance to explain the variation in asset returns through a set of underlying factors. Their popularity, especially in portfolio and risk management, stems from their ability to differentiate cross-sectional return variation rather than attempting to predict the future with precision.

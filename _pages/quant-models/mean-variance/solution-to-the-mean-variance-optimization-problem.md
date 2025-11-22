@@ -1,8 +1,9 @@
 ---
 title: "Solution to the Mean-Variance Optimization Problem"
+layout: page
 permalink: /mean-variance/solution-to-the-mean-variance-optimization-problem/
-sidebar:
-    nav: "mean-variance"
+
+nav: "mean-variance"
 ---
 
 The mean-variance optimization problem can be summarized as follows:

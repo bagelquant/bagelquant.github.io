@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: home_page
 aliases: BagelQuant
 author: "Eric Huang"
 excerpt: "Your go-to spot for all things quirky and quant!"

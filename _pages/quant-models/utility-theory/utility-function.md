@@ -1,8 +1,9 @@
 ---
 title: "Utility Function"
+layout: page
 permalink: /utility-theory/utility-function/
-sidebar:
-    nav: "utility-theory"
+
+nav: "utility-theory"
 ---
 
 ## Utility Function

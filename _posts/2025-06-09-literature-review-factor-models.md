@@ -1,8 +1,6 @@
 ---
 title: "Factor Models in Asset Pricing: A Comprehensive Literature Review (Up to 2024)"
-tags:
-  - factor models
-  - literature review
+layout: post
 ---
 
 ## Introduction

@@ -1,8 +1,9 @@
 ---
 title: "Multivariable Regression"
+layout: page
 permalink: /econometrics/multivariable-regression/
-sidebar:
-  nav: "econometrics"
+
+nav: "econometrics"
 ---
 
 Compared to univariable regression, multivariable regression incorporates multiple independent variables into the model. The relationship remains linear, but now more than one independent variable is considered. The general form is:

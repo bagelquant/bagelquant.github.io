@@ -1,0 +1,12 @@
+<nav class="site-nav">
+  {% assign nav_items = site.data.navigation.main %}
+  {% if nav_items %}
+    <ul class="nav-list">
+      {% for item in nav_items %}
+        <li class="nav-item">
+          <a href="{{ item.url | relative_url }}" class="nav-link">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</nav>

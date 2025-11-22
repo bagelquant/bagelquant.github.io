@@ -1,8 +1,8 @@
 ---
 title: "Options Pricing: Binomial Model"
+layout: page
 permalink: /derivatives/options-pricing-binomial-model/
-sidebar:
-  nav: "derivatives"
+nav: "derivatives"
 ---
 
 The **binomial model** is the most intuitive and fundamental method for option pricing.  

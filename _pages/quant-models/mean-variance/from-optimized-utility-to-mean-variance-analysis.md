@@ -1,8 +1,9 @@
 ---
 title: "From Optimized Utility to Mean-Variance Analysis"
+layout: page
 permalink: /mean-variance/from-optimized-utility-to-mean-variance-analysis/
-sidebar:
-    nav: "mean-variance"
+
+nav: "mean-variance"
 ---
 
 Mean-variance optimization is at the heart of modern portfolio theory. The basic idea is straightforward:

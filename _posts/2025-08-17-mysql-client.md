@@ -1,9 +1,6 @@
 ---
 title: "Fixing mysqlclient Installation Error on macOS (pip + Homebrew)"
-tags: 
-    - mysql
-    - database
-    - python
+layout: post
 ---
 
 Recently I tried to install the mysqlclient Python package using pip, but ran into a frustrating build error. Since this is a common issue for macOS developers, I’m recording the problem and solution here for future reference.

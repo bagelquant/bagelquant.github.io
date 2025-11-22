@@ -1,6 +1,6 @@
 ---
-layout: splash
 title: "Yanzhong(Eric) Huang"
+layout: topic
 permalink: /about-me/
 excerpt: "M.S. Quantitative Finance"
 header:

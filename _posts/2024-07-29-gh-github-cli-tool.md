@@ -1,7 +1,6 @@
 ---
 title: "GitHub CLI Tool"
-tags:
-  - setup
+layout: post
 ---
 
 Github provides a CLI tool for Copilot. This tool can be used to interact with Copilot from the command line. This tool is useful for automating Copilot workflows and integrating Copilot with other tools.

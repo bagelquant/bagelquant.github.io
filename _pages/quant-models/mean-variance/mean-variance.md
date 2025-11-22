@@ -1,8 +1,9 @@
 ---
 title: "Mean-Variance Optimization"
+layout: topic
 permalink: /mean-variance/
-sidebar:
-    nav: "mean-variance"
+
+nav: "mean-variance"
 ---
 
 Mean-variance portfolio optimization, introduced by Harry Markowitz in 1952, is the cornerstone of modern portfolio theory. The core idea is to construct an optimal portfolio that either **maximizes expected return for a given level of risk** or **minimizes risk for a given expected return**, with **variance** serving as the measure of risk.

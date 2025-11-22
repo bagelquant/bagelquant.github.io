@@ -1,8 +1,9 @@
 ---
 title: "Stock Universe"
+layout: page
 permalink: /factor-model-in-china/stock-universe/
-sidebar:
-    nav: "factor-model-in-china"
+
+nav: "factor-model-in-china"
 ---
 Stock universe: CSI 300 + CSI 500 + CSI 1000
 

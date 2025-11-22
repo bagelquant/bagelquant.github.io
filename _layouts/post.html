@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+{% if page.header and page.header.overlay_image %}
+  <header class="post-hero">
+    <div class="post-header-cover">
+      <img src="{{ page.header.overlay_image | relative_url }}" alt="{{ page.title }}" loading="lazy" />
+      <div class="post-header-overlay container">
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.excerpt %}
+          <p class="post-subtitle">{{ page.excerpt | strip_html }}</p>
+        {% endif %}
+        <p class="post-meta">
+          {% if page.date %}
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %-d, %Y' }}</time>
+          {% endif %}
+          {% if page.read_time %}
+            &bull; {{ page.read_time }} minute read
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  </header>
+{% endif %}
+
+<div class="layout-three-column post-layout">
+  <aside class="post-sidebar-left">
+    <div class="sidebar-inner">
+      {% if site.author %}
+        <section class="author-profile">
+          {% if site.author.avatar %}
+            <img class="author-avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" />
+          {% endif %}
+          <div class="author-info">
+            <h2>{{ site.author.name }}</h2>
+            {% if site.author.links %}
+              <ul class="author-links">
+                {% for link in site.author.links %}
+                  <li>
+                    <a href="{{ link.url }}" target="_blank">
+                      {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
+                      {{ link.label }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </section>
+      {% endif %}
+    </div>
+  </aside>
+
+  <main class="post-main">
+    <article class="post">
+      {% unless page.header and page.header.overlay_image %}
+        <header class="post-header">
+          <div class="container">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <p class="post-meta">
+              {% if page.date %}
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %-d, %Y' }}</time>
+              {% endif %}
+              {% if page.read_time %}
+                &bull; {{ page.read_time }} minute read
+              {% endif %}
+            </p>
+          </div>
+        </header>
+      {% endunless %}
+
+      <div class="post-content container">
+        {{ content }}
+      </div>
+    </article>
+  </main>
+
+  <aside class="post-toc">
+    <div class="toc-inner"></div>
+  </aside>
+</div>

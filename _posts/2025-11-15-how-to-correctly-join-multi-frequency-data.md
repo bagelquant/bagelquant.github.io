@@ -1,6 +1,6 @@
 ---
 title: "How to Correctly Join Multi-Frequency Data (Quarterly → Daily) Without Leakage"
-tags: [factor-research]
+layout: post
 ---
 
 Joining quarterly fundamentals to daily equity data is one of the most

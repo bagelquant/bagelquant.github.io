@@ -1,7 +1,6 @@
 ---
 title: "Predictability Measure - IC, ICIR"
-tags:
-    - factor
+layout: post
 ---
 
 For a factor model, we can measure the predictability of a factor by calculating the Information Coefficient (IC) and the Information Coefficient Information Ratio (ICIR).

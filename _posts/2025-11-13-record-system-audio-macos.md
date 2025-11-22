@@ -1,6 +1,5 @@
----
-Title: "How to Record Screen with Internal Audio on macOS Using BlackHole-16ch"
-Tags: [macOS]
+title: "How to Record Screen with Internal Audio on macOS Using BlackHole-16ch"
+layout: post
 ---
 
 Recording screen with internal audio on macOS is not supported by default. Apple allows QuickTime to capture microphone input, but not system audio.
