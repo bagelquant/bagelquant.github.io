@@ -26,6 +26,24 @@
   --btn-bg: var(--accent);
   --btn-text: #ffffff;
   --btn-bg-hover: #1f4fc6;
+}
+
+/* Quant world image: show light or dark variant depending on theme */
+.quant-world {
+  max-width: 100%;
+  margin: 1.25rem 0;
+}
+.quant-world .quant-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.quant-world .img-dark { display: none; }
+.quant-world .img-light { display: block; }
+
+html.dark .quant-world .img-dark { display: block; }
+html.dark .quant-world .img-light { display: none; }
+
   /* About button (home hero) */
   --about-bg: #ffd8a8;       /* 浅橙 */
   --about-text: #1f2937;     /* 深色文字，保证对比 */
@@ -1566,22 +1584,33 @@ body {
   transition: background 0.18s ease, color 0.18s ease;
 }
 
-/* Theme toggle styles in the nav */
-.nav-item-theme .nav-link-theme {
+/* Theme toggle styles in the nav - match `.site-nav .nav-link` behavior so it aligns */
+.site-nav .nav-link-theme {
+  font-size: 0.98rem;
+  color: var(--muted);
+  text-decoration: none;
   padding: 0.35rem 0.45rem;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
   border-radius: 0.45rem;
-  color: var(--muted);
   background: transparent;
   border: none;
+  transition: background 0.12s ease, color 0.12s ease, transform 0.08s ease;
 }
 
-.nav-item-theme .nav-link-theme:hover {
+.site-nav .nav-link-theme:hover {
   color: var(--text);
-  background: rgba(255,255,255,0.03);
+  background: rgba(0,0,0,0.03);
   transform: translateY(-1px);
+}
+
+/* Icon sizing / vertical nudge to match search icon */
+.site-nav .nav-link-theme svg {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  transform: translateY(2px);
 }
 
 /* Icon switching: show moon in light, show sun in dark */
