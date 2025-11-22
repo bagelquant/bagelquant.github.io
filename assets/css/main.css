@@ -135,6 +135,17 @@ a:hover {
   gap: 1.1rem;
 }
 
+/* Desktop: keep theme/search positioned after the main nav items
+   even though they live in a separate `.nav-controls` container in the DOM. */
+.site-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.site-nav .nav-list { order: 1; }
+.site-nav .nav-controls { display: inline-flex; gap: 0.6rem; align-items: center; order: 2; }
+
 /* Hide mobile nav toggle by default; it becomes visible only on small screens */
 .site-nav .nav-toggle {
   display: none;
@@ -924,8 +935,16 @@ a:hover {
     align-items: center;
   }
 
-  /* hide non-search items by default on small screens, but keep theme visible */
-  .site-nav .nav-list > li:not(.nav-item-search):not(.nav-item-theme) {
+  /* keep theme & search controls visible next to hamburger */
+  .site-nav .nav-controls {
+    display: inline-flex;
+    gap: 0.6rem;
+    align-items: center;
+    margin-right: 0.4rem;
+  }
+
+  /* hide nav list items by default on small screens (they appear inside dropdown) */
+  .site-nav .nav-list > li {
     display: none;
   }
 
