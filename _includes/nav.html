@@ -3,8 +3,9 @@
   {% if nav_items %}
     <ul class="nav-list">
       {% for item in nav_items %}
+        {% assign item_url = item.url | relative_url %}
         <li class="nav-item">
-          <a href="{{ item.url | relative_url }}" class="nav-link">{{ item.title }}</a>
+          <a href="{{ item_url }}" class="nav-link {% if page.url == item_url %}is-current{% endif %}">{{ item.title }}</a>
         </li>
       {% endfor %}
     </ul>

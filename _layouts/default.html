@@ -34,7 +34,9 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+        <div class="footer-left">
+          <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+        </div>
         {% if site.footer.links %}
           <ul class="footer-links">
             {% for link in site.footer.links %}

@@ -1,8 +1,8 @@
 ---
-title: "Posts by Year"
 permalink: /posts/
 layout: topic
 author_profile: true
+no_card_header: true
 ---
 
 {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
@@ -25,7 +25,7 @@ author_profile: true
   {% for year in posts_by_year %}
     {% assign sorted_posts = year.items | sort: "date" | reverse %}
     <section id="year-{{ year.name }}" class="taxonomy__section">
-      <h2 class="archive__subtitle">{{ year.name }}</h2>
+      <h2 class="archive__subtitle">Year {{ year.name }}</h2>
 
       {% for post in sorted_posts %}
       <article class="archive__item">
