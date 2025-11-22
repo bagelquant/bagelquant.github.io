@@ -533,13 +533,13 @@ a:hover {
   max-width: 46rem;
   font-size: 1.1rem;
   margin: 0 0 0.75rem;
-  color: #111827;
+  color: var(--muted);
 }
 
 .post-header-overlay .post-meta {
   margin: 0;
   font-size: 0.9rem;
-  color: #4b5563;
+  color: var(--muted);
 }
 
 .post-header {
@@ -678,7 +678,7 @@ a:hover {
 }
 
 .post-content p {
-  color: #263145;
+  color: var(--text);
 }
 
 /* Prev / Next navigation (below content) */
@@ -1151,8 +1151,8 @@ a:hover {
   margin: 1.5rem 0;
   padding: 0.75rem 1rem;
   border-left: 4px solid var(--accent);
-  background: #f9fafb;
-  color: #374151;
+  background: var(--bg-alt);
+  color: var(--text);
 }
 
 /* 3-column: [left sidebar] [main] [right sidebar] */
@@ -1385,7 +1385,7 @@ a:hover {
   padding: 1.4rem 1.6rem;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  background: #f9fafb;
+  background: var(--bg-alt);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1409,7 +1409,7 @@ a:hover {
   font-size: 1.2rem;
   font-weight: 650;
   text-transform: none;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .author-links {
@@ -1542,3 +1542,57 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* Dark theme overrides: toggle by adding `class="dark"` on the <html> element */
+html.dark {
+  --bg: #07111a;
+  --bg-alt: #0b141a;
+  --text: #e6eef8;
+  --muted: #94a3b8;
+  --muted-light: #cbd5e1;
+  --accent: #60a5fa;
+  --accent-soft: rgba(96,165,250,0.06);
+  --link: var(--accent);
+  --border: #1f2a33;
+  --code-bg: #071018;
+  --code-text: #e6eef8;
+  --btn-bg: var(--accent);
+  --btn-text: #07111a;
+  --btn-bg-hover: #3b82f6;
+}
+
+/* Smoothly transition between themes */
+body {
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+/* Theme toggle styles in the nav */
+.nav-item-theme .nav-link-theme {
+  padding: 0.35rem 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 0.45rem;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+}
+
+.nav-item-theme .nav-link-theme:hover {
+  color: var(--text);
+  background: rgba(255,255,255,0.03);
+  transform: translateY(-1px);
+}
+
+/* Icon switching: show moon in light, show sun in dark */
+.nav-link-theme .icon-sun { display: none; }
+.nav-link-theme .icon-moon { display: inline-block; }
+
+html.dark .nav-link-theme .icon-sun { display: inline-block; }
+html.dark .nav-link-theme .icon-moon { display: none; }
+
+/* Ensure subtle hover color in dark mode stays readable */
+html.dark .site-nav .nav-link:hover {
+  background: rgba(255,255,255,0.04);
+}
+
