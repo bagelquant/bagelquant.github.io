@@ -12,7 +12,7 @@ Integration is the inverse operation of differentiation.
 Where differentiation measures instantaneous change, integration measures total accumulation.  
 In finance, integration underlies pricing by expectation, continuous compounding, and risk aggregation — computing areas, totals, or probabilities over continuous domains.
 
-## 1. The Concept of Integral
+## The Concept of Integral
 
 Given a continuous function $f:[a,b]\to\mathbb{R}$, the **definite integral** of $f$ over $[a,b]$ is the limit of Riemann sums:
 
@@ -32,7 +32,7 @@ If the limit exists and is finite, $f$ is **Riemann integrable** on $[a,b]$.
 - For $f(x)\ge0$, the integral is the exact area under $f$.  
 - For $f(x)$ of mixed sign, areas below the axis subtract from the total.
 
-## 2. Indefinite Integral and Antiderivative
+## Indefinite Integral and Antiderivative
 
 The **indefinite integral** (antiderivative) of $f$ is any function $F$ such that $F'(x)=f(x)$:
 
@@ -53,7 +53,7 @@ $$
 
 Differentiation and integration are inverse processes.
 
-## 3. Linearity and Basic Rules
+## Linearity and Basic Rules
 
 For integrable functions $f,g$ and constant $c$:
 
@@ -67,7 +67,7 @@ $$
 \int_0^2 (3x^2 - 2x)\,dx = [x^3 - x^2]_0^2 = 8 - 4 = 4.
 $$
 
-## 4. Standard Integrals
+## Standard Integrals
 
 | Function | $\displaystyle \int f(x)\,dx$ |
 |-----------|-------------------------------|
@@ -82,9 +82,9 @@ $$
 
 These form the building blocks for analytic integration.
 
-## 5. Integration Techniques
+## Integration Techniques
 
-### 5.1 Substitution (Change of Variable)
+### Substitution (Change of Variable)
 
 If $u=g(x)$, then
 $$
@@ -96,7 +96,7 @@ $$
 \int e^{3x}\,dx = \frac{1}{3}e^{3x}+C.
 $$
 
-### 5.2 Integration by Parts
+### Integration by Parts
 
 If $u=u(x)$ and $v=v(x)$ are differentiable,
 $$
@@ -108,7 +108,7 @@ $$
 \int x e^x dx = x e^x - \int e^x dx = e^x(x - 1) + C.
 $$
 
-### 5.3 Partial Fractions
+### Partial Fractions
 
 For rational functions, decompose into simpler fractions and integrate term by term.
 
@@ -117,7 +117,7 @@ $$
 \int \frac{1}{x(x+1)} dx = \int \left( \frac{1}{x} - \frac{1}{x+1} \right) dx = \ln\left|\frac{x}{x+1}\right| + C.
 $$
 
-### 5.4 Improper Integrals
+### Improper Integrals
 
 When limits are infinite or integrand has singularity, use limit definition:
 
@@ -130,9 +130,9 @@ $$
 \int_1^\infty \frac{1}{x^2}dx = \left[-\frac{1}{x}\right]_1^\infty = 1.
 $$
 
-## 6. Applications in Finance
+## Applications in Finance
 
-### 6.1 Continuous Compounding
+### Continuous Compounding
 
 The continuously compounded value of principal $P_0$ at rate $r$ over $[0,T]$ is
 $$
@@ -141,7 +141,7 @@ $$
 
 If $r(t)$ is constant, $\int_0^T r\,dt = rT$, giving $P_T = P_0 e^{rT}$.
 
-### 6.2 Expected Value and Pricing
+### Expected Value and Pricing
 
 If $X$ is a continuous random variable with pdf $p(x)$, then
 $$
@@ -155,14 +155,14 @@ $$
 
 Thus, valuation becomes integration of discounted payoff weighted by probability density.
 
-### 6.3 Continuous Portfolio Returns
+### Continuous Portfolio Returns
 
 Instantaneous return rate:
 $$
 r_t = \frac{dS_t}{S_t dt} \quad \Rightarrow \quad \ln\frac{S_T}{S_0} = \int_0^T r_t\,dt.
 $$
 
-### 6.4 Total Risk (Variance Integration)
+### Total Risk (Variance Integration)
 
 Variance of a continuous variable:
 $$
@@ -171,7 +171,7 @@ $$
 
 This integration measures dispersion around the mean — core to risk quantification.
 
-## 7. Connection to Differentiation
+## Connection to Differentiation
 
 If $F(x)=\int_a^x f(t)\,dt$, then by the fundamental theorem,
 $$
@@ -182,7 +182,7 @@ Conversely, $\int f'(x)\,dx = f(x) + C$.
 
 Differentiation decomposes accumulation; integration reconstructs it.
 
-## 8. Numerical Integration
+## Numerical Integration
 
 When analytic evaluation is impossible, approximate via discrete summation.
 
@@ -203,7 +203,7 @@ $$
 
 In finance, Monte Carlo integration generalizes to expectation over high-dimensional stochastic spaces.
 
-## 9. Improper and Infinite Domain Integrals in Probability
+## Improper and Infinite Domain Integrals in Probability
 
 For densities $p(x)$ defined over $\mathbb{R}$, we require:
 $$
@@ -222,7 +222,7 @@ $$
 
 Many pricing integrals (e.g., Black–Scholes expectation) are Gaussian-weighted improper integrals.
 
-## 10. Summary
+## Summary
 
 - Integration accumulates infinitesimal contributions.  
 - The definite integral computes total change or area; the indefinite integral reverses differentiation.  

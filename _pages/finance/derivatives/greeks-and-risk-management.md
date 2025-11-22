@@ -8,7 +8,7 @@ nav: "derivatives"
 The **Greeks** are the sensitivities of an option’s value to changes in underlying variables.  
 They quantify how price, volatility, time, and interest rates affect an option’s value — the foundation of risk management and hedging.
 
-## 1. Overview of Greeks
+## Overview of Greeks
 
 | Greek | Symbol | Definition | Interpretation |
 |--------|---------|-------------|----------------|
@@ -21,7 +21,7 @@ They quantify how price, volatility, time, and interest rates affect an option�
 
 ![Delta and Gamma visualization](imgs/greeks_delta_gamma.png)
 
-## 2. Delta — Directional Sensitivity
+## Delta — Directional Sensitivity
 
 For a European call under Black–Scholes:
 
@@ -38,7 +38,7 @@ $$
 - Delta ≈ number of shares needed to hedge one option.  
 - Example: $\Delta = 0.6$ means you buy 0.6 shares per short call to be **delta-neutral**.
 
-## 3. Gamma — Convexity and Delta Stability
+## Gamma — Convexity and Delta Stability
 
 $$
 \Gamma = e^{-qT}\frac{N'(d_1)}{S_0\sigma\sqrt{T}}.
@@ -50,7 +50,7 @@ $$
 
 Gamma is positive for both long calls and long puts — long options **benefit from volatility** because they are convex.
 
-## 4. Vega — Volatility Sensitivity
+## Vega — Volatility Sensitivity
 
 $$
 \nu = S_0 e^{-qT} N'(d_1)\sqrt{T}.
@@ -62,7 +62,7 @@ $$
 
 ![Vega and Theta vs. strike](imgs/greeks_vega_theta.png)
 
-## 5. Theta — Time Decay
+## Theta — Time Decay
 
 $$
 \Theta = -\frac{S_0 e^{-qT} N'(d_1)\sigma}{2\sqrt{T}} - r K e^{-rT} N(d_2) + q S_0 e^{-qT} N(d_1).
@@ -72,7 +72,7 @@ $$
 - Positive theta occurs in short option positions (income strategies).  
 - Time decay accelerates as expiration approaches.
 
-## 6. Rho and Phi — Rate and Dividend Exposure
+## Rho and Phi — Rate and Dividend Exposure
 
 $$
 \rho_{call} = K T e^{-rT} N(d_2), \qquad
@@ -86,7 +86,7 @@ $$
 
 Interest rates and dividends matter primarily for long-dated or high-yield assets.
 
-## 7. Higher-Order Greeks (optional)
+## Higher-Order Greeks (optional)
 
 | Symbol | Name | Description |
 |---------|------|-------------|
@@ -97,9 +97,9 @@ Interest rates and dividends matter primarily for long-dated or high-yield asset
 
 These are used in advanced risk management systems.
 
-## 8. Risk Management and Hedging
+## Risk Management and Hedging
 
-### 8.1 Delta Hedging
+### Delta Hedging
 
 A **delta-hedged portfolio** offsets price risk:
 
@@ -110,19 +110,19 @@ $$
 Regularly rebalance $\Delta$ to remain neutral.  
 However, imperfect hedging introduces **gamma and theta** risk — known as **Gamma–Theta tradeoff**.
 
-### 8.2 Gamma–Theta Tradeoff
+### Gamma–Theta Tradeoff
 
 - Long Gamma → benefits from volatility but loses to time decay.  
 - Short Gamma → earns Theta but loses from large price swings.
 
 Market makers dynamically manage this tradeoff through **delta–gamma hedging**.
 
-### 8.3 Vega Hedging
+### Vega Hedging
 
 To hedge volatility exposure, hold an opposite Vega position — for example, long ATM calls and short OTM calls.  
 Complex portfolios are constructed to remain **delta–vega–theta neutral** at the book level.
 
-### 8.4 Portfolio Greeks
+### Portfolio Greeks
 
 In a portfolio of $n$ options:
 
@@ -134,12 +134,12 @@ $$
 
 These aggregate Greeks form the basis of **risk limits** and **scenario stress testing**.
 
-## 9. Visualization: Greek Sensitivities
+## Visualization: Greek Sensitivities
 
 ![Delta and Gamma visualization](imgs/greeks_delta_gamma.png)
 ![Vega and Theta visualization](imgs/greeks_vega_theta.png)
 
-## 10. Summary
+## Summary
 
 - The Greeks quantify directional, curvature, volatility, time, and rate sensitivities.  
 - They enable hedging, risk control, and capital allocation.  

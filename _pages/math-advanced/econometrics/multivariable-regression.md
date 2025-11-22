@@ -31,7 +31,7 @@ where:
 - $X$ is the matrix of independent variables (including a column of ones for the intercept), $X \in \mathbb{R}^{n \times (k+1)}$,
 - $\beta$ is the vector of coefficients, $\beta \in \mathbb{R}^{k+1}$.
 
-## 2.1 OLS Estimators
+## OLS Estimators
 
 The ordinary least squares (OLS) estimators for the multivariable regression model are:
 
@@ -73,7 +73,7 @@ $$
 \hat{\beta} = (X^TX)^{-1}X^Ty
 $$
 
-## 2.2 F-test
+## F-test
 
 The F-test evaluates the joint significance of the independent variables. The hypotheses are:
 
@@ -102,7 +102,7 @@ The F-test is one-tailed; reject $H_0$ if the calculated F-statistic exceeds the
 
 > The F-test checks the joint significance of all independent variables, while the t-test checks the significance of each variable individually. Sometimes, their results may conflict.
 
-## 2.3 Gauss-Markov Assumptions
+## Gauss-Markov Assumptions
 
 The Gauss-Markov assumptions for multivariable regression are similar to those for univariable regression, with an added focus on the variability of independent variables (no perfect multicollinearity):
 
@@ -115,7 +115,7 @@ The Gauss-Markov assumptions for multivariable regression are similar to those f
 
 The procedure for checking these assumptions is the same as in univariable regression.
 
-## 2.4 Violations of Gauss-Markov Assumptions
+## Violations of Gauss-Markov Assumptions
 
 - **Linearity in parameters**: If the relationship is not linear, consider a nonlinear model.
 - **No perfect multicollinearity**: If present, remove one of the linearly dependent variables. In practice, high (but not perfect) multicollinearity can be addressed by normalizing variables, using principal component analysis (PCA), or removing highly correlated variables.
@@ -124,7 +124,7 @@ The procedure for checking these assumptions is the same as in univariable regre
 - **Homoscedasticity**: If violated, use robust standard errors or Generalized Least Squares (GLS).
 - **Normality of errors**: If violated, inference based on normality may be biased.
 
-## 2.5 Generalized Least Squares (GLS)
+## Generalized Least Squares (GLS)
 
 > This section is supplementary and was not covered in the course, but GLS is useful when errors are not homoscedastic.
 
@@ -154,12 +154,12 @@ $$
 
 GLS estimators are more efficient than OLS when errors are heteroscedastic.
 
-## 2.6 Overfitting
+## Overfitting
 
 - If $n = k + 1$, the model fits the data perfectly ($R^2 = 1$), but is overfitted and should not be used for prediction.
 - If $n < k + 1$, the model is overfitted and not valid.
 
-## 2.7 $R^2$ and Adjusted $R^2$
+## $R^2$ and Adjusted $R^2$
 
 Adding more independent variables always increases $R^2$, so it is not suitable for comparing models with different numbers of variables. The adjusted $R^2$ is a better metric:
 
@@ -178,7 +178,7 @@ Adjusted $R^2$ penalizes the addition of unnecessary variables. It is mainly use
 
 > When comparing models, always check that assumptions are met and that individual t-tests for variables are significant.
 
-## 2.8 Categorical Data
+## Categorical Data
 
 Categorical variables represent categories. There are two common ways to encode them:
 

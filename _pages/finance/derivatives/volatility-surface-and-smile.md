@@ -8,7 +8,7 @@ nav: "derivatives"
 **Implied volatility (IV)** is the volatility input that, when used in the Black–Scholes–Merton (BSM) formula, reproduces a market option price.  
 Across strikes and maturities, markets quote a *surface* of IVs rather than a single number. Understanding, cleaning, and modeling this **volatility surface** is central to pricing, risk, and hedging.
 
-## 1) From Prices to Implied Volatility
+## From Prices to Implied Volatility
 
 Given a mid market price $C^{mkt}(K,T)$ (or $P^{mkt}$), implied volatility $\sigma_{\text{iv}}(K,T)$ solves
 $$
@@ -23,14 +23,14 @@ Good seeds: *Brenner–Subrahmanyam* for near-ATM, or bracket searches for deep 
 
 **Quoting conventions.** Equity & rates often use strike $K$ or **log-moneyness** $k=\ln(K/F)$ with $F=S_0e^{(r-q)T}$; FX often quotes by **delta** (25-risk-reversal, 25-butterfly, ATM).
 
-## 2) Smile, Skew, and Term Structure (Intuition)
+## Smile, Skew, and Term Structure (Intuition)
 
 - **Equities:** Typically **downward skew** (OTM puts rich) due to leverage effect, crash risk, and demand for downside protection.
 - **FX:** More **smile-like**; asymmetry reflects macro skew (e.g., risk-reversals).
 - **Commodities:** Smiles vary; inventory/risk premia can produce positive skew.
 - **Term structure:** Short maturities exhibit stronger skew/kurtosis; long maturities tend to be smoother with lower level and curvature.
 
-## 3) No-Arbitrage Anatomy of a Surface
+## No-Arbitrage Anatomy of a Surface
 
 For **undiscounted** call price $C(K,T)$:
 
@@ -47,7 +47,7 @@ For **undiscounted** call price $C(K,T)$:
 
 **Practical check (discrete quotes).** Ensure convexity across strikes (finite-difference second derivative $\ge 0$) and monotonicity in $T$ for each strike bucket.
 
-## 4) Building a Production-Quality Surface (Workflow)
+## Building a Production-Quality Surface (Workflow)
 
 1. **Data cleaning**
    - Use mid quotes; drop stale/outliers; enforce put–call parity to harmonize calls & puts.
@@ -74,7 +74,7 @@ For **undiscounted** call price $C(K,T)$:
 6. **Sanity & arbitrage checks**
    - Numerically verify $\partial_{KK} C\!\ge\!0$ and $\partial_T C\!\ge\!0$ on a dense $(k,T)$ grid.
 
-## 5) Local and Stochastic Volatility Links
+## Local and Stochastic Volatility Links
 
 ### Dupire Local Volatility
 
@@ -101,7 +101,7 @@ Hagan’s approximation provides a closed-form **implied vol** $\sigma_{\text{iv
 > Local vol exactly matches today’s surface but can mis-represent dynamics (too “sticky-strike”).  
 > Stochastic vol (Heston/SABR) captures **smile dynamics** and term structures more realistically but won’t fit surfaces exactly without extra freedom.
 
-## 6) Surface Dynamics for Hedging
+## Surface Dynamics for Hedging
 
 - **Sticky-strike:** keep $\sigma_{\text{iv}}(K,T)$ fixed as $S$ moves.  
 - **Sticky-delta:** keep $\sigma_{\text{iv}}(\Delta,T)$ fixed (common in FX).  
@@ -109,7 +109,7 @@ Hagan’s approximation provides a closed-form **implied vol** $\sigma_{\text{iv
 
 Your choice impacts **P&L attribution** and hedge performance (delta/vega rebalancing, vanna/vomma effects). Backtest under the desk’s house convention.
 
-## 7) Implementation Notes (desk-ready)
+## Implementation Notes (desk-ready)
 
 - **Numerics:** Use robust IV inversion (bounded Newton + vega floor).  
 - **Grids:** Work on $(k,T)$ lattices; store $w=\sigma^2T$ for stability.  
@@ -117,7 +117,7 @@ Your choice impacts **P&L attribution** and hedge performance (delta/vega rebala
 - **Risk:** Compute **surface Greeks** ($\partial \sigma/\partial K$, $\partial \sigma/\partial T$) for vanna/vomma management and slippage analysis.  
 - **Auditability:** Persist raw quotes, cleaning flags, and fitted parameters for replay.
 
-## 8) Quick Example (SVI slice)
+## Quick Example (SVI slice)
 
 Suppose for $T=1$ year you fit an SVI smile with parameters  
 $a=0.02,\ b=0.15,\ \rho=-0.4,\ m=0.0,\ \sigma=0.25$.  
@@ -127,7 +127,7 @@ w(k)=0.02+0.15\Big(-0.4(-0.1)+\sqrt{0.1^2+0.25^2}\Big)=0.02+0.15(0.04+0.269)=0.0
 $$
 So $\sigma_{\text{iv}}(K,T)=\sqrt{w/T}\approx \sqrt{0.066}=25.7\%$.
 
-## 9) Takeaways
+## Takeaways
 
 - The **volatility surface** encodes the market’s risk-neutral beliefs and risk premia.  
 - Building a **clean, arbitrage-free** surface requires careful coordinates (log-moneyness), **total variance** interpolation, and **SVI/other parametric** fits.  

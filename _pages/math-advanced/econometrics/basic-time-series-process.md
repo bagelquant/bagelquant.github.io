@@ -14,7 +14,7 @@ Time-series analysis is a statistical technique focused on data collected over t
 2. **Cross-sectional data**: Observations collected at a single point in time across different entities.
 3. **Pooled data**: A combination of time series and cross-sectional data.
 
-## 4.1 Basic Definitions
+## Basic Definitions
 
 ### White Noise
 
@@ -28,7 +28,7 @@ A random process $\{y_t\}$ is strictly stationary if the joint distribution of $
 
 A random process $\{y_t\}$ is weakly stationary if $E(y_t)$ is constant for all $t$, $Var(y_t)$ is constant for all $t$, and $Cov(y_t, y_{t+k})$ depends only on $k$ (the lag), not on $t$.
 
-## 4.2 Examples of Non-Stationary Processes
+## Examples of Non-Stationary Processes
 
 ### Step Function
 
@@ -77,7 +77,7 @@ Thus, $Var(y_t)$ increases with $t$, so this process is not stationary.
 
 > Stock prices often follow a random walk: today's price equals yesterday's price plus random noise.
 
-## 4.3 Lag Operator
+## Lag Operator
 
 The lag operator $L$ is defined by:
 
@@ -119,7 +119,7 @@ $$
 (1 - pL)^{-1} = 1 + pL + p^2 L^2 + ...
 $$
 
-## 4.4 Autoregressive Process
+## Autoregressive Process
 
 An autoregressive process of order $p$, denoted $AR(p)$, is:
 
@@ -147,7 +147,7 @@ $$
 y_t = \alpha_1 y_{t-1} + \epsilon_t.
 $$
 
-## 4.5 Moving Average Process
+## Moving Average Process
 
 A moving average process of order $q$, denoted $MA(q)$, is:
 
@@ -169,7 +169,7 @@ $$
 y_t = \epsilon_t + \beta_1 \epsilon_{t-1}.
 $$
 
-## 4.6 ARMA Process
+## ARMA Process
 
 An autoregressive moving average process of order $p$ and $q$, denoted $ARMA(p, q)$, is:
 
@@ -181,7 +181,7 @@ where $a(L)$ is of order $p$ and $b(L)$ is of order $q$.
 
 > An intercept term can be added to any of these models.
 
-## 4.7 Tests for Stationarity
+## Tests for Stationarity
 
 ### Dickey-Fuller (ADF) Test
 
@@ -217,7 +217,7 @@ where $S_t$ is the cumulative sum of the series, and $\hat{\sigma}^2$ is the est
 
 > Note: The null and alternative hypotheses are reversed in the KPSS test compared to the ADF test. The KPSS $H_1$ is a unit root process, the opposite of stationarity. These tests may give conflicting results, so it is recommended to use both when checking for stationarity.
 
-## 4.8 Making Non-Stationary Series Stationary
+## Making Non-Stationary Series Stationary
 
 ### Differencing
 

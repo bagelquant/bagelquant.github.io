@@ -9,7 +9,7 @@ Among all derivatives, **forwards** and **futures** are the simplest.
 They are *linear* contracts whose payoffs vary one-for-one with the underlying price.  
 Understanding their pricing through the lens of **no-arbitrage** provides the mathematical foundation for all derivative valuation.
 
-## 1. What Are Forwards and Futures?
+## What Are Forwards and Futures?
 
 ### Forward Contract
 
@@ -34,7 +34,7 @@ A **futures** contract is the exchange-traded equivalent:
 
 ![Forward vs Futures overview](imgs/forwards_futures_comparison.png)
 
-## 2. The No-Arbitrage Pricing Principle
+## The No-Arbitrage Pricing Principle
 
 Pricing of forwards and futures rests on the idea that **identical future payoffs must cost the same today**.
 
@@ -49,7 +49,7 @@ We construct **replicating portfolios** to enforce price consistency.
 
 ---
 
-### 2.1 Cash-and-Carry Arbitrage
+### Cash-and-Carry Arbitrage
 
 Imagine the forward is **over-priced** ($F_0 > S_0 e^{(r - q)T}$).  
 We can lock in risk-free profit via a *cash-and-carry* strategy:
@@ -73,7 +73,7 @@ $$
 If $F_0$ is indeed higher than $S_0 e^{(r - q)T}$, this profit is positive and **arbitrage** exists.  
 Competition pushes $F_0$ down until equality holds.
 
-### 2.2 Reverse Cash-and-Carry Arbitrage
+### Reverse Cash-and-Carry Arbitrage
 
 Conversely, if the forward is **under-priced** ($F_0 < S_0 e^{(r - q)T}$):
 
@@ -95,7 +95,7 @@ $$
 
 If positive, arbitrageurs buy forwards and short spot, driving prices back to parity.
 
-### 2.3 Equilibrium Relation
+### Equilibrium Relation
 
 In equilibrium (no free lunch), both strategies yield zero profit:
 
@@ -107,7 +107,7 @@ This is the **cost-of-carry model** — the cornerstone of forward and futures p
 
 ---
 
-### 2.4 Example: Equity Forward on a Dividend-Paying Stock
+### Example: Equity Forward on a Dividend-Paying Stock
 
 Suppose:
 
@@ -133,7 +133,7 @@ If a forward were quoted at $F_0 = 103$:
   receive $103$, repay $100 e^{0.05\times0.5}=102.53$, receive dividends ≈ \$1.  
 - Net profit ≈ \$1.47 risk-free → arbitrage.
 
-### 2.5 Visualization
+### Visualization
 
 ![No-arbitrage pricing diagram](imgs/no_arbitrage_pricing.png)
 
@@ -141,7 +141,7 @@ The diagram illustrates how arbitrage connects **spot**, **carry**, and **forwar
 if the forward is too high → cash-and-carry (sell forward, buy spot);  
 too low → reverse cash-and-carry (buy forward, sell spot).
 
-## 3. Futures Pricing and Convexity
+## Futures Pricing and Convexity
 
 For deterministic interest rates, futures and forwards have the same fair value.  
 However, with stochastic rates:
@@ -153,7 +153,7 @@ $$
 because futures are marked to market daily.  
 If $\text{corr}(r_t, S_t) > 0$, the long futures tends to outperform the forward — a **positive convexity bias**.
 
-## 4. Market Usage
+## Market Usage
 
 | Sector | Purpose | Typical Instrument |
 |--------|----------|--------------------|
@@ -164,7 +164,7 @@ If $\text{corr}(r_t, S_t) > 0$, the long futures tends to outperform the forward
 
 These instruments underpin price discovery across asset classes.
 
-## 5. Summary
+## Summary
 
 - No-arbitrage ensures $F_0 = S_0 e^{(r - q)T}$.  
 - Cash-and-carry and reverse carry strategies enforce this relation.  

@@ -22,7 +22,7 @@ where:
 
 This model describes a linear relationship between $x$ and $y$, but the true values of $\beta_0$ and $\beta_1$ are unknown. Our objective is to estimate these parameters from sample data and construct the best-fitting regression line.
 
-## 1.1 How to Find $\beta_0$ and $\beta_1$
+## How to Find $\beta_0$ and $\beta_1$
 
 **First attempt:**
 
@@ -40,7 +40,7 @@ $$\sum_{i=1}^{n} \epsilon_i^2 = \sum_{i=1}^{n} (y_i - \beta_0 - \beta_1x_i)^2.$$
 
 > The hats on $\hat\beta_0$ and $\hat\beta_1$ indicate they are estimators, not the true parameters. Similarly, $\hat{\epsilon}_i$ is the residual for observation $i$, not the true error term.
 
-## 1.2 OLS Estimation
+## OLS Estimation
 
 $\hat{\beta}_0$ and $\hat{\beta}_1$ are the OLS estimators of $\beta_0$ and $\beta_1$, found by minimizing the sum of squared residuals:
 
@@ -107,7 +107,7 @@ Other key results:
 - $\sum_{i=1}^{n} \hat{\epsilon}_i = 0$
 - $\sum_{i=1}^{n} x_i\hat{\epsilon}_i = 0$
 
-## 1.3 Gauss-Markov Assumptions
+## Gauss-Markov Assumptions
 
 The Gauss-Markov theorem specifies when the OLS estimator is the Best Linear Unbiased Estimator (BLUE). The assumptions are:
 
@@ -120,7 +120,7 @@ The Gauss-Markov theorem specifies when the OLS estimator is the Best Linear Unb
 
 If these hold, OLS is BLUE: unbiased, minimum variance among linear unbiased estimators, and normally distributed.
 
-## 1.4 MLE Approach
+## MLE Approach
 
 OLS estimators can also be derived via Maximum Likelihood Estimation (MLE). The likelihood function is:
 
@@ -136,7 +136,7 @@ Maximizing the log-likelihood with respect to $\beta_0$ and $\beta_1$ is equival
 
 > The last term matches the OLS objective, so MLE and OLS estimators coincide.
 
-## 1.5 Variability in Data: SST, SSE, SSR
+## Variability in Data: SST, SSE, SSR
 
 > Notation follows the lecture; it may differ in other sources.
 
@@ -180,11 +180,11 @@ Thus:
 
 $$SST = SSR + SSE.$$
 
-## 1.6 Bias in SST
+## Bias in SST
 
 *To be added later.*
 
-## 1.7 Hypothesis Testing on $\beta_1$
+## Hypothesis Testing on $\beta_1$
 
 Recall the t-distribution:
 
@@ -211,7 +211,7 @@ where:
 
 Reject $H_0$ if $|t|$ exceeds the critical value at the chosen significance level.
 
-## 1.8 F-test
+## F-test
 
 Define:
 
@@ -236,7 +236,7 @@ $$F = \frac{MSE}{MSR} = \frac{SSE/k}{SSR/(n-k-1)} \sim F(k, n-k-1),$$
 
 where $k$ is the number of independent variables ($k=1$), $n$ is the sample size. Reject $H_0$ if $F$ exceeds the critical value.
 
-## 1.9 Test Based on Correlation Coefficient
+## Test Based on Correlation Coefficient
 
 The correlation coefficient $\rho$:
 
@@ -268,7 +268,7 @@ $$H_1: R_{x,y} \neq 0$$
 
 > This test is equivalent to the t-test on $\beta_1$; both yield the same statistic.
 
-## 1.10 Interval Estimator of $\beta_1$
+## Interval Estimator of $\beta_1$
 
 $\hat{\beta}_1$ is a point estimator. The interval estimator is:
 
@@ -279,7 +279,7 @@ where:
 - $t_{\alpha/2}(n-2)$: critical value of the t-distribution at significance level $\alpha/2$ with $n-2$ degrees of freedom
 - $SE(\hat{\beta}_1)$: standard error of $\hat{\beta}_1$
 
-## 1.11 t-test on $\beta_0$
+## t-test on $\beta_0$
 
 The t-test for the intercept $\beta_0$ mirrors that for $\beta_1$:
 
@@ -292,7 +292,7 @@ $$(\hat{\beta}_0 - t_{\alpha/2}(n-2)SE(\hat{\beta}_0), \ \hat{\beta}_0 + t_{\alp
 
 where $t_{\alpha/2}(n-2)$ is the critical value and $SE(\hat{\beta}_0)$ is the standard error of the intercept.
 
-## 1.12 Subjective Check of Assumptions
+## Subjective Check of Assumptions
 
 1. **Linearity**: Plot $y$ vs. $x$ to visually assess linearity.
 2. **Variability in $x$**: Ensure $x$ has non-zero variance; otherwise, it cannot explain $y$.
@@ -308,7 +308,7 @@ To construct a Q-Q plot:
 3. Theoretical quantile: $z_{(i)} = \Phi^{-1}((i - 0.5)/n)$
 4. Plot theoretical quantiles vs. residuals
 
-## 1.13 Statistical Tests on Assumptions
+## Statistical Tests on Assumptions
 
 ### Durbin-Watson Test (Assumption 3)
 

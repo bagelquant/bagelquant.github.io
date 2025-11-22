@@ -9,7 +9,7 @@ excerpt: "A technical overview of model interpretability in quantitative finance
 
 Model interpretability has become increasingly important in quantitative research and model risk governance. As machine learning methods grow more complex, practitioners must explain why a model behaves the way it does, which features drive predictions, and whether the model is robust or overfit. Interviews often test your understanding of interpretability frameworks such as feature importance, SHAP values, and techniques for controlling overfitting.
 
-## 1. Why is interpretability important in quant finance?
+## Why is interpretability important in quant finance?
 
 Interpretability is not just an academic requirement; it is essential for practical and regulatory reasons:
 
@@ -21,7 +21,7 @@ Interpretability is not just an academic requirement; it is essential for practi
 
 Interpretability complements performance. A model with high predictive accuracy but unclear reasoning is risky and fragile.
 
-## 2. What is global vs. local interpretability?
+## What is global vs. local interpretability?
 
 **Global interpretability** explains the model’s behavior across the entire dataset.  
 Examples:  
@@ -37,7 +37,7 @@ Examples:
 
 Both forms matter in quantitative research: global for understanding the model structure, local for investigating unexpected signals or outliers.
 
-## 3. Feature importance in tree-based models
+## Feature importance in tree-based models
 
 Feature importance measures how much each feature contributed to reducing model error.
 
@@ -62,7 +62,7 @@ In interviews, you may be asked:
 “How would you evaluate whether a feature is genuinely predictive?”  
 Answer: check stability across folds, out-of-sample performance, SHAP distributions, and economic justification.
 
-## 4. SHAP values
+## SHAP values
 
 SHAP (SHapley Additive exPlanations) is based on cooperative game theory.  
 It assigns each feature a contribution value for a specific prediction.
@@ -93,11 +93,11 @@ Common SHAP diagnostics:
 
 These tools are now standard in quant ML research and model validation.
 
-## 5. Identifying overfitting with interpretability tools
+## Identifying overfitting with interpretability tools
 
 Interpretability is tightly connected with overfitting control:
 
-### 5.1 Feature importance instability  
+### Feature importance instability
 If feature importance changes dramatically across:
 - different time windows  
 - different folds  
@@ -105,7 +105,7 @@ If feature importance changes dramatically across:
 
 then the model may be overfit or unstable.
 
-### 5.2 SHAP noise  
+### SHAP noise
 SHAP values dominated by:
 - uninformative features  
 - random noise  
@@ -113,21 +113,21 @@ SHAP values dominated by:
 
 often indicate the model is learning noise.
 
-### 5.3 Economic intuition mismatch  
+### Economic intuition mismatch
 Even highly predictive models should have economically meaningful relationships.  
 If a model claims “book-to-market has negative explanatory power” or “volatility predicts higher returns,” verify whether this is:
 - economically plausible  
 - an artifact of the sample  
 - a sign of overfitting or leakage
 
-### 5.4 Highly localized predictions  
+### Highly localized predictions
 If the model’s predictions rely heavily on a few extreme observations, interpretability tools will reveal large swings in SHAP values.
 
-## 6. Techniques for controlling overfitting
+## Techniques for controlling overfitting
 
 A robust quant model must generalize. Common tools:
 
-### 6.1 Regularization  
+### Regularization
 - L1 (Lasso): encourages sparsity  
 - L2 (Ridge): shrinks coefficients  
 - Elastic Net: balance of L1/L2  
@@ -137,19 +137,19 @@ For trees:
 - Min samples per leaf  
 - Learning rate control (in boosting)
 
-### 6.2 Cross-validation for time series  
+### Cross-validation for time series
 Standard K-fold is invalid. Use:
 - Rolling windows  
 - Expanding windows  
 - Walk-forward validation  
 
-### 6.3 Stability checks  
+### Stability checks
 A feature should:
 - remain important across different periods  
 - show consistent SHAP patterns  
 - maintain predictive power out-of-sample  
 
-### 6.4 Out-of-sample decay  
+### Out-of-sample decay
 Compare performance between:
 - train  
 - validation  
@@ -157,7 +157,7 @@ Compare performance between:
 
 A large drop in test performance signals overfitting.
 
-### 6.5 Robustness to perturbations  
+### Robustness to perturbations
 Add noise to:
 - features  
 - parameters  
@@ -165,7 +165,7 @@ Add noise to:
 
 If predictions collapse, the model lacks robustness.
 
-## 7. How do these concepts appear in interview questions?
+## How do these concepts appear in interview questions?
 
 Typical prompts include:
 

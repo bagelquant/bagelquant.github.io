@@ -9,7 +9,7 @@ excerpt: "A technical overview of short-rate interest rate models commonly used 
 
 Short-rate models are fundamental tools in interest rate quant roles. They describe the evolution of the instantaneous short rate, allowing quants to price bonds, swaps, swaptions, and construct arbitrage-free term structures. Vasicek, CIR, and Hull–White are among the most common models tested in interviews because of their tractability and closed-form solutions.
 
-## 1. What is a short-rate model?
+## What is a short-rate model?
 
 A short-rate model specifies the stochastic process followed by the instantaneous short rate $r_t$. It defines the drift, volatility, and randomness of interest rate movements.
 
@@ -27,7 +27,7 @@ $$
 
 Short-rate models allow closed-form bond pricing under certain assumptions, making them widely used for fixed-income derivatives.
 
-## 2. Vasicek Model
+## Vasicek Model
 
 SDE:
 $$
@@ -60,7 +60,7 @@ $$
 Pros: analytically simple, widely used for intuition and pedagogy.  
 Cons: allows negative rates; cannot match the initial yield curve exactly.
 
-## 3. CIR Model (Cox–Ingersoll–Ross)
+## CIR Model (Cox–Ingersoll–Ross)
 
 SDE:
 $$
@@ -89,7 +89,7 @@ Cons:
 
 Common in credit risk and Monte Carlo simulation of short rates.
 
-## 4. Hull–White One-Factor Model (Extended Vasicek)
+## Hull–White One-Factor Model (Extended Vasicek)
 
 SDE:
 $$
@@ -117,7 +117,7 @@ Cons:
 - Gaussian → negative rates possible.  
 - Still one-factor → cannot capture slope/twist of the curve.
 
-## 5. Model Comparison
+## Model Comparison
 
 | Model | Mean Reversion | Volatility | Rates Always Positive | Fits Initial Curve | Typical Use |
 |-------|----------------|------------|------------------------|---------------------|-------------|
@@ -125,7 +125,7 @@ Cons:
 | CIR | Yes | $\sigma\sqrt{r}$ | Yes (Feller) | No | Credit risk, simulation |
 | Hull–White | Yes | Constant | No | Yes | Curve calibration, swaption pricing |
 
-## 6. Calibration Approaches
+## Calibration Approaches
 
 Vasicek / CIR:
 - Estimate $a, b, \sigma$ from historical short rates using MLE or GMM.  
@@ -141,7 +141,7 @@ Common interview question:
 Answer:  
 Fit $\theta(t)$ to match the initial term structure, and fit $a$ and $\sigma$ to match market swaption/cap volatilities.
 
-## 7. When to use each model
+## When to use each model
 
 - Use **Vasicek** when you need tractability and simple closed-form intuition.  
 - Use **CIR** when positivity of rates is required or when rate-level-dependent volatility is important.  
@@ -149,7 +149,7 @@ Fit $\theta(t)$ to match the initial term structure, and fit $a$ and $\sigma$ to
 
 For more complex curve dynamics, two-factor extensions such as G2++ or multi-factor Hull–White models are used.
 
-## 8. Limitations of One-Factor Short-Rate Models
+## Limitations of One-Factor Short-Rate Models
 
 - Cannot capture multi-factor yield curve movements (twist, butterfly).  
 - Gaussian models can produce negative rates.  

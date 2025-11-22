@@ -9,7 +9,7 @@ excerpt: "A practical guide to backtesting and performance evaluation — unders
 
 Backtesting is the backbone of quantitative research. It’s where ideas become data-driven strategies and where many good ideas are filtered out. Interviewers will test your understanding of not just how to run a backtest, but also how to diagnose bias, evaluate performance, and ensure robustness.
 
-### 🧠 1. What is backtesting and why is it important?
+### 1. What is backtesting and why is it important?
 
 **Definition:**  
 Backtesting is the process of applying a trading strategy to historical data to simulate how it would have performed.
@@ -21,7 +21,7 @@ Backtesting is the process of applying a trading strategy to historical data to 
 
 A backtest is only useful if it accurately reflects *realistic trading conditions* — otherwise, it’s just curve-fitting to historical noise.
 
-### 📉 2. What is slippage and why does it matter?
+### 2. What is slippage and why does it matter?
 
 **Definition:**  
 Slippage is the difference between the expected execution price and the actual execution price.
@@ -45,7 +45,7 @@ In more advanced setups:
 
 **Interview Tip:** Always emphasize that ignoring slippage leads to overly optimistic backtest results.
 
-### 🔁 3. What is turnover and how is it computed?
+### 3. What is turnover and how is it computed?
 
 **Definition:**  
 Turnover measures how frequently a portfolio’s positions change, representing trading intensity (and thus cost).
@@ -64,7 +64,7 @@ $$
 - Metric for execution cost modeling  
 - Stability diagnostic for factor strategies  
 
-### 🧬 4. What is alpha decay?
+### 4. What is alpha decay?
 
 **Definition:**  
 Alpha decay measures how quickly a signal loses predictive power after it is discovered or after it is generated.
@@ -85,7 +85,7 @@ $$
 Strategies with slow decay → easier to execute, less sensitive to slippage.  
 Fast-decay signals → require low latency and aggressive execution.
 
-### 📊 5. What are the key performance metrics in backtesting?
+### 5. What are the key performance metrics in backtesting?
 
 | Metric | Meaning | Purpose |
 |:--|:--|:--|
@@ -100,7 +100,7 @@ Fast-decay signals → require low latency and aggressive execution.
 
 
 
-### ⚙️ 8. What is realistic transaction cost modeling?
+### 8. What is realistic transaction cost modeling?
 
 Good backtests include:
 - **Bid–ask spread cost**  
@@ -115,7 +115,7 @@ $$
 $$
 where \(a\) models linear costs and \(b\) models market impact.
 
-### 🚀 9. What makes a backtest “too good to be true”?
+### 9. What makes a backtest “too good to be true”?
 
 Red flags:
 - Extremely high Sharpe (>3 in equities)  

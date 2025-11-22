@@ -6,7 +6,7 @@ permalink: /optimization/convex-sets-and-functions/
 nav: "optimization"
 ---
 
-## 2.1 Definition of Convex Sets
+## Definition of Convex Sets
 
 The concept of a convex set is fundamental in optimization theory. A set is convex if, for any two points within the set, the entire line segment connecting them also lies within the set.
 
@@ -16,7 +16,7 @@ $$
 \alpha x^1 + (1-\alpha)x^2, \quad \text{for all} \quad \alpha \in (0,1).
 $$
 
-## 2.2 Properties of Convex Sets
+## Properties of Convex Sets
 
 ### Intersection of Convex Sets
 
@@ -76,6 +76,6 @@ $$
 
 **Lemma:** If $X \subset \mathbb{R}^n$, then every point in $\text{conv}(X)$ can be represented as a convex combination of at most $n+1$ points from $X$.
 
-## 2.3 Projection
+## Projection
 
 **Definition:** The projection of a point $x \in \mathbb{R}^n$ onto a set $X \subset \mathbb{R}^n$ is the point in $X$ closest to $x$.

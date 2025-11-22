@@ -10,7 +10,7 @@ nav: "calculus"
 Calculus is the mathematical foundation of continuous change.  
 In quantitative finance, it underpins derivative pricing, risk management, and dynamic optimization — from computing sensitivities (Greeks) to modeling stochastic processes in continuous time.
 
-## 1. The Concept of Limit
+## The Concept of Limit
 
 Let $f: \mathbb{R} \to \mathbb{R}$.  
 We say that $f(x)$ approaches $L$ as $x$ approaches $a$ if, for every $\epsilon > 0$, there exists $\delta > 0$ such that
@@ -30,7 +30,7 @@ $$
 **Remark:**  
 Limits describe continuity, differentiability, and integral accumulation — all subsequent operations are built upon this notion.
 
-## 2. Continuity
+## Continuity
 
 A function $f(x)$ is *continuous* at $x=a$ if:
 
@@ -46,7 +46,7 @@ Polynomial and exponential functions are continuous everywhere; step or piecewis
 **In Finance:**  
 Continuity allows infinitesimal modeling — asset prices $S_t$ are modeled as continuous semimartingales, even though real prices move discretely.
 
-## 3. The Derivative
+## The Derivative
 
 The **derivative** of $f$ at point $x=a$ is defined by the limit:
 
@@ -62,7 +62,7 @@ If the above limit exists (finite), $f$ is *differentiable* at $a$.
 **Example:**  
 $f(x) = x^2 \Rightarrow f'(x) = 2x.$
 
-## 4. Higher-Order Derivatives
+## Higher-Order Derivatives
 
 Repeated differentiation yields higher-order derivatives:
 
@@ -78,7 +78,7 @@ $$
 f^{(n)}(x) = a^n e^{ax}.
 $$
 
-## 5. Differentiation Rules
+## Differentiation Rules
 
 Let $u(x)$ and $v(x)$ be differentiable functions.
 
@@ -91,7 +91,7 @@ Let $u(x)$ and $v(x)$ be differentiable functions.
 If $f(x) = e^{3x^2}$,  
 then $f'(x) = e^{3x^2} \cdot 6x.$
 
-## 6. Differentiability and Continuity
+## Differentiability and Continuity
 
 Every differentiable function is continuous,  
 but continuity does not imply differentiability.
@@ -103,7 +103,7 @@ $$
 \lim_{h\to 0^-}\frac{|h|-0}{h}=-1.
 $$
 
-## 7. The Mean Value Theorem (MVT)
+## The Mean Value Theorem (MVT)
 
 If $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$,  
 then there exists $c \in (a,b)$ such that
@@ -118,7 +118,7 @@ There exists a point where the instantaneous slope equals the average rate of ch
 **In Finance:**  
 The theorem underlies linear approximations like Delta hedging — local linearization of payoff with respect to the underlying.
 
-## 8. The Integral — The Inverse of Differentiation
+## The Integral — The Inverse of Differentiation
 
 Given $f(x)$ continuous on $[a,b]$,  
 the **definite integral** is the limit of Riemann sums:
@@ -138,7 +138,7 @@ $$
 
 Thus differentiation and integration are inverse operations.
 
-## 9. Applications in Quantitative Finance
+## Applications in Quantitative Finance
 
 1. **Instantaneous returns:**  
    $r_t = \frac{dS_t}{S_t\,dt}$ → continuous compounding.  
@@ -149,7 +149,7 @@ Thus differentiation and integration are inverse operations.
 4. **Continuous-time models:**  
    Ito calculus extends these limits to stochastic processes.
 
-## 10. Key Takeaways
+## Key Takeaways
 
 - Limits formalize continuity and smoothness.  
 - Derivatives quantify infinitesimal changes.  

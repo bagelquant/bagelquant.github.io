@@ -10,7 +10,7 @@ Previously, we discussed cases where the independent variables are categorical. 
 
 Instead, we use a different approach: logistic regression.
 
-## 3.1 Sigmoid Function
+## Sigmoid Function
 
 Consider the following function:
 
@@ -34,7 +34,7 @@ $$
 x = \ln \left( \frac{y}{1 - y} \right).
 $$
 
-## 3.2 Regression Model
+## Regression Model
 
 Given a binary outcome $Y$:
 
@@ -65,7 +65,7 @@ $$
 \ln \left( \frac{p}{1 - p} \right) = \beta_0 + \beta_1 X.
 $$
 
-## 3.3 Maximum Likelihood Estimation
+## Maximum Likelihood Estimation
 
 To estimate the parameters $\beta_0$ and $\beta_1$, recall the probability mass function of the Bernoulli distribution:
 
@@ -139,7 +139,7 @@ $$
 \end{cases}
 $$
 
-## 3.4 Multiclass Case: $M$ Categories of $Y$
+## Multiclass Case: $M$ Categories of $Y$
 
 When $Y$ has $M$ categories and $k$ independent variables, the model becomes:
 

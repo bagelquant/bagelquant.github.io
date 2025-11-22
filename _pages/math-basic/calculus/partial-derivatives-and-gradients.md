@@ -12,7 +12,7 @@ Many financial quantities depend on several variables — for example, an option
 To measure how such a multivariable function changes with respect to each variable independently, we use **partial derivatives**.  
 Their collection, the **gradient**, describes the direction and magnitude of the steepest change.
 
-## 1. Functions of Several Variables
+## Functions of Several Variables
 
 Let $f: \mathbb{R}^n \to \mathbb{R}$ and $\mathbf{x} = (x_1, x_2, \ldots, x_n)$.  
 The function $f$ assigns a scalar output to multiple inputs.
@@ -23,7 +23,7 @@ The function $f$ assigns a scalar output to multiple inputs.
 - $P(y_1, y_2, \ldots, y_n)$ — bond portfolio value as a function of key interest rates.
 - $L(w_1, w_2, \ldots, w_n)$ — portfolio loss as a function of factor exposures.
 
-## 2. Definition of a Partial Derivative
+## Definition of a Partial Derivative
 
 The **partial derivative** of $f$ with respect to $x_i$ is
 
@@ -44,7 +44,7 @@ $$
 **Interpretation:**  
 Each partial derivative isolates the sensitivity of $f$ to one variable — similar to computing the “Greeks” in finance.
 
-## 3. Notation and Terminology
+## Notation and Terminology
 
 - $\frac{\partial f}{\partial x}$ : partial derivative with respect to $x$.  
 - $\nabla f$ : gradient vector (all partial derivatives).  
@@ -64,7 +64,7 @@ dV \approx \frac{\partial V}{\partial S} dS + \frac{\partial V}{\partial \sigma}
 $$
 In finance, this is the infinitesimal P&L approximation.
 
-## 4. The Gradient Vector
+## The Gradient Vector
 
 For $f: \mathbb{R}^n \to \mathbb{R}$, the gradient is defined as
 
@@ -93,7 +93,7 @@ $\nabla f$ is perpendicular to each contour.
 
 $\nabla V = (\Delta, \nu, \Theta, \rho, \dots)$ — vector of Greeks describing sensitivities along each input dimension.
 
-## 5. Second-Order Partial Derivatives and Hessian Matrix
+## Second-Order Partial Derivatives and Hessian Matrix
 
 If all second-order derivatives exist and are continuous,  
 the matrix of second derivatives is the **Hessian**:
@@ -128,7 +128,7 @@ $$
 
 Positive definiteness of $H$ implies local convexity (e.g., convex payoffs like calls).
 
-## 6. Total Differential and Sensitivity Approximation
+## Total Differential and Sensitivity Approximation
 
 The total differential gives a local linear approximation:
 
@@ -144,7 +144,7 @@ $$
 This approximation forms the foundation of *delta-hedging* and *risk attribution*.  
 Higher-order terms (e.g., $\frac{1}{2}\Gamma (dS)^2$) appear in second-order Taylor expansions.
 
-## 7. Chain Rule for Multivariable Functions
+## Chain Rule for Multivariable Functions
 
 If $z = f(x,y)$ and $x = g(t)$, $y = h(t)$, then
 
@@ -162,7 +162,7 @@ $$
 **Use in Finance:**  
 When risk factors depend on common drivers (e.g., correlated market variables), total exposure to a driver is obtained via multivariate chain rule.
 
-## 8. Gradient in Optimization
+## Gradient in Optimization
 
 The gradient vanishes at critical points:
 $$
@@ -181,7 +181,7 @@ To determine type:
 - Calibration: gradients used in gradient-descent or quasi-Newton algorithms for parameter fitting.  
 - Lagrange multipliers: enforce equality constraints $\nabla f = \lambda \nabla g$.
 
-## 9. Mixed Sensitivities in Finance
+## Mixed Sensitivities in Finance
 
 Consider a derivative portfolio value $V(S,\sigma,t)$.  
 Second-order sensitivities (cross-partials):
@@ -198,7 +198,7 @@ $$
 
 Such interactions are crucial for hedging multi-risk portfolios.
 
-## 10. Directional Derivatives
+## Directional Derivatives
 
 For a unit vector $\mathbf{u}$,  
 the **directional derivative** of $f$ at $\mathbf{x}$ in the direction of $\mathbf{u}$ is
@@ -216,7 +216,7 @@ then $D_{\mathbf{u}}f = 3/\sqrt{2} + 4/\sqrt{2} = 7/\sqrt{2}$.
 **Interpretation:**  
 In portfolio space, $\mathbf{u}$ may represent a normalized portfolio change; $D_{\mathbf{u}} f$ is the marginal change in portfolio value along that direction.
 
-## 11. Summary
+## Summary
 
 - Partial derivatives isolate sensitivities to individual variables.  
 - The gradient aggregates these sensitivities and points in the direction of steepest ascent.  

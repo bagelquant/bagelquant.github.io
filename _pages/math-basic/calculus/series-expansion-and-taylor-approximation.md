@@ -8,7 +8,7 @@ nav: "calculus"
 Series expansions allow us to approximate complex nonlinear functions with polynomial terms around a known point.  
 In quantitative finance, Taylor expansions are used for **risk approximation**, **Greeks computation**, and **convexity adjustments** — expressing prices and sensitivities in powers of small perturbations.
 
-## 1. Power Series and Analytic Functions
+## Power Series and Analytic Functions
 
 A **power series** centered at $a$ is a sum of the form:
 
@@ -30,7 +30,7 @@ $$
 \cos x = \sum_{n=0}^\infty (-1)^n \frac{x^{2n}}{(2n)!}.
 $$
 
-## 2. Taylor Series
+## Taylor Series
 
 If $f(x)$ is infinitely differentiable near $a$, its **Taylor series** expansion around $a$ is:
 
@@ -54,7 +54,7 @@ $$
 e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
 $$
 
-## 3. Maclaurin Series
+## Maclaurin Series
 
 A special case with $a=0$:
 $$
@@ -68,7 +68,7 @@ $$
 
 The binomial series extends to non-integer $r$, crucial in continuous compounding and yield approximations.
 
-## 4. First and Second Order Approximations
+## First and Second Order Approximations
 
 Truncating the series gives **linear** and **quadratic** approximations:
 
@@ -91,7 +91,7 @@ dV \approx \Delta\,dS + \frac{1}{2}\Gamma\,(dS)^2.
 $$
 Here, $\Delta = \frac{\partial V}{\partial S}$ and $\Gamma = \frac{\partial^2 V}{\partial S^2}$ are the first and second derivatives with respect to $S$.
 
-## 5. Taylor Expansion in Several Variables
+## Taylor Expansion in Several Variables
 
 For $f(x_1,\ldots,x_n)$, the first- and second-order Taylor expansion around $\mathbf{a}$ is:
 
@@ -109,7 +109,7 @@ where $\nabla f$ is the gradient and $H(f)$ is the Hessian matrix.
 - $H(f)$: curvature matrix of cross-Greeks
 - The expansion provides the **second-order P&L approximation** used in risk aggregation.
 
-## 6. Error and Convergence
+## Error and Convergence
 
 The accuracy of a truncated Taylor expansion depends on the remainder $R_n(x)$ and the behavior of higher derivatives.
 
@@ -120,9 +120,9 @@ However, convergence does not always guarantee equality — some functions are i
 **Example:**  
 $f(x) = e^{-1/x^2}$ for $x\neq 0$ and $f(0)=0$ has all derivatives zero at 0, but $f(x)\neq 0$ for $x\neq 0$.
 
-## 7. Applications in Quantitative Finance
+## Applications in Quantitative Finance
 
-### 7.1 Option Pricing Approximations
+### Option Pricing Approximations
 
 Small perturbations in inputs allow for local approximations:
 $$
@@ -130,7 +130,7 @@ V(S+\Delta S) \approx V(S) + \Delta\,\Delta S + \tfrac{1}{2}\Gamma (\Delta S)^2.
 $$
 This expansion isolates linear (delta) and quadratic (gamma) risk components, forming the backbone of **delta-gamma hedging**.
 
-### 7.2 Convexity Adjustment
+### Convexity Adjustment
 
 In interest rate products, the expectation of a nonlinear function of rates can be expanded:
 $$
@@ -138,7 +138,7 @@ E[f(r)] \approx f(E[r]) + \tfrac{1}{2}f''(E[r])Var(r).
 $$
 The correction term is the **convexity adjustment**, arising from Jensen’s inequality for convex functions.
 
-### 7.3 Volatility Expansion
+### Volatility Expansion
 
 For implied volatility $\sigma = \sigma_0 + \epsilon$, one can expand price $V(\sigma)$:
 $$
@@ -146,7 +146,7 @@ V(\sigma) \approx V(\sigma_0) + \nu (\sigma - \sigma_0) + \tfrac{1}{2}\text{Vomm
 $$
 capturing vega and higher-order vol sensitivities.
 
-### 7.4 Duration and Convexity of Bonds
+### Duration and Convexity of Bonds
 
 Bond price as function of yield $y$:
 $$
@@ -154,7 +154,7 @@ P(y) \approx P(y_0) - D\,P(y_0)(y - y_0) + \tfrac{1}{2}C\,P(y_0)(y - y_0)^2.
 $$
 This gives the **duration-convexity** decomposition for yield curve risk management.
 
-## 8. Asymptotic Expansions
+## Asymptotic Expansions
 
 Taylor series often provide local approximations; for extreme values or limits, **asymptotic expansions** are used:
 
@@ -168,7 +168,7 @@ Used in:
 - Large deviation theory
 - Laplace and saddlepoint methods in risk analytics
 
-## 9. Logarithmic and Exponential Approximations
+## Logarithmic and Exponential Approximations
 
 Frequently used first-order expansions:
 
@@ -183,7 +183,7 @@ Frequently used first-order expansions:
 - $\ln(1+r) \approx r$ for small $r$ → link between discrete and continuous returns.
 - $(1+y/m)^{mT} \approx e^{yT}$ → continuous compounding approximation.
 
-## 10. Summary
+## Summary
 
 - Series expansions approximate smooth functions via polynomial terms.  
 - Taylor’s theorem provides systematic local approximations and error control.  

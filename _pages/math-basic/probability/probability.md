@@ -17,9 +17,9 @@ Additional topics in probability:
 - Characteristic Functions
 - [General Probability Theory](general-probability-theory.md) (A more advanced treatment of probability theory)
 
-## 1. Combinatorial Analysis
+## Combinatorial Analysis
 
-### 1.1 Permutations
+### Permutations
 
 For n distinct objects, the number of permutations is
 $$
@@ -36,7 +36,7 @@ $$
 \frac{6!}{3! \, 2! \, 1!} = 60.
 $$
 
-### 1.2 Combinations
+### Combinations
 
 Number of ways to choose $r$ from $n$:
 $$
@@ -66,9 +66,9 @@ $$
 x_1^{n_1}\cdots x_r^{n_r}.
 $$
 
-## 2. Axioms of Probability
+## Axioms of Probability
 
-### 2.1 Basics
+### Basics
 
 $$
 0 \le P(A) \le 1, \qquad P(\Omega)=1.
@@ -79,7 +79,7 @@ $$
 P\!\left(\bigcup_{i} A_i\right) = \sum_{i} P(A_i).
 $$
 
-### 2.2 Conditional Probability and Independence
+### Conditional Probability and Independence
 
 Conditional probability:
 $$
@@ -96,7 +96,7 @@ $$
 P(AB)=P(A)P(B).
 $$
 
-## 2.3 Random Variables and Distributions
+## Random Variables and Distributions
 
 CDF:
 
@@ -128,7 +128,7 @@ $$
 f_{X,Y}(x,y) = f_X(x)\,f_Y(y).
 $$
 
-## 2.4 Expectation, Variance, Covariance
+## Expectation, Variance, Covariance
 
 Expectation
 
@@ -177,7 +177,7 @@ $$
 \sqrt{\operatorname{Var}(X)\,\operatorname{Var}(Y)}}.
 $$
 
-## 2.5 Inequalities and Laws of Large Numbers
+## Inequalities and Laws of Large Numbers
 
 Markov (for nonnegative $X$ and $a>0$):
 $$
@@ -199,9 +199,9 @@ $$
 \frac{1}{n}\sum_{k=1}^{n} X_k \ \xrightarrow{\text{a.s.}}\ \mu.
 $$
 
-## 3. Discrete Distributions
+## Discrete Distributions
 
-### 3.1 Binomial
+### Binomial
 
 $$
 P(X=i)=\binom{n}{i} p^{\,i} (1-p)^{\,n-i}, \quad i=0,1,\ldots,n.
@@ -210,7 +210,7 @@ $$
 E[X]=np, \qquad \operatorname{Var}(X)=np(1-p).
 $$
 
-### 3.2 Poisson
+### Poisson
 
 $$
 P(X=i)=e^{-\lambda}\frac{\lambda^{i}}{i!}, \quad i=0,1,2,\ldots
@@ -220,7 +220,7 @@ E[X]=\lambda, \qquad \operatorname{Var}(X)=\lambda.
 $$
 Limit of Binomial: $n\to\infty$, $p\to 0$, $np=\lambda$.
 
-### 3.3 Geometric (first success on trial $n$)
+### Geometric (first success on trial $n$)
 
 $$
 P(X=n)=(1-p)^{\,n-1}p, \quad n=1,2,\ldots
@@ -229,7 +229,7 @@ $$
 E[X]=\frac{1}{p}, \qquad \operatorname{Var}(X)=\frac{1-p}{p^{2}}.
 $$
 
-### 3.4 Negative Binomial (trials until $r$-th success)
+### Negative Binomial (trials until $r$-th success)
 
 $$
 P(X=n)=\binom{n-1}{r-1} p^{\,r} (1-p)^{\,n-r}, \quad n=r,r+1,\ldots
@@ -238,7 +238,7 @@ $$
 E[X]=\frac{r}{p}, \qquad \operatorname{Var}(X)=\frac{r(1-p)}{p^{2}}.
 $$
 
-### 3.5 Hypergeometric (without replacement)
+### Hypergeometric (without replacement)
 
 Population has $N+M$ items, $N$ of type A and $M$ of type B. Draw $n$.
 $$
@@ -249,9 +249,9 @@ E[X]=\frac{nN}{N+M}, \qquad
 \operatorname{Var}(X)=\frac{nNM}{(N+M)^2}\left(1-\frac{n-1}{N+M-1}\right).
 $$
 
-## 4. Continuous Distributions
+## Continuous Distributions
 
-### 4.1 Uniform on $(a,b)$
+### Uniform on $(a,b)$
 
 $$
 f(x)=\frac{1}{b-a}, \quad a<x<b; \qquad
@@ -261,14 +261,14 @@ $$
 E[X]=\frac{a+b}{2}, \qquad \operatorname{Var}(X)=\frac{(b-a)^2}{12}.
 $$
 
-### 4.2 Normal
+### Normal
 
 $$
 f(x)=\frac{1}{\sqrt{2\pi}\,\sigma}\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right).
 $$
 Standard normal: $Z\sim N(0,1)$, CDF $\Phi\!\left(\frac{x-\mu}{\sigma}\right)$.
 
-### 4.3 Exponential
+### Exponential
 
 $$
 f(x)=\lambda e^{-\lambda x}, \quad x>0; \qquad
@@ -276,7 +276,7 @@ E[X]=\frac{1}{\lambda}, \quad \operatorname{Var}(X)=\frac{1}{\lambda^2}.
 $$
 Memoryless: $P(X>s+t\mid X>s)=P(X>t)$.
 
-### 4.4 Poisson Process and Gamma
+### Poisson Process and Gamma
 
 Homogeneous Poisson process with rate $\lambda$:
 $$
@@ -284,7 +284,7 @@ N(t) \sim \text{Poisson}(\lambda t).
 $$
 Interarrival times are i.i.d. exponential$(\lambda)$; the sum of $n$ such interarrivals is gamma$(n,\lambda)$.
 
-### 4.5 Nonhomogeneous Poisson Process
+### Nonhomogeneous Poisson Process
 
 Time-varying rate $\lambda(t)$, mean value function
 $$
@@ -295,7 +295,7 @@ $$
 N(t+s)-N(t) \sim \text{Poisson}\!\left(m(t+s)-m(t)\right).
 $$
 
-## 5. Conditional Expectation and Variance
+## Conditional Expectation and Variance
 
 Discrete:
 $$

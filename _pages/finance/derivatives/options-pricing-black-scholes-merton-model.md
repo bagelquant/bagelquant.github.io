@@ -9,7 +9,7 @@ The **Black–Scholes–Merton (BSM) model** provides a continuous-time framewor
 It assumes frictionless trading, continuous hedging, and lognormally distributed asset prices.  
 The model forms the cornerstone of modern quantitative finance.
 
-## 1. Model Assumptions
+## Model Assumptions
 
 1. The underlying asset price $S_t$ follows **geometric Brownian motion**:
 
@@ -24,7 +24,7 @@ The model forms the cornerstone of modern quantitative finance.
 4. Trading occurs continuously, and borrowing/lending are possible at $r$.  
 5. Markets are arbitrage-free and complete.
 
-## 2. Deriving the Black–Scholes–Merton PDE
+## Deriving the Black–Scholes–Merton PDE
 
 Let the option value be $V(t,S_t)$.  
 By **Itô’s lemma**:
@@ -72,7 +72,7 @@ $$
 
 This is the **Black–Scholes–Merton partial differential equation**.
 
-## 3. Boundary Conditions
+## Boundary Conditions
 
 For a European call option with strike $K$ and maturity $T$:
 
@@ -86,7 +86,7 @@ $$
 V(T,S_T) = \max(K - S_T, 0).
 $$
 
-## 4. Solving the PDE (Risk-Neutral Valuation)
+## Solving the PDE (Risk-Neutral Valuation)
 
 Under the **risk-neutral measure** $\mathbb{Q}$, the drift of $S_t$ becomes $(r - q)$:
 
@@ -103,7 +103,7 @@ $$
 V(t,S_t) = e^{-r(T-t)}\mathbb{E}^{\mathbb{Q}}\!\left[f(S_T)\,|\,S_t\right].
 $$
 
-## 5. Closed-Form Black–Scholes–Merton Formula
+## Closed-Form Black–Scholes–Merton Formula
 
 For a European call and put:
 
@@ -125,7 +125,7 @@ Here, $N(x)$ is the cumulative distribution function of the standard normal dist
 
 ![Normal CDF interpretation of $N(d_1)$ and $N(d_2)$](imgs/black_scholes_nd1_nd2.png)
 
-## 6. Intuition Behind $N(d_1)$ and $N(d_2)$
+## Intuition Behind $N(d_1)$ and $N(d_2)$
 
 - $N(d_2)$: risk-neutral probability that the option will expire **in the money** ($S_T > K$).  
 - $N(d_1)$: probability-weighted delta — the **present value of expected exercise** under risk-neutral drift.
@@ -135,7 +135,7 @@ Thus:
 - The first term, $S_0 e^{-qT}N(d_1)$, is the **present value of the expected asset received** upon exercise.  
 - The second term, $K e^{-rT}N(d_2)$, is the **present value of the payment** made at exercise.
 
-## 7. Example Calculation
+## Example Calculation
 
 Let:
 
@@ -158,7 +158,7 @@ $$
 
 Hence, the **call price is \$8.91** and **put price is \$6.33**.
 
-## 8. Economic Insights
+## Economic Insights
 
 1. **Volatility ($\sigma$):**  
    Higher volatility increases option value due to convexity of the payoff.
@@ -172,14 +172,14 @@ Hence, the **call price is \$8.91** and **put price is \$6.33**.
 4. **Time to Maturity ($T$):**  
    Generally increases option value — more time, more optionality.
 
-## 9. Visualization: The Black–Scholes World
+## Visualization: The Black–Scholes World
 
 ![Option value vs underlying and volatility](imgs/black_scholes_surface.png)
 
 The BSM framework elegantly connects stochastic calculus, PDEs, and probabilistic valuation.  
 Its assumptions may be simplified, but the logic — replication, hedging, and no-arbitrage — underpins all modern pricing theory.
 
-## 10. Summary
+## Summary
 
 - The BSM model arises from continuous-time hedging and no-arbitrage.  
 - It yields closed-form prices via risk-neutral expectation.  

@@ -9,7 +9,7 @@ excerpt: "A practical overview of key portfolio risk measures — from VaR and C
 
 Quantitative finance is built around one central challenge: **how to measure and control risk**. Whether you’re evaluating a portfolio’s downside exposure or comparing risk-adjusted performance, understanding common risk metrics is crucial for both interviews and real-world trading.
 
-### 🧠 1. What is Value at Risk (VaR)?
+### 1. What is Value at Risk (VaR)?
 
 **Definition:**  
 Value at Risk estimates the maximum loss over a given time horizon at a specified confidence level.
@@ -29,7 +29,7 @@ Example: A 1-day 95% VaR of \$1 million means there’s a 5% chance the portfoli
 **Limitations:**  
 VaR ignores tail losses beyond the cutoff and is not subadditive (violates diversification principle).
 
-### 📉 2. What is Conditional Value at Risk (CVaR)?
+### 2. What is Conditional Value at Risk (CVaR)?
 
 **Definition:**  
 Also called *Expected Shortfall (ES)*, CVaR measures the *average loss* beyond the VaR threshold:
@@ -46,7 +46,7 @@ While VaR tells you the loss threshold, CVaR tells you the *expected loss when t
 **Common in:**  
 Stress testing, portfolio optimization under tail constraints.
 
-### 📊 3. What is Maximum Drawdown?
+### 3. What is Maximum Drawdown?
 
 **Definition:**  
 The largest peak-to-trough decline in portfolio value over time:
@@ -64,7 +64,7 @@ Represents worst-case cumulative loss an investor would have experienced.
 - **Calmar Ratio:** $\text{Return} / \text{Max Drawdown}$  
 - **Pain Ratio:** $\text{Average Return} / \text{Average Drawdown}$  
 
-### ⚖️ 4. What is the Sharpe Ratio?
+### 4. What is the Sharpe Ratio?
 
 **Definition:**  
 Measures risk-adjusted return using total volatility as the risk proxy:
@@ -81,7 +81,7 @@ How much excess return you earn per unit of total risk.
 **Interview Tip:**  
 If asked how to improve Sharpe, mention *position sizing, diversification, and turnover control* — not just maximizing raw return.
 
-### 📈 5. What is the Sortino Ratio?
+### 5. What is the Sortino Ratio?
 
 **Definition:**  
 A refinement of Sharpe that penalizes only downside volatility:
@@ -94,7 +94,7 @@ Rewards asymmetric return profiles (strategies with limited downside but high up
 **Used in:**  
 Performance evaluation for options, hedge funds, or asymmetric payoff strategies.
 
-### 🔍 6. What is the Kelly Criterion?
+### 6. What is the Kelly Criterion?
 
 **Definition:**  
 Maximizes the expected logarithm of wealth (geometric growth rate):
@@ -117,7 +117,7 @@ Determines the optimal fraction of capital to invest in a risky asset to maximiz
 **Cons:**  
 - Highly sensitive to estimation error, can lead to extreme leverage if $\mu/\sigma$ is misestimated.
 
-### 🧩 7. How do VaR, CVaR, and Drawdown differ conceptually?
+### 7. How do VaR, CVaR, and Drawdown differ conceptually?
 
 | Measure | Focus | Type | Pros | Cons |
 |:--|:--|:--|:--|:--|
@@ -126,7 +126,7 @@ Determines the optimal fraction of capital to invest in a risky asset to maximiz
 | Drawdown | Peak-to-trough | Path-based | Intuitive, dynamic | Not distributional |
 
 
-### 📏 8. How are these measures applied in practice?
+### 8. How are these measures applied in practice?
 
 - **Risk management:** daily VaR/CVaR reporting for trading desks.  
 - **Portfolio construction:** minimize CVaR or drawdown instead of variance.  
@@ -135,7 +135,7 @@ Determines the optimal fraction of capital to invest in a risky asset to maximiz
 
 **Quant Tip:** Many modern strategies use **CVaR optimization** as a robust alternative to variance-based mean–variance optimization.
 
-### 🧮 9. What are coherent risk measures?
+### 9. What are coherent risk measures?
 
 A risk measure $\rho(X)$ is **coherent** if it satisfies:
 1. **Monotonicity:** If $X_1 \le X_2$, then $\rho(X_1) \ge \rho(X_2)$  
@@ -145,7 +145,7 @@ A risk measure $\rho(X)$ is **coherent** if it satisfies:
 
 **VaR** fails subadditivity; **CVaR** satisfies all four — hence it’s coherent.
 
-### 🚀 10. How to combine return and risk metrics effectively?
+### 10. How to combine return and risk metrics effectively?
 
 For interviews, emphasize that risk and return are inseparable:
 - **Sharpe / Sortino:** Risk-adjusted reward.  

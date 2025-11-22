@@ -10,7 +10,7 @@ header:
 
 This page follows the same structure as the [derivatives FAQ](https://bagelquant.com/quant-interview-faq-derivatives/): each question has a **Short Answer**, a concrete **Example**, and a **Detailed Explanation** with formulas, edge cases, and practical caveats.
 
-## 1) Brownian Motion / Wiener Process
+## Brownian Motion / Wiener Process
 
 Short Answer
 
@@ -26,7 +26,7 @@ Detailed Explanation
 - Construction: limit of random walk (Donsker’s theorem) or via Karhunen–Loève expansion.
 - Caveats: Brownian paths are nowhere differentiable and have infinite variation on any interval; quadratic variation over $[0,T]$ equals $T$.
 
-## 2) Quadratic Variation
+## Quadratic Variation
 
 Short Answer
 
@@ -42,7 +42,7 @@ Detailed Explanation
 - For finite-variation processes the quadratic variation is 0; for diffusions it's positive.
 - In practice, realized variance estimators estimate quadratic variation from high-frequency returns, with microstructure noise caveats.
 
-## 3) Itô’s Lemma
+## Itô’s Lemma
 
 Short Answer
 
@@ -65,7 +65,7 @@ Detailed Explanation
 - Contrasts with Stratonovich calculus where the chain rule looks like ordinary calculus; conversion: $dX\circ dW = dX dW + \tfrac12 d\langle X,W\rangle$.
 - Use cases: derive Black–Scholes dynamics for log-price, change variables, compute SDEs of functions of processes.
 
-## 4) Itô vs Stratonovich
+## Itô vs Stratonovich
 
 Short Answer
 
@@ -81,7 +81,7 @@ Detailed Explanation
 - When modeling from physical considerations (limits of smooth noise), Stratonovich is natural; for probabilistic pricing and martingale measures, Itô is standard.
 - Numerics: Euler–Maruyama approximates Itô; the midpoint (Stratonovich) scheme converges to Stratonovich.
 
-## 5) Stochastic Integrals (Itô integral)
+## Stochastic Integrals (Itô integral)
 
 Short Answer
 
@@ -96,7 +96,7 @@ Detailed Explanation
 - Conditions: H must be predictable and square-integrable. Pathwise interpretations exist (Föllmer) but require different frameworks.
 - Use in finance: martingale representation theorem says local martingales can be written as stochastic integrals under completeness assumptions.
 
-## 6) SDE Existence & Uniqueness
+## SDE Existence & Uniqueness
 
 Short Answer
 
@@ -118,7 +118,7 @@ Detailed Explanation
 - Picard iterations give existence/uniqueness under global Lipschitz and linear growth. For CIR (square-root) process, Feller conditions ensure positivity and uniqueness despite non-Lipschitz at 0.
 - Strong vs weak solutions: strong = adapted to given Brownian motion, weak = existence of probability space and Brownian motion; Girsanov change-of-measure can convert between laws.
 
-## 7) Girsanov’s Theorem
+## Girsanov’s Theorem
 
 Short Answer
 
@@ -133,7 +133,7 @@ Detailed Explanation
 - Novikov/Kazamaki conditions ensure Z is a martingale. If they fail, the candidate density may be a strict local martingale, causing measure-change problems.
 - Applications: pricing, risk premia identification, and filtering/measure transforms in stochastic control.
 
-## 8) Martingales & Local Martingales
+## Martingales & Local Martingales
 
 Short Answer
 
@@ -148,7 +148,7 @@ Detailed Explanation
 - Distinctions matter: pricing via a candidate density that is only a local martingale can produce bubbles and asset price anomalies.
 - Uniform integrability is a common sufficient condition to promote local martingales to martingales.
 
-## 9) Risk-Neutral Measure & Martingale Representation
+## Risk-Neutral Measure & Martingale Representation
 
 Short Answer
 
@@ -163,7 +163,7 @@ Detailed Explanation
 - Martingale representation underpins replication: the integrand gives the hedging strategy (delta is the integrand for option replication).
 - In incomplete markets (extra sources of risk), the representation may require multiple Brownian motions or incomplete spanning.
 
-## 10) Fokker–Planck / Kolmogorov Forward Equation
+## Fokker–Planck / Kolmogorov Forward Equation
 
 Short Answer
 
@@ -182,7 +182,7 @@ Detailed Explanation
 - It’s the PDE dual to the backward Kolmogorov (pricing) PDE. Useful for density forecasting, likelihood-based calibration, and filtering.
 - Numerical challenges: boundary conditions and absorbing/reflecting barriers must be specified carefully.
 
-## 11) Backward Kolmogorov / Feynman–Kac
+## Backward Kolmogorov / Feynman–Kac
 
 Short Answer
 
@@ -197,7 +197,7 @@ Detailed Explanation
 - Use: derive pricing PDEs and represent solutions as risk-neutral expectations; forms the theoretical basis for Monte Carlo pricing.
 - Requires sufficient regularity of coefficients; for payoffs with low regularity, weak solutions or viscosity solutions may be used.
 
-## 12) Numerical Schemes: Euler–Maruyama & Milstein
+## Numerical Schemes: Euler–Maruyama & Milstein
 
 Short Answer
 
@@ -212,7 +212,7 @@ Detailed Explanation
 - Order: strong vs weak convergence. For option pricing (expectations) weak order is relevant; for path-dependent Greeks, strong order matters.
 - For SDEs with non-Lipschitz coefficients (e.g., CIR), implicit schemes or specialized positivity-preserving methods are preferred.
 
-## 13) Stopping Times & Optional Sampling
+## Stopping Times & Optional Sampling
 
 Short Answer
 
@@ -232,7 +232,7 @@ $$
 
 - Use in finance: pricing barrier options and proving optional decomposition for American claims.
 
-## 14) Local Time
+## Local Time
 
 Short Answer
 
@@ -251,7 +251,7 @@ $$
 u(x,t)=\mathbb{E}^{x,t}\bigl[e^{-\int_t^T r(s,X_s)\,ds}\,g(X_T)\bigr].
 $$
 
-## 15) Tanaka’s Formula
+## Tanaka’s Formula
 
 Short Answer
 
@@ -266,7 +266,7 @@ Detailed Explanation
 - A continuous-time stochastic process with stationary independent Gaussian increments, continuous paths, zero mean and variance proportional to time: for $W_t$, $W_0=0$, and $W_t-W_s\sim\mathcal{N}(0,t-s)$.
 - Useful for reflecting boundaries and deriving properties of hitting times. Shows how non-differentiable payoffs introduce local-time terms in SDE transforms.
 
-## 16) Martingale Problems (Stroock–Varadhan)
+## Martingale Problems (Stroock–Varadhan)
 
 Short Answer
 
@@ -282,7 +282,7 @@ Detailed Explanation
 
 Quadratic variation $[W]_T$ of Brownian motion over $[0,T]$ equals $T$; for a continuous semimartingale $X$ it's the pathwise limit of sums of squared increments.
 
-## 17) Jump Processes & Lévy Itô Decomposition
+## Jump Processes & Lévy Itô Decomposition
 
 Short Answer
 
@@ -297,7 +297,7 @@ Detailed Explanation
 - Pricing: jumps break completeness; risk-neutral measure selection and option pricing need jump compensator adjustments.
 - Numerics: simulate jumps with thinning or exact jump-time simulation; small-jump approximations (diffusion limits) sometimes used.
 
-## 18) Change of Numeraire
+## Change of Numeraire
 
 Short Answer
 
@@ -311,7 +311,7 @@ Detailed Explanation
 
 - Radon–Nikodym derivative involves the ratio of numeraires discounted; martingale property shifts accordingly and drift terms adjust.
 
-## 19) Malliavin Calculus (brief)
+## Malliavin Calculus (brief)
 
 Short Answer
 
@@ -325,7 +325,7 @@ Detailed Explanation
 
 - Advanced topic: requires smoothness on Wiener space; practical use in Monte Carlo Greeks (likelihood ratio vs pathwise vs Malliavin). Introduces Skorokhod integral (anticipating integrand).
 
-## 20) Practical Caveats for Quant Work
+## Practical Caveats for Quant Work
 
 Short Answer
 

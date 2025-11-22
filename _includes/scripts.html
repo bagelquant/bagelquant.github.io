@@ -60,13 +60,14 @@
 <script>
   (function() {
     document.addEventListener('DOMContentLoaded', function() {
-      var content = document.querySelector('.post-content');
+      // Only build TOC for numbered post/page content
+      var content = document.querySelector('.post-content.numbered');
       if (!content) return;
 
       // Allow disabling via `toc: false` in front matter
       if (!{{ page.toc | default: true | jsonify }}) return;
 
-      var headings = content.querySelectorAll('h2, h3, h4');
+      var headings = content.querySelectorAll('h2, h3');
       if (!headings.length) return;
 
       // Decide which TOC container to use: post or page
@@ -82,6 +83,8 @@
 
       var ul = document.createElement('ul');
 
+      var h2Count = 0, h3Count = 0;
+
       headings.forEach(function(h) {
         if (!h.id) {
           h.id = h.textContent.trim().toLowerCase()
@@ -94,7 +97,21 @@
 
         var a = document.createElement('a');
         a.href = '#' + h.id;
-        a.textContent = h.textContent;
+
+        // Compute numbering that matches the in-content numbering script
+        var tag = h.tagName.toLowerCase();
+        var numberText = '';
+        if (tag === 'h2') {
+          h2Count += 1;
+          h3Count = 0;
+          numberText = h2Count + '.\u00A0';
+        } else if (tag === 'h3') {
+          if (h2Count === 0) h2Count = 1;
+          h3Count += 1;
+          numberText = h2Count + '.' + h3Count + '.\u00A0';
+        }
+
+        a.textContent = (numberText ? numberText : '') + h.textContent;
 
         li.appendChild(a);
         ul.appendChild(li);
@@ -127,6 +144,49 @@
             if (siteNav.contains(e.target) || toggle.contains(e.target)) return;
             headerInner.classList.remove('nav-open');
             toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      // Auto-number level-2 and level-3 headings inside article/page content
+      (function() {
+        document.addEventListener('DOMContentLoaded', function() {
+          var containers = document.querySelectorAll('.post-content.numbered');
+          if (!containers || !containers.length) return;
+
+          containers.forEach(function(container) {
+            var headings = container.querySelectorAll('h2, h3');
+            var h2Count = 0, h3Count = 0;
+
+            headings.forEach(function(h) {
+              var tag = h.tagName.toLowerCase();
+
+              // Skip if numbering already applied
+              if (h.querySelector('.heading-number')) return;
+
+              if (tag === 'h2') {
+                h2Count += 1;
+                h3Count = 0;
+                var num = h2Count + '.\u00A0';
+                var span = document.createElement('span');
+                span.className = 'heading-number';
+                span.setAttribute('aria-hidden', 'true');
+                span.textContent = num;
+                h.insertBefore(span, h.firstChild);
+              } else if (tag === 'h3') {
+                // If there's no preceding h2, start numbering at 1
+                if (h2Count === 0) h2Count = 1;
+                h3Count += 1;
+                var num3 = h2Count + '.' + h3Count + '.\u00A0';
+                var span3 = document.createElement('span');
+                span3.className = 'heading-number';
+                span3.setAttribute('aria-hidden', 'true');
+                span3.textContent = num3;
+                h.insertBefore(span3, h.firstChild);
+              }
+            });
           });
         });
       })();

@@ -8,7 +8,7 @@ nav: "derivatives"
 **Exotic options** extend beyond standard European calls and puts by modifying payoffs, paths, or conditions of exercise.  
 They tailor exposure to specific market views or hedging needs and are widely traded in FX, equities, commodities, and structured products.
 
-## 1. Why Exotic Options Exist
+## Why Exotic Options Exist
 
 Vanilla options only depend on $S_T$, the terminal price.  
 In practice, clients often need exposure to **path-dependent**, **barrier**, or **average-based** outcomes.
@@ -21,7 +21,7 @@ Exotics provide:
 
 However, these benefits come with **model risk** and **liquidity risk**.
 
-## 2. Classification Overview
+## Classification Overview
 
 | Type | Example | Key Feature |
 |------|----------|-------------|
@@ -33,9 +33,9 @@ However, these benefits come with **model risk** and **liquidity risk**.
 | **Rainbow / Multi-asset** | Max(S₁, S₂), Spread | Correlation exposure |
 | **Cliquet / Ratchet** | Reset gains | Accumulated periodic performance |
 
-## 3. Path-Dependent Options
+## Path-Dependent Options
 
-### 3.1 Asian (Average-Price or Average-Strike)
+### Asian (Average-Price or Average-Strike)
 
 Payoff depends on the **average** of the underlying price over time:
 $$
@@ -44,7 +44,7 @@ A_T=\frac{1}{n}\sum_{i=1}^n S_{t_i},\quad
 $$
 Reduces sensitivity to spikes → lower volatility exposure → cheaper price.
 
-### 3.2 Lookback Options
+### Lookback Options
 
 Payoff depends on the **max or min** achieved:
 $$
@@ -53,9 +53,9 @@ $$
 $$
 Provides “perfect timing” — highest convexity, expensive premium.
 
-## 4. Barrier Options
+## Barrier Options
 
-### 4.1 Definition
+### Definition
 
 Barriers introduce activation (knock-in) or extinction (knock-out) conditions:
 
@@ -67,19 +67,19 @@ $$
 V_T^{UO}=1_{\{\max_t S_t < B\}}\max(S_T-K,0).
 $$
 
-### 4.2 Pricing Intuition
+### Pricing Intuition
 
 - Knock-out options are **cheaper** than vanilla (less likely to survive).  
 - Knock-in + Knock-out = Vanilla (static replication).  
 - Analytic formulas exist under BSM via **reflection principle**.
 
-### 4.3 Example
+### Example
 
 A **down-and-out call** at $K=100$, $B=80$ may cost 60% of the vanilla call — cheaper hedge if you expect the stock to stay above $80$.
 
 ![Barrier behavior illustration](imgs/exotics_barrier.png)
 
-## 5. Digital and Binary Options
+## Digital and Binary Options
 
 Digital options pay a fixed amount if a condition is met:
 $$
@@ -100,7 +100,7 @@ Applications:
 - Credit derivatives (digital triggers).  
 - FX options for yield enhancement.
 
-## 6. Multi-Asset (Rainbow, Basket, Spread)
+## Multi-Asset (Rainbow, Basket, Spread)
 
 These depend on several assets:
 
@@ -113,7 +113,7 @@ Monte Carlo and copula-based methods are standard tools.
 
 ![Multi-asset payoff illustration](imgs/exotics_multiasset.png)
 
-## 7. Cliquet and Ratchet Options
+## Cliquet and Ratchet Options
 
 Cliquet options **reset** each period, locking in gains:
 $$
@@ -122,7 +122,7 @@ $$
 
 Used in equity-linked notes to provide participation in cumulative positive returns with downside protection.
 
-## 8. Exotic Option Pricing Methods
+## Exotic Option Pricing Methods
 
 | Method | Use Case | Notes |
 |---------|-----------|-------|
@@ -133,7 +133,7 @@ Used in equity-linked notes to provide participation in cumulative positive retu
 
 Variance reduction (antithetic, control variates) improves Monte Carlo efficiency.
 
-## 9. Risk and Hedging Considerations
+## Risk and Hedging Considerations
 
 - **Path-dependence risk:** Standard Greeks insufficient; rely on simulation Greeks (bump-and-revalue, adjoint differentiation).  
 - **Vega/Gamma risk:** Often nonlinear; small vol moves cause large price jumps (especially near barrier).  
@@ -141,7 +141,7 @@ Variance reduction (antithetic, control variates) improves Monte Carlo efficienc
 - **Model risk:** Choice between local/stochastic vol or jump-diffusion changes hedging P&L significantly.  
 - **Liquidity risk:** OTC exotics trade in thin markets — wide bid–ask spreads, large valuation adjustments (XVA).
 
-## 10. Summary
+## Summary
 
 - Exotics customize payoff structures for risk management, yield, or exposure.  
 - Their valuation requires **advanced models** and careful **hedging of path-dependent risks**.  

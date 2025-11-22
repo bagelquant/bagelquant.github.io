@@ -11,7 +11,7 @@ In quantitative research and data science, we often use Jupyter notebooks for th
 
 But with **Jupytext paired notebooks**, we can bridge this gap — letting you **edit `.py` files in Neovim** and **run the corresponding `.ipynb` notebook** interactively, while keeping all previous outputs and execution counts.
 
-## 1. Concept: Two Representations of the Same Notebook
+## Concept: Two Representations of the Same Notebook
 
 Jupytext allows a Jupyter notebook to exist in two synchronized formats:
 
@@ -32,7 +32,7 @@ the other side updates automatically.
 - ✅ `.py` is pure text — perfect for Git version control
 - ✅ Both stay perfectly in sync
 
-## 2. Creating the Pair
+## Creating the Pair
 
 Let’s say you have an existing Jupyter notebook:
 
@@ -46,7 +46,7 @@ This will:
 - embed pairing metadata in demo.ipynb
 - tell Jupytext that these two files represent the same notebook
 
-## 3. What Does py:percent Mean?
+## What Does py:percent Mean?
 
 The py:percent format uses familiar cell markers to split code and markdown cells, like this:
 
@@ -69,7 +69,7 @@ x
 This syntax is recognized by VS Code, Spyder, PyCharm, and Neovim.
 It’s simple, human-readable, and makes jumping between cells in Vim effortless.
 
-## 4. Typical Workflow: Neovim for Code, JupyterLab for Execution
+## Typical Workflow: Neovim for Code, JupyterLab for Execution
 
 Here’s how to combine them in practice.
 

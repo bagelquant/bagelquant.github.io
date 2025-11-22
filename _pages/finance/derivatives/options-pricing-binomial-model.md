@@ -8,7 +8,7 @@ nav: "derivatives"
 The **binomial model** is the most intuitive and fundamental method for option pricing.  
 It provides a discrete-time framework for valuing derivatives by replicating their payoffs with dynamic trading in the underlying and a risk-free asset.
 
-## 1. Conceptual Overview
+## Conceptual Overview
 
 In a single period of length $\Delta t$, the underlying price can move **up** or **down** by known factors:
 
@@ -23,7 +23,7 @@ The model assumes frictionless trading, continuous compounding at rate $r$, and 
 
 ![Binomial tree schematic](imgs/binomial_tree.png)
 
-## 2. Building the Replicating Portfolio
+## Building the Replicating Portfolio
 
 We replicate the option by holding $\Delta$ shares of the underlying and investing $B$ in the risk-free asset:
 
@@ -47,7 +47,7 @@ $$
 V_0 = \Delta S_0 + B.
 $$
 
-## 3. Risk-Neutral Valuation
+## Risk-Neutral Valuation
 
 Alternatively, define the **risk-neutral probability** $p^*$ as the probability that makes the expected growth of the asset equal to the risk-free rate:
 
@@ -63,7 +63,7 @@ $$
 
 This discrete-time expectation is the **foundation** of all modern risk-neutral pricing.
 
-## 4. Multi-Step Tree
+## Multi-Step Tree
 
 Extending to $N$ time steps ($T = N \Delta t$), the underlying evolves through a recombining binomial lattice:
 
@@ -82,7 +82,7 @@ This recursive relationship is called **backward induction**.
 
 ![Option payoff on binomial tree](imgs/binomial_payoff.png)
 
-## 5. Example: One-Step European Call
+## Example: One-Step European Call
 
 Let:
 
@@ -108,7 +108,7 @@ $$
 
 Thus, the one-step binomial price is **\$6.14**, matching the risk-neutral expected discounted payoff.
 
-## 6. Convergence to Black–Scholes
+## Convergence to Black–Scholes
 
 As $\Delta t \to 0$, the binomial model converges to the continuous-time **Black–Scholes model**.
 
@@ -120,7 +120,7 @@ and the binomial distribution of terminal prices approaches a lognormal distribu
 
 This link bridges discrete and continuous models — showing that the Black–Scholes formula is the limiting case of risk-neutral binomial pricing.
 
-## 7. Practical Extensions
+## Practical Extensions
 
 - **American options:**  
   At each node, allow early exercise:  
@@ -132,7 +132,7 @@ This link bridges discrete and continuous models — showing that the Black–Sc
 - **Volatility smiles:**  
   Use non-constant $u,d,p^*$ to capture skewed distributions.
 
-## 8. Summary
+## Summary
 
 - Binomial trees provide a simple, flexible, and intuitive option-pricing method.  
 - Pricing follows from replication or risk-neutral expectation.  

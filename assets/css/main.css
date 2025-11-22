@@ -627,43 +627,7 @@ a:hover {
   font-size: 0.85rem;
 }
 
-/* Table of contents (right column) */
-.post-toc .toc-inner {
-  position: sticky;
-  top: 90px;
-  /* Revert TOC to a simple, non-card style */
-  padding: 0;
-  border-radius: 0;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.post-toc h2 {
-  font-size: 0.95rem;
-  margin: 0 0 0.6rem;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.post-toc ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.post-toc a {
-  display: block;
-  padding: 0.28rem 0;
-  color: var(--text);
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.post-toc a:hover {
-  color: var(--accent);
-}
+/* Post TOC: unified with page TOC styles further below */
 
 /* Post content improvements */
 .post-content {
@@ -676,6 +640,13 @@ a:hover {
   color: var(--text);
   margin-top: 1.8rem;
   margin-bottom: 0.6rem;
+}
+
+/* Number prefix inserted by JS for h2/h3 */
+.post-content.numbered .heading-number {
+  font-weight: 600;
+  margin-right: 0.45rem;
+  color: var(--muted);
 }
 
 /* Add a subtle divider under level-2 headings inside page/post content */
@@ -933,7 +904,7 @@ a:hover {
     font-size: 0.92rem;
   }
 
-  /* Mobile nav: hide all nav items except search, show hamburger */
+  /* Mobile nav: hide most nav items except search and theme, show hamburger */
   .site-nav .nav-toggle {
     display: inline-block;
     background: transparent;
@@ -944,14 +915,17 @@ a:hover {
     color: var(--muted);
   }
 
+  /* Ensure hamburger is clickable even if nearby elements overlap */
+  .site-nav .nav-toggle { position: relative; z-index: 1300; }
+
   .site-nav .nav-list {
     display: flex;
     gap: 0.6rem;
     align-items: center;
   }
 
-  /* hide non-search items by default on small screens */
-  .site-nav .nav-list > li:not(.nav-item-search) {
+  /* hide non-search items by default on small screens, but keep theme visible */
+  .site-nav .nav-list > li:not(.nav-item-search):not(.nav-item-theme) {
     display: none;
   }
 
@@ -1613,12 +1587,14 @@ body {
   transform: translateY(2px);
 }
 
-/* Icon switching: show moon in light, show sun in dark */
-.nav-link-theme .icon-sun { display: none; }
-.nav-link-theme .icon-moon { display: inline-block; }
+/* Icon switching: show moon in light, show sun in dark
+  Use the same specificity as the svg rule above so these
+  display declarations reliably override the generic svg display. */
+.site-nav .nav-link-theme .icon-sun { display: none; }
+.site-nav .nav-link-theme .icon-moon { display: inline-block; }
 
-html.dark .nav-link-theme .icon-sun { display: inline-block; }
-html.dark .nav-link-theme .icon-moon { display: none; }
+html.dark .site-nav .nav-link-theme .icon-sun { display: inline-block; }
+html.dark .site-nav .nav-link-theme .icon-moon { display: none; }
 
 /* Ensure subtle hover color in dark mode stays readable */
 html.dark .site-nav .nav-link:hover {

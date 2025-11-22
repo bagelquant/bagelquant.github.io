@@ -11,7 +11,7 @@ header:
 Differentiation is the central tool of calculus — it formalizes how quantities vary with respect to each other.  
 In quantitative finance, differentiation measures *sensitivity*: how a small change in one variable (price, rate, volatility) affects another (portfolio value, risk, or return).
 
-## 1. Definition
+## Definition
 
 Let $f:\mathbb{R}\to\mathbb{R}$.  
 The **derivative** of $f$ at $x=a$ is
@@ -30,7 +30,7 @@ The derivative equals the slope of the tangent line to $f(x)$ at $x=a$.
 **Economic interpretation:**  
 The derivative is the marginal change of output per unit change in input — e.g., marginal profit, marginal cost, marginal return.
 
-## 2. Basic Differentiation Rules
+## Basic Differentiation Rules
 
 Let $u(x)$ and $v(x)$ be differentiable functions and $c$ a constant.
 
@@ -50,7 +50,7 @@ $$
 f'(x) = e^{3x^2} \cdot 6x.
 $$
 
-## 3. Derivatives of Common Functions
+## Derivatives of Common Functions
 
 | Function $f(x)$ | Derivative $f'(x)$ |
 |-----------------|--------------------|
@@ -69,7 +69,7 @@ $$
 f'(x) = 3x^2 + 4x - 5.
 $$
 
-## 4. The Chain Rule — Composition of Functions
+## The Chain Rule — Composition of Functions
 
 Suppose $y=f(u)$ and $u=g(x)$, then
 $$
@@ -84,7 +84,7 @@ $$
 
 In finance, this principle governs *propagation of sensitivities* — e.g., the delta of an option whose underlying itself depends on other factors.
 
-## 5. Higher-Order Derivatives
+## Higher-Order Derivatives
 
 The second derivative is
 $$
@@ -103,7 +103,7 @@ $f(x)=x^3 \Rightarrow f''(x)=6x$ — positive for $x>0$, negative for $x<0$.
 - Convex payoff functions (options) have positive second derivative (Gamma).
 - Portfolio curvature: second derivative of value wrt price or rate measures nonlinearity of exposure.
 
-## 6. Implicit Differentiation
+## Implicit Differentiation
 
 When $y$ is defined implicitly by $F(x,y)=0$, differentiation uses the chain rule:
 
@@ -118,7 +118,7 @@ $2x + 2y\frac{dy}{dx} = 0 \Rightarrow \frac{dy}{dx} = -\frac{x}{y}.$
 **In Finance:**  
 Used in sensitivities derived from equilibrium or constraint conditions, e.g. yield-curve bootstrapping where yields depend implicitly on discount factors.
 
-## 7. Logarithmic Differentiation
+## Logarithmic Differentiation
 
 When differentiating products or powers efficiently:
 
@@ -131,9 +131,9 @@ $$
 **Example:**  
 $y = x^x \Rightarrow \ln y = x \ln x \Rightarrow \frac{1}{y}\frac{dy}{dx} = \ln x + 1 \Rightarrow \frac{dy}{dx} = x^x(\ln x + 1).$
 
-## 8. Differentiation in Financial Contexts
+## Differentiation in Financial Contexts
 
-### 8.1 Instantaneous Rate of Return
+### Instantaneous Rate of Return
 
 For a continuously compounded return process:
 $$
@@ -141,12 +141,12 @@ r_t = \frac{dS_t}{S_t \, dt}.
 $$
 The derivative here measures instantaneous proportional growth.
 
-### 8.2 Yield Curve Slope
+### Yield Curve Slope
 
 If $y(T)$ is the zero-coupon yield for maturity $T$,  
 the slope $\frac{dy}{dT}$ measures how yields change with maturity (key rate sensitivity).
 
-### 8.3 Option Greeks
+### Option Greeks
 
 The option price $V(S, \sigma, t)$ yields:
 $$
@@ -156,7 +156,7 @@ $$
 $$
 All are applications of partial differentiation and rates of change.
 
-### 8.4 Duration and Convexity
+### Duration and Convexity
 
 For bond price $P(y)$ as a function of yield $y$:
 $$
@@ -164,7 +164,7 @@ D = -\frac{1}{P}\frac{dP}{dy}, \quad C = \frac{1}{P}\frac{d^2 P}{dy^2}.
 $$
 Duration and convexity describe first- and second-order sensitivities to rate changes.
 
-## 9. Differentiability vs Smoothness
+## Differentiability vs Smoothness
 
 - Differentiable ⇒ continuous  
 - $C^1$ ⇒ continuously differentiable (no kinks)  
@@ -175,7 +175,7 @@ Smoothness is essential in models requiring Ito’s lemma or Taylor expansions.
 **Example:**  
 $|x|$ is not differentiable at 0 (kink), but $x^2$ is $C^\infty$.
 
-## 10. Summary
+## Summary
 
 - Differentiation formalizes infinitesimal rates of change.  
 - Fundamental rules (chain, product, quotient) allow decomposition of complex relationships.  

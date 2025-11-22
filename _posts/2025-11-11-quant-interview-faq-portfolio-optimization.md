@@ -9,7 +9,7 @@ excerpt: "From Markowitz mean–variance theory to Black–Litterman and robust 
 
 Portfolio optimization is a cornerstone of modern finance — bridging statistical modeling and decision-making under uncertainty. In quant interviews, it’s a common topic that tests your ability to translate theory into implementable allocation models.
 
-### 🧠 1. What is the mean–variance optimization framework?
+### 1. What is the mean–variance optimization framework?
 
 **Short Answer:**  
 Proposed by Harry Markowitz (1952), mean–variance optimization seeks to maximize expected return for a given level of risk — or equivalently, minimize variance for a given expected return.
@@ -30,7 +30,7 @@ $$
 
 Solving this yields the **efficient frontier**, a curve representing optimal trade-offs between risk and return.
 
-### 📈 2. What is the efficient frontier?
+### 2. What is the efficient frontier?
 
 The efficient frontier is the set of portfolios that offers the **highest expected return for each risk level**.  
 
@@ -39,7 +39,7 @@ The efficient frontier is the set of portfolios that offers the **highest expect
 
 When a risk-free asset is introduced, the **Capital Market Line (CML)** becomes the tangent line to the efficient frontier — representing combinations of the risk-free asset and the tangency portfolio.
 
-### ⚖️ 3. What are the main assumptions behind mean–variance optimization?
+### 3. What are the main assumptions behind mean–variance optimization?
 
 1. Returns are jointly normally distributed.  
 2. Investors care only about mean and variance.  
@@ -48,7 +48,7 @@ When a risk-free asset is introduced, the **Capital Market Line (CML)** becomes 
 
 **Interview Tip:** Mention that in practice, these assumptions rarely hold — estimation error and non-stationarity are major problems.
 
-### 🧮 4. What are common extensions or constraints in optimization?
+### 4. What are common extensions or constraints in optimization?
 
 | Constraint | Description | Impact |
 |:--|:--|:--|
@@ -59,7 +59,7 @@ When a risk-free asset is introduced, the **Capital Market Line (CML)** becomes 
 
 Adding constraints typically converts the quadratic program into a **convex optimization problem**, solvable by standard methods (e.g., CVXOPT).
 
-### 🧩 5. What is the Black–Litterman model?
+### 5. What is the Black–Litterman model?
 
 **Motivation:**  
 Traditional mean–variance optimization is highly sensitive to expected returns $\mu$. Black–Litterman (1992) incorporates investor *views* into the equilibrium returns implied by the market.
@@ -78,7 +78,7 @@ where:
 **Intuition:**  
 It blends prior (market equilibrium) and subjective views into posterior expected returns — producing more stable and diversified allocations.
 
-### 🔍 6. What is robust portfolio optimization?
+### 6. What is robust portfolio optimization?
 
 **Concept:**  
 Accounts for estimation uncertainty in inputs ($\mu$, $\Sigma$).  
@@ -95,7 +95,7 @@ where $\mathcal{U}$ is an uncertainty set (e.g., ellipsoidal or box-shaped).
 - Reduces sensitivity to noisy data.  
 - Often results in lower turnover and higher out-of-sample Sharpe ratio.
 
-### 📊 7. What is risk parity and how does it differ?
+### 7. What is risk parity and how does it differ?
 
 **Idea:**  
 Allocate capital so that each asset contributes equally to total portfolio risk:
@@ -110,7 +110,7 @@ where $RC_i$ is the risk contribution of asset $i$.
 
 Commonly used in macro and multi-asset strategies.
 
-### 📏 8. How do you evaluate optimized portfolios?
+### 8. How do you evaluate optimized portfolios?
 
 1. **Risk metrics:** volatility, VaR, CVaR, drawdown  
 2. **Performance ratios:** Sharpe, Sortino, Information ratio  
@@ -120,14 +120,14 @@ Commonly used in macro and multi-asset strategies.
 
 **Quant Tip:** Interviewers often ask about **robustness** — how you handle instability in covariance or expected returns.
 
-### 💡 9. What are practical issues in implementation?
+### 9. What are practical issues in implementation?
 
 - Estimation error dominates small-sample covariance estimates.  
 - Shrinkage estimators (Ledoit–Wolf) or factor-based covariances help.  
 - Transaction costs, liquidity, and execution constraints can’t be ignored.  
 - Portfolio rebalancing frequency affects performance and turnover.
 
-### 🚀 10. What are modern extensions of portfolio optimization?
+### 10. What are modern extensions of portfolio optimization?
 
 | Approach | Description | Example Use |
 |:--|:--|:--|
