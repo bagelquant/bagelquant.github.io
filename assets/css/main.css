@@ -146,6 +146,14 @@ a:hover {
 .site-nav .nav-list { order: 1; }
 .site-nav .nav-controls { display: inline-flex; gap: 0.6rem; align-items: center; order: 2; }
 
+/* Slight vertical nudge for theme toggle and search so icons align with text */
+.site-nav .nav-controls .nav-link,
+#theme-toggle,
+.nav-link-search {
+  position: relative;
+  top: -2px;
+}
+
 /* Hide mobile nav toggle by default; it becomes visible only on small screens */
 .site-nav .nav-toggle {
   display: none;
@@ -915,27 +923,13 @@ a:hover {
     font-size: 0.92rem;
   }
 
-  /* Mobile nav: hide most nav items except search and theme, show hamburger */
-  .site-nav .nav-toggle {
-    display: inline-block;
-    background: transparent;
-    border: none;
-    font-size: 1.2rem;
-    padding: 0.2rem 0.6rem;
-    cursor: pointer;
-    color: var(--muted);
-  }
-
-  /* Ensure hamburger is clickable even if nearby elements overlap */
-  .site-nav .nav-toggle { position: relative; z-index: 1300; }
-
+  /* On small screens show the full nav same as desktop */
   .site-nav .nav-list {
     display: flex;
     gap: 0.6rem;
     align-items: center;
   }
 
-  /* keep theme & search controls visible next to hamburger */
   .site-nav .nav-controls {
     display: inline-flex;
     gap: 0.6rem;
@@ -943,30 +937,8 @@ a:hover {
     margin-right: 0.4rem;
   }
 
-  /* hide nav list items by default on small screens (they appear inside dropdown) */
   .site-nav .nav-list > li {
-    display: none;
-  }
-
-  /* when header-inner has .nav-open, show the nav as a dropdown */
-  .header-inner.nav-open .site-nav .nav-list {
-    display: block;
-    position: absolute;
-    top: 100%;
-    right: 1.25rem;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 0.6rem;
-    padding: 0.6rem;
-    box-shadow: 0 8px 30px rgba(15,23,42,0.08);
-    z-index: 1200;
-    width: calc(100% - 2.5rem);
-    max-width: 320px;
-  }
-
-  .header-inner.nav-open .site-nav .nav-list > li {
-    display: block;
-    padding: 0.45rem 0;
+    display: list-item;
   }
 
 
