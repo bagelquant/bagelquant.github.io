@@ -125,10 +125,25 @@ a:hover {
   text-decoration: none;
 }
 
+/* Icon that appears before top nav titles */
+.site-nav .nav-link .nav-icon {
+  display: inline-block;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.site-nav .nav-link .nav-title {
+  vertical-align: middle;
+}
+
 .site-nav .nav-link.is-current {
-  background: var(--accent-soft);
-  color: var(--accent);
-  box-shadow: inset 0 -2px 0 rgba(37,99,235,0.12);
+  /* Disabled: top navigation should not display a persistent "current" highlight.
+     This rule preserved as a no-op to avoid style regressions in other navs. */
+  background: transparent;
+  color: var(--muted);
+  box-shadow: none;
 }
 
 .site-main {
@@ -570,11 +585,12 @@ a:hover {
 .post-toc .toc-inner {
   position: sticky;
   top: 90px;
-  padding: 1rem;
-  border-radius: 0.8rem;
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(15,23,42,0.04);
+  /* Revert TOC to a simple, non-card style */
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .post-toc h2 {
