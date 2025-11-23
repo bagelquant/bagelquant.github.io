@@ -609,17 +609,18 @@ html.dark .sidebar-toggle:hover {
 }
 
 .home-main .home-content {
-  background: radial-gradient(circle at top left, var(--bg-alt), var(--bg) 45%, var(--accent-soft) 100%);
-  border-radius: 1.25rem;
-  padding: 2rem 2.2rem;
-  box-shadow: 0 26px 80px rgba(15, 23, 42, 0.08);
-  border: 1px solid rgba(148, 163, 184, 0.12);
+  /* Flatten the home page container to remove card-like visuals */
+  background: transparent;
+  border-radius: 0;
+  padding: 1.2rem 0;
+  box-shadow: none;
+  border: none;
 }
 
 @media (max-width: 768px) {
   .home-main .home-content {
-    padding: 1.4rem 1.4rem;
-    border-radius: 1rem;
+    padding: 1rem 0;
+    border-radius: 0;
   }
 }
 
