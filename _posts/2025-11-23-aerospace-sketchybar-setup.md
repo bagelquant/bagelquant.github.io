@@ -33,6 +33,22 @@ AeroSpace solves these issues by offering:
 
 However, AeroSpace does not provide a native UI for showing available workspaces, active workspace, system metrics, or general status bar controls. This is where SketchyBar comes in.
 
+### Advantages of AeroSpace
+
+- **Fast, keyboard-driven workspace management**, AeroSpace allows you to switch workspaces instantly using keyboard shortcuts. I could easily navigate between workspaces and windows without reaching for the mouse! For a long-time vim user, who relies heavily on keyboard navigation, this was a game-changer.
+- **Tiling window management**, AeroSpace automatically arranges windows in a non-overlapping manner. This maximizes screen real estate and keeps everything organized. I could have multiple terminal windows, code editors, and browsers open without worrying about overlapping or resizing.
+- **Easy configuration**, AeroSpace uses a simple YAML file to define workspaces, layouts, and keybindings. This made it easy to customize my setup and experiment with different configurations until I found what worked best for me.
+- **Focus follows mouse**, AeroSpace allows you to focus windows by hovering over them. This is a nice touch for users who prefer a more fluid interaction style.
+- **Tree-based window layout**, AeroSpace organizes windows in a tree structure, allowing for complex layouts and easy navigation. This is especially useful for users who like to have multiple windows open at once.
+- **CLI integration**, AeroSpace provides a powerful command-line interface for managing workspaces and windows. This allows for scripting and automation, which is essential for power users.
+
+### Some Drawbacks
+
+- **Performance**, I noticed that AeroSpace works okay on my M1 Max MacBook Pro, but it start to struggle when I have more than 10 windows open and lots of workspaces. This is likely due to the way it manages window events and redraws the screen.
+- **Limited customization**, AeroSpace is focused on tiling and workspace management, but it does not provide a way to customize the status bar or display system information. This is where SketchyBar comes in.
+
+> I am sure eventually I will switch to a linux distro with a window manager like i3 or hyprland. Someday perhaps, LOL😄. For now, AeroSpace + SketchyBar is a great way to get a similar experience on macOS.
+
 ## Why SketchyBar
 
 SketchyBar is lightweight, scriptable, and highly extensible. Every item in the bar is defined by a command and can be connected to shell scripts, system events, or external tools. This makes it ideal for building:
