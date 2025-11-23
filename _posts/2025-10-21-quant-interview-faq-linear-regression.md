@@ -12,7 +12,7 @@ Linear regression is one of the most fundamental yet widely tested topics in qua
 
 > Full topic regarding **econometrics** can be found in [Econometrics](https://bagelquant.com/econometrics/) page.
 
-### 1. What is linear regression and when is it appropriate?
+## What is linear regression and when is it appropriate?
 
 **Short Answer:**  
 Linear regression models a dependent variable $y$ as a linear function of one or more independent variables $x_i$, assuming the relationship is approximately linear and residuals are random.
@@ -32,7 +32,7 @@ $$
 $$
 It’s appropriate when the underlying relationship is roughly linear, variables are continuous, and residuals satisfy classical OLS assumptions (linearity, independence, homoskedasticity, no perfect multicollinearity, and normally distributed errors for inference).
 
-### 2. What are the assumptions of OLS and why do they matter?
+## What are the assumptions of OLS and why do they matter?
 
 1 **Linearity:** Model is linear in parameters.
 2 **Random Sampling:** Each observation $(x_i, y_i)$ is iid.  
@@ -55,7 +55,7 @@ $$
 
 Violation of these assumptions affects unbiasedness, efficiency, and inference validity. For example, heteroskedasticity invalidates standard errors, and multicollinearity inflates variance of coefficient estimates.
 
-### 3. How do you interpret $R^2$ and Adjusted $R^2$?
+## How do you interpret $R^2$ and Adjusted $R^2$?
 
 - **$R^2$:** Fraction of variance in $y$ explained by the model.  
 $$R^2 = 1 - \frac{\text{SSR}}{\text{SST}}$$
@@ -64,7 +64,7 @@ $$R^2_{adj} = 1 - (1 - R^2)\frac{n-1}{n-k-1}$$
 
 **Interview Tip:** Adding more variables always increases $R^2$, but not necessarily predictive power — adjusted $R^2$ is more robust for model comparison.
 
-### 4. What is multicollinearity and how can you detect it?
+## What is multicollinearity and how can you detect it?
 
 **Definition:** When two or more independent variables are highly correlated, leading to unstable coefficient estimates.
 
@@ -76,7 +76,7 @@ $$R^2_{adj} = 1 - (1 - R^2)\frac{n-1}{n-k-1}$$
 
 **Remedies:** Drop redundant variables, use regularization (Ridge/Lasso), or principal component regression.
 
-### 5. What is heteroskedasticity and how do you handle it?
+## What is heteroskedasticity and how do you handle it?
 
 **Definition:** When the variance of residuals depends on $X$ (non-constant error variance).
 
@@ -90,7 +90,7 @@ $$R^2_{adj} = 1 - (1 - R^2)\frac{n-1}{n-k-1}$$
 - **Breusch–Pagan / White Test** for detection.  
 - **Robust Standard Errors (Huber–White)** or **Weighted Least Squares (WLS)** for correction.
 
-### 6. What’s the difference between OLS, GLS, and MLE?
+## What’s the difference between OLS, GLS, and MLE?
 
 | Method | Core Idea | When Used |
 |:--|:--|:--|
@@ -98,7 +98,7 @@ $$R^2_{adj} = 1 - (1 - R^2)\frac{n-1}{n-k-1}$$
 | GLS | Weight residuals by covariance matrix | Heteroskedastic or correlated errors |
 | MLE | Maximize likelihood under distributional assumptions | When error distribution known or in probabilistic models |
 
-### 7. How do you evaluate regression models?
+## How do you evaluate regression models?
 
 1. **In-sample fit:** $R^2$, Adjusted $R^2$, RMSE  
 2. **Out-of-sample performance:** Cross-validation, rolling regression  
@@ -107,7 +107,7 @@ $$R^2_{adj} = 1 - (1 - R^2)\frac{n-1}{n-k-1}$$
 
 **Quant Tip:** In asset pricing, we often test factor significance by **cross-sectional regression t-stats** and **Gibbons–Ross–Shanken (GRS) tests**.
 
-### 8. What is regularization and why is it useful?
+## What is regularization and why is it useful?
 
 **Purpose:** Reduce overfitting and handle multicollinearity by adding penalty terms to the loss function.
 
@@ -127,7 +127,7 @@ $$
 
 **Application:** In quant research, used for factor selection or constructing parsimonious alpha models.
 
-### 9. What are residual diagnostics and why are they important?
+## What are residual diagnostics and why are they important?
 
 Residuals help detect model misspecification.  
 Plotting residuals vs. fitted values should show no patterns.  
@@ -139,7 +139,7 @@ Key diagnostics include:
 
 In time-series regression, persistent autocorrelation indicates you may need ARIMA or HAC standard errors.
 
-### 10. What are common extensions of linear regression?
+## What are common extensions of linear regression?
 
 | Model | Description | Quant Application |
 |:--|:--|:--|
@@ -149,6 +149,6 @@ In time-series regression, persistent autocorrelation indicates you may need ARI
 | Quantile Regression | Models conditional quantiles | Risk (VaR, tail behavior) |
 | Bayesian Regression | Incorporates priors | Hierarchical or shrinkage models |
 
-### Summary
+## Summary
 
 Linear regression underpins nearly all quantitative modeling frameworks — from estimating betas to calibrating risk models and ML pipelines. A deep understanding of its assumptions, diagnostics, and extensions is key to explaining not just *what* a model predicts, but *why* it behaves that way.

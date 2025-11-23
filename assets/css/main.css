@@ -167,6 +167,46 @@ a:hover {
   display: none;
 }
 
+/* Mobile sidebar toggle (inserted dynamically for page/post sidebars)
+   Use a circular button with an SVG that inherits `currentColor` so
+   the icon adapts to light/dark themes and keeps consistent sizing. */
+.sidebar-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 999px;
+  border: none;
+  background: var(--bg-alt);
+  color: var(--muted);
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: background 0.12s ease, transform 0.08s ease, color 0.12s ease;
+}
+
+.sidebar-toggle svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.sidebar-toggle:hover {
+  transform: translateY(-1px);
+  background: rgba(0,0,0,0.03);
+  color: var(--text);
+}
+
+html.dark .sidebar-toggle {
+  background: rgba(255,255,255,0.03);
+  color: var(--muted);
+}
+
+html.dark .sidebar-toggle:hover {
+  background: rgba(255,255,255,0.06);
+}
+
 .site-nav .nav-link {
   font-size: 0.98rem;
   color: var(--muted);
