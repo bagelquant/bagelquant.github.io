@@ -1750,11 +1750,19 @@ html.dark {
   --accent-soft: rgba(96,165,250,0.06);
   --link: var(--accent);
   --border: #1f2a33;
-  --code-bg: #071018;
+  --code-bg: #0b2630; /* slightly lighter than page bg for better contrast */
   --code-text: #e6eef8;
   --btn-bg: var(--accent);
   --btn-text: #07111a;
   --btn-bg-hover: #3b82f6;
+}
+
+/* Improve code block separation in dark mode for better readability */
+html.dark .post-content pre,
+html.dark .page-content pre,
+html.dark pre.highlight {
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.48);
 }
 
 /* Smoothly transition between themes */
