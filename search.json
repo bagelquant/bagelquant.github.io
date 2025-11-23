@@ -6,15 +6,17 @@ permalink: /search.json
 {% assign first = true %}
 {% comment %}Pages{% endcomment %}
 {% for page in site.pages %}
-  {% if page.title and page.search != false and page.url != "/search/" and page.url != "/search.json" and page.url contains "/assets/" == false %}
-    {% unless first %}, {% endunless %}
-    {
-      "title": {{ page.title | jsonify }},
-      "url": {{ page.url | relative_url | jsonify }},
-      "content": {{ page.content | strip_html | strip_newlines | jsonify }},
-      "date": {{ page.date | date_to_string | jsonify }}
-    }
-    {% assign first = false %}
+  {% if page.title and page.search != false and page.url != "/search/" and page.url != "/search.json" %}
+    {% unless page.url contains "/assets/" %}
+      {% unless first %}, {% endunless %}
+      {
+        "title": {{ page.title | jsonify }},
+        "url": {{ page.url | relative_url | jsonify }},
+        "content": {{ page.content | strip_html | strip_newlines | jsonify }},
+        "date": {{ page.date | date_to_string | jsonify }}
+      }
+      {% assign first = false %}
+    {% endunless %}
   {% endif %}
 {% endfor %}
 {% comment %}Posts{% endcomment %}
