@@ -57,6 +57,13 @@ brew tap FelixKratz/formulae
 brew install borders
 ```
 
+add sketchybar
+
+```shell
+brew tap FelixKratz/formulae
+brew install sketchybar
+```
+
 
 ## Conda
 

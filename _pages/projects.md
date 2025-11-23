@@ -1,13 +1,11 @@
 ---
 layout: topic
-title: "BagelQuant Projects"
+title: "Projects"
 permalink: /projects/
-excerpt: "All projects and code samples from BagelQuant."
+excerpt: "Quant projects from BagelQuant."
 header: 
-    overlay_image: /assets/images/quant-skills-header.png
+    overlay_image: /assets/images/headers/topic-header.png
 ---
-
-Projects list:
 
 ## bagel-tushare
 

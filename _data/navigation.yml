@@ -1,16 +1,12 @@
 main:
   - title: "Topics"
     url: /topics/
-    icon: "📚"
   - title: "Projects"
     url: /projects/
-    icon: "🧩"
   - title: "Posts"
     url: /posts/
-    icon: "✍️"
-  - title: "About Me"
+  - title: "About"
     url: /about-me/
-    icon: "👤"
   # - title: "Category"
   #   url: /categories/
   # - title: "Tags"

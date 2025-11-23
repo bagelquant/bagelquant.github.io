@@ -84,6 +84,14 @@ a:hover {
   background: var(--bg);
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  position: relative;
+  z-index: 20;
+}
+
+/* If the page content starts with a full-bleed hero, hide the header border
+   so there's no hairline gap. Uses :has() where available. */
+.site-header:has(+ .site-main > .post-hero) {
+  border-bottom: none;
 }
 
 /* Unified card component for listing/summary pages
@@ -262,6 +270,15 @@ a:hover {
     font-size: 0.98rem;
   }
 
+  /* ensure topic pages match these mobile sizes too */
+  .topic-hero .post-header-overlay .post-title {
+    font-size: 2.2rem;
+  }
+
+  .topic-hero .post-header-overlay .post-subtitle {
+    font-size: 0.98rem;
+  }
+
   .hero-button {
     padding: 0.5rem 1.2rem;
     font-size: 0.9rem;
@@ -391,15 +408,17 @@ a:hover {
   background: transparent;
   color: #f9fafb;
   overflow: hidden;
-  max-height: 360px;
+  /* use an explicit height so child <img> can fill via height:100% + object-fit */
+  height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .post-header-cover img {
+  /* always fill the cover container and crop as needed */
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
   object-position: center center;
@@ -449,6 +468,26 @@ a:hover {
 
 .home-hero .post-header-cover img {
   filter: saturate(1.05) contrast(1.02);
+}
+
+/* Topic pages: match homepage hero title/subtitle sizing so topics don't
+   appear oversized. We scope to `.topic-hero` added to the topic layout. */
+.topic-hero .post-header-cover {
+  color: #ffffff;
+}
+
+.topic-hero .post-header-overlay {
+  color: #ffffff;
+}
+
+.topic-hero .post-header-overlay .post-title {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.topic-hero .post-header-overlay .post-subtitle {
+  max-width: 40rem;
+  color: rgba(255,255,255,0.9);
 }
 
 /* Non-home headers: keep light text on dark overlays */
@@ -789,50 +828,14 @@ a:hover {
 .archive__item-teaser img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   display: block;
 }
 
-/* Year archive navigation and cards */
-.archive__nav {
-  margin: 2rem 0 1.5rem;
-}
-
-.taxonomy__index {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.taxonomy__index li a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.55rem 1.1rem;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--bg-alt);
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.taxonomy__index li a:hover {
-  background: var(--accent-soft);
-  color: var(--text);
-}
-
-.taxonomy__index__label {
-  font-weight: 600;
-}
-
-.taxonomy__index__count {
-  font-size: 0.85rem;
-}
+/* Year filter removed: archive navigation/pills are intentionally omitted.
+   If you later want to restore year-filtering, re-add `.archive__nav` and
+   `.taxonomy__index` CSS here. */
 
 .archive__content {
   margin-top: 2rem;
@@ -857,13 +860,57 @@ a:hover {
 }
 
 .archive__item {
+  /* Desktop: image and content side-by-side. Keep items stretched so
+     the teaser height matches the card body height. */
   display: flex;
+  flex-direction: row;
   gap: 1rem;
+  align-items: stretch;
 }
 
 .archive__item-teaser {
-  flex: 0 0 160px;
+  /* Desktop fixed teaser size (width + height) so teaser and card height
+     are visually comparable. Image inside will scale/crop to fill. */
+  flex: 0 0 180px;
+  width: 180px;
+  height: 180px;
   border-radius: calc(var(--radius) - 0.15rem);
+  overflow: hidden;
+}
+
+/* Mobile: stack image above content and align teaser to card inner width
+   (leave card padding as breathing room). */
+@media (max-width: 640px) {
+  .archive__item {
+    flex-direction: column;
+    align-items: stretch; /* allow teaser to fill the available inner width */
+  }
+
+  .archive__item-teaser {
+    /* Mobile: expand teaser to nearly full card width and center */
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    /* Hide teaser images on small/mobile screens per design request */
+    display: none;
+    margin: 0;
+    overflow: hidden;
+    border-radius: calc(var(--radius) - 0.15rem);
+    flex: none; /* remove desktop fixed flex-basis so width can stretch */
+    height: auto; /* let aspect-ratio define height */
+  }
+
+  .archive__item-teaser img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .archive__item-body {
+    width: 100%;
+  }
 }
 
 .archive__item-body {
@@ -872,7 +919,7 @@ a:hover {
 
 .archive__item-title {
   margin: 0 0 0.35rem;
-  font-size: 1.05rem;
+  font-size: 0.98rem;
 }
 
 .archive__item-title a {
@@ -885,26 +932,19 @@ a:hover {
 }
 
 .archive__item-meta {
-  margin: 0 0 0.45rem;
-  font-size: 0.85rem;
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
   color: var(--muted);
 }
 
 .archive__item-excerpt {
   margin: 0;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
 }
 
-@media (max-width: 640px) {
-  .taxonomy__index {
-    gap: 0.5rem;
-  }
-
-  .taxonomy__index li a {
-    padding: 0.45rem 0.9rem;
-  }
-}
+/* Removed year-filter responsive tweaks (no .taxonomy__index present). */
 
 /* Mobile: phone-specific adjustments for better readability and spacing */
 @media (max-width: 480px) {
@@ -944,8 +984,9 @@ a:hover {
 
   /* Reduce hero height on phones so content remains visible above the fold */
   .home-hero .post-header-cover,
+  .topic-hero .post-header-cover,
   .post-hero .post-header-cover {
-    max-height: 220px;
+    height: 220px;
     display: flex;
     align-items: center;
   }
@@ -955,13 +996,15 @@ a:hover {
     padding-bottom: 1.0rem;
   }
 
-  .home-hero .post-header-overlay .post-title {
+  .home-hero .post-header-overlay .post-title,
+  .topic-hero .post-header-overlay .post-title {
     font-size: 1.6rem;
     line-height: 1.08;
     margin-bottom: 0.35rem;
   }
 
-  .home-hero .post-header-overlay .post-subtitle {
+  .home-hero .post-header-overlay .post-subtitle,
+  .topic-hero .post-header-overlay .post-subtitle {
     font-size: 0.95rem;
   }
 
@@ -1007,11 +1050,14 @@ a:hover {
   }
 
   .home-hero .post-header-cover,
+  .home-hero .post-header-cover,
+  .topic-hero .post-header-cover,
   .post-hero .post-header-cover {
-    max-height: 200px;
+    height: 200px;
   }
 
-  .home-hero .post-header-overlay .post-title {
+  .home-hero .post-header-overlay .post-title,
+  .topic-hero .post-header-overlay .post-title {
     font-size: 1.4rem;
   }
 
@@ -1029,6 +1075,68 @@ a:hover {
     padding: 0.2rem 0.35rem;
   }
 }
+
+  /* Fixes for hero on narrow viewports:
+     - Make the full-width hero align with viewport edges on small screens
+     - Give the hero more vertical room so absolute overlay content doesn't get cramped
+     - Slightly reduce overlay padding / font sizes for better fit on phones
+  */
+  @media (max-width: 960px) {
+    /* keep the full-bleed hero on narrower viewports, and pull it up
+       so it sits flush with the site header (site-main adds top padding).
+       We mirror the `.site-main` top padding values so the negative margin
+       cancels that space at each breakpoint. */
+    .post-hero {
+      /* restore full-bleed trick used on desktop */
+      width: 100vw;
+      left: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      /* cancel site-main top padding (1.8rem at this breakpoint) and
+         overlap the header border by 1px so the hero visually touches
+         the navbar without a hairline gap */
+      margin-top: calc(-1.8rem - 1px);
+    }
+
+    .home-hero .post-header-cover,
+    .post-hero .post-header-cover {
+      max-height: none;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .home-hero .post-header-overlay,
+    .post-hero .post-header-overlay {
+      padding-top: 1.0rem;
+      padding-bottom: 1.0rem;
+    }
+
+    .home-hero .post-header-overlay .post-title {
+      font-size: 1.8rem;
+      line-height: 1.08;
+      margin-bottom: 0.35rem;
+    }
+
+    .home-hero .post-header-overlay .post-subtitle {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    /* site-main top padding is 1.4rem here; cancel it */
+    .post-hero {
+      margin-top: calc(-1.4rem - 1px);
+    }
+  }
+
+  @media (max-width: 360px) {
+    /* site-main top padding is 0.8rem here; cancel it */
+    .post-hero {
+      margin-top: calc(-0.8rem - 1px);
+    }
+  }
 
 .page-breadcrumb a:hover {
   color: var(--text);
