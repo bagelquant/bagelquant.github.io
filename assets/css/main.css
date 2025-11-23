@@ -1218,6 +1218,70 @@ a:hover {
   overflow-x: auto;
 }
 
+/* Mobile: move header overlay content below the hero image (no overlay) */
+@media (max-width: 640px) {
+  .post-hero:not(.topic-hero):not(.home-hero) .post-header-cover {
+    /* let the cover size to content and stack children vertically */
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  .post-hero:not(.topic-hero):not(.home-hero) .post-header-cover img {
+    /* let the image size naturally (full width) instead of filling the cover height */
+    width: 100%;
+    height: auto !important;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+  }
+
+  .post-hero:not(.topic-hero):not(.home-hero) .post-header-overlay {
+    /* stop being absolute so it flows below the image */
+    position: static !important;
+    inset: auto !important;
+    display: block;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    color: var(--text);
+    background: transparent;
+  }
+  /* use dark text on mobile for readability (no translucent overlay) */
+  .post-hero:not(.topic-hero):not(.home-hero) .post-header-overlay .post-title,
+  .post-hero:not(.topic-hero):not(.home-hero) .post-header .post-title {
+    color: var(--text) !important;
+  }
+
+  .post-hero:not(.topic-hero):not(.home-hero) .post-header-overlay .post-subtitle,
+  .post-hero:not(.topic-hero):not(.home-hero) .post-header .post-subtitle {
+    color: var(--muted) !important;
+  }
+
+  /* ensure spacing between hero and following content is reasonable */
+  .post-hero:not(.topic-hero):not(.home-hero) {
+    margin-top: 0; /* avoid large negative overlap on small screens */
+    margin-bottom: 1rem;
+  }
+
+  /* 大幅缩小手机模式下 page 与 post 的标题字号（不影响 topic） */
+  .post-hero:not(.topic-hero):not(.home-hero) .post-header-overlay .post-title,
+  .post:not(.post-topic) .post-header .post-title {
+    font-size: 1.5rem !important;
+    line-height: 1.12 !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  @media (max-width: 360px) {
+    .post-hero:not(.topic-hero):not(.home-hero) .post-header-overlay .post-title,
+    .post:not(.post-topic) .post-header .post-title {
+      font-size: 1.7rem !important;
+      line-height: 1.1 !important;
+    }
+  }
+}
+
 /* --- Unified body typography --- */
 .post-content {
   font-size: 1rem;
@@ -1698,5 +1762,64 @@ html.dark .site-nav .nav-link-theme .icon-moon { display: none; }
 /* Ensure subtle hover color in dark mode stays readable */
 html.dark .site-nav .nav-link:hover {
   background: rgba(255,255,255,0.04);
+}
+
+
+/* Copy-to-clipboard button for code blocks */
+.post-content pre,
+.page-content pre,
+pre.highlight {
+  position: relative;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 0.28rem 0.6rem;
+  font-size: 0.82rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease, transform 0.08s ease;
+  z-index: 10;
+}
+
+.copy-code-button:hover {
+  background: var(--accent-soft);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.copy-code-button.copied {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+/* Slightly reduce button size on small screens */
+@media (max-width: 640px) {
+  .copy-code-button { font-size: 0.75rem; padding: 0.2rem 0.45rem; }
+}
+
+/* Dark mode: tweak button so it reads properly on dark backgrounds */
+html.dark .copy-code-button {
+  background: rgba(255,255,255,0.03);
+  color: var(--muted-light);
+  border-color: rgba(255,255,255,0.04);
+}
+
+html.dark .copy-code-button:hover {
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+}
+
+/* Mark dark-mode copied state still uses accent with readable text */
+html.dark .copy-code-button.copied {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
 }
 
