@@ -16,8 +16,7 @@ This guide covers the core concepts and modeling techniques.
 Volatility measures the variability of returns. It is critical for:
 
 - Derivatives pricing (vol is a direct input to option valuation)
-- Portfolio risk management
-- Scenario analysis and stress testing
+- Portfolio risk management Scenario analysis and stress testing
 - Forecasting tail risk
 - High-frequency market-making
 
@@ -120,7 +119,7 @@ Cons:
 
 Common in risk-neutral calibration and scenario analysis.
 
-## 7. Stochastic volatility models
+## Stochastic volatility models
 
 These models assume volatility itself follows a stochastic process.
 
@@ -152,7 +151,7 @@ Important properties:
 
 Used widely in trading because it generates realistic implied vol surfaces and has semi-closed-form solutions for European options.
 
-## 8. Comparing volatility modeling approaches
+## Comparing volatility modeling approaches
 
 | Model | Pros | Cons | Typical Use |
 |------|------|------|--------------|
@@ -162,7 +161,7 @@ Used widely in trading because it generates realistic implied vol surfaces and h
 | Heston (SV) | Captures skew, dynamics | Harder to calibrate | Derivatives pricing |
 | SABR | Good for rates, skew | No dynamics of vol | Interest-rate options |
 
-## 9. Volatility forecasting vs. volatility pricing
+## Volatility forecasting vs. volatility pricing
 
 Two different tasks:
 
