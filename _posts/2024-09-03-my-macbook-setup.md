@@ -1,7 +1,6 @@
 ---
 title: "My MacBook Setup" 
-layout: post
----
+layout: post ---
 
 Updated on Nov 14, 2025
 
@@ -63,6 +62,8 @@ add sketchybar
 brew tap FelixKratz/formulae
 brew install sketchybar
 ```
+
+[install ruby and run jekyll](/posts/2025-11-21-install-ruby-run-jekyll-local.md)
 
 
 ## Conda
