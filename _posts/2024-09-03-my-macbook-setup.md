@@ -25,7 +25,7 @@ However, since graduating from college, I have gradually transitioned all my dig
 
 ## Configs
 
-```shell
+```zsh
 defaults write -g ApplePressAndHoldEnabled 0
 ```
 
@@ -33,41 +33,47 @@ defaults write -g ApplePressAndHoldEnabled 0
 
 Homebrew
 
-```shell
+```zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 Casks
 
-```shell
-brew install --cask miniconda zoom itsycal pdf-expert raycast r-app rstudio google-chrome microsoft-teams chatgpt visual-studio-code blackhole-16ch karabiner-elements pronotes iterm2
+```zsh
+brew install --cask miniconda zoom pdf-expert raycast r-app rstudio google-chrome microsoft-teams chatgpt visual-studio-code blackhole-16ch iterm2 obsidian tencent-lemon
 ```
 
 Formulas
 
-```shell
-brew install nvim gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi lazygit ffmpegthumbnailer poppler deno pkg-config mysql aerospace
+```zsh
+brew install nvim gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi lazygit ffmpegthumbnailer poppler deno pkg-config mysql
+```
+
+aerospace
+
+```zsh
+brew install --cask nikitabobko/tap/aerospace
 ```
 
 add border to active window
 
-```shell
+```zsh
 brew tap FelixKratz/formulae
 brew install borders
 ```
 
 add sketchybar
 
-```shell
+```zsh
 brew tap FelixKratz/formulae
 brew install sketchybar
 ```
 
 [install ruby and run jekyll](/posts/2025-11-21-install-ruby-run-jekyll-local.md)
 
-
 ## Conda
 
-```shell
+```zsh
 conda config --set auto_activate false
 ```
+
