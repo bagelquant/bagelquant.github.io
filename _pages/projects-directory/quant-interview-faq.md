@@ -13,3 +13,7 @@ This page is the post collection of frequently asked questions (FAQs) encountere
 - [Quant Interview FAQ - Portfolio Optimization](https://bagelquant.com/quant-interview-faq-portfolio-optimization/)
 - [Quant Interview FAQ - Risk Measures](https://bagelquant.com/quant-interview-faq-risk-measures/)
 - [Quant Interview FAQ - Backtesting and Performance Evaluation](https://bagelquant.com/quant-interview-faq-bt-portfolio-evaluaiton/)
+- [Quant Interview FAQ - Multi-Frequency Data Joining](https://bagelquant.com/how-to-correctly-join-multi-frequency-data/)
+- [Quant Interview FAQ — Interest Rate Models](https://bagelquant.com/quant-interview-faq-interest-rate-models/)
+- [Quant Interview FAQ — Model Interpretability](https://bagelquant.com/quant-interview-faq-model-interpretability/)
+- [Quant Interview FAQ — Volatility Modeling](https://bagelquant.com/quant-interview-faq-volatility-modeling/)
