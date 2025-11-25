@@ -1,6 +1,7 @@
 ---
 title: "My MacBook Setup" 
-layout: post ---
+layout: post 
+---
 
 Updated on Nov 14, 2025
 
@@ -40,7 +41,7 @@ Homebrew
 Casks
 
 ```zsh
-brew install --cask miniconda zoom pdf-expert raycast r-app rstudio google-chrome microsoft-teams chatgpt visual-studio-code blackhole-16ch iterm2 obsidian tencent-lemon
+brew install --cask miniconda zoom pdf-expert raycast r-app rstudio google-chrome microsoft-teams chatgpt visual-studio-code blackhole-16ch iterm2 
 ```
 
 Formulas
@@ -67,9 +68,10 @@ add sketchybar
 ```zsh
 brew tap FelixKratz/formulae
 brew install sketchybar
+brew install --cask font-hack-nerd-font
 ```
 
-[install ruby and run jekyll](/posts/2025-11-21-install-ruby-run-jekyll-local.md)
+[install ruby and run jekyll](https://bagelquant.com/install-ruby-run-jekyll-local/)
 
 ## Conda
 
