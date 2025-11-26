@@ -13,7 +13,7 @@ header:
 
 <div class="archive__content">
   {% for post in sorted_posts %}
-  <article class="archive__item">
+  <article class="archive__item fade-in-on-scroll">
     {% if post.header and post.header.overlay_image %}
     <a class="archive__item-teaser" href="{{ post.url | relative_url }}">
       <img src="{{ post.header.overlay_image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
