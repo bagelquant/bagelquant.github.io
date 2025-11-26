@@ -176,4 +176,3 @@ Requires **realized volatility**, reflecting the true distribution of returns.
 GARCH, HAR-RV, realized kernels, and intraday data are common tools.
 
 Interviews often test whether candidates understand this distinction.
-
