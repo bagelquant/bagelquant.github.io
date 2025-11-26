@@ -1,8 +1,9 @@
 ---
-title: "Constructing Peer-Based Features Using Gaussian Similarity in Embedding Space"
+title: "Peer-Based Features Using Gaussian Similarity in Embedding Space"
 layout: post
 header:
   overlay_image: /assets/images/headers/network-dark.png
+excerpt: "A method for building peer effect features by leveraging neural network embeddings and Gaussian similarity, enabling adaptive and data-driven peer definitions in financial modeling."
 ---
 
 Peer effects are a long-standing theme in empirical asset pricing and corporate finance, appearing in areas such as investment spillovers, product market competition, and information diffusion across related firms. Traditional models typically rely on predefined peer groups constructed using industry classifications, size buckets, or ad-hoc distance metrics. These approaches can be effective, but they also embed strong assumptions about firm similarity that may not capture the evolving and high-dimensional structure of modern equity data.
