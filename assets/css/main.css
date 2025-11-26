@@ -91,6 +91,23 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Enhanced interactive elements: link hover effect */
+.post-content a,
+.home-content a,
+.page-content a {
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+  padding: 0 0.2rem; /* Add some padding for the background to show */
+  margin: 0 -0.2rem; /* Negative margin to offset padding */
+  border-radius: 0.2rem;
+}
+
+.post-content a:hover,
+.home-content a:hover,
+.page-content a:hover {
+  background-color: var(--accent-soft);
+}
+
 .container {
   max-width: 1320px;
   margin: 0 auto;
@@ -742,7 +759,14 @@ html.dark .sidebar-toggle:hover {
   border-radius: 999px;
   color: var(--muted);
   text-decoration: none;
-  font-size: 0.85rem;
+  transition: all 0.2s ease-out;
+}
+
+.post-meta .tags a:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  background: var(--accent-soft);
+  color: var(--text);
 }
 
 /* Post TOC: unified with page TOC styles further below */
@@ -1746,11 +1770,14 @@ html.dark .sidebar-toggle:hover {
   color: white;
   font-weight: 550;
   border: none;
+  transition: all 0.2s ease-out;
 }
 
 .btn-primary:hover {
   text-decoration: none;
   background: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
 }
 
 .splash-body {
