@@ -78,3 +78,4 @@ I believe **simple, well-validated models** deployed with reliable data and thou
 ---
 
 If you’re building rigorous, practical quant processes—and want someone who ships research **and** production code—let’s talk.
+

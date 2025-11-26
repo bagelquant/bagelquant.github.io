@@ -1383,12 +1383,28 @@ html.dark .sidebar-toggle:hover {
 }
 
 .post-sidebar-left,
-.post-toc {
+.page-sidebar,
+.post-toc,
+.page-toc {
   font-size: 0.9rem;
   color: var(--muted);
 }
 
+@media (min-width: 961px) {
+  .post-sidebar-left,
+  .page-sidebar,
+  .post-toc,
+  .page-toc {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1.75rem;
+    height: calc(100vh - 3.5rem);
+    overflow-y: auto;
+  }
+}
+
 /* Move sidebars slightly down relative to header/title */
+.layout-three-column > .post-sidebar-left,
 .layout-three-column > .post-toc,
 .layout-three-column > .page-sidebar,
 .layout-three-column > .page-toc {
@@ -1397,13 +1413,6 @@ html.dark .sidebar-toggle:hover {
 
 .post-main {
   min-width: 0;
-}
-
-.page-sidebar,
-.page-toc,
-.post-toc {
-  font-size: 0.9rem;
-  color: var(--muted);
 }
 
 .sidebar-inner,
