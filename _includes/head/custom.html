@@ -19,13 +19,29 @@ Open Graph & Twitter card metadata so LinkedIn / social platforms can pick a pre
 Ensure absolute URL with `absolute_url` so scrapers can fetch the image.
 {%- endcomment -%}
 
-{%- assign og_image = page.image | default: page.teaser | default: page.overlay_image | default: page.header | default: site.header.teaser | default: site.teaser | default: site.logo -%}
-{%- assign og_image = og_image | default: "" -%}
+{%- assign og_image = "" -%}
+{%- if page.image -%}
+	{%- assign og_image = page.image -%}
+{%- elsif page.teaser -%}
+	{%- assign og_image = page.teaser -%}
+{%- elsif page.overlay_image -%}
+	{%- assign og_image = page.overlay_image -%}
+{%- elsif page.header and page.header.overlay_image -%}
+	{%- assign og_image = page.header.overlay_image -%}
+{%- elsif page.header and page.header.teaser -%}
+	{%- assign og_image = page.header.teaser -%}
+{%- elsif site.header and site.header.teaser -%}
+	{%- assign og_image = site.header.teaser -%}
+{%- elsif site.teaser -%}
+	{%- assign og_image = site.teaser -%}
+{%- elsif site.logo -%}
+	{%- assign og_image = site.logo -%}
+{%- endif -%}
 
-{%- if og_image != "" -%}
-  <meta property="og:image" content="{{ og_image | absolute_url }}" />
-  <meta name="twitter:image" content="{{ og_image | absolute_url }}" />
-  <link rel="image_src" href="{{ og_image | absolute_url }}" />
+{%- if og_image and og_image != "" -%}
+	<meta property="og:image" content="{{ og_image | absolute_url }}" />
+	<meta name="twitter:image" content="{{ og_image | absolute_url }}" />
+	<link rel="image_src" href="{{ og_image | absolute_url }}" />
 {%- endif -%}
 
 <meta property="og:title" content="{{ page.title | default: site.title }}" />
