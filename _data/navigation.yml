@@ -148,13 +148,57 @@ calculus:
     children:
       - title: "Introduction to Calculus"
         url: /calculus/introduction-to-calculus/
-      - title: "Differentiation and Rates of Change"
-        url: /calculus/differentiation-and-rates-of-change/
+      - title: "Introduction to Calculus - Problems"
+        url: /calculus/problems/introduction-to-calculus-problems/
+      - title: "Limits and Continuity"
+        url: /calculus/limits-and-continuity/
+      - title: "Limits And Continuity - Problems"
+        url: /calculus/problems/limits-and-continuity-problems/
+      - title: "The Derivative"
+        url: /calculus/derivatives/
+      - title: "Derivatives - Problems"
+        url: /calculus/problems/derivatives-problems/
+      - title: "Applications of Differentiation"
+        url: /calculus/applications-of-differentiation/
+      - title: "Applications Of Differentiation - Problems"
+        url: /calculus/problems/applications-of-differentiation-problems/
+      - title: "The Integral"
+        url: /calculus/integrals/
+      - title: "Integrals - Problems"
+        url: /calculus/problems/integrals-problems/
+      - title: "Techniques of Integration"
+        url: /calculus/techniques-of-integration/
+      - title: "Techniques Of Integration - Problems"
+        url: /calculus/problems/techniques-of-integration-problems/
+      - title: "Applications of Integration"
+        url: /calculus/applications-of-integration/
+      - title: "Applications Of Integration - Problems"
+        url: /calculus/problems/applications-of-integration-problems/
+      - title: "Sequences and Series"
+        url: /calculus/sequences-and-series/
+      - title: "Sequences And Series - Problems"
+        url: /calculus/problems/sequences-and-series-problems/
+      - title: "Power and Taylor Series"
+        url: /calculus/power-and-taylor-series/
+      - title: "Power And Taylor Series - Problems"
+        url: /calculus/problems/power-and-taylor-series-problems/
+      - title: "Vectors and the Geometry of Space"
+        url: /calculus/vectors-and-geometry-of-space/
+      - title: "Vectors And Geometry Of Space - Problems"
+        url: /calculus/problems/vectors-and-geometry-of-space-problems/
       - title: "Partial Derivatives and Gradients"
-        url: /calculus/partial-derivatives-and-gradients/
-      - title: "Integration and Areas Under Curves"
-        url: /calculus/integration-and-areas-under-curves/
-      - title: "Multivariable Integration and Change of Variables"
-        url: /calculus/multivariable-integration-and-change-of-variables/
-      - title: "Series Expansion and Taylor Approximation"
-        url: /calculus/series-expansion-and-taylor-approximation/
+        url: /calculus/partial-derivatives/
+      - title: "Partial Derivatives - Problems"
+        url: /calculus/problems/partial-derivatives-problems/
+      - title: "Applications of Partial Derivatives"
+        url: /calculus/applications-of-partial-derivatives/
+      - title: "Applications Of Partial Derivatives - Problems"
+        url: /calculus/problems/applications-of-partial-derivatives-problems/
+      - title: "Multiple Integrals"
+        url: /calculus/multiple-integrals/
+      - title: "Multiple Integrals - Problems"
+        url: /calculus/problems/multiple-integrals-problems/
+      - title: "Vector Calculus"
+        url: /calculus/vector-calculus/
+      - title: "Vector Calculus - Problems"
+        url: /calculus/problems/vector-calculus-problems/

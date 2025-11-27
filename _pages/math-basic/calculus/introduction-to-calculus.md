@@ -1,191 +1,55 @@
 ---
-title: "Introduction to Calculus"
+title: "Introduction to Calculus: The Mathematics of Change"
 permalink: /calculus/introduction-to-calculus/
 header:
-  overlay_image: assets/images/headers/calculus.png
+  overlay_image: /assets/images/headers/calculus.png
   overlay_opacity: 0.8
 nav: "calculus"
 ---
 
-Calculus is the mathematical foundation of continuous change.  
-In quantitative finance, it underpins derivative pricing, risk management, and dynamic optimization — from computing sensitivities (Greeks) to modeling stochastic processes in continuous time.
+Welcome to the start of our journey into calculus! Before we dive into complex formulas and rules, let's build an intuition for what calculus is and why it's one of the most powerful tools in mathematics and finance.
 
-## The Concept of Limit
+At its core, **calculus is the study of continuous change**.
 
-Let $f: \mathbb{R} \to \mathbb{R}$.  
-We say that $f(x)$ approaches $L$ as $x$ approaches $a$ if, for every $\epsilon > 0$, there exists $\delta > 0$ such that
+Think about the world around you. A car doesn't instantly jump from 0 to 60 mph; it accelerates smoothly over time. The value of a stock doesn't just exist at two separate points; it fluctuates continuously. The path of a rocket is a smooth curve, not a series of jagged lines.
 
-$$
-0 < |x - a| < \delta \implies |f(x) - L| < \epsilon.
-$$
+Classical mathematics, like algebra and geometry, is excellent at describing static, unchanging things. You can calculate the area of a rectangle or the slope of a straight line. But what about the area under a curve? Or the instantaneous speed of a car when its velocity is constantly changing?
 
-This formal $\epsilon$–$\delta$ definition allows calculus to treat continuous motion precisely.
+This is where calculus comes in. It provides a framework for analyzing systems that are in motion or changing in a non-uniform way.
 
-**Example:**  
-For $f(x) = 3x + 2$,  
-$$
-\lim_{x \to 1} f(x) = 5.
-$$
+## The Two Big Ideas of Calculus
 
-**Remark:**  
-Limits describe continuity, differentiability, and integral accumulation — all subsequent operations are built upon this notion.
+Calculus is built on two fundamental and complementary concepts:
 
-## Continuity
+1.  **Differential Calculus:** This branch is all about finding the **instantaneous rate of change**. It's like having a microscope for functions. While algebra can find the average slope between two points on a curve, differential calculus lets us zoom in to an infinitesimally small interval and find the exact slope *at a single point*. This "slope at a point" is called the **derivative**.
 
-A function $f(x)$ is *continuous* at $x=a$ if:
+    *   **Key Question:** How fast is something changing *right now*?
+    *   **Financial Analogy:** What is the exact, instantaneous sensitivity of my option's price to a tiny change in the stock price? (This is the *Delta* of an option).
 
-1. $f(a)$ is defined,  
-2. $\lim_{x \to a} f(x)$ exists, and  
-3. $\lim_{x \to a} f(x) = f(a)$.
+2.  **Integral Calculus:** This branch is about **accumulating quantities** and finding the total. It's about summing up an infinite number of infinitesimally small pieces to get a whole. This process is called **integration**, and the result is an **integral**.
 
-Equivalently, small perturbations in $x$ produce small changes in $f(x)$.
+    *   **Key Question:** What is the total amount accumulated over a period?
+    *   **Financial Analogy:** If I know the probability of a stock ending at any given price, what is the total expected value of my option at expiration? This involves summing up all possible (payoff × probability) outcomes.
 
-**Example:**  
-Polynomial and exponential functions are continuous everywhere; step or piecewise functions may not be.
+## The Bridge: The Fundamental Theorem of Calculus
 
-**In Finance:**  
-Continuity allows infinitesimal modeling — asset prices $S_t$ are modeled as continuous semimartingales, even though real prices move discretely.
+The most beautiful and powerful idea in calculus is that these two concepts, differentiation and integration, are **inverse operations** of each other. This relationship is captured in the **Fundamental Theorem of Calculus**.
 
-## The Derivative
+This means that if you know the rate of change of a quantity, you can use integration to find the total amount. And if you know the total amount described by a function, you can use differentiation to find its rate of change. This elegant connection is what makes calculus a complete and cohesive system.
 
-The **derivative** of $f$ at point $x=a$ is defined by the limit:
+## Why Calculus Matters in Finance
 
-$$
-f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}.
-$$
+Quantitative finance is all about modeling and managing uncertainty and change in financial markets. Calculus provides the essential toolkit:
 
-It measures the *instantaneous rate of change* or the slope of the tangent line to $f$ at $x=a$.
+-   **Pricing Derivatives:** The values of options and other derivatives are constantly changing in response to movements in stock prices, interest rates, and time. Derivatives (the calculus kind!) are used to model these sensitivities, which are known as the "Greeks" (Delta, Gamma, Vega, Theta).
+-   **Risk Management:** Calculus allows us to approximate and manage the risk of complex portfolios by breaking it down into first-order (linear) and second-order (curvature) effects.
+-   **Optimization:** Finding the best portfolio allocation to maximize returns for a given level of risk is an optimization problem that is solved using calculus.
+-   **Stochastic Calculus:** The advanced models used for asset price movements (like Brownian motion) are built upon the foundations of integral and differential calculus, extending them to handle randomness.
 
-**Existence:**  
-If the above limit exists (finite), $f$ is *differentiable* at $a$.
+In this series, we will explore each of these concepts from the ground up, starting with the very foundation of calculus: the concept of a **limit**.
 
-**Example:**  
-$f(x) = x^2 \Rightarrow f'(x) = 2x.$
-
-## Higher-Order Derivatives
-
-Repeated differentiation yields higher-order derivatives:
-
-$$
-f^{(n)}(x) = \frac{d^n f(x)}{dx^n}.
-$$
-
-These measure curvature and higher-order sensitivities — analogous to Gamma, Vomma, and higher Greeks in option pricing.
-
-**Example:**  
-For $f(x) = e^{ax}$,  
-$$
-f^{(n)}(x) = a^n e^{ax}.
-$$
-
-## Differentiation Rules
-
-Let $u(x)$ and $v(x)$ be differentiable functions.
-
-1. **Linearity:** $(au + bv)' = au' + bv'$  
-2. **Product Rule:** $(uv)' = u'v + uv'$  
-3. **Quotient Rule:** $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$  
-4. **Chain Rule:** $\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)$
-
-**Example (Chain Rule):**  
-If $f(x) = e^{3x^2}$,  
-then $f'(x) = e^{3x^2} \cdot 6x.$
-
-## Differentiability and Continuity
-
-Every differentiable function is continuous,  
-but continuity does not imply differentiability.
-
-**Counterexample:**  
-$f(x) = |x|$ is continuous at $x=0$ but not differentiable there:
-$$
-\lim_{h\to 0^+}\frac{|h|-0}{h}=1,\quad
-\lim_{h\to 0^-}\frac{|h|-0}{h}=-1.
-$$
-
-## The Mean Value Theorem (MVT)
-
-If $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$,  
-then there exists $c \in (a,b)$ such that
-
-$$
-f'(c) = \frac{f(b) - f(a)}{b - a}.
-$$
-
-**Interpretation:**  
-There exists a point where the instantaneous slope equals the average rate of change.
-
-**In Finance:**  
-The theorem underlies linear approximations like Delta hedging — local linearization of payoff with respect to the underlying.
-
-## The Integral — The Inverse of Differentiation
-
-Given $f(x)$ continuous on $[a,b]$,  
-the **definite integral** is the limit of Riemann sums:
-
-$$
-\int_a^b f(x)\,dx = \lim_{n \to \infty} \sum_{i=1}^n f(x_i^*)\,\Delta x_i.
-$$
-
-It represents the *accumulated area* under $f(x)$ from $a$ to $b$.
-
-**Fundamental Theorem of Calculus:**
-
-If $F'(x) = f(x)$, then
-$$
-\int_a^b f(x)\,dx = F(b) - F(a).
-$$
-
-Thus differentiation and integration are inverse operations.
-
-## Applications in Quantitative Finance
-
-1. **Instantaneous returns:**  
-   $r_t = \frac{dS_t}{S_t\,dt}$ → continuous compounding.  
-2. **Sensitivity analysis:**  
-   Greeks = partial derivatives of option price $V(S, \sigma, t, \dots)$.  
-3. **Optimization:**  
-   Portfolio weights solved via derivative-based first-order conditions.  
-4. **Continuous-time models:**  
-   Ito calculus extends these limits to stochastic processes.
-
-## Key Takeaways
-
-- Limits formalize continuity and smoothness.  
-- Derivatives quantify infinitesimal changes.  
-- Integrals accumulate effects over continuous domains.  
-- The interplay between the two forms the foundation of continuous-time finance.
-
-This groundwork supports more advanced topics such as **partial differentiation**, **multivariable integration**, and **stochastic calculus**.
-
-Next, [Differentiation and Rates of Change](differentiation-and-rates-of-change.md).
+Next, we will explore [Limits and Continuity](limits-and-continuity.md), the bedrock upon which all of calculus is built.
 
 ---
 
-Some differentiation formulas for reference:
-
-| Function                | Derivative                     |
-|-------------------------|--------------------------------|
-| $c$ (constant)          | $0$                            |
-| $x^n$                   | $nx^{n-1}$                     |
-| $e^{x}$                 | $e^{x}$                        |
-| $e^{cx}$                | $ce^{cx}$                      |
-| $\ln(x)$                | $\frac{1}{x}$                  |
-| $\sin(x)$               | $\cos(x)$                      |
-| $\cos(x)$               | $-\sin(x)$                     |
-| $\tan(x)$               | $\sec^2(x)$                    |
-| $u(x)v(x)$             | $u'(x)v(x) + u(x)v'(x)$       |
-| $\frac{u(x)}{v(x)}$    | $\frac{u'(x)v(x) - u(x)v'(x)}{v^2(x)}$ |
-| $f(g(x))$              | $f'(g(x)) \cdot g'(x)$         |
-| $f^{(n)}(x)$            | $\frac{d^n f(x)}{dx^n}$         |
-
-Derivative Rules Summary:
-
-|Derivatives Rule         | Description                    |
-|-------------------------|--------------------------------|
-|Sum                      | $\frac{d}{dx}[u + v] = \frac{du}{dx} + \frac{dv}{dx}$ |
-|Product                 | $\frac{d}{dx}[uv] = u\frac{dv}{dx} + v\frac{du}{dx}$ |
-|Quotient                | $\frac{d}{dx}\left[\frac{u}{v}\right] = \frac{v\frac{du}{dx} - u\frac{dv}{dx}}{v^2}$ |
-|Chain                    | $\frac{d}{dx}f(g(x)) = f'(g(x)) \cdot g'(x)$ |
-|Power                   | $\frac{d}{dx}[u^n] = nu^{n-1}\frac{du}{dx}$ |
-|Inverse                  | $\frac{dx}{dy} = \frac{1}{\frac{dy}{dx}}$ |
+[View Problems and Solutions for Introduction to Calculus](/math-basic/calculus/problems/introduction-to-calculus-problems/)
