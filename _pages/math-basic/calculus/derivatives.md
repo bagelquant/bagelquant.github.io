@@ -106,7 +106,7 @@ The **second derivative**, denoted $f''(x)$, is the derivative of the first deri
 
 *(Solutions will be provided in a separate section or at the end of the course).*
 
-[View Solutions](/math-basic/calculus/calculus-solutions/)
+[View Solutions](calculus-solutions.md)
 
 With these rules, we can differentiate a wide variety of functions. This ability to precisely measure rates of change is the first major step in applying calculus to real-world problems.
 

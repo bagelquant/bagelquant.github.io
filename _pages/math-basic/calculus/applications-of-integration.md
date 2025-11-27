@@ -83,7 +83,7 @@ where $p(S_T)$ is the risk-neutral probability density of the final stock price.
 
 *(Solutions will be provided in a separate section or at the end of the course).*
 
-[View Solutions](/math-basic/calculus/calculus-solutions/)
+[View Solutions](calculus-solutions.md)
 
 This is just a sample of the many applications of integration. It is a versatile tool for summing up continuous quantities in geometry, physics, probability, and finance.
 

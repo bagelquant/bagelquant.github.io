@@ -114,6 +114,6 @@ Let $f(x, y) = x e^{xy}$.
 
 *(Solutions will be provided in a separate section or at the end of the course).*
 
-[View Solutions](/math-basic/calculus/calculus-solutions/)
+[View Solutions](calculus-solutions.md)
 
 Next, we will use these concepts to solve optimization problems in multiple dimensions in [Applications of Partial Derivatives](applications-of-partial-derivatives.md).

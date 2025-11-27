@@ -1,11 +1,16 @@
 ---
 title: "Calculus Practice Problems: Solutions"
-layout: page
+permalink: /calculus/calculus-solutions/
+header:
+  overlay_image: /assets/images/headers/calculus.png
+  overlay_opacity: 0.8
+nav: "calculus"
+
 ---
 
 Here you'll find the solutions to the practice problems from the main calculus articles.
 
-### Solutions for "The Derivative"
+## Solutions for "The Derivative"
 
 **1. Find the derivative of $f(x) = 5x^4 - \frac{1}{x^2} + \sqrt{x}$.**
 
@@ -52,8 +57,7 @@ $f''(x) = \frac{1}{x}$
 At $x=1$, $f''(1) = \frac{1}{1} = 1$.
 Since $f''(1) > 0$, the function is **convex** at $x=1$.
 
----
-### Solutions for "The Integral"
+## Solutions for "The Integral"
 
 **1. Find the indefinite integral of $f(x) = 6x^2 - 2x + 5$.**
 
@@ -75,8 +79,7 @@ Area $= \int_0^4 \sqrt{x} dx = \int_0^4 x^{1/2} dx$
 $= [\frac{x^{3/2}}{3/2}]_0^4 = [\frac{2}{3}x^{3/2}]_0^4$
 $= \frac{2}{3}(4^{3/2}) - \frac{2}{3}(0^{3/2}) = \frac{2}{3}(8) - 0 = \frac{16}{3}$
 
----
-### Solutions for "Applications of Integration"
+## Solutions for "Applications of Integration"
 
 **1. Find the area of the region bounded by $y = x$ and $y = x^2$.**
 
@@ -97,8 +100,7 @@ Arc length $L = \int_a^b \sqrt{1 + [f'(x)]^2} dx$.
 $f(x) = x^2 \implies f'(x) = 2x$.
 $L = \int_0^1 \sqrt{1 + (2x)^2} dx = \int_0^1 \sqrt{1 + 4x^2} dx$
 
----
-### Solutions for "Techniques of Integration"
+## Solutions for "Techniques of Integration"
 
 **1. Evaluate $\int x^2 \sqrt{x^3 + 1} \,dx$ using substitution.**
 
@@ -129,8 +131,7 @@ If $x=2$, $1 = 4A \implies A = 1/4$.
 If $x=-2$, $1 = -4B \implies B = -1/4$.
 $\int (\frac{1/4}{x-2} - \frac{1/4}{x+2}) dx = \frac{1}{4}(\ln|x-2| - \ln|x+2|) + C = \frac{1}{4}\ln|\frac{x-2}{x+2}| + C$
 
----
-### Solutions for "Partial Derivatives"
+## Solutions for "Partial Derivatives"
 
 Let $f(x, y) = x e^{xy}$.
 
@@ -156,8 +157,7 @@ $f_{xy} = \frac{\partial}{\partial y}(e^{xy}(1+xy)) = x e^{xy}(1+xy) + e^{xy}(x)
 $f_{yx} = \frac{\partial}{\partial x}(x^2 e^{xy}) = 2x e^{xy} + x^2 (y e^{xy}) = xe^{xy}(2+xy)$
 They are equal.
 
----
-### Solutions for "Power and Taylor Series"
+## Solutions for "Power and Taylor Series"
 
 **1. Find the first three non-zero terms of the Maclaurin series for $f(x) = e^{-x^2}$.**
 
@@ -180,8 +180,7 @@ $f'(x) = \frac{1}{x} \implies f'(1) = 1$
 $L(x) = f(1) + f'(1)(x-1) = 0 + 1(x-1) = x-1$.
 $\ln(1.1) \approx L(1.1) = 1.1 - 1 = 0.1$
 
----
-### Solutions for "Multiple Integrals"
+## Solutions for "Multiple Integrals"
 
 **1. Evaluate $\int_0^1 \int_0^x (x+2y) \,dy\,dx$.**
 
