@@ -10,6 +10,8 @@ Peer effects are a long-standing theme in empirical asset pricing and corporate 
 
 The goal of this work is to build a data-driven peer effect feature that adapts to the cross-sectional structure of firms at each date. Rather than relying on static industry classifications, I use a neural network to learn an embedding for each firm-date observation and then define peers based on similarity in this latent space. Embeddings act as compact summaries of the complex information contained in the underlying features. Once these embeddings are available, similarity between firms can be computed using a Gaussian kernel. The resulting peer-weighted feature represents a locally smoothed cross-sectional signal and can be incorporated into predictive models or factor construction exercises.
 
+More about embeddings can be found in my post on [Embeddings for Financial Data](https://bagelquant.com/embeddings-for-financial-data/).
+
 ## Motivation
 
 High-dimensional financial data present several challenges. Firms operate in rapidly changing environments, and simple classifications may be too coarse to capture nuanced relationships. A neural embedding offers an alternative representation: it is learned directly from the predictive task, and therefore emphasizes characteristics relevant for explaining variation in future returns.
