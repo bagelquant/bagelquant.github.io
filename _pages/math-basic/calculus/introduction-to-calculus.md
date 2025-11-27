@@ -49,7 +49,3 @@ Quantitative finance is all about modeling and managing uncertainty and change i
 In this series, we will explore each of these concepts from the ground up, starting with the very foundation of calculus: the concept of a **limit**.
 
 Next, we will explore [Limits and Continuity](limits-and-continuity.md), the bedrock upon which all of calculus is built.
-
----
-
-[View Problems and Solutions for Introduction to Calculus](/math-basic/calculus/problems/introduction-to-calculus-problems/)

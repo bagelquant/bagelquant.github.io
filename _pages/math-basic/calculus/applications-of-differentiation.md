@@ -101,7 +101,3 @@ $$
 -   L'Hôpital's Rule provides a powerful method for evaluating certain types of limits.
 
 Next, we will begin our exploration of the second major pillar of calculus: [Integration](integrals.md).
-
----
-
-[View Problems and Solutions for Applications Of Differentiation](/math-basic/calculus/problems/applications-of-differentiation-problems/)

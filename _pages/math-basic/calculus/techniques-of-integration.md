@@ -126,10 +126,8 @@ Find $\int \frac{x+5}{x^2 + x - 2} \,dx$.
 
 *(Solutions will be provided in a separate section or at the end of the course).*
 
+[View Solutions](/math-basic/calculus/calculus-solutions/)
+
 Mastering these techniques is essential for solving a wide variety of problems in calculus and its applications.
 
 Next, we will explore some of the [Applications of Integration](applications-of-integration.md).
-
----
-
-[View Problems and Solutions for Techniques Of Integration](/math-basic/calculus/problems/techniques-of-integration-problems/)

@@ -108,8 +108,6 @@ where $p(s_1, s_2)$ is the joint probability density function. While these integ
 
 *(Solutions will be provided in a separate section or at the end of the course).*
 
+[View Solutions](/math-basic/calculus/calculus-solutions/)
+
 Next, we will explore the final topic of our calculus series: [Vector Calculus](vector-calculus.md).
-
----
-
-[View Problems and Solutions for Multiple Integrals](/math-basic/calculus/problems/multiple-integrals-problems/)

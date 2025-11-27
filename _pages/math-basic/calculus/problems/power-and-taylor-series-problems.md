@@ -1,1 +1,0 @@
----\ntitle: "Power And Taylor Series - Problems"\nlayout: page\n---\n\n## Problems and Solutions for Power And Taylor Series

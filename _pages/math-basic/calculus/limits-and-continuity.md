@@ -88,7 +88,3 @@ In simple terms, a continuous function must take on every value between any two 
 With the concepts of limits and continuity firmly established, we are now ready to tackle the first major pillar of calculus.
 
 Next, we will explore the [Derivative](derivatives.md).
-
----
-
-[View Problems and Solutions for Limits And Continuity](/math-basic/calculus/problems/limits-and-continuity-problems/)

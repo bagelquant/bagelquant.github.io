@@ -39,7 +39,3 @@ Calculus provides the language and tools to analyze how financial quantities evo
 - [Optimization in Finance](https://bagelquant.com/optimization/)
 - [Stochastic Calculus](https://bagelquant.com/stochastic-calculus/)
 - [Econometrics](https://bagelquant.com/econometrics/)
-
----
-
-[View Problems and Solutions for Calculus](/math-basic/calculus/problems/calculus-problems/)

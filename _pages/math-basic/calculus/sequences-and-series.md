@@ -91,7 +91,3 @@ This is a very powerful test, especially for series involving factorials or $n$-
 With this foundation in infinite series, we are now ready to explore a special and incredibly useful type of series.
 
 Next, we will look at [Power and Taylor Series](power-and-taylor-series.md).
-
----
-
-[View Problems and Solutions for Sequences And Series](/math-basic/calculus/problems/sequences-and-series-problems/)

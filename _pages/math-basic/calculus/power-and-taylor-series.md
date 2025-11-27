@@ -86,10 +86,8 @@ This is the famous **Delta-Gamma approximation**. It tells a trader that their r
 
 *(Solutions will be provided in a separate section or at the end of the course).*
 
+[View Solutions](/math-basic/calculus/calculus-solutions/)
+
 This concludes our journey through the core concepts of single-variable calculus. We are now equipped to tackle problems involving multiple variables.
 
 Next, we will begin Part 3 of our series with [Vectors and the Geometry of Space](vectors-and-geometry-of-space.md).
-
----
-
-[View Problems and Solutions for Power And Taylor Series](/math-basic/calculus/problems/power-and-taylor-series-problems/)

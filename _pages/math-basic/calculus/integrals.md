@@ -111,10 +111,8 @@ Integration allows us to move from an instantaneous rate to a total accumulated 
 
 *(Solutions will be provided in a separate section or at the end of the course).*
 
+[View Solutions](/math-basic/calculus/calculus-solutions/)
+
 While these basic rules are powerful, many functions are not so simple to integrate.
 
 Next, we will explore more advanced [Techniques of Integration](techniques-of-integration.md).
-
----
-
-[View Problems and Solutions for Integrals](/math-basic/calculus/problems/integrals-problems/)

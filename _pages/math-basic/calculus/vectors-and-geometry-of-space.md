@@ -106,7 +106,3 @@ $$ a(x - x_0) + b(y - y_0) + c(z - z_0) = 0 $$
 This framework for working in three dimensions is the necessary prerequisite for the next step in calculus.
 
 Next, we will use these vector concepts to analyze functions of multiple variables with [Partial Derivatives](partial-derivatives.md).
-
----
-
-[View Problems and Solutions for Vectors And Geometry Of Space](/math-basic/calculus/problems/vectors-and-geometry-of-space-problems/)

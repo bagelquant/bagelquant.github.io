@@ -88,7 +88,3 @@ A common problem in economics is to maximize an investor's utility function $U(x
 -   These optimization techniques are central to solving problems in finance, such as finding optimal portfolio allocations or calibrating model parameters.
 
 Next, we will extend our study of integration to multiple dimensions with [Multiple Integrals](multiple-integrals.md).
-
----
-
-[View Problems and Solutions for Applications Of Partial Derivatives](/math-basic/calculus/problems/applications-of-partial-derivatives-problems/)
