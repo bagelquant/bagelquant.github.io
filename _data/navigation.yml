@@ -142,6 +142,35 @@ derivatives:
       - title: "Quant Interview Questions"
         url: /quant-interview-faq-derivatives/
 
+linear-algebra:
+  - title: "Linear Algebra"
+    url: /linear-algebra/
+    children:
+      - title: "Introduction to Linear Algebra"
+        url: /linear-algebra/introduction-to-linear-algebra/
+      - title: "Vectors and Vector Spaces"
+        url: /linear-algebra/vectors-and-vector-spaces/
+      - title: "Matrices and Matrix Operations"
+        url: /linear-algebra/matrices-and-matrix-operations/
+      - title: "Solving Linear Systems"
+        url: /linear-algebra/solving-linear-systems/
+      - title: "Determinants and Their Properties"
+        url: /linear-algebra/determinants-and-their-properties/
+      - title: "Subspaces, Basis, and Dimension"
+        url: /linear-algebra/subspaces-basis-and-dimension/
+      - title: "Linear Transformations"
+        url: /linear-algebra/linear-transformations/
+      - title: "Eigenvalues and Eigenvectors"
+        url: /linear-algebra/eigenvalues-and-eigenvectors/
+      - title: "Inner Product Spaces and Orthogonality"
+        url: /linear-algebra/inner-product-spaces-and-orthogonality/
+      - title: "Singular Value Decomposition (SVD)"
+        url: /linear-algebra/singular-value-decomposition/
+      - title: "PCA and Applications in Finance"
+        url: /linear-algebra/pca-and-applications-in-finance/
+      - title: "Least Squares and Regression"
+        url: /linear-algebra/least-squares-and-regression/
+
 calculus:
   - title: "Calculus"
     url: /calculus/

@@ -14,7 +14,7 @@ This page lists all major topics covered in BagelQuant. Each topic links to a de
 Basic math:
 
 - [Calculus](math-basic/calculus/calculus.md)
-- Linear Algebra
+- [Linear Algebra](math-basic/linear-algebra/linear-algebra.md)
 - [Probability Theory](math-basic/probability/probability.md)
   - [General Probability Theory](math-basic/probability/general-probability-theory.md)
 
