@@ -42,6 +42,10 @@ Ensure absolute URL with `absolute_url` so scrapers can fetch the image.
 	<meta property="og:image" content="{{ og_image | absolute_url }}" />
 	<meta name="twitter:image" content="{{ og_image | absolute_url }}" />
 	<link rel="image_src" href="{{ og_image | absolute_url }}" />
+	<meta property="og:image:secure_url" content="{{ og_image | absolute_url }}" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:image:src" content="{{ og_image | absolute_url }}" />
+	<meta name="twitter:image:alt" content="{{ page.title | default: site.title }}" />
 {%- endif -%}
 
 <meta property="og:title" content="{{ page.title | default: site.title }}" />
@@ -53,6 +57,9 @@ Ensure absolute URL with `absolute_url` so scrapers can fetch the image.
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ page.title | default: site.title }}" />
 <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 200 }}" />
+{%- if site.twitter_username -%}
+	<meta name="twitter:site" content="@{{ site.twitter_username }}" />
+{%- endif -%}
 
 {%- comment -%}
 Author metadata: prefer `page.author` (string) and `page.author_url` (or link to About page), otherwise fall back to `site.author` values.
