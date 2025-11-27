@@ -1826,6 +1826,75 @@ html.dark {
   --btn-bg-hover: #3b82f6;
 }
 
+/* Scrollbar styling for light theme (WebKit/Blink: Chrome, Safari, Edge) */
+body::-webkit-scrollbar,
+.post-sidebar-left::-webkit-scrollbar,
+.page-sidebar::-webkit-scrollbar,
+.post-toc::-webkit-scrollbar,
+.page-toc::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track,
+.post-sidebar-left::-webkit-scrollbar-track,
+.page-sidebar::-webkit-scrollbar-track,
+.post-toc::-webkit-scrollbar-track,
+.page-toc::-webkit-scrollbar-track {
+  background: var(--bg-alt);
+}
+
+body::-webkit-scrollbar-thumb,
+.post-sidebar-left::-webkit-scrollbar-thumb,
+.page-sidebar::-webkit-scrollbar-thumb,
+.post-toc::-webkit-scrollbar-thumb,
+.page-toc::-webkit-scrollbar-thumb {
+  background: rgba(15,23,42,0.25);
+  border-radius: 999px;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+.post-sidebar-left::-webkit-scrollbar-thumb:hover,
+.page-sidebar::-webkit-scrollbar-thumb:hover,
+.post-toc::-webkit-scrollbar-thumb:hover,
+.page-toc::-webkit-scrollbar-thumb:hover {
+  background: rgba(15,23,42,0.4);
+}
+
+/* Dark mode scrollbar overrides */
+html.dark body::-webkit-scrollbar-track,
+html.dark .post-sidebar-left::-webkit-scrollbar-track,
+html.dark .page-sidebar::-webkit-scrollbar-track,
+html.dark .post-toc::-webkit-scrollbar-track,
+html.dark .page-toc::-webkit-scrollbar-track {
+  background: #020817;
+}
+
+html.dark body::-webkit-scrollbar-thumb,
+html.dark .post-sidebar-left::-webkit-scrollbar-thumb,
+html.dark .page-sidebar::-webkit-scrollbar-thumb,
+html.dark .post-toc::-webkit-scrollbar-thumb,
+html.dark .page-toc::-webkit-scrollbar-thumb {
+  background: rgba(148,163,184,0.7);
+}
+
+html.dark body::-webkit-scrollbar-thumb:hover,
+html.dark .post-sidebar-left::-webkit-scrollbar-thumb:hover,
+html.dark .page-sidebar::-webkit-scrollbar-thumb:hover,
+html.dark .post-toc::-webkit-scrollbar-thumb:hover,
+html.dark .page-toc::-webkit-scrollbar-thumb:hover {
+  background: rgba(191,219,254,0.9);
+}
+
+/* Firefox scrollbar colors */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148,163,184,0.8) var(--bg-alt);
+}
+
+html.dark {
+  scrollbar-color: rgba(148,163,184,0.9) #020817;
+}
+
 /* Improve code block separation in dark mode for better readability */
 html.dark .post-content pre,
 html.dark .page-content pre,
