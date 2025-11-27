@@ -1553,6 +1553,14 @@ html.dark .sidebar-toggle:hover {
   font-weight: 600;
 }
 
+/* Sidebar nav: highlight current page (matches TOC highlight) */
+.page-sidebar a.active,
+.post-sidebar-left a.active,
+.sidebar-nav a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 /* Hide sidebar toggle on large screens; it is only for narrow layouts */
 .sidebar-toggle {
   display: none;

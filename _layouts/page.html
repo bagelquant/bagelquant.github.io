@@ -24,11 +24,13 @@ layout: default
 
       {% if nav_items %}
         <h2>Navigation</h2>
+        {% assign current = page.url %}
         <ul class="sidebar-nav">
           {% for item in nav_items %}
             <li>
               {% if item.url %}
-                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% assign item_url = item.url %}
+                <a href="{{ item_url | relative_url }}" class="{% if current == item_url or current contains item_url %}active{% endif %}">{{ item.title }}</a>
               {% else %}
                 {{ item.title }}
               {% endif %}
@@ -38,7 +40,8 @@ layout: default
                 <ul class="sidebar-nav-children">
                   {% for child in item.children %}
                     <li>
-                      <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+                      {% assign child_url = child.url %}
+                      <a href="{{ child_url | relative_url }}" class="{% if current == child_url or current contains child_url %}active{% endif %}">{{ child.title }}</a>
                     </li>
                   {% endfor %}
                 </ul>
