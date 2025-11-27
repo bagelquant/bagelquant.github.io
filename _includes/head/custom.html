@@ -53,3 +53,23 @@ Ensure absolute URL with `absolute_url` so scrapers can fetch the image.
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ page.title | default: site.title }}" />
 <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 200 }}" />
+
+{%- comment -%}
+Author metadata: prefer `page.author` (string) and `page.author_url` (or link to About page), otherwise fall back to `site.author` values.
+Include `name`, `article:author` (URL), `link rel=author`, and `twitter:creator` for broad scraper coverage.
+{%- endcomment -%}
+
+{%- assign author_name = page.author | default: site.author.name -%}
+{%- assign author_url = page.author_url | default: '/about-me/' -%}
+{%- if author_url and author_url != '' and author_url != author_name -%}
+	{%- assign author_url = author_url | absolute_url -%}
+{%- else -%}
+	{%- assign author_url = '/about-me/' | absolute_url -%}
+{%- endif -%}
+
+<meta name="author" content="{{ author_name }}" />
+<meta property="article:author" content="{{ author_url }}" />
+<link rel="author" href="{{ author_url }}" />
+{%- if site.twitter_username -%}
+	<meta name="twitter:creator" content="@{{ site.twitter_username }}" />
+{%- endif -%}
