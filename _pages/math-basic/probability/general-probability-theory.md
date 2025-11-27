@@ -96,7 +96,7 @@ $$
 
 (1) Intergrability
 
-A random variable $X$ is said to be integrable if $\mathbb{E}[|X|] < \infty$. This ensures that the expectation $\mathbb{E}[X]$ is well-defined.
+A random variable $X$ is said to be integrable if $\mathbb{E}[\|X\|] < \infty$. This ensures that the expectation $\mathbb{E}[X]$ is well-defined.
 
 (2) Comparison
 

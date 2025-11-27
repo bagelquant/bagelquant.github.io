@@ -1,318 +1,75 @@
 ---
 title: "Probability"
+layout: topic
 permalink: /probability/
-
-nav: probability
+header:
+  overlay_image: assets/images/headers/probability.png
+  overlay_opacity: 0.8
 ---
 
-Probability theory forms the foundation of quantitative finance. It provides the mathematical framework to model uncertainty, evaluate risk, and make informed decisions in environments dominated by randomness. From pricing derivatives and evaluating portfolios to designing trading algorithms and conducting statistical inference, probability plays a central role in the toolkit of a quant.
+Probability is the mathematics of uncertainty. For quantitative finance, it is as fundamental as calculus and linear algebra: every model of risk, return, and pricing is ultimately a probabilistic statement about the future.
 
-Below is a concise walkthrough of key concepts and formulas in probability theory, structured to aid quick reference and understanding.
+This series is designed as a **complete, beginner-friendly probability course** tailored to future quants. We build the theory carefully from first principles but constantly tie ideas back to intuition and financial applications: returns, risk, factor models, and derivatives pricing.
 
-Link to handwritten notes: [probability-handwritten.pdf](Probability.pdf)
+## Part 1: Foundations of Probability
 
-Additional topics in probability:
+- [Introduction to Probability: Quantifying Uncertainty](introduction-to-probability.md)
+- [Probability Spaces, Events, and Axioms](probability-spaces-and-events.md)
+- [Conditional Probability and Bayes' Theorem](conditional-probability-and-bayes-theorem.md)
+- [Independence and Common Dependence Structures](independence-and-dependence.md)
+
+## Part 2: Random Variables and Distributions
+
+- [Discrete Random Variables and Distributions](discrete-random-variables.md)
+- [Continuous Random Variables and Densities](continuous-random-variables.md)
+- [Expectation, Variance, and Moments](expectation-variance-and-moments.md)
+- [Joint Distributions, Covariance, and Correlation](joint-distributions-and-covariance.md)
+
+## Part 3: Core Distributions in Quantitative Finance
+
+- [The Normal Distribution and the Central Limit Phenomenon](normal-distribution-and-clt.md)
+- [The Lognormal Distribution and Asset Prices](lognormal-distribution-and-asset-prices.md)
+- [Bernoulli, Binomial, and Poisson Models](bernoulli-binomial-poisson.md)
+- [Heavy-Tailed Distributions and Financial Returns](heavy-tailed-distributions-and-returns.md)
+
+## Part 4: Sequences of Random Variables
+
+- [Convergence Concepts in Probability](convergence-of-random-variables.md)
+- [The Law of Large Numbers](law-of-large-numbers.md)
+- [The Central Limit Theorem in Depth](central-limit-theorem.md)
+- [Inequalities and Concentration Bounds](concentration-inequalities.md)
+
+## Part 5: Multivariate Probability and Dependence
+
+- [Random Vectors and Multivariate Normal](random-vectors-and-multivariate-normal.md)
+- [Covariance Matrices and Portfolio Risk](covariance-matrices-and-portfolio-risk.md)
+- [Copulas and Modeling Dependence](copulas-and-dependence.md)
+
+## Part 6: Probability Tools for Modeling and Inference
+
+- [Generating Random Variables and Monte Carlo Basics](monte-carlo-and-random-number-generation.md)
+- [Change of Measure and Radon–Nikodym Intuition](change-of-measure-intuition.md)
+- [Moment Generating Functions and Characteristic Functions](mgf-and-characteristic-functions.md)
+
+---
+
+This probability course is meant to sit alongside:
+
+- [Calculus: A Comprehensive Course](/calculus/)
+- [Linear Algebra](/linear-algebra/)
+
+Together, these three form the mathematical basic for more advanced topics in quantitative finance, including:
+
+- [Stochastic Calculus](https://bagelquant.com/stochastic-calculus/)
+- [Econometrics](https://bagelquant.com/econometrics/)
+- [Optimization in Finance](https://bagelquant.com/optimization/)
+
+Next Topic: [Introduction to Probability: Quantifying Uncertainty](introduction-to-probability.md)
+
+---
+
+Other topics in probability:
 
 - Moment Generating Functions
 - Characteristic Functions
 - [General Probability Theory](general-probability-theory.md) (A more advanced treatment of probability theory)
-
-## Combinatorial Analysis
-
-### Permutations
-
-For n distinct objects, the number of permutations is
-$$
-n! = n(n-1)(n-2)\cdots 1.
-$$
-
-If some objects are alike with counts $n_1,n_2,\ldots,n_r$,
-$$
-\frac{n!}{n_1! \, n_2! \cdots n_r!}.
-$$
-
-**Example (PEPPER):**
-$$
-\frac{6!}{3! \, 2! \, 1!} = 60.
-$$
-
-### Combinations
-
-Number of ways to choose $r$ from $n$:
-$$
-\binom{n}{r} = \frac{n!}{(n-r)!\,r!}.
-$$
-
-Basic facts:
-$$
-\binom{n}{0}=\binom{n}{n}=1, \qquad
-\binom{n}{i}=0 \ \text{if}\ i<0 \ \text{or}\ i>n.
-$$
-
-Pascal identity:
-$$
-\binom{n}{r} = \binom{n-1}{r-1} + \binom{n-1}{r}.
-$$
-
-Binomial theorem:
-$$
-(x+y)^n = \sum_{k=0}^{n} \binom{n}{k} x^k y^{\,n-k}.
-$$
-
-Multinomial theorem:
-$$
-(x_1+\cdots+x_r)^n
-= \sum_{n_1+\cdots+n_r=n} \frac{n!}{n_1! \cdots n_r!}\,
-x_1^{n_1}\cdots x_r^{n_r}.
-$$
-
-## Axioms of Probability
-
-### Basics
-
-$$
-0 \le P(A) \le 1, \qquad P(\Omega)=1.
-$$
-
-For pairwise disjoint $A_i$,
-$$
-P\!\left(\bigcup_{i} A_i\right) = \sum_{i} P(A_i).
-$$
-
-### Conditional Probability and Independence
-
-Conditional probability:
-$$
-P(A \mid B) = \frac{P(AB)}{P(B)}.
-$$
-
-Law of total probability:
-$$
-P(A) = P(A \mid B)P(B) + P(A \mid B^{c})P(B^{c}).
-$$
-
-Independence of events $A,B$:
-$$
-P(AB)=P(A)P(B).
-$$
-
-## Random Variables and Distributions
-
-CDF:
-
-$$
-F(x) = P(X \le x).
-$$
-
-Discrete (PMF) and continuous (PDF):
-
-$$
-p(x)=P(X=x), \qquad \sum_{x} p(x)=1;
-$$
-
-$$
-P(X \in C)=\int_{C} f(x)\,dx, \qquad
-F(x)=\int_{-\infty}^{x} f(s)\,ds.
-$$
-
-Joint distributions:
-
-$$
-F_{X,Y}(x,y)=P(X\le x,\ Y\le y)
-= \int_{-\infty}^{x}\!\!\int_{-\infty}^{y} f(u,v)\,du\,dv.
-$$
-
-Independence of random variables:
-
-$$
-f_{X,Y}(x,y) = f_X(x)\,f_Y(y).
-$$
-
-## Expectation, Variance, Covariance
-
-Expectation
-
-Discrete:
-
-$$
-E[X] = \sum_{i} x_i\,p(x_i) \quad \text{(discrete)}.
-$$
-
-Continuous:
-
-$$
-E[X] = \int_{-\infty}^{\infty} x f(x)\,dx \quad \text{(continuous)}.
-$$
-
-For a function $g$:
-
-Discrete:
-
-$$
-E[g(X)] = \sum_{i} g(x_i)\,p(x_i).
-$$
-
-Continuous:
-
-$$
-E[g(X)] = \int_{-\infty}^{\infty} g(x)\,f(x)\,dx.
-$$
-
-Variance and covariance:
-$$
-\operatorname{Var}(X)=E[X^2]-\big(E[X]\big)^2,
-\qquad
-\operatorname{Cov}(X,Y)=E[XY]-E[X]E[Y].
-$$
-
-Sum of two variables:
-$$
-\operatorname{Var}(X+Y) =
-\operatorname{Var}(X)+\operatorname{Var}(Y)+2\,\operatorname{Cov}(X,Y).
-$$
-
-Correlation:
-$$
-\operatorname{Corr}(X,Y)=\frac{\operatorname{Cov}(X,Y)}{
-\sqrt{\operatorname{Var}(X)\,\operatorname{Var}(Y)}}.
-$$
-
-## Inequalities and Laws of Large Numbers
-
-Markov (for nonnegative $X$ and $a>0$):
-$$
-P(X \ge a) \le \frac{E[X]}{a}.
-$$
-
-Chebyshev (mean $\mu$, variance $\sigma^2$):
-$$
-P\big(|X-\mu|\ge k\sigma\big) \le \frac{1}{k^2}.
-$$
-
-Weak Law of Large Numbers (i.i.d. mean $\mu$):
-$$
-\frac{1}{n}\sum_{k=1}^{n} X_k \ \xrightarrow{P}\ \mu.
-$$
-
-Strong Law of Large Numbers (i.i.d. mean $\mu$):
-$$
-\frac{1}{n}\sum_{k=1}^{n} X_k \ \xrightarrow{\text{a.s.}}\ \mu.
-$$
-
-## Discrete Distributions
-
-### Binomial
-
-$$
-P(X=i)=\binom{n}{i} p^{\,i} (1-p)^{\,n-i}, \quad i=0,1,\ldots,n.
-$$
-$$
-E[X]=np, \qquad \operatorname{Var}(X)=np(1-p).
-$$
-
-### Poisson
-
-$$
-P(X=i)=e^{-\lambda}\frac{\lambda^{i}}{i!}, \quad i=0,1,2,\ldots
-$$
-$$
-E[X]=\lambda, \qquad \operatorname{Var}(X)=\lambda.
-$$
-Limit of Binomial: $n\to\infty$, $p\to 0$, $np=\lambda$.
-
-### Geometric (first success on trial $n$)
-
-$$
-P(X=n)=(1-p)^{\,n-1}p, \quad n=1,2,\ldots
-$$
-$$
-E[X]=\frac{1}{p}, \qquad \operatorname{Var}(X)=\frac{1-p}{p^{2}}.
-$$
-
-### Negative Binomial (trials until $r$-th success)
-
-$$
-P(X=n)=\binom{n-1}{r-1} p^{\,r} (1-p)^{\,n-r}, \quad n=r,r+1,\ldots
-$$
-$$
-E[X]=\frac{r}{p}, \qquad \operatorname{Var}(X)=\frac{r(1-p)}{p^{2}}.
-$$
-
-### Hypergeometric (without replacement)
-
-Population has $N+M$ items, $N$ of type A and $M$ of type B. Draw $n$.
-$$
-P(X=i)=\frac{\binom{N}{i}\,\binom{M}{\,n-i\,}}{\binom{N+M}{n}}.
-$$
-$$
-E[X]=\frac{nN}{N+M}, \qquad
-\operatorname{Var}(X)=\frac{nNM}{(N+M)^2}\left(1-\frac{n-1}{N+M-1}\right).
-$$
-
-## Continuous Distributions
-
-### Uniform on $(a,b)$
-
-$$
-f(x)=\frac{1}{b-a}, \quad a<x<b; \qquad
-F(x)=\frac{x-a}{b-a} \ \ (a\le x\le b).
-$$
-$$
-E[X]=\frac{a+b}{2}, \qquad \operatorname{Var}(X)=\frac{(b-a)^2}{12}.
-$$
-
-### Normal
-
-$$
-f(x)=\frac{1}{\sqrt{2\pi}\,\sigma}\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right).
-$$
-Standard normal: $Z\sim N(0,1)$, CDF $\Phi\!\left(\frac{x-\mu}{\sigma}\right)$.
-
-### Exponential
-
-$$
-f(x)=\lambda e^{-\lambda x}, \quad x>0; \qquad
-E[X]=\frac{1}{\lambda}, \quad \operatorname{Var}(X)=\frac{1}{\lambda^2}.
-$$
-Memoryless: $P(X>s+t\mid X>s)=P(X>t)$.
-
-### Poisson Process and Gamma
-
-Homogeneous Poisson process with rate $\lambda$:
-$$
-N(t) \sim \text{Poisson}(\lambda t).
-$$
-Interarrival times are i.i.d. exponential$(\lambda)$; the sum of $n$ such interarrivals is gamma$(n,\lambda)$.
-
-### Nonhomogeneous Poisson Process
-
-Time-varying rate $\lambda(t)$, mean value function
-$$
-m(t)=\int_{0}^{t} \lambda(s)\,ds.
-$$
-Then
-$$
-N(t+s)-N(t) \sim \text{Poisson}\!\left(m(t+s)-m(t)\right).
-$$
-
-## Conditional Expectation and Variance
-
-Discrete:
-$$
-E[X \mid Y=y] = \sum_{x} x \, P(X=x \mid Y=y).
-$$
-
-Continuous:
-$$
-E[X \mid Y=y] = \int_{-\infty}^{\infty} x \, \frac{f(x,y)}{f_Y(y)} \, dx.
-$$
-
-Tower property:
-$$
-E\!\left[ E[X \mid Y] \right] = E[X].
-$$
-
-Law of total variance:
-$$
-\operatorname{Var}(X)=E\!\left[\operatorname{Var}(X\mid Y)\right] + \operatorname{Var}\!\left(E[X\mid Y]\right).
-$$
