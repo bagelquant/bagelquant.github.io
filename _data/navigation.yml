@@ -118,6 +118,62 @@ factor-model-in-china:
 probability:
   - title: "Probability"
     url: /probability/
+  - title: "Foundations of Probability"
+    children:
+      - title: "Introduction to Probability"
+        url: /probability/introduction-to-probability/
+      - title: "Probability Spaces, Events, and Axioms"
+        url: /probability/probability-spaces-and-events/
+      - title: "Conditional Probability and Bayes' Theorem"
+        url: /probability/conditional-probability-and-bayes-theorem/
+      - title: "Independence and Common Dependence Structures"
+        url: /probability/independence-and-dependence/
+  - title: "Random Variables and Distributions"
+    children:
+      - title: "Discrete Random Variables and Distributions"
+        url: /probability/discrete-random-variables/
+      - title: "Continuous Random Variables and Densities"
+        url: /probability/continuous-random-variables/
+      - title: "Expectation, Variance, and Moments"
+        url: /probability/expectation-variance-and-moments/
+      - title: "Joint Distributions, Covariance, and Correlation"
+        url: /probability/joint-distributions-and-covariance/
+  - title: "Core Distributions in Quant Finance"
+    children:
+      - title: "The Normal Distribution and the Central Limit Phenomenon"
+        url: /probability/normal-distribution-and-clt/
+      - title: "The Lognormal Distribution and Asset Prices"
+        url: /probability/lognormal-distribution-and-asset-prices/
+      - title: "Bernoulli, Binomial, and Poisson Models"
+        url: /probability/bernoulli-binomial-poisson/
+      - title: "Heavy-Tailed Distributions and Financial Returns"
+        url: /probability/heavy-tailed-distributions-and-returns/
+  - title: "Sequences of Random Variables"
+    children:
+      - title: "Convergence Concepts in Probability"
+        url: /probability/convergence-of-random-variables/
+      - title: "The Law of Large Numbers"
+        url: /probability/law-of-large-numbers/
+      - title: "The Central Limit Theorem in Depth"
+        url: /probability/central-limit-theorem/
+      - title: "Inequalities and Concentration Bounds"
+        url: /probability/concentration-inequalities/
+  - title: "Multivariable Probability and Dependence"
+    children:
+      - title: "Random Vectors and Multivariate Normal"
+        url: /probability/random-vectors-and-multivariate-normal/
+      - title: "Covariance Matrices and Portfolio Risk"
+        url: /probability/covariance-matrices-and-portfolio-risk/
+      - title: "Copulas and Modeling Dependence"
+        url: /probability/copulas-and-dependence/
+  - title: "Probability Tools for Modeling and Inference"
+    children:
+      - title: "Generating Random Variables and Monte Carlo Basics"
+        url: /probability/monte-carlo-and-random-number-generation/
+      - title: "Change of Measure and Radon–Nikodym Intuition"
+        url: /probability/change-of-measure-intuition/
+      - title: "Moment Generating Functions and Characteristic Functions"
+        url: /probability/mgf-and-characteristic-functions/
   - title: "General Probability Theory"
     url: /probability/general-probability-theory/
 
