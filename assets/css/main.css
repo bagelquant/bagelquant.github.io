@@ -738,7 +738,7 @@ html.dark .sidebar-toggle:hover {
   font-size: 2.25rem;
   line-height: 1.12;
   margin: 0 0 0.4rem;
-  color: var(--text);
+  color: var(--accent);
 }
 
 .post-header .post-subtitle {
@@ -786,9 +786,13 @@ html.dark .sidebar-toggle:hover {
   padding: 1.6rem 0;
 }
 
+.post-content h1,
 .post-content h2,
-.post-content h3 {
-  color: var(--text);
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  color: var(--accent);
   margin-top: 1.8rem;
   margin-bottom: 0.6rem;
 }
