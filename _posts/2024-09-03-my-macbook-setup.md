@@ -41,7 +41,7 @@ Homebrew
 Casks
 
 ```zsh
-brew install --cask miniconda zoom pdf-expert raycast r-app rstudio google-chrome microsoft-teams chatgpt visual-studio-code blackhole-16ch iterm2 
+brew install --cask miniconda zoom pdf-expert raycast r-app rstudio google-chrome microsoft-teams chatgpt visual-studio-code blackhole-16ch iterm2 zed zen
 ```
 
 Formulas
