@@ -550,10 +550,18 @@ html.dark .sidebar-toggle:hover {
    appear oversized. We scope to `.topic-hero` added to the topic layout. */
 .topic-hero .post-header-cover {
   color: #ffffff;
+  height: auto; /* Allow full height */
+  align-items: flex-end; /* Align content to the bottom */
+}
+
+.topic-hero .post-header-cover img {
+  object-fit: contain; /* Show full image */
+  object-position: center bottom; /* Align image to the bottom within its container */
 }
 
 .topic-hero .post-header-overlay {
   color: #ffffff;
+  justify-content: center; /* Align overlay content to the center */
 }
 
 .topic-hero .post-header-overlay .post-title {
@@ -1068,11 +1076,21 @@ html.dark .sidebar-toggle:hover {
 
   /* Reduce hero height on phones so content remains visible above the fold */
   .home-hero .post-header-cover,
-  .topic-hero .post-header-cover,
   .post-hero .post-header-cover {
     height: 220px;
     display: flex;
     align-items: center;
+  }
+
+  .topic-hero .post-header-cover {
+    height: auto; /* Allow full height */
+    display: flex;
+    align-items: flex-end; /* Align content to the bottom */
+  }
+
+  .topic-hero .post-header-cover img {
+    object-fit: contain; /* Show full image */
+    object-position: center bottom; /* Align image to the bottom within its container */
   }
 
   .home-hero .post-header-overlay {
@@ -1085,6 +1103,12 @@ html.dark .sidebar-toggle:hover {
     font-size: 1.6rem;
     line-height: 1.08;
     margin-bottom: 0.35rem;
+  }
+
+  .topic-hero .post-header-overlay {
+    padding-top: 1.0rem;
+    padding-bottom: 1.0rem;
+    justify-content: center; /* Align overlay content to the center */
   }
 
   .home-hero .post-header-overlay .post-subtitle,
@@ -1134,15 +1158,29 @@ html.dark .sidebar-toggle:hover {
   }
 
   .home-hero .post-header-cover,
-  .home-hero .post-header-cover,
-  .topic-hero .post-header-cover,
+  .home-hero .post-header-cover, /* Duplicated, likely a typo */
   .post-hero .post-header-cover {
     height: 200px;
+  }
+
+  .topic-hero .post-header-cover {
+    height: auto; /* Allow full height */
+    display: flex;
+    align-items: flex-end; /* Align content to the bottom */
+  }
+
+  .topic-hero .post-header-cover img {
+    object-fit: contain; /* Show full image */
+    object-position: center bottom; /* Align image to the bottom within its container */
   }
 
   .home-hero .post-header-overlay .post-title,
   .topic-hero .post-header-overlay .post-title {
     font-size: 1.4rem;
+  }
+
+  .topic-hero .post-header-overlay {
+    justify-content: center; /* Align overlay content to the center */
   }
 
   .post-header .post-title {
@@ -1191,10 +1229,26 @@ html.dark .sidebar-toggle:hover {
       justify-content: center;
     }
 
+    .topic-hero .post-header-cover {
+      height: auto; /* Allow full height */
+      align-items: flex-end; /* Align content to the bottom */
+    }
+
+    .topic-hero .post-header-cover img {
+      object-fit: contain; /* Show full image */
+      object-position: center bottom; /* Align image to the bottom within its container */
+    }
+
     .home-hero .post-header-overlay,
     .post-hero .post-header-overlay {
       padding-top: 1.0rem;
       padding-bottom: 1.0rem;
+    }
+
+    .topic-hero .post-header-overlay {
+      padding-top: 1.0rem;
+      padding-bottom: 1.0rem;
+      justify-content: center; /* Align overlay content to the center */
     }
 
     .home-hero .post-header-overlay .post-title {
