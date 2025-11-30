@@ -567,10 +567,11 @@ html.dark .sidebar-toggle:hover {
 .topic-hero .post-header-overlay .post-title {
   font-size: 3rem;
   color: #ffffff;
+  max-width: 60%; /* Limit width to left side */
 }
 
 .topic-hero .post-header-overlay .post-subtitle {
-  max-width: 40rem;
+  max-width: 60%; /* Limit width to left side */
   color: rgba(255,255,255,0.9);
 }
 
