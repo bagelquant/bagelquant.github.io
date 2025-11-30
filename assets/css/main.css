@@ -1810,20 +1810,21 @@ html.dark .sidebar-toggle:hover {
 
 /* Dark theme overrides: toggle by adding `class="dark"` on the <html> element */
 html.dark {
-  --bg: #07111a;
-  --bg-alt: #0b141a;
-  --text: #e6eef8;
-  --muted: #94a3b8;
-  --muted-light: #cbd5e1;
-  --accent: #60a5fa;
-  --accent-soft: rgba(96,165,250,0.06);
+  /* Tokyo Night Theme */
+  --bg: #1a1b26;
+  --bg-alt: #24283b;
+  --text: #c0caf5;
+  --muted: #a9b1d6;
+  --muted-light: #787c99;
+  --accent: #7aa2f7;
+  --accent-soft: rgba(122, 162, 247, 0.1);
   --link: var(--accent);
-  --border: #1f2a33;
-  --code-bg: #0b2630; /* slightly lighter than page bg for better contrast */
-  --code-text: #e6eef8;
+  --border: #414868;
+  --code-bg: #24283b;
+  --code-text: #c0caf5;
   --btn-bg: var(--accent);
-  --btn-text: #07111a;
-  --btn-bg-hover: #3b82f6;
+  --btn-text: #1a1b26;
+  --btn-bg-hover: #2ac3de;
 }
 
 /* Scrollbar styling for light theme (WebKit/Blink: Chrome, Safari, Edge) */
@@ -1866,7 +1867,7 @@ html.dark .post-sidebar-left::-webkit-scrollbar-track,
 html.dark .page-sidebar::-webkit-scrollbar-track,
 html.dark .post-toc::-webkit-scrollbar-track,
 html.dark .page-toc::-webkit-scrollbar-track {
-  background: #020817;
+  background: #1a1b26;
 }
 
 html.dark body::-webkit-scrollbar-thumb,
@@ -1874,7 +1875,7 @@ html.dark .post-sidebar-left::-webkit-scrollbar-thumb,
 html.dark .page-sidebar::-webkit-scrollbar-thumb,
 html.dark .post-toc::-webkit-scrollbar-thumb,
 html.dark .page-toc::-webkit-scrollbar-thumb {
-  background: rgba(148,163,184,0.7);
+  background: rgba(122, 162, 247, 0.5);
 }
 
 html.dark body::-webkit-scrollbar-thumb:hover,
@@ -1882,7 +1883,7 @@ html.dark .post-sidebar-left::-webkit-scrollbar-thumb:hover,
 html.dark .page-sidebar::-webkit-scrollbar-thumb:hover,
 html.dark .post-toc::-webkit-scrollbar-thumb:hover,
 html.dark .page-toc::-webkit-scrollbar-thumb:hover {
-  background: rgba(191,219,254,0.9);
+  background: rgba(122, 162, 247, 0.8);
 }
 
 /* Firefox scrollbar colors */
@@ -1892,7 +1893,7 @@ html {
 }
 
 html.dark {
-  scrollbar-color: rgba(148,163,184,0.9) #020817;
+  scrollbar-color: rgba(122, 162, 247, 0.5) #1a1b26;
 }
 
 /* Improve code block separation in dark mode for better readability */
