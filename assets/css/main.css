@@ -326,8 +326,14 @@ html.dark .sidebar-toggle:hover {
 
   .post-layout,
   .post.post-topic {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Prevent double padding on mobile since site-main already has padding */
+  .site-main .container {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .header-inner {
