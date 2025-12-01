@@ -28,7 +28,7 @@ layout: default
         
         <div class="archive__content">
           {% for post in group.items %}
-            <article class="archive__item fade-in-on-scroll">
+            <article class="archive__item">
               {% if post.header and post.header.overlay_image %}
               <a class="archive__item-teaser" href="{{ post.url | relative_url }}">
                 <img src="{{ post.header.overlay_image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
@@ -94,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const activeLink = document.querySelector(`.timeline-link[data-target="${id}"]`);
         if (activeLink) {
             activeLink.classList.add('active');
-            // activeLink.scrollIntoView({ block: 'center', behavior: 'smooth' }); 
         }
       }
     });
@@ -102,6 +101,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.querySelectorAll('.timeline-section').forEach(section => {
     observer.observe(section);
+  });
+
+  // New observer for fading posts in/out
+  const itemObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      } else {
+        entry.target.classList.remove('is-visible');
+      }
+    });
+  }, {
+    rootMargin: '-100px 0px -10% 0px', // Trigger fade out when approaching sticky header
+    threshold: [0, 0.1, 1.0]
+  });
+
+  document.querySelectorAll('.archive__item').forEach(item => {
+    itemObserver.observe(item);
   });
 });
 </script>
@@ -115,15 +132,16 @@ document.addEventListener("DOMContentLoaded", function() {
     position: absolute;
     top: 0;
     left: 100%;
-    margin-left: 2rem; /* Gap between content and sidebar */
+    margin-left: 2rem;
     width: 160px;
-    height: 100%; /* Fill height of wrapper so sticky inner can travel */
+    height: 100%;
+    padding-top: 1rem; /* Align with content */
   }
 
   .sidebar-sticky {
     position: -webkit-sticky;
     position: sticky;
-    top: 2rem; /* Offset from top of viewport */
+    top: 6rem;
   }
 
   /* Hide timeline if screen is too narrow to fit it outside the container */
@@ -145,10 +163,21 @@ document.addEventListener("DOMContentLoaded", function() {
     margin-bottom: 1.5rem;
     color: var(--accent);
     position: sticky;
-    top: 60px; /* Below site header */
-    background: var(--bg);
-    z-index: 10;
+    top: 0;
+    background: var(--bg); /* Opaque background to mask scrolling content */
+    z-index: 20;
     padding-top: 0.5rem;
+  }
+
+  .archive__item {
+    transition: opacity 0.1s ease-out, filter 0.1s ease-out;
+    opacity: 0; /* Completely invisible when out of view */
+    filter: blur(1px);
+  }
+  
+  .archive__item.is-visible {
+    opacity: 1;
+    filter: none;
   }
 
   .timeline-nav ul {
