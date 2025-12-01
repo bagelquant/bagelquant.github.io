@@ -515,7 +515,7 @@ html.dark .sidebar-toggle:hover {
 .post-header-overlay .post-title {
   font-size: 2.6rem;
   margin: 0 0 0.5rem;
-  color: var(--muted-light);
+  color: #ffffff;
 }
 
 .post-header-overlay .post-subtitle {
