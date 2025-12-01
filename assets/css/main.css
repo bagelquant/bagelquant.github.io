@@ -336,6 +336,13 @@ html.dark .sidebar-toggle:hover {
     padding-right: 0;
   }
 
+  /* Restore padding for title/header content on mobile to provide a gap */
+  .post-hero .container,
+  .post-header-overlay.container {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
   .header-inner {
     min-height: 64px;
   }
@@ -682,13 +689,6 @@ html.dark .sidebar-toggle:hover {
   padding: 1.2rem 0;
   box-shadow: none;
   border: none;
-}
-
-@media (max-width: 768px) {
-  .home-main .home-content {
-    padding: 1rem 0;
-    border-radius: 0;
-  }
 }
 
 /* Constrain images in article content to text width */
@@ -1071,6 +1071,12 @@ html.dark .sidebar-toggle:hover {
     padding: 0.9rem 0.8rem 1.8rem;
   }
 
+  .post-hero .container,
+  .post-header-overlay.container {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
   .header-inner {
     min-height: 52px;
     padding-top: 0;
@@ -1171,7 +1177,8 @@ html.dark .sidebar-toggle:hover {
     max-width: 120px;
   }
 
-  .post-content {
+  .post-content,
+  .home-main .home-content {
     padding: 1rem 0;
   }
 
@@ -1504,16 +1511,16 @@ html.dark .sidebar-toggle:hover {
 
 .post-layout {
   max-width: 1320px;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 /* Topic pages: center content similar to 3-column width */
 .post.post-topic {
   max-width: 1320px;
   margin: 0 auto;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .post-sidebar-left,
