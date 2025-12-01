@@ -1,8 +1,8 @@
 ---
-title: "Yanzhong(Eric) Huang"
+title: "Yanzhong (Eric) Huang"
 layout: aboutme
 permalink: /about-me/
-excerpt: "M.S. Quantitative Finance"
+excerpt: "Quantitative Finance | Data Science | Risk Analytics"
 header:
   overlay_image: /assets/images/eric-huang-prohead.png
   actions:
@@ -10,72 +10,67 @@ header:
       url: "https://bagelquant.github.io/assets/docs/Yanzhong-Huang-Resume-2025-10-03.pdf"
 ---
 
-Hi, I’m **Yanzhong (Eric) Huang**—a quantitative finance practitioner who blends fundamental intuition with rigorous data science. I’m finishing my **Master of Quantitative Finance at Rutgers Business School (Dec 2025)** and I build research pipelines end-to-end: from data engineering and factor design to backtesting, risk, and portfolio construction. I care about clean code, reproducible research, and practical models that survive out-of-sample.
+I am a **Quantitative Finance practitioner** graduating with a Master of Quantitative Finance from Rutgers Business School in **December 2025** (GPA 4.0). My expertise lies at the intersection of fundamental financial intuition and rigorous data science, where I build end-to-end research pipelines—from raw data engineering and factor design to robust backtesting, risk modeling, and portfolio construction.
 
-## Now
+Currently based in the NYC area, I am seeking opportunities in **Quantitative Research**, **Risk Management**, or **Portfolio Analytics**, where I can leverage my technical toolkit to drive actionable investment insights.
 
-- 🎓 **MQF @ Rutgers** (GPA 4.0), graduating **December 2025**
-- 🔎 Looking for roles in **Quant Research/Analytics**, **Risk/Model Validation**, or **Portfolio Analytics** (NYC preferred)
-- 👨🏻‍💻 Building reusable Python tooling for factor research and portfolio analytics
+## Core Competencies
 
-## What I bring
+My approach combines clean, reproducible code with practical models designed to survive out-of-sample testing.
 
-- **Full-stack quant workflow**: data ingestion/cleaning → factor construction → forecasting → portfolio/risk → reporting
-- **Modeling toolkit**: statistical (OLS, PCA, time-series), ML (Lasso/ENet, RF/GBM, simple NN), risk (VaR/CVaR, stress tests)
-- **Data engineering**: ETL pipelines, SQL databases, data quality checks, automated reporting
-- **Research discipline**: rolling validation, IC/IR diagnostics, robust OOS tests, clear experiment logs
-- **Communication**: translate models into portfolio decisions, attribution, and risk narratives for PMs & stakeholders
+*   **Full-Stack Quant Workflow:** End-to-end execution of data ingestion, factor construction, signal forecasting, and portfolio optimization.
+*   **Advanced Modeling:** Expertise in statistical methods (OLS, PCA, Time-Series), Machine Learning (Lasso/ENet, Random Forest, GBM), and Risk Analytics (VaR/CVaR, Stress Testing).
+*   **Data Engineering:** Construction of robust ETL pipelines, SQL database management, and automated data quality assurance.
+*   **Research Discipline:** Commitment to rigorous rolling validation, IC/IR diagnostics, and transparent experiment logging.
 
-## Experience Highlights
+## Professional Experience
 
-**Quant Analyst Intern, Quantel Asset Management (NY, Jun–Aug 2025)**  
+**Quant Analyst Intern | Quantel Asset Management**  
+*New York, NY (Jun 2025 – Aug 2025)*
 
-- Led a 3-intern team to deliver a streamlined **equity multi-factor research pipeline** (construction, evaluation, backtest, optimization) and used it to interpret client portfolio performance.  
-- **Reconstructed 170+ academic characteristics**, ran IC/IR, OLS & quantile tests; curated **~80 candidate signals** plus macro predictors.  
-- Built **return-forecasting** models (Lasso/ENet, Random Forest, PCA-regression, simple NN) with **rolling-window validation** and robust OOS testing.
+*   **Pipeline Architecture:** Led a team of three to architect and deliver a streamlined equity multi-factor research pipeline, covering signal construction, evaluation, backtesting, and optimization.
+*   **Factor Research:** Reconstructed 170+ academic characteristics and curated ~80 candidate signals through rigorous IC/IR, OLS, and quantile analysis.
+*   **Forecasting Models:** Developed return-forecasting models utilizing Lasso/ENet, Random Forest, and PCA-regression, validated through rolling-window and out-of-sample testing.
 
-**Quant Developer, Sincere Digits (Beijing, 2022–2024)**  
+**Quant Developer | Sincere Digits**  
+*Beijing, China (2022 – 2024)*
 
-- Led a 4-person backend team building a **FastAPI** fund-research site (evaluation, recommendation, backtesting).  
-- Productionized ETL and quality checks (SQL reconciliations, exception queues); vectorization **cut runtime ~65%**.  
-- Implemented performance & risk analytics (Sharpe/Sortino/MaxDD, **VaR/CVaR** with historical & MC, traffic-light backtests).
+*   **System Development:** Directed a backend team in building a FastAPI-based fund research platform, featuring automated evaluation, recommendation engines, and backtesting capabilities.
+*   **Performance Optimization:** Productionized ETL workflows and data quality checks, achieving a **65% reduction in runtime** through vectorization and SQL optimization.
+*   **Risk Analytics:** Implemented comprehensive risk metrics (VaR/CVaR, Sharpe, Sortino, MaxDD) and traffic-light backtesting protocols.
 
-**Quant Analyst → PM, Hongchou Investment (Beijing, 2021–2022)**  
+**Quant Analyst & Project Manager | Hongchou Investment**  
+*Beijing, China (2021 – 2022)*
 
-- Drove a **fundamental → quant** transition; helped oversee **5 portfolios** (~200M CNY AUM).  
-- Built a **fund scoring system** (clustering, pattern mining, risk-adjusted metrics) and automated exposure/attribution reports.  
-- Implemented **Brinson–Fachler attribution**, TE/IR tracking, and IC/IR + attribution bridges for PM decks.
+*   **Strategic Transition:** Spearheaded the firm's transition from fundamental to quantitative strategies, overseeing 5 portfolios with **~200M CNY AUM**.
+*   **Analytics Infrastructure:** Built a proprietary fund scoring system using clustering and pattern mining, automating exposure and attribution reporting.
+*   **Performance Attribution:** Implemented Brinson–Fachler attribution and tracking error analysis to support Portfolio Manager decision-making.
 
-## Projects & Research
+## Academic & Research Projects
 
-- **RA (with Prof. Zhengzi “Sophia” Li, Rutgers, 2025– )**: LLM-based measurement of **analyst–management disagreement** in earnings calls; link to volume, volatility, and returns.  
-- **Time-Series Volatility for Risk-Timing**: GARCH family & LSTM overlays for factor portfolios; validated with RMSE/MAE and trading KPIs.  
-- **Portfolio Exposure Dashboard**: maps Barra/Axioma styles, integrates **Greeks buckets** and vol-surface timers for overlay decisions.  
-- **Open-source (PyPI)**: `bagel-factor` (factor evaluation pipeline) and `bagel-tushare` (robust, multithreaded data ingestion).
+*   **Analyst-Management Disagreement (Research Assistant):** Leveraging LLMs to measure sentiment divergence in earnings calls and analyzing its predictive power on trading volume, volatility, and returns (with Prof. Zhengzi “Sophia” Li, Rutgers).
+*   **Risk-Timing Models:** Applying GARCH and LSTM models to forecast time-series volatility for factor portfolios, validated against RMSE/MAE and trading KPIs.
+*   **Open Source Contributions:** 
+    *   `bagel-factor`: A comprehensive factor evaluation pipeline on PyPI.
+    *   `bagel-tushare`: A robust, multithreaded data ingestion tool for financial datasets.
 
-## Skills Snapshot
+## Technical Arsenal
 
-**Programming**: Python (pandas, NumPy, scikit-learn, TensorFlow, PyTorch, PyQt), C++, R, MATLAB, VBA, Linux  
-**Data/DB**: SQL, MySQL, PostgreSQL, SQLAlchemy; clean ETL, reconciliations, QA checks  
-**Quant Modeling**: Fama-French/factor research, **Vasicek/Hull–White/Heston**, Black-Scholes, mean-variance & utility  
-**Risk/Validation**: **VaR/CVaR** (hist/param/MC), stress & scenario, backtesting (Kupiec/Christoffersen), **SR 11-7** mindset  
-**ML**: Lasso/ENet/Ridge/GLS, Random Forest/GBM, LSTM; feature engineering; cross-validation & drift monitoring  
-**Tools**: Git/GitHub, VS Code/PyCharm, Vim/Neovim, Tableau, LaTeX; clean repos & reproducible notebooks
+| Domain | Tools & Technologies |
+| :--- | :--- |
+| **Programming** | Python (pandas, NumPy, scikit-learn, TensorFlow, PyTorch), C++, R, MATLAB, SQL |
+| **Quant Modeling** | Fama-French Factors, Black-Scholes, Vasicek/Hull-White, Mean-Variance Optimization |
+| **Risk & Validation** | VaR/CVaR (Historical/Parametric/MC), Stress Testing, Backtesting (Kupiec/Christoffersen) |
+| **Machine Learning** | Linear Models (Lasso/Ridge), Tree-based (RF/GBM), Deep Learning (LSTM/NN) |
+| **Development** | Git, Docker, Linux, VS Code, Neovim, LaTeX, Tableau |
 
-## Philosophy
+## Professional Philosophy
 
-I believe **simple, well-validated models** deployed with reliable data and thoughtful risk controls beat fragile complexity. My north star is **clarity**—in code, in research design, and in how model outputs inform portfolio decisions.
-
----
-
-## Elsewhere
-
-- **Email**: <eric.yanzhong.huang@gmail.com>  
-- **LinkedIn**: <https://www.linkedin.com/in/yanzhonghuang>  
-- **GitHub**: <https://github.com/bagelquant>  
-- **Blog**: <https://bagelquant.com/>
+I advocate for **simplicity and robustness** over fragile complexity. My goal is to deliver clarity—whether in code architecture, research design, or the communication of model outputs to stakeholders. I believe that rigorous validation and reliable data are the cornerstones of sustainable alpha.
 
 ---
 
-If you’re building rigorous, practical quant processes—and want someone who ships research **and** production code—let’s talk.
-
+**Connect with Me:**
+*   [Email](mailto:eric.yanzhong.huang@gmail.com)
+*   [LinkedIn](https://www.linkedin.com/in/yanzhonghuang)
+*   [GitHub](https://github.com/bagelquant)
