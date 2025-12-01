@@ -16,9 +16,7 @@ layout: default
   </header>
 {% endif %}
 
-<div class="layout-three-column post-layout">
-  <div class="post-sidebar-left"></div>
-
+<div class="timeline-wrapper container">
   <main class="post-main">
     {% assign sorted_posts = site.posts | sort: "date" | reverse %}
     {% assign postsByDate = sorted_posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
@@ -62,8 +60,8 @@ layout: default
     {% endfor %}
   </main>
 
-  <aside class="post-toc timeline-sidebar">
-    <div class="sidebar-inner">
+  <aside class="timeline-sidebar">
+    <div class="sidebar-sticky">
       <nav class="timeline-nav">
         <ul>
           {% for group in postsByDate %}
@@ -96,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const activeLink = document.querySelector(`.timeline-link[data-target="${id}"]`);
         if (activeLink) {
             activeLink.classList.add('active');
-            // Optional: Scroll sidebar to keep active link in view if list is long
             // activeLink.scrollIntoView({ block: 'center', behavior: 'smooth' }); 
         }
       }
@@ -110,8 +107,34 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 <style>
+  .timeline-wrapper {
+    position: relative;
+  }
+
+  .timeline-sidebar {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 2rem; /* Gap between content and sidebar */
+    width: 160px;
+    height: 100%; /* Fill height of wrapper so sticky inner can travel */
+  }
+
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2rem; /* Offset from top of viewport */
+  }
+
+  /* Hide timeline if screen is too narrow to fit it outside the container */
+  @media (max-width: 1550px) {
+    .timeline-sidebar {
+      display: none;
+    }
+  }
+
   .timeline-section {
-    scroll-margin-top: 100px; /* Offset for sticky header */
+    scroll-margin-top: 100px;
     margin-bottom: 4rem;
   }
   
@@ -122,14 +145,10 @@ document.addEventListener("DOMContentLoaded", function() {
     margin-bottom: 1.5rem;
     color: var(--accent);
     position: sticky;
-    top: 0; /* Stick month title within the column if desired, or just static */
+    top: 60px; /* Below site header */
     background: var(--bg);
     z-index: 10;
     padding-top: 0.5rem;
-  }
-
-  .timeline-nav {
-    margin-top: 1rem;
   }
 
   .timeline-nav ul {
@@ -164,20 +183,5 @@ document.addEventListener("DOMContentLoaded", function() {
     border-left-color: var(--accent);
     font-weight: 600;
     background: linear-gradient(to right, var(--accent-soft), transparent);
-  }
-  
-  /* Custom Layout Overrides for Timeline Page */
-  @media (min-width: 961px) {
-    .layout-three-column {
-      /* Override grid to widen center column and center it (symmetric sidebars) */
-      grid-template-columns: 160px 1fr 160px !important;
-    }
-  }
-
-  /* Mobile adjustments */
-  @media (max-width: 960px) {
-    .timeline-sidebar {
-      display: none; /* Hide timeline on mobile or move it? Usually hide sidebar on mobile */
-    }
   }
 </style>
