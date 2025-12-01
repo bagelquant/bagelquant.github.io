@@ -63,6 +63,8 @@ layout: default
     {% if segments.size > 1 %}
       <nav class="breadcrumb">
         <a href="{{ '/' | relative_url }}">Home</a>
+        &nbsp;/&nbsp;
+        <a href="{{ '/topics/' | relative_url }}">Topics</a>
         {% for segment in segments %}
           {% unless segment == '' or segment contains '.html' %}
             {% assign path = path | append:'/' | append:segment %}

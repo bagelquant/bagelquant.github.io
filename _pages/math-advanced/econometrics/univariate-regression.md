@@ -30,7 +30,7 @@ We might try minimizing the sum of residuals: $\sum_{i=1}^{n} \epsilon_i$. Howev
 
 **Second attempt:**
 
-To avoid cancellation, we could minimize the sum of absolute residuals: $\sum_{i=1}^{n} |\epsilon_i|$. Yet, this approach leads to a non-differentiable function, complicating optimization.
+To avoid cancellation, we could minimize the sum of absolute residuals: $\sum_{i=1}^{n} \|\epsilon_i\|$. Yet, this approach leads to a non-differentiable function, complicating optimization.
 
 **Best approach:**
 
