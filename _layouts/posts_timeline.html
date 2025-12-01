@@ -1,0 +1,183 @@
+---
+layout: default
+---
+
+{% if page.header and page.header.overlay_image %}
+  <header class="post-hero">
+    <div class="post-header-cover">
+      <img src="{{ page.header.overlay_image | relative_url }}" alt="{{ page.title }}" loading="lazy" />
+      <div class="post-header-overlay container">
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.excerpt %}
+          <p class="post-subtitle">{{ page.excerpt | strip_html }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+{% endif %}
+
+<div class="layout-three-column post-layout">
+  <div class="post-sidebar-left"></div>
+
+  <main class="post-main">
+    {% assign sorted_posts = site.posts | sort: "date" | reverse %}
+    {% assign postsByDate = sorted_posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
+    
+    {% for group in postsByDate %}
+      {% assign group_date = group.name | append: "-01" | date: "%B %Y" %}
+      <section id="month-{{ group.name }}" class="timeline-section">
+        <h2 class="timeline-month-title">{{ group_date }}</h2>
+        
+        <div class="archive__content">
+          {% for post in group.items %}
+            <article class="archive__item fade-in-on-scroll">
+              {% if post.header and post.header.overlay_image %}
+              <a class="archive__item-teaser" href="{{ post.url | relative_url }}">
+                <img src="{{ post.header.overlay_image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
+              </a>
+              {% endif %}
+
+              <div class="archive__item-body">
+                <h2 class="archive__item-title">
+                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h2>
+
+                <p class="archive__item-meta">
+                  {{ post.date | date: "%B %d, %Y" }}
+                  {% if post.read_time %}
+                    &bull; {{ post.read_time }} minute read
+                  {% endif %}
+                </p>
+
+                {% if post.excerpt %}
+                <p class="archive__item-excerpt">
+                  {{ post.excerpt | strip_html | truncate: 220 }}
+                </p>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+  </main>
+
+  <aside class="post-toc timeline-sidebar">
+    <div class="sidebar-inner">
+      <nav class="timeline-nav">
+        <ul>
+          {% for group in postsByDate %}
+            {% assign group_date = group.name | append: "-01" | date: "%B %Y" %}
+            <li><a href="#month-{{ group.name }}" class="timeline-link" data-target="month-{{ group.name }}">{{ group_date }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </aside>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -70% 0px', // Trigger when section is near top
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        // Remove active class from all
+        document.querySelectorAll('.timeline-link').forEach(link => {
+          link.classList.remove('active');
+        });
+        // Add active class to corresponding link
+        const activeLink = document.querySelector(`.timeline-link[data-target="${id}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+            // Optional: Scroll sidebar to keep active link in view if list is long
+            // activeLink.scrollIntoView({ block: 'center', behavior: 'smooth' }); 
+        }
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.timeline-section').forEach(section => {
+    observer.observe(section);
+  });
+});
+</script>
+
+<style>
+  .timeline-section {
+    scroll-margin-top: 100px; /* Offset for sticky header */
+    margin-bottom: 4rem;
+  }
+  
+  .timeline-month-title {
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+    position: sticky;
+    top: 0; /* Stick month title within the column if desired, or just static */
+    background: var(--bg);
+    z-index: 10;
+    padding-top: 0.5rem;
+  }
+
+  .timeline-nav {
+    margin-top: 1rem;
+  }
+
+  .timeline-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 2px solid var(--border);
+  }
+  
+  .timeline-nav li {
+    margin: 0;
+  }
+  
+  .timeline-nav a {
+    display: block;
+    padding: 0.35rem 1rem;
+    color: var(--muted);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    margin-left: -2px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  
+  .timeline-nav a:hover {
+    color: var(--text);
+    border-left-color: var(--muted-light);
+  }
+  
+  .timeline-nav a.active {
+    color: var(--accent);
+    border-left-color: var(--accent);
+    font-weight: 600;
+    background: linear-gradient(to right, var(--accent-soft), transparent);
+  }
+  
+  /* Custom Layout Overrides for Timeline Page */
+  @media (min-width: 961px) {
+    .layout-three-column {
+      /* Override grid to widen center column and center it (symmetric sidebars) */
+      grid-template-columns: 160px 1fr 160px !important;
+    }
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 960px) {
+    .timeline-sidebar {
+      display: none; /* Hide timeline on mobile or move it? Usually hide sidebar on mobile */
+    }
+  }
+</style>
