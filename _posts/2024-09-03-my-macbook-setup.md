@@ -41,13 +41,13 @@ Homebrew
 Casks
 
 ```zsh
-brew install --cask miniconda zoom pdf-expert raycast r-app rstudio google-chrome microsoft-teams chatgpt visual-studio-code blackhole-16ch iterm2 zed zen
+brew install --cask miniconda zoom pdf-expert raycast blackhole-16ch ghostty obsidian
 ```
 
 Formulas
 
 ```zsh
-brew install nvim gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi lazygit ffmpegthumbnailer poppler deno pkg-config mysql
+brew install nvim gh zsh-syntax-highlighting zsh-autosuggestions font-jetbrains-mono-nerd-font ripgrep fd pandoc basictex texlive fzf npm wget gcc yazi lazygit ffmpegthumbnailer poppler deno pkg-config mysql fastfetch uv
 ```
 
 aerospace
