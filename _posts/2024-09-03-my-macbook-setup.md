@@ -41,7 +41,7 @@ Homebrew
 Casks
 
 ```zsh
-brew install --cask miniconda zoom pdf-expert raycast blackhole-16ch ghostty obsidian
+brew install --cask miniconda zoom pdf-expert raycast blackhole-16ch ghostty obsidian chatgpt spotify
 ```
 
 Formulas
