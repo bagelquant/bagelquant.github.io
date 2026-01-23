@@ -2,7 +2,6 @@
 title: "Create your own Python package"
 layout: post
 ---
-
 In the past, I used `twine` to upload my packages to PyPI, building them with a `setup.py` file. Recently, I switched to using `pyproject.toml` for project management and package building. In my experience, it is more concise and much easier to maintain. With a single file, you can manage your project, build your package, and upload it to PyPI.
 
 For reference, see the [Official Python Packaging Guide](https://packaging.python.org/en/latest/guides/section-build-and-publish/).
@@ -113,3 +112,23 @@ python3 -m twine upload --repository pypi dist/*
 ```
 
 With `pyproject.toml`, managing, building, and publishing your Python package is simple and efficient.
+
+### Using `uv` for Uploading
+
+Alternatively, you can use `uv`, a tool that combines building and uploading into a single command. Install it with `pip install uv`.
+
+To upload your package using `uv`, simply run:
+
+```shell
+uv add --dev build twine
+```
+
+Then, build and upload your package with:
+
+```shell
+uv run python -m build
+```
+
+```shell
+uv run twine upload dist/*
+```
