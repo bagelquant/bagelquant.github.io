@@ -21,19 +21,21 @@ Github link: [bagel-mean-variance](https://github.com/bagelquant/bagel-mean-vari
 
 ## bagel-factor
 
-Github link: [bagel-factor](https://github.com/bagelquant/bagel-factor)
+Github link: [bagel-factor](https://github.com/bagelquant/bagel-factor/blob/main/README.md)
 
-`bagel-factor` is a universal, high-performance Python library for evaluating quantitative factor performance in equity trading. It’s flexible and efficient, built on pandas/numpy, and ships with a modular API for research and production.
+A small, pandas-first toolkit for **single-factor evaluation/testing**.
 
-Key Features
+### Scope (by design)
 
-- Universality: price, fundamental, alternative data; daily or intraday.
-- Performance: vectorized operations; minimal copying.
-- Extensibility: plug in custom metrics and workflows.
-- Usability: clear, typed API and ready-to-use plots.
+This package focuses on:
+- canonical point-in-time data helpers (`(date, asset)` panel)
+- preprocessing transforms (clip / z-score / rank)
+- single-factor evaluation (IC/ICIR, quantile returns, long-short, coverage, turnover)
 
-## Factor Model in China Stock Market
+It intentionally does **not** implement multi-factor modeling or portfolio backtesting.
 
-This project aims to build a **stock scoring and backtesting system** based on classical factor investing techniques. The goal is to start simple, generate interpretable results, and gradually expand into more sophisticated methods.
+### Key documents
 
-Link: [Factor Model in China Stock Market](https://bagelquant.com/factor-model-in-china/)
+- [Factor evaluation guide](https://github.com/bagelquant/bagel-factor/blob/main/docs/factor_evaluation.md)
+- [End-to-end example](https://github.com/bagelquant/bagel-factor/blob/main/docs/example.md)
+
