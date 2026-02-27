@@ -72,5 +72,4 @@ This section provides a comprehensive overview of factor models from academic an
 
 Other related reads:
 
-1. A more practical approach example of factor model implementation can be found in the [Factor Model in China Stock Market](https://bagelquant.com/factor-model-in-china/) project.
-2. A comprehensive literature review on factor models can be found in the [Factor Models Literature Review](https://bagelquant.com/factor-models-literature-review/) post.
+- A comprehensive literature review on factor models can be found in the [Factor Models Literature Review](https://bagelquant.com/factor-models-literature-review/) post.
