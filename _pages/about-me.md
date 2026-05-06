@@ -5,9 +5,6 @@ permalink: /about-me/
 excerpt: "Systematic Asset Management | Quantitative Research | Portfolio Construction"
 header:
   overlay_image: /assets/images/eric-huang-prohead.png
-  <!-- actions: -->
-  <!--   - label: "Download Resume" -->
-  <!--     url: "https://bagelquant.github.io/assets/docs/Yanzhong-Huang-Resume-2025-10-03.pdf" -->
 ---
 
 ## About Me
