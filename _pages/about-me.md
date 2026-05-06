@@ -17,8 +17,6 @@ My research spans factor design, signal evaluation, and portfolio construction, 
 
 I am currently based in Shanghai and working at Systematica Investments, focusing on equity alpha research within a systematic investment framework.
 
----
-
 ## Core Competencies
 
 * Systematic equity factor research and signal evaluation
@@ -27,11 +25,9 @@ I am currently based in Shanghai and working at Systematica Investments, focusin
 * Risk and performance analysis (drawdowns, attribution, stress testing)
 * Python-based quantitative research pipelines
 
----
-
 ## Professional Experience
 
-**Junior Quantitative Analyst | Systematica Investments**
+**Junior Quantitative Analyst - Systematica Investments**
 
 *Shanghai, China*
 
@@ -40,7 +36,7 @@ I am currently based in Shanghai and working at Systematica Investments, focusin
 * Out-of-sample and regime-based robustness testing
 
 
-**Quant Analyst Intern | Quantel Asset Management**
+**Quant Analyst Intern - Quantel Asset Management**
 
 *New York, NY*
 
@@ -49,7 +45,7 @@ I am currently based in Shanghai and working at Systematica Investments, focusin
 * Rolling out-of-sample testing for models and strategies
 * Drawdown and risk analysis of portfolio behavior
 
-**Quant Analyst | Sincere Digits**
+**Quant Analyst - Sincere Digits**
 
 *Beijing, China*
 
@@ -57,7 +53,7 @@ I am currently based in Shanghai and working at Systematica Investments, focusin
 * Developed fund scoring and risk evaluation frameworks
 * Automated reporting and data workflows for portfolio monitoring
 
-**Analyst | Hongchou Investment**
+**Analyst - Hongchou Investment**
 
 *Beijing, China*
 
@@ -75,19 +71,13 @@ I am currently based in Shanghai and working at Systematica Investments, focusin
 * Open-Source Quant Tools
     bagel-factor, bagel-tushare for factor research and data infrastructure.
 
---- 
-
 ## Technical Skills
 
 Python, SQL, C++ for systematic investment research.
 
----
-
 ## Philosophy
 
 I focus on building strategies that are stable, explainable, and robust under real market conditions. The goal is not maximizing backtest performance, but understanding structural behavior of signals across regimes.
-
----
 
 ## Connect with Me
 
