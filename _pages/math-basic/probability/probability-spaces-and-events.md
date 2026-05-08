@@ -151,11 +151,13 @@ Because events are sets, we can use set identities to derive probability formula
 For any two events A and B:
 
 - **Union:**
+
   $$
   P(A \cup B) = P(A) + P(B) - P(A \cap B).
   $$
 
 - **Inclusion–Exclusion for Three Events:**
+
   $$
   P(A \cup B \cup C) = P(A) + P(B) + P(C)
   - P(A \cap B) - P(A \cap C) - P(B \cap C)

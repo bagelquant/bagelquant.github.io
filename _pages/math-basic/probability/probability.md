@@ -1,10 +1,10 @@
 ---
 title: "Probability"
-layout: topic
 permalink: /probability/
 header:
   overlay_image: assets/images/headers/probability.png
   overlay_opacity: 0.8
+nav: "probability"
 ---
 
 Probability is the mathematics of uncertainty. For quantitative finance, it is as fundamental as calculus and linear algebra: every model of risk, return, and pricing is ultimately a probabilistic statement about the future.

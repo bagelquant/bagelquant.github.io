@@ -4,24 +4,41 @@ aliases: BagelQuant
 author: "Eric Huang"
 excerpt: "Your go-to spot for all things quirky and quant!"
 header:
-  overlay_image: /assets/images/headers/topic-header.png
+  overlay_image: /assets/images/header.png
   actions:
     - label: "About me"
       url: "https://bagelquant.github.io/about-me/"
 --- 
 
-This blog is a collection of quant skills, finance knowledge, programming tips, and personal experiences. Aimed at quant enthusiasts, finance professionals, and anyone interested in the world of finance, BagelQuant offers a unique perspective on the industry. More about me can be found [here](https://bagelquant.github.io/about-me/).
+BagelQuant is a personal research blog focused on systematic equity investing.
 
-<div class="quant-world-container">
-  {% include quant-world.html %}
-</div>
+The name comes from Bagel — my Shiba Inu — combined with quantitative research.
 
-This blog provides a variety of resources, including:
+This blog is a long-term research notebook for studying how modern quantitative investment systems are designed, researched, and implemented in practice: from alpha generation to portfolio construction, execution, and research infrastructure.
 
-- **[Topics on Quantitative Finance](_pages/topics.md)**: A series of well-structured articles covering all aspects from the quant world map above. It is a great resource for both beginners and experienced quants to learn the core quant concepts and techniques.
-- **[Projects](_pages/projects.md)**: A collection of my personal projects related to quantitative finance, including code samples, data analysis, and research findings.
-- **[Posts](_pages/posts.md)**: Regular blog posts discussing recent developments in quantitative finance, market trends, and personal insights.
+Systematic equity portfolio management can generally be viewed as five core components:
 
-Feel free to explore the blog and reach out if you have any questions or suggestions!
+- An **alpha model** that forecasts expected returns
+- A **portfolio construction process** that converts forecasts into portfolio weights and positions
+- A **risk model** that estimates covariance structure and portfolio exposures
+- An **execution and implementation layer** that accounts for transaction costs, liquidity, market impact, and operational constraints
+- A **research and production platform** that supports data, infrastructure, backtesting, deployment, and monitoring
 
-[Contact and about me](_pages/about-me.md)
+Together, the first four components form the core investment process of a quantitative hedge fund.
+
+A simplified but representative workflow may look like this:
+
+![Systematic equity portfolio management workflow](/assets/images/systematic-equity-portfolio-management-workflow.png)
+
+For example, a simple market-neutral strategy may:
+
+- Long the top 100 stocks with the highest predicted returns
+- Short the bottom 100 stocks with the lowest predicted returns
+- Apply risk constraints to maintain neutrality and diversification
+- Rebalance periodically based on updated forecasts
+
+BagelQuant explores these topics in depth — including the mathematics, statistics, machine learning, optimization, and engineering required to build real-world quantitative equity investment systems.
+
+The goal is to serve as a practical and research-oriented hub for learning quantitative equity investing.
+
+See all coverage in the [Topics page](_pages/topics.md). 

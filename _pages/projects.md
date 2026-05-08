@@ -4,7 +4,7 @@ title: "Projects"
 permalink: /projects/
 excerpt: "Quant projects from BagelQuant."
 header: 
-    overlay_image: /assets/images/headers/topic-header.png
+    overlay_image: /assets/images/headers/header.png
 ---
 
 ## bagel-factor
