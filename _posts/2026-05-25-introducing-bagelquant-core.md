@@ -11,9 +11,7 @@ I recently started building **BagelQuant-Core**, a new project focused on struct
 
 The goal is not just to implement another factor library or backtesting framework, but to define a **clean abstraction layer for how alpha is represented, composed, and executed**.
 
----
-
-## 1. Motivation
+## Motivation
 
 In most quant research workflows, alpha signals are treated as:
 
@@ -36,9 +34,7 @@ This creates fragmentation between:
 
 **BagelQuant-Core is designed to unify these layers.**
 
----
-
-## 2. Core Idea: Everything is a DAG
+## Core Idea: Everything is a DAG
 
 At the center of the system is a simple but powerful idea:
 
@@ -57,9 +53,7 @@ This allows us to formalize:
 - risk transformations
 - portfolio construction rules
 
----
-
-## 3. Key Abstractions
+## Key Abstractions
 
 BagelQuant-Core introduces three core concepts:
 
@@ -73,9 +67,7 @@ A **Panel** is a structured data object:
 
 Think of it as the atomic unit of quant data.
 
----
-
-### 3.2 Operator
+### Operator
 
 An **Operator** transforms one or more panels into another panel.
 
@@ -88,9 +80,8 @@ Examples:
 
 Operators are **pure functions over panels**.
 
----
 
-### 3.3 Composer
+### Composer
 
 A **Composer** combines multiple panels or operators into a higher-level structure.
 
@@ -104,9 +95,7 @@ happens.
 
 It is the bridge between **research logic and portfolio logic**.
 
----
-
-## 4. Execution Model
+## Execution Model
 
 Once expressed as a DAG:
 
@@ -121,9 +110,7 @@ This makes research workflows:
 - modular
 - scalable
 
----
-
-## 5. Example Conceptual Flow
+## Example Conceptual Flow
 
 A simple alpha pipeline might look like:
 
@@ -134,9 +121,7 @@ A simple alpha pipeline might look like:
 
 Everything is explicitly structured rather than implicit in code scripts.
 
----
-
-## 6. Why This Matters
+## Why This Matters
 
 This design is trying to solve a structural problem in quant research:
 
@@ -152,9 +137,7 @@ By enforcing a DAG + compositional abstraction, we get:
 - easier factor experimentation
 - scalable portfolio construction
 
----
-
-## 7. Current Status
+## Current Status
 
 BagelQuant-Core is currently in early development.
 
@@ -171,9 +154,7 @@ What is next:
 - integration with live data pipelines
 - backtesting engine alignment
 
----
-
-## 8. Roadmap Direction
+## Roadmap Direction
 
 The long-term direction is:
 
@@ -188,9 +169,7 @@ This includes:
 
 All unified under a single compositional system.
 
----
-
-## 9. Closing
+## Closing
 
 BagelQuant-Core is still early, but the goal is clear:
 
