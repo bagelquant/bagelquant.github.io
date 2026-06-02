@@ -19,15 +19,4 @@ permalink: /search.json
     {% endunless %}
   {% endif %}
 {% endfor %}
-{% comment %}Posts{% endcomment %}
-{% for post in site.posts %}
-  {% unless first %}, {% endunless %}
-  {
-    "title": {{ post.title | jsonify }},
-    "url": {{ post.url | relative_url | jsonify }},
-    "content": {{ post.content | strip_html | strip_newlines | jsonify }},
-    "date": {{ post.date | date_to_string | jsonify }}
-  }
-  {% assign first = false %}
-{% endfor %}
 ]
