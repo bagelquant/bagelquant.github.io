@@ -32,37 +32,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Quant world image: show light or dark variant depending on theme */
-.quant-world {
-  max-width: 100%;
-  margin: 1.25rem 0;
-}
-
-.quant-world-container {
-  background: var(--bg-alt);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-soft);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  border: 1px solid var(--border);
-}
-
-html.dark .quant-world-container {
-  border: 1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 8px 30px rgba(2,6,23,0.35);
-}
-
-.quant-world .quant-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.quant-world .img-dark { display: none; }
-.quant-world .img-light { display: block; }
-
-html.dark .quant-world .img-dark { display: block; }
-html.dark .quant-world .img-light { display: none; }
-
   /* About button (home hero) */
   --about-bg: #ffd8a8;       /* 浅橙 */
   --about-text: #1f2937;     /* 深色文字，保证对比 */
@@ -2120,4 +2089,3 @@ html.dark .copy-code-button.copied {
   opacity: 1;
   transform: translateY(0);
 }
-

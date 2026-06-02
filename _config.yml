@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: BagelQuant
 email: eric.yanzhong.huang@gmail.com
-description: Your go-to spot for all things quirky and quant!
+description: A knowledge base, open-source ecosystem, and future research platform for quantitative equity portfolio management.
 url: "https://bagelquant.com"
   
 twitter_username: EricYanzhongH
@@ -32,12 +32,7 @@ kramdown:
 mathjax: true
 # Outputting
 permalink: /:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-include:
-  - _pages
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -53,10 +48,8 @@ include:
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
   - jemoji
   - jekyll-include-cache
 
@@ -113,9 +106,4 @@ enable_copy_code_button: true
 #     url: "{{ page.url | absolute_url }}"
 #     title: "{{ page.title }}"
 
-# Site header
-header:
-  teaser: /assets/images/bagel_photo.png
-
 logo: "/assets/images/logo.png"
-
