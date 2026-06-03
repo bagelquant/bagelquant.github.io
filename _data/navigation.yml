@@ -1,17 +1,25 @@
 main:
   - title: "Home"
+    i18n_key: nav.home
     url: /
   - title: "Quick Start"
+    i18n_key: nav.quick_start
     url: /quick-start/
   - title: "Learn"
+    i18n_key: nav.learn
     url: /learn/
   - title: "Research"
+    i18n_key: nav.research
     url: /research/
   - title: "Projects"
+    i18n_key: nav.projects
     url: /projects/
   - title: "Docs"
+    i18n_key: nav.docs
     url: /docs/
   - title: "App"
+    i18n_key: nav.app
     url: /app/
   - title: "About Me"
+    i18n_key: nav.about
     url: /about-me/

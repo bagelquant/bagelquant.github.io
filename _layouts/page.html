@@ -23,7 +23,7 @@ layout: default
       {% assign nav_items = site.data.navigation[nav_key] %}
 
       {% if nav_items %}
-        <h2>Navigation</h2>
+        <h2 data-i18n="layout.navigation">Navigation</h2>
         {% assign current = page.url %}
         <ul class="sidebar-nav">
           {% assign parent_index = 0 %}
@@ -62,7 +62,7 @@ layout: default
     {% assign path = '' %}
     {% if segments.size > 1 %}
       <nav class="breadcrumb">
-        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/' | relative_url }}" data-i18n="layout.home">Home</a>
         {% for segment in segments %}
           {% unless segment == '' or segment contains '.html' %}
             {% assign path = path | append:'/' | append:segment %}
