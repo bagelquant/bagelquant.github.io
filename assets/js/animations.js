@@ -1,7 +1,22 @@
 (function() {
   document.addEventListener('DOMContentLoaded', function() {
+    const autoTargets = document.querySelectorAll(
+      '.home-content > *, .post-content > *, .page-sidebar, .post-sidebar-left, .page-toc, .post-toc, .author-profile'
+    );
+    autoTargets.forEach((target, index) => {
+      if (!target.classList.contains('fade-in-on-scroll')) {
+        target.classList.add('fade-in-on-scroll');
+        target.style.transitionDelay = `${Math.min(index * 35, 280)}ms`;
+      }
+    });
+
     const targets = document.querySelectorAll('.fade-in-on-scroll');
     if (!targets.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      targets.forEach(target => target.classList.add('is-visible'));
+      return;
+    }
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
