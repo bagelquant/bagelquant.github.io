@@ -19,15 +19,43 @@ layout: default
 <div class="layout-three-column post-layout">
   <aside class="page-sidebar">
     <div class="sidebar-inner">
-      {% assign nav_key = page.nav | default: page.category %}
-      {% assign nav_items = site.data.navigation[nav_key] %}
-
-      {% if nav_items %}
-        <h2 data-i18n="layout.navigation">Navigation</h2>
+      {% if page.nav and site.data.navigation[page.nav] %}
+        <h2>{% if page.lang == 'zh' %}导航{% else %}Navigation{% endif %}</h2>
         {% assign current = page.url %}
         <ul class="sidebar-nav">
           {% assign parent_index = 0 %}
-          {% for item in nav_items %}
+          {% for item in site.data.navigation[page.nav] %}
+            {% assign parent_index = parent_index | plus: 1 %}
+            <li>
+              {% if item.url %}
+                {% assign item_url = item.url %}
+                <a href="{{ item_url | relative_url }}" class="{% if current == item_url or current contains item_url %}active{% endif %}">{{ parent_index }}. {{ item.title }}</a>
+              {% else %}
+                {{ parent_index }}. {{ item.title }}
+              {% endif %}
+
+              {% if item.children %}
+                <div class="sidebar-nav-separator"></div>
+                <ul class="sidebar-nav-children">
+                  {% assign child_index = 0 %}
+                  {% for child in item.children %}
+                    {% assign child_index = child_index | plus: 1 %}
+                    <li>
+                      {% assign child_url = child.url %}
+                      <a href="{{ child_url | relative_url }}" class="{% if current == child_url or current contains child_url %}active{% endif %}">{{ parent_index }}.{{ child_index }}. {{ child.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% elsif page.category and site.data.navigation[page.category] %}
+        <h2>{% if page.lang == 'zh' %}导航{% else %}Navigation{% endif %}</h2>
+        {% assign current = page.url %}
+        <ul class="sidebar-nav">
+          {% assign parent_index = 0 %}
+          {% for item in site.data.navigation[page.category] %}
             {% assign parent_index = parent_index | plus: 1 %}
             <li>
               {% if item.url %}
@@ -58,18 +86,11 @@ layout: default
   </aside>
 
   <main class="post-main">
-    {% assign segments = page.url | split:'/' %}
-    {% assign path = '' %}
-    {% if segments.size > 1 %}
+    {% if page.url != '/' and page.url != '/zh/' %}
       <nav class="breadcrumb">
-        <a href="{{ '/' | relative_url }}" data-i18n="layout.home">Home</a>
-        {% for segment in segments %}
-          {% unless segment == '' or segment contains '.html' %}
-            {% assign path = path | append:'/' | append:segment %}
-            &nbsp;/&nbsp;
-            <a href="{{ path | append:'/' | relative_url }}">{{ segment | replace:'-',' ' | capitalize }}</a>
-          {% endunless %}
-        {% endfor %}
+        <a href="{% if page.lang == 'zh' %}{{ '/zh/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">{% if page.lang == 'zh' %}首页{% else %}Home{% endif %}</a>
+        &nbsp;/&nbsp;
+        <span>{{ page.title }}</span>
       </nav>
     {% endif %}
 

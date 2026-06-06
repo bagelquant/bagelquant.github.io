@@ -3,6 +3,9 @@ layout: page
 title: "Docs"
 permalink: /docs/
 excerpt: "Documentation for the BagelQuant open-source ecosystem."
+lang: en
+ref: "docs"
+alternate_lang_url: /zh/docs/
 ---
 
 BagelQuant software is organized into focused packages that support quantitative equity research.

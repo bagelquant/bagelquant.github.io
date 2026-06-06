@@ -2,6 +2,9 @@
 layout: page
 title: "Complete Workflow"
 permalink: /quick-start/complete-workflow/
+lang: en
+ref: "quick-start-complete-workflow"
+alternate_lang_url: /zh/quick-start/complete-workflow/
 ---
 
 The complete BagelQuant workflow is:

@@ -2,6 +2,9 @@
 layout: page
 title: "Learning Roadmap"
 permalink: /learn/roadmap/
+lang: en
+ref: "learn-roadmap"
+alternate_lang_url: /zh/learn/roadmap/
 ---
 
 Use this roadmap according to the problem in front of you:

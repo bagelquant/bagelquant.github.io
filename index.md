@@ -9,7 +9,10 @@ header:
   actions:
     - label: "Start here"
       url: "/quick-start/"
---- 
+lang: en
+ref: "home"
+alternate_lang_url: /zh/
+---
 
 ## What is BagelQuant?
 

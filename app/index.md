@@ -3,6 +3,9 @@ layout: page
 title: "App"
 permalink: /app/
 excerpt: "A future graph-based research platform for quantitative equity workflows."
+lang: en
+ref: "app"
+alternate_lang_url: /zh/app/
 ---
 
 The BagelQuant App is under development.

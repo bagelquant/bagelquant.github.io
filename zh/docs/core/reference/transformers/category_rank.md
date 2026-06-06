@@ -1,0 +1,55 @@
+---
+layout: page
+title: "category_rank"
+permalink: /zh/docs/core/reference/transformers/category_rank/
+lang: zh
+ref: "docs-core-reference-transformers-category_rank"
+alternate_lang_url: /docs/core/reference/transformers/category_rank/
+nav: docs_zh
+---
+
+# category_rank
+
+```python
+category_rank(source, categories, name=None, metadata=None)
+```
+
+Return percentile ranks within each category and row.
+
+## Parameters
+
+**source** : Panel | Graph
+: Input numeric `Panel` or single-output `Graph`.
+**categories** : Panel | Graph
+: Matching `CategoryPanel` containing row-wise group labels.
+**name** : str | None, default `None`
+: Optional graph-node name. A generated name is used when omitted.
+**metadata** : Mapping[str, Any] | None, default `None`
+: Optional metadata stored on the graph node.
+
+## Returns
+
+**Graph**
+: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+
+## Examples
+
+```python
+import pandas as pd
+
+from bagelquant_core import CategoryPanel, Domain, Panel
+from bagelquant_core.transformer import category_rank
+
+domain = Domain(calendar=pd.to_datetime(["2024-01-02"]), universe=["a", "b", "c"])
+factor = Panel.from_domain(pd.DataFrame({"a": [1.0], "b": [3.0], "c": [8.0]}, index=domain.sessions), domain)
+industry = CategoryPanel.from_domain(pd.DataFrame({"a": ["tech"], "b": ["tech"], "c": ["bank"]}, index=domain.sessions), domain)
+
+result = category_rank(factor, industry).compute().data
+print(result)
+```
+
+## Notes
+
+Rows represent time and columns represent assets.
+
+Missing group labels are excluded from the group calculation.

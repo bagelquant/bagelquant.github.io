@@ -2,6 +2,9 @@
 layout: page
 title: "Portfolio Construction in 30 Minutes"
 permalink: /quick-start/portfolio-construction-in-30-min/
+lang: en
+ref: "quick-start-portfolio-construction-in-30-min"
+alternate_lang_url: /zh/quick-start/portfolio-construction-in-30-min/
 ---
 
 Portfolio construction converts forecasts into investable weights. The design must balance expected return, risk, diversification, liquidity, turnover, and implementation costs.

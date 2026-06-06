@@ -1,25 +1,125 @@
 main:
   - title: "Home"
-    i18n_key: nav.home
     url: /
   - title: "Quick Start"
-    i18n_key: nav.quick_start
     url: /quick-start/
   - title: "Learn"
-    i18n_key: nav.learn
     url: /learn/
   - title: "Research"
-    i18n_key: nav.research
     url: /research/
   - title: "Projects"
-    i18n_key: nav.projects
     url: /projects/
   - title: "Docs"
-    i18n_key: nav.docs
     url: /docs/
   - title: "App"
-    i18n_key: nav.app
     url: /app/
   - title: "About Me"
-    i18n_key: nav.about
     url: /about-me/
+
+main_zh:
+  - title: "首页"
+    url: /zh/
+  - title: "快速开始"
+    url: /zh/quick-start/
+  - title: "学习"
+    url: /zh/learn/
+  - title: "研究"
+    url: /zh/research/
+  - title: "项目"
+    url: /zh/projects/
+  - title: "文档"
+    url: /zh/docs/
+  - title: "应用"
+    url: /zh/app/
+  - title: "关于我"
+    url: /zh/about-me/
+
+docs_en:
+  - title: "Overview"
+    url: /docs/
+  - title: "bagelquant-core"
+    url: /docs/core/
+    children:
+      - title: "Quick Start"
+        url: /docs/core/quick-start/
+      - title: "Architecture"
+        url: /docs/core/architecture/
+      - title: "Public API"
+        url: /docs/core/public-api/
+      - title: "Internals"
+        url: /docs/core/internals/
+      - title: "Reference"
+        url: /docs/core/reference/
+  - title: "bagelquant-data"
+    url: /docs/data/
+    children:
+      - title: "Quick Start"
+        url: /docs/data/quick-start/
+      - title: "Architecture"
+        url: /docs/data/architecture/
+      - title: "Public API"
+        url: /docs/data/public-api/
+      - title: "Internals"
+        url: /docs/data/internals/
+      - title: "Backend API"
+        url: /docs/data/backend-api/
+  - title: "bagelquant-bt"
+    url: /docs/bt/
+    children:
+      - title: "Quick Start"
+        url: /docs/bt/quick-start/
+      - title: "Architecture"
+        url: /docs/bt/architecture/
+      - title: "Public API"
+        url: /docs/bt/public-api/
+      - title: "Internals"
+        url: /docs/bt/internals/
+      - title: "Factor Evaluation"
+        url: /docs/bt/factor-evaluation/
+  - title: "bagelquant-app"
+    url: /docs/app/
+
+docs_zh:
+  - title: "概览"
+    url: /zh/docs/
+  - title: "bagelquant-core"
+    url: /zh/docs/core/
+    children:
+      - title: "快速开始"
+        url: /zh/docs/core/quick-start/
+      - title: "架构"
+        url: /zh/docs/core/architecture/
+      - title: "公开 API"
+        url: /zh/docs/core/public-api/
+      - title: "内部实现"
+        url: /zh/docs/core/internals/
+      - title: "参考"
+        url: /zh/docs/core/reference/
+  - title: "bagelquant-data"
+    url: /zh/docs/data/
+    children:
+      - title: "快速开始"
+        url: /zh/docs/data/quick-start/
+      - title: "架构"
+        url: /zh/docs/data/architecture/
+      - title: "公开 API"
+        url: /zh/docs/data/public-api/
+      - title: "内部实现"
+        url: /zh/docs/data/internals/
+      - title: "后端 API"
+        url: /zh/docs/data/backend-api/
+  - title: "bagelquant-bt"
+    url: /zh/docs/bt/
+    children:
+      - title: "快速开始"
+        url: /zh/docs/bt/quick-start/
+      - title: "架构"
+        url: /zh/docs/bt/architecture/
+      - title: "公开 API"
+        url: /zh/docs/bt/public-api/
+      - title: "内部实现"
+        url: /zh/docs/bt/internals/
+      - title: "因子评估"
+        url: /zh/docs/bt/factor-evaluation/
+  - title: "bagelquant-app"
+    url: /zh/docs/app/

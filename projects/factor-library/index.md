@@ -2,6 +2,9 @@
 layout: page
 title: "Factor Library"
 permalink: /projects/factor-library/
+lang: en
+ref: "projects-factor-library"
+alternate_lang_url: /zh/projects/factor-library/
 ---
 
 This section is under development. It will collect factor definitions, implementation notes, and evaluation results.

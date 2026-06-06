@@ -2,6 +2,9 @@
 layout: page
 title: "Alpha Research in 30 Minutes"
 permalink: /quick-start/alpha-research-in-30-min/
+lang: en
+ref: "quick-start-alpha-research-in-30-min"
+alternate_lang_url: /zh/quick-start/alpha-research-in-30-min/
 ---
 
 Alpha research is the disciplined search for signals that contain information about future returns. A useful research loop checks data timing, economic intuition, coverage, information coefficient, quantile returns, turnover, and robustness across periods and universes.

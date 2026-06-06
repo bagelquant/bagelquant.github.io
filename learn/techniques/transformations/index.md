@@ -2,6 +2,9 @@
 layout: page
 title: "Transformations"
 permalink: /learn/techniques/transformations/
+lang: en
+ref: "learn-techniques-transformations"
+alternate_lang_url: /zh/learn/techniques/transformations/
 ---
 
 Transformations can stabilize variance, reduce sensitivity to outliers, and make signals easier to compare.

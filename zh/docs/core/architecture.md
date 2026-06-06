@@ -1,0 +1,120 @@
+---
+layout: page
+title: "架构与设计"
+permalink: /zh/docs/core/architecture/
+lang: zh
+ref: "docs-core-architecture"
+alternate_lang_url: /docs/core/architecture/
+nav: docs_zh
+---
+
+# BagelQuant Core Architecture
+
+## Overview
+
+BagelQuant separates concrete panel data from lazy graph logic.
+
+```text
+Panel inputs
+    |
+    v
+Transformer and Composer functions
+    |
+    v
+Graph logic chains
+    |
+    v
+Internal execution runtime
+    |
+    v
+Cached Panel outputs
+```
+
+## Panel
+
+A `Panel` is an immutable numeric frame indexed by time and asset. Every input
+is normalized through a `Domain`, which owns its trading sessions and asset
+membership. Panels return a defensive copy through `Panel.data`.
+
+```python
+price = Panel.from_domain(price_df, domain, name="price")
+```
+
+Panels are DAG leaves and execution outputs.
+
+## Graph
+
+A `Graph` represents lazy derived logic:
+
+```python
+bm_ratio = div(book, price, name="bm_ratio")
+bm_factor = rank(zscore(bm_ratio), name="bm_factor")
+```
+
+Graph responsibilities:
+
+- Collect dependencies
+- Validate DAG structure
+- Expose reproducible specs
+- Delegate execution
+- Expose the materialized `output` panel after execution
+
+Graph does not own domain operations or raw input data.
+
+## Transformer Functions
+
+A transformer is unary:
+
+```text
+Panel | Graph -> Graph
+```
+
+```python
+signal = rank(raw_factor, name="signal")
+```
+
+Custom transformers use `@transformer`.
+
+## Composer Functions
+
+A composer accepts one or more inputs:
+
+```text
+(Panel | Graph, ...) -> Graph
+```
+
+```python
+bm_ratio = div(book, price, name="bm_ratio")
+```
+
+Custom composers use `@composer`.
+
+## Internal Nodes
+
+Calling an operation creates an internal node that stores:
+
+- Parent nodes
+- Qualified operation name
+- Serializable configuration
+- Node name and metadata
+- Cached output panel after execution
+
+Users do not construct internal nodes directly.
+
+## Execution
+
+Calling `Graph.compute()` invokes an internal runtime that recursively
+evaluates dependencies, checks multi-input Domain compatibility, computes
+deterministic cache keys, caches output panels during execution, and updates
+node outputs. Dynamic membership masks are reapplied to derived outputs.
+Within one runtime invocation, shared DAG nodes are evaluated once. When
+composer inputs are already aligned, the runtime reuses the existing frames
+and their stored hashes.
+
+```python
+signal.compute()
+panel = signal.output
+```
+
+Scheduling is sequential in the current implementation. Parallel scheduling,
+persisted caches, and incremental invalidation remain future work.

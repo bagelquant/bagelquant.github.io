@@ -3,6 +3,9 @@ layout: page
 title: "Research"
 permalink: /research/
 excerpt: "A practitioner workflow for turning ideas into testable equity strategies."
+lang: en
+ref: "research"
+alternate_lang_url: /zh/research/
 ---
 
 This section is for researchers who want to turn concepts into investable, reproducible strategies.
