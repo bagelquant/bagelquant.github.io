@@ -10,49 +10,112 @@ ref: "about-me"
 alternate_lang_url: /about-me/
 ---
 
-## About Me
+## 关于我
 
-我是一名股票量化研究员，深耕alpha研究、组合优化。我信奉alpha必须具有经济意义，而不是简单的统计特性，强调不同市场环境下的稳健性、稳定性和样本外表现。这些因素才是真正可投资的关键，而不是简单的回测曲线。
+你好，我是 Eric。
 
-我的研究涵盖因子设计、信号评估和组合构建，并使用 Python 作为支持实证分析和验证的工具。
+我是一名量化研究员，主要关注系统化股票投资、组合构建以及研究基础设施建设。
 
-我目前居住在上海，在 Systematica Investments 工作，专注于系统投资框架内的股票alpha研究。
+我的工作位于金融理论、统计学、机器学习与软件工程的交叉点，并长期围绕一个问题展开：
 
-## 核心能力
+**投资想法如何最终转化为可投资的组合？**
 
-* 因子研究和信号评估
-* 组合构建
-* 样本外验证和稳健性测试
-* 风险和绩效分析（回撤、归因、压力测试）
-* 基于Python的定量研究pipeling
+这个问题贯穿整个研究流程——从原始数据、因子设计、预测模型，到组合构建，以及在真实交易约束下的评估与验证。
 
-## 专业经验
+相比追求回测表现最大化，我更关注一个信号是否具有稳健性、可解释性，以及在真实投资环境中的可部署性。
 
-**量化研究员 - Systematica Investments**
+目前我居住于上海，就职于 Systematica Investments，从事系统投资框架下的股票 Alpha 研究。
 
-*中国上海*
+## 研究方向
 
-* Alpha研究
+我的研究兴趣包括：
 
-## 学术与研究项目
+* 股票 Alpha 与因子投资
+* 信号生成与预测建模
+* 组合构建与优化
+* 稳健性与样本外验证
+* 金融数据基础设施
+* 可复现研究系统设计
 
-* 分析师与管理层的分歧（RA，Rutgers University）
-基于 NLP 的财报电话会议分析，以衡量分歧并与市场反应联系起来。
-* 波动率预测和风险时机
-用于波动性预测和组合风险时机的 GARCH 和 LSTM 模型。
-* 开源量化工具
-bagel-因子、bagel-tushare 用于因子研究和数据基础设施。
+## 构建 BagelQuant
 
-## 技术技能
+除工作之外，我也在持续建设 **BagelQuant** —— 一个面向量化股票投资的开源生态与知识平台。
 
-用于系统投资研究的Python、SQL、C++。
+BagelQuant 目标连接完整研究流程：
 
-## Philosophy
+```text
+数据 → 因子 → 预测 → 组合 → 回测
+```
 
-我专注于构建在真实市场条件下稳定、可解释且稳健的策略。目标不是最大化回测性能，而是了解跨体系信号的结构行为。
+目标是让量化研究能够做到：
 
-## 与我联系
+* 可组合，而不是高度耦合
+* 透明，而不是隐藏假设
+* 严谨，同时保持研究迭代效率
 
-- [Email](mailto:eric.yanzhong.huang@gmail.com)  
-- [LinkedIn](https://www.linkedin.com/in/yanzhonghuang)  
-- [GitHub](https://github.com/bagelquant)
+其软件架构基于计算图思想，将数据、变换、因子、预测与组合逻辑抽象为可复用模块，以积木式方式自由组合研究流程。
+
+BagelQuant 同时也是一个持续积累中的知识库，覆盖量化投资、数学、机器学习、优化以及研究工程等主题。
+
+## 研究理念
+
+### 可投资性优先于回测结果
+
+优秀的历史结果往往不能代表未来。
+
+我更关注策略在换手、交易成本、组合约束以及市场环境变化下是否仍然成立。
+
+### 先理解，再优化
+
+模型应首先帮助理解市场，再追求指标提升。
+
+可解释性与结构性认知同样重要。
+
+### 让假设可见
+
+好的研究系统不应隐藏依赖关系与中间过程，而应该让研究流程保持透明。
+
+## 工作经历
+
+### Quantitative Researcher — Systematica Investments
+
+*中国 · 上海*
+
+* 股票 Alpha 研究
+* 信号评估与稳健性分析
+* 面向实际组合约束的研究工作
+
+## 研究与项目
+
+### 分析师与管理层分歧研究
+
+使用 NLP 方法分析财报电话会议内容，研究观点分歧与市场反应之间的关系。
+
+### 波动率预测与风险时机
+
+使用 GARCH 与机器学习方法进行波动率预测与动态风险配置研究。
+
+### 开源量化研究工具
+
+持续建设：
+
+* [bagelquant-core](https://github.com/bagelquant/bagelquant-core), docs at [bagelquant.com/docs/core](https://bagelquant.com/docs/core)
+* [bagelquant-data](https://github.com/bagelquant/bagelquant-data), docs at [bagelquant.com/docs/data](https://bagelquant.com/docs/data)
+* [bagelquant-bt](https://github.com/bagelquant/bagelquant-bt), docs at [bagelquant.com/docs/bt](https://bagelquant.com/docs/bt)
+* [bagelquant.com](https://bagelquant.com)
+
+## 技术栈
+
+Python · SQL · C++
+数据工程 · 研究基础设施 · 金融建模
+
+## 工作之外
+
+除研究工作外，我也喜欢构建系统、整理知识，以及探索软件架构如何提升投资研究效率。
+
+## 联系方式
+
+* Email: [eric.yanzhong.huang@gmail.com](mailto:eric.yanzhong.huang@gmail.com)
+* LinkedIn: [linkedin.com/in/yanzhonghuang](https://linkedin.com/in/yanzhonghuang)
+* GitHub: [github.com/bagelquant](https://github.com/bagelquant)
+* Website: [bagelquant.com](https://bagelquant.com)
