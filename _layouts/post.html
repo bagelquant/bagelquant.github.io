@@ -2,6 +2,11 @@
 layout: default
 ---
 
+{% assign has_h1 = false %}
+{% if content contains '<h1' %}
+  {% assign has_h1 = true %}
+{% endif %}
+
 {% if page.header and page.header.overlay_image %}
   <header class="post-hero">
     <div class="post-header-cover">
@@ -24,7 +29,7 @@ layout: default
   </header>
 {% endif %}
 
-<div class="layout-three-column post-layout">
+<div class="layout-three-column post-layout has-left-sidebar has-toc">
   <aside class="post-sidebar-left">
     <div class="sidebar-inner">
       {% if site.author %}
@@ -55,19 +60,21 @@ layout: default
   <main class="post-main">
     <article class="post">
       {% unless page.header and page.header.overlay_image %}
-        <header class="post-header">
-          <div class="container">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <p class="post-meta">
-              {% if page.date %}
-                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %-d, %Y' }}</time>
-              {% endif %}
-              {% if page.read_time %}
-                &bull; {{ page.read_time }} minute read
-              {% endif %}
-            </p>
-          </div>
-        </header>
+        {% unless has_h1 %}
+          <header class="post-header">
+            <div class="container">
+              <h1 class="post-title">{{ page.title }}</h1>
+              <p class="post-meta">
+                {% if page.date %}
+                  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %-d, %Y' }}</time>
+                {% endif %}
+                {% if page.read_time %}
+                  &bull; {{ page.read_time }} minute read
+                {% endif %}
+              </p>
+            </div>
+          </header>
+        {% endunless %}
       {% endunless %}
 
       <div class="post-content container numbered">

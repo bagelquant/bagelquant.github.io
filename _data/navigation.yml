@@ -7,8 +7,6 @@ main:
     url: /learn/
   - title: "Research"
     url: /research/
-  - title: "Projects"
-    url: /projects/
   - title: "Docs"
     url: /docs/
   - title: "App"
@@ -25,8 +23,6 @@ main_zh:
     url: /zh/learn/
   - title: "研究"
     url: /zh/research/
-  - title: "项目"
-    url: /zh/projects/
   - title: "文档"
     url: /zh/docs/
   - title: "应用"

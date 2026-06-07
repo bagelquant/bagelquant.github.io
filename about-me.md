@@ -85,7 +85,7 @@ Research systems should expose dependencies, transformations, and decisions inst
 * Signal evaluation and robustness analysis
 * Portfolio-oriented research under production constraints
 
-## Selected Research & Projects
+## Selected Research
 
 ### Analyst–Management Disagreement
 

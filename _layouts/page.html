@@ -9,6 +9,10 @@ layout: default
   {% assign sidebar_items = site.data.navigation[page.category] %}
 {% endif %}
 {% assign toc_enabled = true %}
+{% assign has_h1 = false %}
+{% if content contains '<h1' %}
+  {% assign has_h1 = true %}
+{% endif %}
 {% if page.toc == false %}
   {% assign toc_enabled = false %}
 {% endif %}
@@ -81,9 +85,11 @@ layout: default
 
     <article class="post container">
       {% unless page.header and page.header.overlay_image %}
-        <header class="post-header">
-          <h1 class="post-title">{{ page.title }}</h1>
-        </header>
+        {% unless has_h1 %}
+          <header class="post-header">
+            <h1 class="post-title">{{ page.title }}</h1>
+          </header>
+        {% endunless %}
       {% endunless %}
 
       <div class="post-content numbered">

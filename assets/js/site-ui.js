@@ -40,7 +40,7 @@
       if (!sidebar.querySelector('a, li')) return;
 
       var layout = document.querySelector('.layout-three-column');
-      if (!layout || layout.parentNode.querySelector('.sidebar-toggle')) return;
+      if (!layout || layout.querySelector('.sidebar-toggle')) return;
 
       var btn = document.createElement('button');
       btn.type = 'button';
@@ -55,7 +55,7 @@
         sidebar.classList.toggle('is-open');
       });
 
-      layout.parentNode.insertBefore(btn, layout);
+      layout.insertBefore(btn, layout.firstElementChild);
     }
 
     setupToggle();
