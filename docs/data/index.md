@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: content-list
 title: "Overview"
 permalink: /docs/data/
 lang: en
@@ -7,8 +7,6 @@ ref: "docs-data"
 alternate_lang_url: /zh/docs/data/
 nav: docs_en
 ---
-
-# BagelQuant Data
 
 `bagelquant-data` is the provider-neutral data layer for BagelQuant.
 
@@ -19,14 +17,3 @@ analytics.
 Use it as a backend Python package to register providers, manage local data lake
 snapshots, run provider updates, and retrieve pandas datasets or panel-shaped
 objects:
-
-```python
-from bagelquant_data.datasource import DataSourceRegistry, TushareDataSource
-from bagelquant_data.lake import DataLakeManager, LocalDataLake
-
-registry = DataSourceRegistry()
-registry.register(TushareDataSource(token="your-token"))
-
-lake = LocalDataLake(".bagelquant-data-lake")
-manager = DataLakeManager(lake, registry=registry)
-```

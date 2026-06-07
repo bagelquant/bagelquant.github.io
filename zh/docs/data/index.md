@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: content-list
 title: "概览"
 permalink: /zh/docs/data/
 lang: zh
@@ -7,8 +7,6 @@ ref: "docs-data"
 alternate_lang_url: /docs/data/
 nav: docs_zh
 ---
-
-# BagelQuant 数据
 
 `bagelquant-data` 是 BagelQuant 的提供商中立数据层。
 

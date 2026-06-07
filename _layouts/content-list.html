@@ -32,35 +32,8 @@ layout: default
     {% endif %}
   {% endif %}
 {% endfor %}
-{% assign toc_enabled = true %}
-{% assign has_h1 = false %}
-{% if content contains '<h1' %}
-  {% assign has_h1 = true %}
-{% endif %}
-{% if page.toc == false %}
-  {% assign toc_enabled = false %}
-{% endif %}
-{% unless content contains '<h2' %}
-  {% unless content contains '<h3' %}
-    {% assign toc_enabled = false %}
-  {% endunless %}
-{% endunless %}
 
-{% if page.header and page.header.overlay_image %}
-  <header class="post-hero">
-    <div class="post-header-cover">
-      <img src="{{ page.header.overlay_image | relative_url }}" alt="{{ page.title }}" loading="lazy" />
-      <div class="post-header-overlay container">
-        <h1 class="post-title">{{ page.title }}</h1>
-        {% if page.excerpt %}
-          <p class="post-subtitle">{{ page.excerpt | strip_html }}</p>
-        {% endif %}
-      </div>
-    </div>
-  </header>
-{% endif %}
-
-<div class="layout-three-column post-layout{% if sidebar_items %} has-left-sidebar{% endif %}{% if toc_enabled %} has-toc{% endif %}">
+<div class="layout-three-column post-layout{% if sidebar_items %} has-left-sidebar{% endif %}">
   {% if sidebar_items %}
   <aside class="page-sidebar">
     <div class="sidebar-inner">
@@ -72,7 +45,11 @@ layout: default
             {% assign parent_index = parent_index | plus: 1 %}
             <li>
               {% if item.url %}
-                {% assign item_url = item.url %}
+                {% if item.name == 'index.md' %}
+                  {% assign item_url = '/' | append: item_dir | append: '/' %}
+                {% else %}
+                  {% assign item_url = '/' | append: item.path | remove: '.md' | append: '/' %}
+                {% endif %}
                 <a href="{{ item_url | relative_url }}" class="{% if current == item_url or current contains item_url %}active{% endif %}">{{ parent_index }}. {{ item.title }}</a>
               {% else %}
                 {{ parent_index }}. {{ item.title }}
@@ -152,23 +129,90 @@ layout: default
     {% endif %}
 
     <article class="post container">
-      {% unless page.header and page.header.overlay_image %}
-        {% unless has_h1 %}
-          <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-          </header>
-        {% endunless %}
-      {% endunless %}
+      <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+      </header>
 
-      <div class="post-content numbered">
+      <div class="post-content">
         {{ content }}
       </div>
+
+      <!-- Content List Section -->
+      <section class="content-list-section">
+        <div class="content-list-container">
+          <ul id="content-list-body" class="content-list-items">
+            <!-- Populated by JavaScript -->
+          </ul>
+        </div>
+      </section>
     </article>
   </main>
-
-  {% if toc_enabled %}
-  <aside class="page-toc" data-generated-toc>
-    <div class="toc-inner"></div>
-  </aside>
-  {% endif %}
 </div>
+
+<script>
+(function() {
+  // Get current page path
+  const pagePath = '{{ page.path }}';
+  const pageDir = '{{ page_dir }}';
+  const pageDirDepth = {{ page_dir_depth }};
+  
+  // Fetch content data from Jekyll's site data
+  const contentData = [
+    {% for item in all_files %}
+      {% assign item_dir = item.path | split: '/' | pop | join: '/' %}
+        {% if item.name == 'index.md' %}
+          {% assign item_title = item_dir | split: '/' | last | replace: '-', ' ' | capitalize %}
+        {% else %}
+          {% assign item_title = item.data.title | default: item.name | remove: '.md' | replace: '-', ' ' | capitalize %}
+        {% endif %}
+        {% if item.name == 'index.md' %}
+          {% assign item_url = '/' | append: item_dir | append: '/' %}
+        {% else %}
+          {% assign item_url = '/' | append: item.path | remove: '.md' | append: '/' %}
+        {% endif %}
+        {
+          path: "{{ item.path }}",
+          name: "{{ item.name }}",
+          title: "{{ item_title }}",
+          url: "{{ item_url }}"
+        },
+    {% endfor %}
+  ].filter(item => item && item.url);
+
+  function getItemDir(path) {
+    const slash = path.lastIndexOf('/');
+    return slash === -1 ? '' : path.slice(0, slash);
+  }
+
+  function getItemDepth(path) {
+    return path ? path.split('/').length : 0;
+  }
+
+  const scopedData = contentData.filter(item => {
+    if (!item.path || item.path === pagePath) return false;
+    const itemDir = getItemDir(item.path);
+    if (itemDir === pageDir) return true;
+    return item.name === 'index.md' &&
+      itemDir.startsWith(pageDir + '/') &&
+      getItemDepth(itemDir) === pageDirDepth + 1;
+  });
+
+  // Render list
+  function renderList(data) {
+    const list = document.getElementById('content-list-body');
+    list.innerHTML = data.map(item => `
+      <li class="content-list-item">
+        <a href="${item.url}" class="content-link">${item.title}</a>
+      </li>
+    `).join('');
+  }
+
+  if (scopedData.length > 0) {
+    renderList(scopedData);
+  } else {
+    // No items found
+    document.querySelector('.content-list-container').innerHTML = 
+      '<p class="no-content">{% if page.lang == "zh" %}此目录中没有文件。{% else %}No files in this directory.{% endif %}</p>';
+  }
+})();
+</script>

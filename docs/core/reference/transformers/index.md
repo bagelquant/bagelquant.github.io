@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: content-list
 title: "Overview"
 permalink: /docs/core/reference/transformers/
 lang: en
@@ -8,26 +8,8 @@ alternate_lang_url: /zh/docs/core/reference/transformers/
 nav: docs_en
 ---
 
-# Transformer Reference
-
 Each public transformer has a dedicated reference page with its signature,
 parameters, return value, notes, and an example.
-
-- [`abs`](./abs.md)
-- [`abs_value`](./abs_value.md)
-- [`anscombe`](./anscombe.md)
-- [`arccos`](./arccos.md)
-- [`arcsin`](./arcsin.md)
-- [`arctan`](./arctan.md)
-- [`arctanh`](./arctanh.md)
-- [`bfill`](./bfill.md)
-- [`boxcox`](./boxcox.md)
-- [`category_demean`](./category_demean.md)
-- [`category_mean`](./category_mean.md)
-- [`category_rank`](./category_rank.md)
-- [`category_zscore`](./category_zscore.md)
-- [`constant`](./constant.md)
-- [`cos`](./cos.md)
 - [`date_age_constraint`](./date_age_constraint.md)
 - [`delta`](./delta.md)
 - [`demean`](./demean.md)

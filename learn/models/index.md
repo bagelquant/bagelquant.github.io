@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: content-list
 title: "Models"
 permalink: /learn/models/
 lang: en
@@ -8,7 +8,3 @@ alternate_lang_url: /zh/learn/models/
 ---
 
 This section covers the models used to estimate relationships, combine features, and solve portfolio problems.
-
-- [Econometrics](/learn/models/econometrics/)
-- [Machine Learning](/learn/models/machine-learning/)
-- [Optimization Models](/learn/models/optimization/)

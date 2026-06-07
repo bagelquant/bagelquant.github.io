@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: content-list
 title: "bagelquant-app"
 permalink: /zh/docs/app/
 lang: zh
