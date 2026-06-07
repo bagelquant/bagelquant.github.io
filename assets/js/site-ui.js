@@ -1,4 +1,32 @@
 (function() {
+  function setupTopNavToggle() {
+    var mq = window.matchMedia('(max-width: 720px)');
+    var nav = document.querySelector('.site-nav');
+    if (!nav) return;
+
+    var btn = nav.querySelector('.nav-toggle');
+    var list = nav.querySelector('.nav-list');
+    if (!btn || !list) return;
+
+    function closeMenu() {
+      list.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+    btn.addEventListener('click', function() {
+      var isOpen = list.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    list.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    mq.addEventListener('change', function(e) {
+      if (!e.matches) closeMenu();
+    });
+  }
+
   function setupSidebarToggle() {
     var mq = window.matchMedia('(max-width: 960px)');
     var initialized = false;
@@ -180,6 +208,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', function() {
+    setupTopNavToggle();
     setupSidebarToggle();
     setupHeadingNumbers();
     setupToc();
