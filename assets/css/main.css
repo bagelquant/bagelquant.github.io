@@ -2220,6 +2220,24 @@ html.dark .copy-code-button.copied {
   transform: translateY(0);
 }
 
+.site-header,
+.site-main,
+.site-footer {
+  transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+}
+
+html.is-language-switching .site-header,
+html.is-language-switching .site-main,
+html.is-language-switching .site-footer {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+html.is-language-switching .site-nav .nav-link-language {
+  opacity: 0.72;
+  transform: scale(0.97);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -2234,6 +2252,14 @@ html.dark .copy-code-button.copied {
   }
 
   .fade-in-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+
+  .site-header,
+  .site-main,
+  .site-footer,
+  html.is-language-switching .site-nav .nav-link-language {
     opacity: 1;
     transform: none;
   }
