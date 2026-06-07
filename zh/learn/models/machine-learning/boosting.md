@@ -7,6 +7,4 @@ ref: "learn-models-machine-learning-boosting"
 alternate_lang_url: /learn/models/machine-learning/boosting/
 ---
 
-> 本页是 [/learn/models/machine-learning/boosting/](/learn/models/machine-learning/boosting/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
-
-本节仍在建设中。 It will cover gradient boosting, feature interactions, regularization, and robust model evaluation.
+此部分正在开发中。它将涵盖梯度提升、特征交互、正则化和鲁棒模型评估。

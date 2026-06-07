@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "架构与设计"
+title: "Architecture And Design"
 permalink: /zh/docs/core/architecture/
 lang: zh
 ref: "docs-core-architecture"
@@ -8,11 +8,11 @@ alternate_lang_url: /docs/core/architecture/
 nav: docs_zh
 ---
 
-# BagelQuant Core Architecture
+# BagelQuant 核心架构
 
-## Overview
+## 概览
 
-BagelQuant separates concrete panel data from lazy graph logic.
+BagelQuant 将具体面板数据与惰性图逻辑分开。
 
 ```text
 Panel inputs
@@ -32,38 +32,38 @@ Cached Panel outputs
 
 ## Panel
 
-A `Panel` is an immutable numeric frame indexed by time and asset. Every input
-is normalized through a `Domain`, which owns its trading sessions and asset
-membership. Panels return a defensive copy through `Panel.data`.
+`Panel` 是按时间和资产索引的不可变数字框架。每个输入
+通过 `Domain` 进行标准化，`Domain` 拥有其交易会话和资产
+会员资格。面板通过 `Panel.data` 返回防御副本。
 
 ```python
 price = Panel.from_domain(price_df, domain, name="price")
 ```
 
-Panels are DAG leaves and execution outputs.
+面板是 DAG 叶子和执行输出。
 
 ## Graph
 
-A `Graph` represents lazy derived logic:
+`Graph` 表示惰性派生逻辑：
 
 ```python
 bm_ratio = div(book, price, name="bm_ratio")
 bm_factor = rank(zscore(bm_ratio), name="bm_factor")
 ```
 
-Graph responsibilities:
+图职责：
 
-- Collect dependencies
-- Validate DAG structure
-- Expose reproducible specs
-- Delegate execution
-- Expose the materialized `output` panel after execution
+- 收集依赖项
+- 验证DAG结构
+- 公开可重复的规格
+- 委托执行
+- 执行后暴露物化的`output`面板
 
-Graph does not own domain operations or raw input data.
+图不拥有域操作或原始输入数据。
 
-## Transformer Functions
+## 变压器函数
 
-A transformer is unary:
+变压器是一元的：
 
 ```text
 Panel | Graph -> Graph
@@ -73,11 +73,11 @@ Panel | Graph -> Graph
 signal = rank(raw_factor, name="signal")
 ```
 
-Custom transformers use `@transformer`.
+定制变压器使用 `@transformer`。
 
-## Composer Functions
+## 作曲家功能
 
-A composer accepts one or more inputs:
+作曲家接受一个或多个输入：
 
 ```text
 (Panel | Graph, ...) -> Graph
@@ -87,34 +87,34 @@ A composer accepts one or more inputs:
 bm_ratio = div(book, price, name="bm_ratio")
 ```
 
-Custom composers use `@composer`.
+自定义作曲家使用 `@composer`。
 
-## Internal Nodes
+## 内部节点
 
-Calling an operation creates an internal node that stores:
+调用操作会创建一个内部节点，该节点存储：
 
-- Parent nodes
-- Qualified operation name
-- Serializable configuration
-- Node name and metadata
-- Cached output panel after execution
+- 父节点
+- 合格的操作名称
+- 可串行化的配置
+- 节点名称和元数据
+- 执行后缓存输出面板
 
-Users do not construct internal nodes directly.
+用户不直接构造内部节点。
 
 ## Execution
 
-Calling `Graph.compute()` invokes an internal runtime that recursively
-evaluates dependencies, checks multi-input Domain compatibility, computes
-deterministic cache keys, caches output panels during execution, and updates
-node outputs. Dynamic membership masks are reapplied to derived outputs.
-Within one runtime invocation, shared DAG nodes are evaluated once. When
-composer inputs are already aligned, the runtime reuses the existing frames
-and their stored hashes.
+调用 `Graph.compute()` 会递归地调用内部运行时
+评估依赖关系，检查多输入域兼容性，计算
+确定性缓存键，在执行期间缓存输出面板，并更新
+节点输出。动态成员资格掩码被重新应用于导出的输出。
+在一次运行时调用内，共享 DAG 节点将被评估一次。什么时候
+作曲家输入已经对齐，运行时重用现有框架
+以及它们存储的哈希值。
 
 ```python
 signal.compute()
 panel = signal.output
 ```
 
-Scheduling is sequential in the current implementation. Parallel scheduling,
-persisted caches, and incremental invalidation remain future work.
+在当前的实现中，调度是顺序的。并行调度，
+持久化缓存和增量失效仍然是未来的工作。

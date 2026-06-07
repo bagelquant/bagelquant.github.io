@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "内部实现"
+title: "Internal Documentation"
 permalink: /zh/docs/bt/internals/
 lang: zh
 ref: "docs-bt-internals"
@@ -8,61 +8,65 @@ alternate_lang_url: /docs/bt/internals/
 nav: docs_zh
 ---
 
-# 内部实现
+# 内部文档
 
-本页面面向维护者。
+本页为维护者描述了实施细节。
 
-## 权重回测流程
-
-```text
-校验 weights 和 prices
-    |
-    v
-对齐共同日期和资产
-    |
-    v
-计算资产收益
-    |
-    v
-计算组合毛收益
-    |
-    v
-计算换手和交易成本
-    |
-    v
-构建 BacktestResult
-```
-
-权重被解释为每个时间点的目标权重。成本模型使用权重变化和初始资金估算交易名义金额。
-
-## 因子评估流程
+## 重量回测流量
 
 ```text
-校验 factor 和 prices
+validate weights and prices
     |
     v
-计算 forward returns
+align to common dates/assets
     |
     v
-计算截面 IC
+compute asset returns
     |
     v
-计算分位数组合收益
+compute gross portfolio returns
     |
     v
-构建 top-N 权重
+compute turnover and transaction costs
     |
     v
-运行嵌套权重回测
+build BacktestResult
 ```
 
-嵌套 top-N 回测复用同一个权重回测引擎，从而保持成本和绩效行为一致。
+权重被解释为每个时间戳的目标权重。成本模型
+使用权重变化和资本来估计名义交易。
 
-## 校验原则
+## 因子评估 Flow
 
-对于非 DataFrame 输入、重复坐标轴、非数值值、空交集、无效配置和不支持的 dispatch kind，应尽早失败。错误信息应指出具体输入。
+```text
+validate factor and prices
+    |
+    v
+compute forward returns
+    |
+    v
+compute cross-sectional IC
+    |
+    v
+compute quantile returns
+    |
+    v
+build top-N weights
+    |
+    v
+run nested weight backtest
+```
+
+嵌套的top-N回测重用了相同权重的回测引擎，这使得
+成本和性能行为一致。
+
+## 验证原则
+
+对于非 DataFrame 输入、重复轴、
+非数字值、空交叉点、无效配置值和不受支持
+派遣种类。错误消息应命名有问题的输入。
 
 ## 可视化
 
-绘图辅助函数应消费结果对象并返回 matplotlib 对象。它们不应重新计算绩效指标，也不应修改结果数据。
-
+绘图助手应该使用结果对象并返回 matplotlib 对象。
+他们不应重新计算性能指标或改变结果数据。

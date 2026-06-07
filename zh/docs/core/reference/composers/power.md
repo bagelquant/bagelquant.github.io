@@ -14,25 +14,25 @@ nav: docs_zh
 power(frame, power, name=None, metadata=None)
 ```
 
-Raise each element of the first input to the corresponding element of the second input.
+将第一个输入的每个元素提升到第二个输入的相应元素。
 
-## Parameters
+## 参数
 
-**frame** : Panel | Graph
-: Input numeric `Panel` or single-output `Graph`.
-**power** : Panel | Graph
-: Exponent `Panel` or single-output `Graph`.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+**frame**：面板|图形
+: 输入数值型 `Panel` 或单输出 `Graph`。
+**power**：面板|图形
+：指数 `Panel` 或单输出 `Graph`。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -48,6 +48,6 @@ result = power(left, right).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Inputs are aligned by index and columns before the operation runs.
+在操作运行之前，输入按索引和列对齐。

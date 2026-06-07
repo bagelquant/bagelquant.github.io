@@ -70,4 +70,3 @@ dispatch kinds. Error messages should name the offending input.
 
 Plotting helpers should consume result objects and return matplotlib objects.
 They should not recompute performance metrics or mutate result data.
-

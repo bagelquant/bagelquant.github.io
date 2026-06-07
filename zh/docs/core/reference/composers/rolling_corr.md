@@ -8,35 +8,35 @@ alternate_lang_url: /docs/core/reference/composers/rolling_corr/
 nav: docs_zh
 ---
 
-# rolling_corr
+# 滚动校正
 
 ```python
 rolling_corr(lhs, rhs, window, min_periods=None, name=None, metadata=None)
 ```
 
-Return rolling correlations between corresponding columns.
+返回相应列之间的滚动相关性。
 
-## Parameters
+## 参数
 
-**lhs** : Panel | Graph
-: Left-hand numeric `Panel` or single-output `Graph`.
-**rhs** : Panel | Graph
-: Right-hand numeric `Panel` or single-output `Graph`.
+**lhs**：面板|图形
+：左侧数字 `Panel` 或单输出 `Graph`。
+**rhs**：面板|图形
+：右侧数字 `Panel` 或单输出 `Graph`。
 **window** : int
-: Positive trailing-window length in rows.
-**min_periods** : int | None, default `None`
-: Minimum number of observations required to produce a value.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+：以行为单位的正尾随窗口长度。
+**min_periods**：整数 |无，默认 `None`
+：产生值所需的最少观察次数。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -52,8 +52,8 @@ result = rolling_corr(left, right, window=2).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Inputs are aligned by index and columns before the operation runs.
+在操作运行之前，输入按索引和列对齐。
 
-Rolling calculations run independently down each asset column.
+滚动计算独立地沿着每个资产列运行。

@@ -78,4 +78,3 @@ def average(*frames: pd.DataFrame) -> pd.DataFrame:
 Public APIs are DataFrame and `Panel` oriented. `bagelquant-core` does not own
 data retrieval, provider credentials, persistence, portfolio simulation, or
 application UI.
-

@@ -7,8 +7,6 @@ ref: "quick-start-alpha-research-in-30-min"
 alternate_lang_url: /quick-start/alpha-research-in-30-min/
 ---
 
-> 本页是 [/quick-start/alpha-research-in-30-min/](/quick-start/alpha-research-in-30-min/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
+Alpha 研究是对包含未来回报信息的信号的严格搜索。有用的研究循环检查数据时序、经济直觉、覆盖范围、信息系数、分位数回报、周转率以及跨时期和宇宙的稳健性。
 
-Alpha research is the disciplined search for signals that contain information about future returns. A useful research loop checks data timing, economic intuition, coverage, information coefficient, quantile returns, turnover, and robustness across periods and universes.
-
-Continue with the [研究: 因子s](/zh/research/factors/) guide. Next: [组合 Construction in 30 Minutes](/zh/quick-start/portfolio-construction-in-30-min/).
+继续 [研究: Factors](/zh/research/factors/) 指南。下一页：[30 分钟上手组合构建](/zh/quick-start/portfolio-construction-in-30-min/)。

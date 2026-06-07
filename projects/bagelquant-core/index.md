@@ -28,4 +28,3 @@ executed, cached, and reused.
 - [Internal documentation](/docs/core/internals/)
 - [Transformer reference](/docs/core/reference/transformers/)
 - [Composer reference](/docs/core/reference/composers/)
-

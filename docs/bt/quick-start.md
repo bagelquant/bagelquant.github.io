@@ -75,4 +75,3 @@ config = BacktestConfig(
 
 Minimum fees require `initial_capital` so the engine can translate weight
 turnover into traded notional.
-

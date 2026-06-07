@@ -7,6 +7,4 @@ ref: "projects-reproductions"
 alternate_lang_url: /projects/reproductions/
 ---
 
-> 本页是 [/projects/reproductions/](/projects/reproductions/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
-
-本节仍在建设中。 It will contain reproductions of research papers and public quantitative-investing results, with code and implementation notes where appropriate.
+此部分正在开发中。它将包含研究论文和公共量化投资结果的复制品，并在适当的情况下附有代码和实施说明。

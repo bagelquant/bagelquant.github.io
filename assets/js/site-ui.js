@@ -9,6 +9,7 @@
 
       var sidebar = document.querySelector('.page-sidebar') || document.querySelector('.post-sidebar-left');
       if (!sidebar) return;
+      if (!sidebar.querySelector('a, li')) return;
 
       var layout = document.querySelector('.layout-three-column');
       if (!layout || layout.parentNode.querySelector('.sidebar-toggle')) return;
@@ -37,22 +38,41 @@
 
   function setupToc() {
     var content = document.querySelector('.post-content.numbered');
-    if (!content) return;
-
-    var pageOptions = window.BagelQuantPage || {};
-    if (pageOptions.toc === false) return;
-
-    var headings = content.querySelectorAll('h2, h3');
-    if (!headings.length) return;
-
+    var layout = document.querySelector('.layout-three-column');
     var tocContainer = document.querySelector('.post-toc .toc-inner') ||
                        document.querySelector('.page-toc .toc-inner');
+    var tocAside = tocContainer ? tocContainer.closest('.post-toc, .page-toc') : null;
+
+    function removeEmptyToc() {
+      if (tocAside) tocAside.remove();
+      if (layout) layout.classList.remove('has-toc');
+    }
+
+    if (!content) {
+      removeEmptyToc();
+      return;
+    }
+
+    var pageOptions = window.BagelQuantPage || {};
+    if (pageOptions.toc === false) {
+      removeEmptyToc();
+      return;
+    }
+
+    var headings = content.querySelectorAll('h2, h3');
+    if (!headings.length) {
+      removeEmptyToc();
+      return;
+    }
+
     if (!tocContainer) return;
 
     tocContainer.innerHTML = '';
 
     var headingEl = document.createElement('h2');
-    headingEl.textContent = 'In this article';
+    var isZh = document.documentElement.dataset.lang === 'zh' ||
+      document.documentElement.lang.toLowerCase().indexOf('zh') === 0;
+    headingEl.textContent = isZh ? '本文目录' : 'In this article';
     headingEl.setAttribute('data-i18n', 'toc.title');
 
     var ul = document.createElement('ul');

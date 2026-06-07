@@ -63,4 +63,3 @@ metadata.
 - `transformer` owns unary frame operations.
 - `composer` owns multi-input frame operations.
 - `registry` and `_operation` own operation metadata and decorators.
-

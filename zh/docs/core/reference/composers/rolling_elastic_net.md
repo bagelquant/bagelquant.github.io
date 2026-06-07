@@ -8,41 +8,41 @@ alternate_lang_url: /docs/core/reference/composers/rolling_elastic_net/
 nav: docs_zh
 ---
 
-# rolling_elastic_net
+# 滚动弹性网
 
 ```python
 rolling_elastic_net(y, *factors, window, alpha=1.0, l1_ratio=0.5, max_iter=1000, tolerance=1e-08, name=None, metadata=None)
 ```
 
-Return prior-window elastic-net predictions.
+返回先验窗口弹性网络预测。
 
-## Parameters
+## 参数
 
-**y** : Panel | Graph
-: Dependent-variable `Panel` or single-output `Graph`.
-**factors** : Panel | Graph
-: One or more factor `Panel` or single-output `Graph` inputs.
+**y**：面板|图形
+：因变量 `Panel` 或单输出 `Graph`。
+**factors**：面板|图形
+：一个或多个因子 `Panel` 或单输出 `Graph` 输入。
 **window** : int
-: Positive trailing-window length in rows.
-**alpha** : float, default `1.0`
-: Smoothing or regularization parameter, depending on the operation.
-**l1_ratio** : float, default `0.5`
-: Elastic-net mixing parameter in `[0, 1]`.
-**max_iter** : int, default `1000`
-: Maximum coordinate-descent iterations.
-**tolerance** : float, default `1e-08`
-: Convergence tolerance for coordinate descent.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+：以行为单位的正尾随窗口长度。
+**alpha**：浮动，默认`1.0`
+：平滑或正则化参数，取决于操作。
+**l1_ratio**：浮动，默认`0.5`
+：`[0, 1]` 中的弹性网混合参数。
+**max_iter** : int, 默认 `1000`
+：最大坐标下降迭代。
+**tolerance**：浮动，默认`1e-08`
+：坐标下降的收敛容差。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -58,10 +58,10 @@ result = rolling_elastic_net(left, right, window=2).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Inputs are aligned by index and columns before the operation runs.
+在操作运行之前，输入按索引和列对齐。
 
-Rolling calculations run independently down each asset column.
+滚动计算独立地沿着每个资产列运行。
 
-The model is fit on prior rows only and predicts the current row.
+该模型仅适合先前的行并预测当前行。

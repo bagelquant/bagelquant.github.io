@@ -3,20 +3,20 @@ layout: page
 title: "概览"
 permalink: /zh/docs/core/reference/
 lang: zh
-ref: "docs-core-reference-index"
+ref: "docs-core-reference"
 alternate_lang_url: /docs/core/reference/
 nav: docs_zh
 ---
 
-# API Reference
+# API 参考
 
-BagelQuant operations build lazy graphs from `Panel` inputs.
+BagelQuant 操作从 `Panel` 输入构建惰性图。
 
-- [Transformer reference](./transformers/index.md): 85 public operations
-- [Composer reference](./composers/index.md): 49 public operations
+- [Transformer reference](./transformers/index.md)：85 个公共操作
+- [Composer reference](./composers/index.md)：49 个公共操作
 
-The reference pages are generated from the exported API and curated
-documentation metadata. Regenerate them after changing the operation catalog:
+参考页面是从导出的 API 生成并精心策划的
+文档元数据。更改操作目录后重新生成它们：
 
 ```bash
 uv run python scripts/generate_operator_reference.py

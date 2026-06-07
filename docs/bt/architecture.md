@@ -55,4 +55,3 @@ numeric prices used to compute returns.
 
 The package does not import `bagelquant-data` or `bagelquant-core`; callers
 adapt those outputs into DataFrames before evaluation.
-

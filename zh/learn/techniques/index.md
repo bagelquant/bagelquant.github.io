@@ -7,10 +7,8 @@ ref: "learn-techniques"
 alternate_lang_url: /learn/techniques/
 ---
 
-> 本页是 [/learn/techniques/](/learn/techniques/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
+本节收集用于功能准备、评估和组合设计的可重用技术。
 
-This section collects reusable techniques for feature preparation, evaluation, and portfolio design.
-
-- [Transformations](/zh/learn/techniques/transformations/)
-- [Evaluation](/zh/learn/techniques/evaluation/)
+- [变换](/zh/learn/techniques/transformations/)
+- [评估](/zh/learn/techniques/evaluation/)
 - [组合 Techniques](/zh/learn/techniques/portfolio/)

@@ -8,9 +8,7 @@ ref: "docs"
 alternate_lang_url: /docs/
 ---
 
-> 本页是 [/docs/](/docs/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
-
-BagelQuant software is organized into focused packages that support quantitative equity research.
+BagelQuant 软件被组织成支持量化股票研究的重点软件包。
 
 推荐阅读顺序：
 

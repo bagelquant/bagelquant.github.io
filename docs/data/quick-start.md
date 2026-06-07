@@ -96,4 +96,3 @@ retrieved = Loader(registry=registry, lake=lake).source("tushare").load_panel(
 
 `RetrievedPanel` exposes plain pandas data plus calendar and universe objects so
 downstream packages can decide how to construct their own domain objects.
-

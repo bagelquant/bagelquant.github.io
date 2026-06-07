@@ -8,24 +8,24 @@ alternate_lang_url: /docs/bt/concepts/
 nav: docs_zh
 ---
 
-# Concepts
+# 概念
 
-## Responsibility Boundary
+## 责任边界
 
-`bagelquant-bt` has one job: evaluate a research output against daily prices.
+`bagelquant-bt` 有一项工作：根据每日价格评估研究成果。
 
-It does not import `bagelquant-core` or `bagelquant-data`.
+它不导入 `bagelquant-core` 或 `bagelquant-data`。
 
-- `bagelquant-core` owns signal construction and research logic.
-- `bagelquant-data` owns data access and storage.
-- `bagelquant-bt` owns evaluation, transaction costs, summaries, and plots.
+- `bagelquant-core` 拥有信号构造和研究逻辑。
+- `bagelquant-data` 拥有数据访问和存储。
+- `bagelquant-bt` 拥有评估、交易成本、摘要和图表。
 
-This keeps the backtester useful with any workflow that can produce a
-date-by-asset `DataFrame`.
+这使得回溯测试器对于任何可以产生
+按资产划分的日期 `DataFrame`。
 
-## DataFrame Shape
+## 数据框形状
 
-Prices, weights, and factor scores use the same date-by-asset shape:
+价格、权重和因子得分使用相同的按资产日期的形状：
 
 ```text
 index:   daily dates
@@ -33,34 +33,34 @@ columns: assets
 values:  numeric prices, weights, or factor scores
 ```
 
-Prices are interpreted as close prices.
+价格被解释为收盘价。
 
-For a weight backtest, values are portfolio weights. Negative weights are
+对于权重回测，值是组合权重。负权重是
 allowed.
 
-For factor evaluation, values are cross-sectional scores. Higher scores
-are considered better for quantile and TOP N tests.
+对于细胞因子评估，数值是横截面分数。更高的分数
+被认为更适合分位数和 TOP N 测试。
 
-## Timing Convention
+## 计时约定
 
-The package uses a no-lookahead convention:
+该包使用无前瞻约定：
 
 ```text
 weight or factor at date t -> earns close-to-close return from t to t+1
 ```
 
-This means the final price date cannot produce a realized forward return and is
-dropped from return calculations.
+这意味着最终价格日期不能产生已实现的远期回报，并且是
+从回报计算中删除。
 
 ## Alignment
 
-`bagelquant-bt` aligns prices and signal values by intersecting dates and assets.
+`bagelquant-bt` 通过交叉日期和资产来调整价格和信号值。
 
 It rejects:
 
-- duplicate dates
-- duplicate assets
-- nonnumeric values
-- empty date overlap
-- empty asset overlap
-- non-DataFrame signal inputs
+- 重复的日期
+- 重复资产
+- 非数字值
+- 空日期重叠
+- 空资产重叠
+- 非DataFrame信号输入

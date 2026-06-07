@@ -1,14 +1,12 @@
 ---
 layout: page
-title: "Evaluation"
+title: "评估"
 permalink: /zh/learn/techniques/evaluation/
 lang: zh
 ref: "learn-techniques-evaluation"
 alternate_lang_url: /learn/techniques/evaluation/
 ---
 
-> 本页是 [/learn/techniques/evaluation/](/learn/techniques/evaluation/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
+评估将候选信号转化为证据。
 
-Evaluation turns a candidate signal into evidence.
-
-推荐阅读顺序： [Information Coefficient](/zh/learn/techniques/evaluation/information-coefficient/), [Quantile Analysis](/zh/learn/techniques/evaluation/quantile-analysis/), [Turnover](/zh/learn/techniques/evaluation/turnover/), and [Cross-Validation](/zh/learn/techniques/evaluation/cross-validation/).
+推荐阅读顺序：[信息系数](/zh/learn/techniques/evaluation/information-coefficient/)、[分位数组分析](/zh/learn/techniques/evaluation/quantile-analysis/)、[换手率](/zh/learn/techniques/evaluation/turnover/) 和 [Cross-Validation](/zh/learn/techniques/evaluation/cross-validation/)。

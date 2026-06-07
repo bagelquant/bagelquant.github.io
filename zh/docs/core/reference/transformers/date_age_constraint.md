@@ -8,33 +8,33 @@ alternate_lang_url: /docs/core/reference/transformers/date_age_constraint/
 nav: docs_zh
 ---
 
-# date_age_constraint
+# 日期_年龄_约束
 
 ```python
 date_age_constraint(source, window, min_valid=None, name=None, metadata=None)
 ```
 
-Mask values until enough valid observations exist in a trailing window.
+屏蔽值，直到尾随窗口中存在足够的有效观测值。
 
-## Parameters
+## 参数
 
-**source** : Panel | Graph
-: Input numeric `Panel` or single-output `Graph`.
+**source**：面板|图形
+: 输入数值型 `Panel` 或单输出 `Graph`。
 **window** : int
-: Positive trailing-window length in rows.
-**min_valid** : int | None, default `None`
-: Minimum valid observations required within the trailing window.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+：以行为单位的正尾随窗口长度。
+**min_valid**：整数 |无，默认 `None`
+：跟踪窗口内所需的最小有效观测值。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -49,6 +49,6 @@ result = date_age_constraint(source, window=2).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Rows represent time and columns represent assets.
+行表示时间，列表示资产。

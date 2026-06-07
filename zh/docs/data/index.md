@@ -3,25 +3,30 @@ layout: page
 title: "概览"
 permalink: /zh/docs/data/
 lang: zh
-ref: "docs-data-index"
+ref: "docs-data"
 alternate_lang_url: /docs/data/
 nav: docs_zh
 ---
 
-# BagelQuant Data
+# BagelQuant 数据
 
-`bagelquant-data` 是 BagelQuant 的数据层，负责 provider 接入、本地数据湖快照、元数据、转换流水线和面板形状的数据读取。
+`bagelquant-data` 是 BagelQuant 的提供商中立数据层。
 
-它不负责研究图、组合构建、回测或应用 UI。它的输出边界是 pandas 数据和轻量元数据，方便下游包自行构建 `Domain`、`Panel` 或回测输入。
+它保证对数据的一致、可靠、可重复访问。它不
+自己的研究、组合构建、图形执行、回溯测试或
+analytics.
 
-## 推荐阅读
+使用它作为后端Python包来注册提供商、管理本地数据湖
+快照、运行提供程序更新并检索 pandas 数据集或面板形状
+objects:
 
-- [快速开始](quick-start.md)
-- [架构与设计](architecture.md)
-- [公开 API](public-api.md)
-- [内部实现](internals.md)
-- [概念](concepts.md)
-- [数据契约](contracts.md)
-- [Panel 对接约定](panel-agreements.md)
-- [Tushare provider](providers/tushare.md)
+```python
+from bagelquant_data.datasource import DataSourceRegistry, TushareDataSource
+from bagelquant_data.lake import DataLakeManager, LocalDataLake
 
+registry = DataSourceRegistry()
+registry.register(TushareDataSource(token="your-token"))
+
+lake = LocalDataLake(".bagelquant-data-lake")
+manager = DataLakeManager(lake, registry=registry)
+```

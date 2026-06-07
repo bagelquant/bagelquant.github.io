@@ -3,7 +3,7 @@ layout: page
 title: "Overview"
 permalink: /docs/core/reference/composers/
 lang: en
-ref: "docs-core-reference-composers-index"
+ref: "docs-core-reference-composers"
 alternate_lang_url: /zh/docs/core/reference/composers/
 nav: docs_en
 ---

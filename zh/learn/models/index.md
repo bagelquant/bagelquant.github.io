@@ -7,10 +7,8 @@ ref: "learn-models"
 alternate_lang_url: /learn/models/
 ---
 
-> 本页是 [/learn/models/](/learn/models/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
+本节介绍用于估计关系、组合特征和解决组合问题的模型。
 
-This section covers the models used to estimate relationships, combine features, and solve portfolio problems.
-
-- [Econometrics](/zh/learn/models/econometrics/)
-- [Machine 学习ing](/zh/learn/models/machine-learning/)
+- [计量经济学](/zh/learn/models/econometrics/)
+- [机器学习](/zh/learn/models/machine-learning/)
 - [Optimization Models](/zh/learn/models/optimization/)

@@ -2,6 +2,22 @@
 layout: default
 ---
 
+{% assign sidebar_items = nil %}
+{% if page.nav and site.data.navigation[page.nav] %}
+  {% assign sidebar_items = site.data.navigation[page.nav] %}
+{% elsif page.category and site.data.navigation[page.category] %}
+  {% assign sidebar_items = site.data.navigation[page.category] %}
+{% endif %}
+{% assign toc_enabled = true %}
+{% if page.toc == false %}
+  {% assign toc_enabled = false %}
+{% endif %}
+{% unless content contains '<h2' %}
+  {% unless content contains '<h3' %}
+    {% assign toc_enabled = false %}
+  {% endunless %}
+{% endunless %}
+
 {% if page.header and page.header.overlay_image %}
   <header class="post-hero">
     <div class="post-header-cover">
@@ -16,15 +32,15 @@ layout: default
   </header>
 {% endif %}
 
-<div class="layout-three-column post-layout">
+<div class="layout-three-column post-layout{% if sidebar_items %} has-left-sidebar{% endif %}{% if toc_enabled %} has-toc{% endif %}">
+  {% if sidebar_items %}
   <aside class="page-sidebar">
     <div class="sidebar-inner">
-      {% if page.nav and site.data.navigation[page.nav] %}
         <h2>{% if page.lang == 'zh' %}导航{% else %}Navigation{% endif %}</h2>
         {% assign current = page.url %}
         <ul class="sidebar-nav">
           {% assign parent_index = 0 %}
-          {% for item in site.data.navigation[page.nav] %}
+          {% for item in sidebar_items %}
             {% assign parent_index = parent_index | plus: 1 %}
             <li>
               {% if item.url %}
@@ -50,40 +66,9 @@ layout: default
             </li>
           {% endfor %}
         </ul>
-      {% elsif page.category and site.data.navigation[page.category] %}
-        <h2>{% if page.lang == 'zh' %}导航{% else %}Navigation{% endif %}</h2>
-        {% assign current = page.url %}
-        <ul class="sidebar-nav">
-          {% assign parent_index = 0 %}
-          {% for item in site.data.navigation[page.category] %}
-            {% assign parent_index = parent_index | plus: 1 %}
-            <li>
-              {% if item.url %}
-                {% assign item_url = item.url %}
-                <a href="{{ item_url | relative_url }}" class="{% if current == item_url or current contains item_url %}active{% endif %}">{{ parent_index }}. {{ item.title }}</a>
-              {% else %}
-                {{ parent_index }}. {{ item.title }}
-              {% endif %}
-
-              {% if item.children %}
-                <div class="sidebar-nav-separator"></div>
-                <ul class="sidebar-nav-children">
-                  {% assign child_index = 0 %}
-                  {% for child in item.children %}
-                    {% assign child_index = child_index | plus: 1 %}
-                    <li>
-                      {% assign child_url = child.url %}
-                      <a href="{{ child_url | relative_url }}" class="{% if current == child_url or current contains child_url %}active{% endif %}">{{ parent_index }}.{{ child_index }}. {{ child.title }}</a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
     </div>
   </aside>
+  {% endif %}
 
   <main class="post-main">
     {% if page.url != '/' and page.url != '/zh/' %}
@@ -107,7 +92,9 @@ layout: default
     </article>
   </main>
 
-  <aside class="page-toc">
+  {% if toc_enabled %}
+  <aside class="page-toc" data-generated-toc>
     <div class="toc-inner"></div>
   </aside>
+  {% endif %}
 </div>

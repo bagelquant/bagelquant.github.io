@@ -21,7 +21,7 @@
       </button>
 
       {% assign language_target = page.alternate_lang_url | default: '/' %}
-      <a id="language-toggle" class="nav-link nav-link-language" href="{{ language_target | relative_url }}" aria-label="{% if current_lang == 'zh' %}Switch to English{% else %}切换到中文{% endif %}" title="{% if current_lang == 'zh' %}Switch to English{% else %}切换到中文{% endif %}">
+      <a id="language-toggle" class="nav-link nav-link-language" href="{{ language_target | relative_url }}" data-language-toggle aria-label="{% if current_lang == 'zh' %}Switch to English{% else %}切换到中文{% endif %}" title="{% if current_lang == 'zh' %}Switch to English{% else %}切换到中文{% endif %}">
         <span class="language-option{% if current_lang != 'zh' %} is-active{% endif %}" data-lang-option="en">EN</span>
         <span class="language-divider" aria-hidden="true">/</span>
         <span class="language-option{% if current_lang == 'zh' %} is-active{% endif %}" data-lang-option="zh">中文</span>

@@ -2,20 +2,18 @@
 layout: page
 title: "学习"
 permalink: /zh/learn/
-excerpt: "Deep foundations, models, and techniques for equity researchers."
+excerpt: "为股票研究人员提供深厚的基础、模型和技术。"
 lang: zh
 ref: "learn"
 alternate_lang_url: /learn/
 ---
 
-> 本页是 [/learn/](/learn/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
-
-This knowledge base is for readers building durable quantitative equity research skills. It connects theory to the decisions a portfolio researcher makes in practice.
+该知识库旨在帮助读者建立持久的量化股票研究技能。它将理论与组合研究人员在实践中做出的决策联系起来。
 
 推荐阅读顺序：
 
 1. [Roadmap](/zh/learn/roadmap/)
-2. [Foundations](/zh/learn/foundations/)
-3. [Finance](/zh/learn/finance/)
-4. [Models](/zh/learn/models/)
-5. [Techniques](/zh/learn/techniques/)
+2. [基础知识](/zh/learn/foundations/)
+3. [金融](/zh/learn/finance/)
+4. [模型](/zh/learn/models/)
+5. [技术方法](/zh/learn/techniques/)

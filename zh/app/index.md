@@ -2,16 +2,14 @@
 layout: page
 title: "应用"
 permalink: /zh/app/
-excerpt: "A future graph-based research platform for quantitative equity workflows."
+excerpt: "未来基于图的量化股票工作流程研究平台。"
 lang: zh
 ref: "app"
 alternate_lang_url: /app/
 ---
 
-> 本页是 [/app/](/app/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
+BagelQuant 应用程序正在开发中。
 
-The BagelQuant 应用 is under development.
+它将为因子、预测模型、组合策略和回测提供拖放式图形生成器。目的是使研究管道可见、可组合和可重复，同时保持底层软件包模块化。
 
-It will provide a drag-and-drop graph builder for factors, prediction models, portfolio strategies, and backtests. The aim is to make research pipelines visible, composable, and reproducible while keeping the underlying software packages modular.
-
-Until then, explore the [research workflow](/zh/research/) and [`bagelquant-core` docs](/zh/docs/core/).
+在此之前，请探索 [研究 工作流](/zh/research/) 和 [`bagelquant-core` docs](/zh/docs/core/)。

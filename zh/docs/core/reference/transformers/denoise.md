@@ -14,25 +14,25 @@ nav: docs_zh
 denoise(source, threshold=1e-12, name=None, metadata=None)
 ```
 
-Replace values whose absolute magnitude is tiny with zero.
+将绝对值很小的值替换为零。
 
-## Parameters
+## 参数
 
-**source** : Panel | Graph
-: Input numeric `Panel` or single-output `Graph`.
-**threshold** : float, default `1e-12`
-: Non-negative magnitude below which values are replaced with zero.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+**source**：面板|图形
+: 输入数值型 `Panel` 或单输出 `Graph`。
+**threshold**：浮动，默认`1e-12`
+：非负大小，低于该值的值将替换为零。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -47,6 +47,6 @@ result = denoise(source, threshold=1e-6).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Rows represent time and columns represent assets.
+行表示时间，列表示资产。

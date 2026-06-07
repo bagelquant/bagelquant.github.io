@@ -8,33 +8,33 @@ alternate_lang_url: /docs/core/reference/transformers/rolling_mean/
 nav: docs_zh
 ---
 
-# rolling_mean
+# 滚动平均值
 
 ```python
 rolling_mean(source, window, min_periods=None, name=None, metadata=None)
 ```
 
-Return rolling means over time.
+返回滚动意味着随着时间的推移。
 
-## Parameters
+## 参数
 
-**source** : Panel | Graph
-: Input numeric `Panel` or single-output `Graph`.
+**source**：面板|图形
+: 输入数值型 `Panel` 或单输出 `Graph`。
 **window** : int
-: Positive trailing-window length in rows.
-**min_periods** : int | None, default `None`
-: Minimum number of observations required to produce a value.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+：以行为单位的正尾随窗口长度。
+**min_periods**：整数 |无，默认 `None`
+：产生值所需的最少观察次数。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -49,8 +49,8 @@ result = rolling_mean(source, window=2).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Rows represent time and columns represent assets.
+行表示时间，列表示资产。
 
-Rolling calculations run independently down each asset column.
+滚动计算独立地沿着每个资产列运行。

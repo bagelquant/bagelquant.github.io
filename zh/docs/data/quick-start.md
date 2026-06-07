@@ -10,21 +10,22 @@ nav: docs_zh
 
 # 快速开始
 
-`bagelquant-data` 是 provider 中立的数据层，用于管理 provider 适配器、本地数据湖快照、元数据和面板形状读取。
+`bagelquant-data` 是 BagelQuant 的提供商中立数据层。它管理
+提供者适配器、本地湖快照、元数据和面板型检索。
 
-## 安装
+## Install
 
 ```bash
 uv add bagelquant-data
 ```
 
-如果需要使用 Tushare：
+从 Tushare 加载时使用可选的 Tushare 依赖项：
 
 ```bash
 uv add "bagelquant-data[tushare]"
 ```
 
-## 注册 Provider
+## 注册提供商
 
 ```python
 from bagelquant_data.datasource import DataSourceRegistry, TushareDataSource
@@ -33,7 +34,7 @@ registry = DataSourceRegistry()
 registry.register(TushareDataSource(token="your-token"))
 ```
 
-## 创建本地数据湖
+## 创建一个本地湖
 
 ```python
 from bagelquant_data.lake import DataLakeManager, LocalDataLake
@@ -44,13 +45,13 @@ manager = DataLakeManager(lake, registry=registry)
 
 ## 写入或刷新数据
 
-自定义数据可以直接写入 pandas frame：
+对于自定义数据，直接写一个pandas框架：
 
 ```python
 manager.add("custom", "prices", prices)
 ```
 
-Provider 数据通过 `DataRequest` 读取并保存为本地快照：
+对于提供者数据，请求数据集并将结果保留为本地快照：
 
 ```python
 from bagelquant_data.datasource import DataRequest
@@ -66,7 +67,7 @@ manager.update(
 )
 ```
 
-## 读取数据
+## Retrieve 数据
 
 ```python
 from bagelquant_data.loader import Loader
@@ -81,7 +82,7 @@ loaded = Loader(registry=registry, lake=lake).source("tushare").load(
 frame = loaded.data
 ```
 
-研究输入通常读取为日期乘资产的面板形状：
+对于研究输入，加载按资产日期字段：
 
 ```python
 retrieved = Loader(registry=registry, lake=lake).source("tushare").load_panel(
@@ -93,5 +94,5 @@ retrieved = Loader(registry=registry, lake=lake).source("tushare").load_panel(
 )
 ```
 
-`RetrievedPanel` 暴露 pandas 数据、calendar 和 universe，由下游包决定如何构建自己的 domain 对象。
-
+`RetrievedPanel` 公开普通的 pandas 数据以及日历和 Universe 对象，因此
+下游包可以决定如何构造自己的域对象。

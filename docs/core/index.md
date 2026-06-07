@@ -3,7 +3,7 @@ layout: page
 title: "Overview"
 permalink: /docs/core/
 lang: en
-ref: "docs-core-index"
+ref: "docs-core"
 alternate_lang_url: /zh/docs/core/
 nav: docs_en
 ---
@@ -30,4 +30,3 @@ weight panels.
 - [Composer](01_concepts/composer.md)
 - [Execution](01_concepts/execution.md)
 - [API reference](reference/index.md)
-

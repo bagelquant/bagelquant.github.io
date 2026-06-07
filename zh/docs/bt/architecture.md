@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "架构与设计"
+title: "Architecture And Design"
 permalink: /zh/docs/bt/architecture/
 lang: zh
 ref: "docs-bt-architecture"
@@ -8,48 +8,50 @@ alternate_lang_url: /docs/bt/architecture/
 nav: docs_zh
 ---
 
-# 架构与设计
+# 架构 And Design
 
-`bagelquant-bt` 是 DataFrame 优先的评估包。
+`bagelquant-bt` 是 DataFrame-first 评估包。
 
 ```text
 prices + weights/factor scores
     |
     v
-输入校验
+input validation
     |
     v
-收益、换手、成本、IC、分位数
+returns, turnover, costs, IC, quantiles
     |
     v
-结果 dataclass
+result dataclasses
     |
     v
-可视化辅助函数
+visualization helpers
 ```
 
-## 设计哲学
+＃＃ 哲学
 
-- 回测包不生成研究信号。
-- 公共边界保持为 DataFrame。
-- 交易成本必须显式且可复现。
-- 返回结构化结果对象，而不是只打印报告。
-- 可视化层只消费结果对象。
+- 将研究生成保持在回测器之外。
+- 将数据帧视为公共边界。
+- 使交易成本明确且可重复。
+- 返回结构化结果对象而不是打印报告。
+- 将可视化保持为结果对象上的薄层。
 
-## 结构
+## Structure
 
-- `inputs`：frame 校验、对齐和数值检查。
-- `returns`：资产收益和累计收益工具。
-- `costs`：换手和交易成本计算。
-- `engine`：权重回测编排和公开 dispatch。
-- `factor`：IC、分位数和 top-N 评估。
+- `inputs`：框架验证、对齐和数字检查。
+- `returns`：资产回报和累积回报效用。
+- `costs`：营业额和交易成本计算。
+- `engine`：权重回测编排和公共调度。
+- `factor`：信息系数、分位数和top-N评估。
 - `performance`：汇总指标。
-- `results`：供下游检查的 dataclass。
-- `visualization`：绘图辅助函数。
+- `results`：用于下游检查的数据类。
+- `visualization`：绘图助手。
 
-## 数据边界
+## 数据 Boundary
 
-输入行是日期，列是资产。权重 frame 表示目标权重。因子 frame 表示截面分数。价格 frame 表示用于计算收益的数值价格。
+输入行是日期，列是资产。重量框架包含目标
+重量。 因子框架包含横截面分数。价格框架包含
+用于计算回报的数字价格。
 
-包不导入 `bagelquant-data` 或 `bagelquant-core`；调用方先把这些包的输出适配成 DataFrame。
-
+该包不导入`bagelquant-data`或`bagelquant-core`；来电者
+在评估之前将这些输出调整为数据帧。

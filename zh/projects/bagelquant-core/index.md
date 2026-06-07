@@ -2,31 +2,29 @@
 layout: page
 title: "bagelquant-core"
 permalink: /zh/projects/bagelquant-core/
-excerpt: "Panel data, lazy graph logic, and reusable operations for quantitative research."
+excerpt: "面板数据、惰性图逻辑和用于定量研究的可重用操作。"
 lang: zh
 ref: "projects-bagelquant-core"
 alternate_lang_url: /projects/bagelquant-core/
 ---
 
-> 本页是 [/projects/bagelquant-core/](/projects/bagelquant-core/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
+`bagelquant-core` 是 BagelQuant 生态系统的共享研究内核。
+它将对齐的面板数据转换为可以组合的惰性图逻辑，
+执行、缓存和重用。
 
-`bagelquant-core` is the shared research kernel for the BagelQuant ecosystem.
-It turns aligned panel data into lazy graph logic that can be composed,
-executed, cached, and reused.
+## 它包含什么
 
-## What It Contains
+- `Domain`、`Panel` 和 `CategoryPanel` 数据容器。
+- 用于因子、预测和权重逻辑的惰性 `Graph` 对象。
+- 用于一元面板操作的变压器函数。
+- 用于多输入操作的作曲家功能。
+- 内部执行运行时和操作元数据。
 
-- `Domain`, `Panel`, and `CategoryPanel` data containers.
-- Lazy `Graph` objects for factor, prediction, and weight logic.
-- Transformer functions for unary panel operations.
-- Composer functions for multi-input operations.
-- Internal execution runtime and operation metadata.
-
-## Documentation
+## 文档
 
 - [Quick start](/zh/docs/core/quick-start/)
-- [Architecture and design](/zh/docs/core/architecture/)
-- [Public API](/zh/docs/core/public-api/)
+- [架构 and design](/zh/docs/core/architecture/)
+- [公开 API](/zh/docs/core/public-api/)
 - [Internal documentation](/zh/docs/core/internals/)
 - [Transformer reference](/zh/docs/core/reference/transformers/)
 - [Composer reference](/zh/docs/core/reference/composers/)

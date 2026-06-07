@@ -7,10 +7,8 @@ ref: "quick-start-portfolio-construction-in-30-min"
 alternate_lang_url: /quick-start/portfolio-construction-in-30-min/
 ---
 
-> 本页是 [/quick-start/portfolio-construction-in-30-min/](/quick-start/portfolio-construction-in-30-min/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
+组合建设将预测转化为可投资的权重。设计必须平​​衡预期回报、风险、多元化、流动性、营业额和实施成本。
 
-组合 construction converts forecasts into investable weights. The design must balance expected return, risk, diversification, liquidity, turnover, and implementation costs.
+第一个模型通常从排名信号或均值方差优化开始，然后添加约束和现实的再平衡策略。
 
-A first model often starts with ranked signals or mean-variance optimization, then adds constraints and a realistic rebalance policy.
-
-Continue with [研究: 组合](/zh/research/portfolio/) and [Machine 学习ing for Alpha](/zh/quick-start/machine-learning-for-alpha/).
+继续 [研究: 组合](/zh/research/portfolio/) 和 [机器学习与 Alpha](/zh/quick-start/machine-learning-for-alpha/)。

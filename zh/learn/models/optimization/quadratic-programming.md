@@ -7,6 +7,4 @@ ref: "learn-models-optimization-quadratic-programming"
 alternate_lang_url: /learn/models/optimization/quadratic-programming/
 ---
 
-> 本页是 [/learn/models/optimization/quadratic-programming/](/learn/models/optimization/quadratic-programming/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
-
-本节仍在建设中。 It will cover quadratic objectives, linear constraints, and portfolio-optimization applications.
+此部分正在开发中。它将涵盖二次目标、线性约束和组合优化应用程序。

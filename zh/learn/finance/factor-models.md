@@ -7,6 +7,4 @@ ref: "learn-finance-factor-models"
 alternate_lang_url: /learn/finance/factor-models/
 ---
 
-> 本页是 [/learn/finance/factor-models/](/learn/finance/factor-models/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
-
-本节仍在建设中。 It will cover factor models for explaining returns, estimating exposures, and organizing alpha research.
+此部分正在开发中。它将涵盖用于解释回报、估计暴露和组织 alpha 研究的因子模型。

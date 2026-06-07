@@ -8,9 +8,9 @@ alternate_lang_url: /docs/data/backend-api/
 nav: docs_zh
 ---
 
-# Backend API
+# 后端 API
 
-`bagelquant-data` is operated through Python APIs. The main workflow is:
+`bagelquant-data` 通过 Python API 进行操作。主要工作流程为：
 
 ```text
 DataSourceRegistry
@@ -33,10 +33,10 @@ lake = LocalDataLake(".bagelquant-data-lake")
 manager = DataLakeManager(lake, registry=registry)
 ```
 
-## Data Lake Management
+## 数据湖管理
 
-`LocalDataLake` owns filesystem storage. It writes immutable Parquet snapshots
-under source/table partitions and maintains JSON catalog pointers.
+`LocalDataLake` 拥有文件系统存储。它写入不可变的 Parquet 快照
+在源/表分区下并维护 JSON 目录指针。
 
 ```python
 manager.add("custom", "prices", frame)
@@ -48,7 +48,7 @@ tables = manager.list_tables("custom")
 snapshots = manager.snapshots("custom", "prices")
 ```
 
-Use `LocalDataLake.read` for direct backend reads:
+使用 `LocalDataLake.read` 进行直接后端读取：
 
 ```python
 data = lake.read(
@@ -60,9 +60,9 @@ data = lake.read(
 )
 ```
 
-## Provider Updates
+## 提供商更新
 
-`DataLakeManager.update` performs a simple provider read and writes one local
+`DataLakeManager.update` 执行简单的提供程序读取和写入一个本地
 snapshot.
 
 ```python
@@ -79,8 +79,8 @@ manager.update(
 )
 ```
 
-For Tushare production-style updates, refresh references, scan, then execute the
-confirmed report:
+对于 Tushare 生产式更新，刷新引用、扫描，然后执行
+确认报告：
 
 ```python
 from bagelquant_data.lake import TushareTableUpdateSpec, TushareTradingCalendarRef
@@ -108,14 +108,14 @@ report = manager.scan_tushare_updates(
 manager.execute_tushare_update_report(report, workers=4)
 ```
 
-The report is the review boundary. It contains plans and executable jobs, so
-callers can inspect pending work before running provider reads.
+报告是审查边界。它包含计划和可执行作业，因此
+调用者可以在运行提供程序读取之前检查待处理的工作。
 
 ## Retrieval
 
-`Loader` returns `LoadedDataset` objects with data, identity, lineage, and
-metadata. With a lake configured, it reads local snapshots first and uses the
-provider only for bootstrap or explicit refresh.
+`Loader` 返回带有数据、身份、谱系和信息的 `LoadedDataset` 对象
+元数据。配置湖后，它首先读取本地快照并使用
+提供程序仅用于引导或显式刷新。
 
 ```python
 from bagelquant_data.loader import Loader
@@ -128,8 +128,8 @@ loaded = Loader(registry=registry, lake=lake).source("tushare").load(
 )
 ```
 
-For panel-shaped research inputs, use `load_panel` or `load_panel_field`.
-These APIs return plain pandas objects and do not import downstream packages.
+对于面板形状的研究输入，请使用 `load_panel` 或 `load_panel_field`。
+这些 API 返回普通的 pandas 对象，并且不导入下游包。
 
 ```python
 retrieved = Loader(registry=registry, lake=lake).source("tushare").load_panel(
@@ -147,21 +147,21 @@ panel = lake.read_panel_field(
 )
 ```
 
-## Function Reference
+## Function 参考
 
-- `DataRequest(dataset, fields=(), filters={}, start_date=None, end_date=None,
-  version=None, snapshot=None, options={})`: provider read request.
-- `DataSourceRegistry.register(source)`: register a provider adapter.
-- `DataSourceRegistry.resolve(name)`: retrieve a registered provider.
-- `DataLakeManager.update(source, request, mode="overwrite")`: fetch provider
-  data and write a lake snapshot.
-- `DataLakeManager.scan_tushare_updates(...)`: build a dry-run Tushare update
+-`DataRequest（数据集，字段=（），过滤器= {}，开始日期=无，结束日期=无，
+version=None, snapshot=None, options={})`：提供程序读取请求。
+- `DataSourceRegistry.register(source)`：注册提供者适配器。
+- `DataSourceRegistry.resolve(name)`：检索已注册的提供者。
+- `DataLakeManager.update(source, request, mode="overwrite")`：获取提供者
+数据并编写湖快照。
+- `DataLakeManager.scan_tushare_updates(...)`：构建试运行 Tushare 更新
   report.
 - `DataLakeManager.execute_tushare_update_report(report, workers=4)`: execute
-  report jobs and write snapshots.
-- `LocalDataLake.read(source, dataset, columns=None, start_date=None,
-  end_date=None, year=None, month=None, snapshot=None)`: read local data.
+报告作业并写入快照。
+- `LocalDataLake.read（源，数据集，列=无，开始日期=无，
+end_date=None,year=None,month=None,snapshot=None)`：读取本地数据。
 - `LocalDataLake.read_panel_field(qualified_id, start_date, end_date)`: shape a
-  qualified field id into a date-by-asset panel.
-- `Loader.source(name).load(...)`: load a dataset as `LoadedDataset`.
-- `Loader.source(name).load_panel(...)`: load and shape a `RetrievedPanel`.
+将合格的字段 ID 放入按资产日期面板中。
+- `Loader.source(name).load(...)`：加载数据集为 `LoadedDataset`。
+- `Loader.source(name).load_panel(...)`：加载并塑造 `RetrievedPanel`。

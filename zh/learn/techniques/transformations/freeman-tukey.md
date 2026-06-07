@@ -7,6 +7,4 @@ ref: "learn-techniques-transformations-freeman-tukey"
 alternate_lang_url: /learn/techniques/transformations/freeman-tukey/
 ---
 
-> 本页是 [/learn/techniques/transformations/freeman-tukey/](/learn/techniques/transformations/freeman-tukey/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
-
-本节仍在建设中。 It will cover Freeman-Tukey variance stabilization and when it is useful for feature preparation.
+此部分正在开发中。它将涵盖 Freeman-Tukey 方差稳定性以及它何时对特征准备有用。

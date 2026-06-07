@@ -29,4 +29,3 @@ panel-shaped retrieval.
 - [Internal documentation](/docs/data/internals/)
 - [Backend API](/docs/data/backend-api/)
 - [Tushare provider](/docs/data/providers/tushare/)
-

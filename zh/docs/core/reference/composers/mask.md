@@ -14,27 +14,27 @@ nav: docs_zh
 mask(frame, mask_frame, replace_value=nan, name=None, metadata=None)
 ```
 
-Replace values where a mask frame is false.
+替换掩码框架为 false 的值。
 
-## Parameters
+## 参数
 
-**frame** : Panel | Graph
-: Input numeric `Panel` or single-output `Graph`.
-**mask_frame** : Panel | Graph
-: Mask input. Truthy cells retain values; false or missing cells are replaced.
-**replace_value** : float, default `nan`
-: Value inserted where the mask is false or missing.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+**frame**：面板|图形
+: 输入数值型 `Panel` 或单输出 `Graph`。
+**mask_frame**：面板|图形
+：屏蔽输入。诚实的细胞保留价值；错误或缺失的单元格将被替换。
+**replace_value**：浮动，默认`nan`
+：在掩码为假或缺失的情况下插入值。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -50,6 +50,6 @@ result = mask(left, right, replace_value=0).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Inputs are aligned by index and columns before the operation runs.
+在操作运行之前，输入按索引和列对齐。

@@ -74,4 +74,3 @@ from bagelquant_data import (
 - `TushareTableUpdateSpec`: production-style table update specification.
 - `DataLakeManager.scan_tushare_updates(...)`: build a dry-run update report.
 - `DataLakeManager.execute_tushare_update_report(report, workers=4)`: execute reviewed jobs.
-

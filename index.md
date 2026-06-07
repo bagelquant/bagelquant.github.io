@@ -16,28 +16,21 @@ alternate_lang_url: /zh/
 
 ## What is BagelQuant?
 
-BagelQuant is a knowledge base, open-source software ecosystem, and future research platform for **quantitative equity portfolio management**.
+BagelQuant is a comprehensive research platform for **quantitative equity portfolio management**, featuring a knowledge base, open-source software ecosystem, and future research platform.
 
-The goal is practical: understand how investment ideas become signals, how signals become forecasts, and how forecasts become portfolios that can be tested honestly. The site connects financial theory, statistics, machine learning, optimization, and research engineering around that workflow.
+The goal is to provide a open-source, reproducible, and scalable platform for quantitative equity research. In here, you have:
 
-## The Quant Equity Workflow
-
-**Data → Factor → Prediction → Portfolio → Backtest**
-
-This simple sequence is the spine of BagelQuant. Each step has its own questions: point-in-time data quality, signal design, predictive modeling, portfolio constraints, turnover, transaction costs, and reproducibility.
-
-![Systematic equity portfolio management workflow](/assets/images/systematic-equity-portfolio-management-workflow.png)
+- Learn how to systemically manage equity portfolios, covering from rigorous math to financial theory.
+- An innovative open-source research platform, allowing you to construct factor and portfolio with LEGO building experiences.
+- A systematic backtesting framework, helping you evaluate your strategies on historical data.
+- Trending research reports and papers reviews.
 
 ## Start Here
 
 - [Quick Start](/quick-start/) gives newcomers a short guided introduction.
 - [Learn](/learn/) is the deeper knowledge base for math, finance, models, and techniques.
 - [Research](/research/) follows the practitioner workflow from data to backtesting.
-
-## Projects and Docs
-
-- [Projects](/projects/) collects research outputs, reproductions, factor experiments, and portfolio cases.
-- [Docs](/docs/) explains the BagelQuant open-source ecosystem, starting with `bagelquant-core`.
+- [Docs](/docs/) explains the BagelQuant open-source ecosystem.
 
 ## Future App
 

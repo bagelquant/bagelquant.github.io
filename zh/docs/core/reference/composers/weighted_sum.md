@@ -8,31 +8,31 @@ alternate_lang_url: /docs/core/reference/composers/weighted_sum/
 nav: docs_zh
 ---
 
-# weighted_sum
+# 加权和
 
 ```python
 weighted_sum(*frames, weights, name=None, metadata=None)
 ```
 
-Return the weighted sum of one or more frames.
+返回一帧或多帧的加权和。
 
-## Parameters
+## 参数
 
-**frames** : Panel | Graph
-: One or more numeric `Panel` or single-output `Graph` inputs.
-**weights** : Sequence[Real]
-: One numeric weight for each input frame.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+**frames**：面板|图形
+：一个或多个数字 `Panel` 或单输出 `Graph` 输入。
+**weights**：序列[实数]
+：每个输入帧一个数字权重。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -48,6 +48,6 @@ result = weighted_sum(left, right, weights=[0.25, 0.75]).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Inputs are aligned by index and columns before the operation runs.
+在操作运行之前，输入按索引和列对齐。

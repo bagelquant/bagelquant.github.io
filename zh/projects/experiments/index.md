@@ -7,6 +7,4 @@ ref: "projects-experiments"
 alternate_lang_url: /projects/experiments/
 ---
 
-> 本页是 [/projects/experiments/](/projects/experiments/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
-
-本节仍在建设中。 It will collect exploratory research experiments and implementation notes.
+此部分正在开发中。它将收集探索性研究实验和实施说明。

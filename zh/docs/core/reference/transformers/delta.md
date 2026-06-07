@@ -14,25 +14,25 @@ nav: docs_zh
 delta(source, interval=1, name=None, metadata=None)
 ```
 
-Return changes between rows separated by an interval.
+返回由间隔分隔的行之间的更改。
 
-## Parameters
+## 参数
 
-**source** : Panel | Graph
-: Input numeric `Panel` or single-output `Graph`.
-**interval** : int, default `1`
-: Number of rows between observations. Must be a non-zero integer.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+**source**：面板|图形
+: 输入数值型 `Panel` 或单输出 `Graph`。
+**interval** : int, 默认 `1`
+：观察值之间的行数。必须是非零整数。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -47,6 +47,6 @@ result = delta(source, interval=1).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Rows represent time and columns represent assets.
+行表示时间，列表示资产。

@@ -10,54 +10,54 @@ nav: docs_zh
 
 # Graph
 
-## Overview
+## 概览
 
-`Graph` represents a lazy chain of research logic.
+`Graph` 代表研究逻辑的惰性链。
 
 ```python
 price = Panel.from_domain(price_df, domain, name="price")
 signal = rank(zscore(price), name="signal")
 ```
 
-The raw input is a `Panel`. The derived signal is a `Graph`.
+原始输入是 `Panel`。导出的信号是 `Graph`。
 
-## Responsibility
+＃＃ 责任
 
-Graph manages:
+图表管理：
 
-- Logic-chain outputs
-- Dependency collection
-- DAG validation
-- Topological ordering
-- Graph specifications
-- Runtime delegation
-- Materialized output access
+- 逻辑链输出
+- 依赖收集
+- DAG验证
+- 拓扑排序
+- 图表规格
+- 运行时委托
+- 物化输出访问
 
-Validation rejects cycles, duplicate node names, invalid parent types, and
-operation nodes with an invalid number of parents.
+验证拒绝循环、重复的节点名称、无效的父类型和
+父节点数量无效的操作节点。
 
-Graph does not store raw input frames and does not contain domain-specific
-operation methods.
+图不存储原始输入帧，也不包含特定于域的内容
+操作方法。
 
 ## Output
 
-Before execution, output access raises an error:
+在执行之前，输出访问会引发错误：
 
 ```python
 signal.output
 ```
 
-After execution, `Graph.output` is a panel:
+执行后，`Graph.output`是一个面板：
 
 ```python
 signal.compute()
 signal_panel = signal.output
 ```
 
-Computing a downstream graph also populates outputs for evaluated intermediate
+计算下游图还会填充评估中间的输出
 graphs.
 
-## Multi-Output Graphs
+## 多输出图
 
 ```python
 strategy = Graph(outputs=[signal, prediction])
@@ -65,4 +65,4 @@ strategy.compute()
 outputs = strategy.output
 ```
 
-For a multi-output graph, `output` is a mapping from output name to panel.
+对于多输出图，`output` 是从输出名称到面板的映射。

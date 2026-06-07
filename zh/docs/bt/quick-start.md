@@ -10,17 +10,19 @@ nav: docs_zh
 
 # 快速开始
 
-`bagelquant-bt` 评估研究输出。它不负责读取数据，也不负责生成因子信号。输入必须是数值型 pandas DataFrame。
+`bagelquant-bt` 评估研究成果。它不检索数据，并且
+不产生因子信号。输入是数字 pandas DataFrame。
 
-## 安装
+## Install
 
 ```bash
 uv add bagelquant-bt
 ```
 
-## 权重回测
+## Weight 回测
 
-当 signal frame 已经是组合权重时，使用 `kind="weights"`。行是日期，列是资产，值是目标权重。
+当信号帧已包含组合权重时，请使用 `kind="weights"`。
+行是日期，列是资产，值是目标权重。
 
 ```python
 from bagelquant_bt import BacktestConfig, run_backtest
@@ -38,7 +40,9 @@ result.net_cumulative_returns
 
 ## 因子评估
 
-当第一个 frame 是截面因子分数时，使用 `kind="factor"`。包会计算 forward returns、IC、分位数组合收益和 top-N 回测。
+当第一帧包含横截面因子分数时使用 `kind="factor"`。
+该软件包计算前向回报、信息系数、分位数
+返回，以及前 N 个回测。
 
 ```python
 from bagelquant_bt import BacktestConfig, run_backtest
@@ -69,5 +73,5 @@ config = BacktestConfig(
 )
 ```
 
-最小费用需要 `initial_capital`，因为引擎需要把权重换手转换为交易名义金额。
-
+最低费用需要 `initial_capital`，以便引擎可以转换重量
+营业额转化为名义交易额。

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "数据契约"
+title: "Data Contracts"
 permalink: /zh/docs/data/contracts/
 lang: zh
 ref: "docs-data-contracts"
@@ -10,20 +10,20 @@ nav: docs_zh
 
 # Contracts
 
-Contracts make datasets reproducible.
+合同使数据集可重复。
 
-## DatasetIdentity
+## 数据集身份
 
-Identifies a logical dataset by name, provider, version, and optional snapshot.
+按名称、提供程序、版本和可选快照标识逻辑数据集。
 
-## DatasetSchema
+## 数据集架构
 
-Declares fields and primary keys independently from physical storage.
+独立于物理存储声明字段和主键。
 
-## DataContract
+## 数据合约
 
-Combines identity, schema, owner, freshness, and metadata.
+结合身份、模式、所有者、新鲜度和元数据。
 
-## LineageRecord
+## 谱系记录
 
-Records source, operation, parameters, and creation time.
+记录来源、操作、参数和创建时间。

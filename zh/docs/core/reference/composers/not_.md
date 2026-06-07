@@ -14,23 +14,23 @@ nav: docs_zh
 not_(frame, name=None, metadata=None)
 ```
 
-Return one where elements are falsy and zero where they are truthy.
+当元素为假时返回 1，当元素为真时返回 0。
 
-## Parameters
+## 参数
 
-**frame** : Panel | Graph
-: Input numeric `Panel` or single-output `Graph`.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+**frame**：面板|图形
+: 输入数值型 `Panel` 或单输出 `Graph`。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -46,8 +46,8 @@ result = not_(left).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Inputs are aligned by index and columns before the operation runs.
+在操作运行之前，输入按索引和列对齐。
 
-Logical and comparison results are numeric panels containing `1.0` and `0.0`.
+逻辑和比较结果是包含 `1.0` 和 `0.0` 的数字面板。

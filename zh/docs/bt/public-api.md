@@ -10,19 +10,19 @@ nav: docs_zh
 
 # 公开 API
 
-稳定 API 从 `bagelquant_bt` 导出。
+稳定的公共API是从`bagelquant_bt`导出的。
 
-## 入口函数
+## 入口点
 
 ```python
 from bagelquant_bt import run_backtest, run_factor_evaluation, run_weight_backtest
 ```
 
-- `run_backtest(signal, prices, *, kind, config=None)`：根据 `kind` 分发。
+- `run_backtest(signal, prices, *, kind, config=None)`：由 `kind` 调度。
 - `run_weight_backtest(weights, prices, *, config)`：评估组合权重。
 - `run_factor_evaluation(factor, prices, *, config)`：评估因子分数。
 
-## 配置
+＃＃ 配置
 
 ```python
 from bagelquant_bt import BacktestConfig, TransactionCostConfig
@@ -38,13 +38,13 @@ config = BacktestConfig(
 ```
 
 - `initial_capital` 必须为正。
-- `ic_method` 可以是 `"spearman"` 或 `"pearson"`。
-- `quantiles` 控制因子分桶数量。
+- `ic_method` may be `"spearman"` or `"pearson"`.
+- `quantiles` 控制因子桶计数。
 - `top_n` 控制 top-N 因子组合。
 
-## 结果对象
+## Results
 
-`BacktestResult` 暴露：
+`BacktestResult` exposes:
 
 - `weights`
 - `asset_returns`
@@ -58,7 +58,7 @@ config = BacktestConfig(
 - `transaction_costs`
 - `summary`
 
-`FactorEvaluationResult` 暴露：
+`FactorEvaluationResult` exposes:
 
 - `factor`
 - `forward_returns`
@@ -72,9 +72,8 @@ config = BacktestConfig(
 - `top_n_weights`
 - `top_n_backtest`
 
-## 异常
+## 例外情况
 
-- `BagelQuantBacktestError`：包级基础异常。
-- `BacktestConfigError`：配置无效。
-- `InputValidationError`：输入 frame 无效或不兼容。
-
+- `BagelQuantBacktestError`：基础包错误。
+- `BacktestConfigError`：无效配置。
+- `InputValidationError`：输入帧无效或不兼容。

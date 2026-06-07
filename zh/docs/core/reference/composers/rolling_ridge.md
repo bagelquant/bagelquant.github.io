@@ -8,35 +8,35 @@ alternate_lang_url: /docs/core/reference/composers/rolling_ridge/
 nav: docs_zh
 ---
 
-# rolling_ridge
+# 滚动山脊
 
 ```python
 rolling_ridge(y, *factors, window, alpha=1.0, name=None, metadata=None)
 ```
 
-Return prior-window ridge-regression predictions.
+返回先验窗脊回归预测。
 
-## Parameters
+## 参数
 
-**y** : Panel | Graph
-: Dependent-variable `Panel` or single-output `Graph`.
-**factors** : Panel | Graph
-: One or more factor `Panel` or single-output `Graph` inputs.
+**y**：面板|图形
+：因变量 `Panel` 或单输出 `Graph`。
+**factors**：面板|图形
+：一个或多个因子 `Panel` 或单输出 `Graph` 输入。
 **window** : int
-: Positive trailing-window length in rows.
-**alpha** : float, default `1.0`
-: Smoothing or regularization parameter, depending on the operation.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+：以行为单位的正尾随窗口长度。
+**alpha**：浮动，默认`1.0`
+：平滑或正则化参数，取决于操作。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -52,10 +52,10 @@ result = rolling_ridge(left, right, window=2).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Inputs are aligned by index and columns before the operation runs.
+在操作运行之前，输入按索引和列对齐。
 
-Rolling calculations run independently down each asset column.
+滚动计算独立地沿着每个资产列运行。
 
-The model is fit on prior rows only and predicts the current row.
+该模型仅适合先前的行并预测当前行。

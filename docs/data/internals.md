@@ -72,4 +72,3 @@ Provider and lake errors should include the source, dataset, requested date
 range, and operation whenever possible. Missing optional provider dependencies
 should fail at adapter construction or first provider use, not during package
 import.
-

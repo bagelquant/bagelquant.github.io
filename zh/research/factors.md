@@ -7,8 +7,6 @@ ref: "research-factors"
 alternate_lang_url: /research/factors/
 ---
 
-> 本页是 [/research/factors/](/research/factors/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
+基因研究将经济思想和原始特征转化为可测量的信号。有用的评估过程会检查覆盖范围、时间安排、信息系数、分位数回报、营业额、稳定性和冗余。
 
-因子 research turns economic ideas and raw features into measurable signals. A useful evaluation process checks coverage, timing, information coefficient, quantile returns, turnover, stability, and redundancy.
-
-本节仍在建设中。 It will expand with practical factor-evaluation workflows and examples.
+此部分正在开发中。它将通过实用的因子评估工作流程和示例进行扩展。

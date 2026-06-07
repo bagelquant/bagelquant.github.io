@@ -14,25 +14,25 @@ nav: docs_zh
 constant(source, value=1, name=None, metadata=None)
 ```
 
-Return a same-shaped constant frame.
+返回一个相同形状的常量框架。
 
-## Parameters
+## 参数
 
-**source** : Panel | Graph
-: Input numeric `Panel` or single-output `Graph`.
-**value** : float, default `1`
-: Numeric replacement or constant value.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+**source**：面板|图形
+: 输入数值型 `Panel` 或单输出 `Graph`。
+**value**：浮动，默认`1`
+：数字替换或常数值。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -47,6 +47,6 @@ result = constant(source, value=2).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Rows represent time and columns represent assets.
+行表示时间，列表示资产。

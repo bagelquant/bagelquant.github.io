@@ -50,4 +50,3 @@ The cost-aware portfolio value compounds through time using net returns.
 - `cost_return`
 
 Every backtest includes both gross no-cost and net cost-adjusted results.
-

@@ -14,39 +14,39 @@ nav: docs_zh
 ewm_var(source, com=None, span=None, halflife=None, alpha=None, min_periods=0, adjust=True, ignore_na=False, bias=False, name=None, metadata=None)
 ```
 
-Return pandas exponentially weighted variances over time.
+返回 pandas 随着时间的指数加权方差。
 
-## Parameters
+## 参数
 
-**source** : Panel | Graph
-: Input numeric `Panel` or single-output `Graph`.
-**com** : float | None, default `None`
-: Center-of-mass decay parameter. Supply exactly one decay parameter.
-**span** : float | None, default `None`
-: Span decay parameter. Supply exactly one decay parameter.
-**halflife** : float | None, default `None`
-: Half-life decay parameter. Supply exactly one decay parameter.
-**alpha** : float | None, default `None`
-: Smoothing or regularization parameter, depending on the operation.
-**min_periods** : int, default `0`
-: Minimum number of observations required to produce a value.
-**adjust** : bool, default `True`
-: Whether to divide by the decaying adjustment factor.
-**ignore_na** : bool, default `False`
-: Whether missing values are ignored when calculating weights.
-**bias** : bool, default `False`
-: Whether to use the biased exponentially weighted variance calculation.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+**source**：面板|图形
+: 输入数值型 `Panel` 或单输出 `Graph`。
+**com**：浮动|无，默认 `None`
+：质心衰减参数。只提供一个衰减参数。
+**span**：浮动|无，默认 `None`
+：跨度衰减参数。只提供一个衰减参数。
+**halflife**：浮动|无，默认 `None`
+：半衰期衰减参数。只提供一个衰减参数。
+**alpha**：浮动|无，默认 `None`
+：平滑或正则化参数，取决于操作。
+**min_periods** : int, 默认 `0`
+：产生值所需的最少观察次数。
+**adjust** : 布尔值，默认 `True`
+：是否除以衰减调节因子。
+**ignore_na** : 布尔值，默认 `False`
+：计算权重时是否忽略缺失值。
+**bias** : 布尔值，默认 `False`
+：是否使用有偏指数加权方差计算。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -61,8 +61,8 @@ result = ewm_var(source, span=2).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Rows represent time and columns represent assets.
+行表示时间，列表示资产。
 
-Rolling calculations run independently down each asset column.
+滚动计算独立地沿着每个资产列运行。

@@ -1,12 +1,10 @@
 ---
 layout: page
-title: "Panel Regression"
+title: "面板回归"
 permalink: /zh/learn/models/econometrics/panel-regression/
 lang: zh
 ref: "learn-models-econometrics-panel-regression"
 alternate_lang_url: /learn/models/econometrics/panel-regression/
 ---
 
-> 本页是 [/learn/models/econometrics/panel-regression/](/learn/models/econometrics/panel-regression/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
-
-本节仍在建设中。 It will cover panel-data structure, fixed effects, clustered errors, and cross-sectional equity applications.
+此部分正在开发中。它将涵盖面板数据结构、固定效应、集群错误和横截面股票应用。

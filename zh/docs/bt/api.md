@@ -16,12 +16,12 @@ nav: docs_zh
 run_backtest(signal, prices, *, kind, config=None)
 ```
 
-Dispatches to the correct evaluation path.
+分派到正确的评估路径。
 
 - `kind="weights"` calls `run_weight_backtest`
 - `kind="factor"` calls `run_factor_evaluation`
 
-`config` is required because transaction-cost minimum fees require
+需要 `config`，因为交易成本最低费用要求
 `initial_capital`.
 
 ## `run_weight_backtest`
@@ -30,11 +30,11 @@ Dispatches to the correct evaluation path.
 run_weight_backtest(weights, prices, *, config)
 ```
 
-Evaluates a DataFrame as portfolio weights.
+将 DataFrame 评估为组合权重。
 
-Returns `BacktestResult`.
+返回值 `BacktestResult`.
 
-Important fields:
+重要字段：
 
 - `weights`
 - `asset_returns`
@@ -54,11 +54,11 @@ Important fields:
 run_factor_evaluation(factor, prices, *, config)
 ```
 
-Evaluates a DataFrame as factor scores.
+将数据帧评估为因子分数。
 
-Returns `FactorEvaluationResult`.
+返回值 `FactorEvaluationResult`.
 
-Important fields:
+重要字段：
 
 - `factor`
 - `forward_returns`
@@ -85,12 +85,12 @@ BacktestConfig(
 )
 ```
 
-`initial_capital` must be positive.
+`initial_capital` 必须为正。
 
 `ic_method` may be `"spearman"` or `"pearson"`.
 
-## DataFrame Boundary
+## 数据帧边界
 
-The first argument must be a numeric `pandas.DataFrame`.
+第一个参数必须是数字 `pandas.DataFrame`。
 
-Rows are dates, columns are assets, and values are weights or factor scores.
+行是日期，列是资产，值是权重或因子分数。

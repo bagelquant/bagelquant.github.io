@@ -14,25 +14,25 @@ nav: docs_zh
 add(lhs, rhs, name=None, metadata=None)
 ```
 
-Add two frames.
+添加两个框架。
 
-## Parameters
+## 参数
 
-**lhs** : Panel | Graph
-: Left-hand numeric `Panel` or single-output `Graph`.
-**rhs** : Panel | Graph
-: Right-hand numeric `Panel` or single-output `Graph`.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+**lhs**：面板|图形
+：左侧数字 `Panel` 或单输出 `Graph`。
+**rhs**：面板|图形
+：右侧数字 `Panel` 或单输出 `Graph`。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -48,6 +48,6 @@ result = add(left, right).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Inputs are aligned by index and columns before the operation runs.
+在操作运行之前，输入按索引和列对齐。

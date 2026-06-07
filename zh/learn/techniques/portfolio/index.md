@@ -7,8 +7,6 @@ ref: "learn-techniques-portfolio"
 alternate_lang_url: /learn/techniques/portfolio/
 ---
 
-> 本页是 [/learn/techniques/portfolio/](/learn/techniques/portfolio/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
+这些技术有助于将研究信号转化为受控位置。
 
-These techniques help translate research signals into controlled positions.
-
-推荐阅读顺序： [Kelly Criterion](/zh/learn/techniques/portfolio/kelly-criterion/), [Risk Parity](/zh/learn/techniques/portfolio/risk-parity/), [Volatility Targeting](/zh/learn/techniques/portfolio/volatility-targeting/), and [Position Sizing](/zh/learn/techniques/portfolio/position-sizing/).
+推荐阅读顺序：[Kelly 准则](/zh/learn/techniques/portfolio/kelly-criterion/)、[风险平价](/zh/learn/techniques/portfolio/risk-parity/)、[波动率目标](/zh/learn/techniques/portfolio/volatility-targeting/) 和 [仓位 sizing](/zh/learn/techniques/portfolio/position-sizing/)。

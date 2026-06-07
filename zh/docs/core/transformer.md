@@ -8,20 +8,20 @@ alternate_lang_url: /docs/core/transformer/
 nav: docs_zh
 ---
 
-# Transformer
+# 变压器
 
-## Overview
+## 概览
 
-A transformer is a unary function-style operation:
+变压器是一元函数式的操作：
 
 ```text
 Panel | Graph -> Graph
 ```
 
-For signatures, parameter descriptions, and examples for every public
-operation, see the [transformer reference](../reference/transformers/index.md).
+为每个公众提供签名、参数描述和示例
+操作见[transformer reference](../reference/transformers/index.md)。
 
-## Built-In Transformers
+## 内置变压器
 
 ```python
 from bagelquant_core.transformer import (
@@ -37,125 +37,125 @@ smoothed = rolling_mean(factor, window=20, name="smoothed")
 compressed = signed_log1p(smoothed, name="compressed")
 ```
 
-Built-ins are grouped by behavior:
+内置函数按行为分组：
 
-| Family | Transformers |
+|家庭|变形金刚|
 | --- | --- |
 | Basic | `identity`, `abs_value`, `negate`, `diff`, `pct_change` |
-| Missing values | `fillna`, `fillna_zero`, `ffill`, `bfill` |
-| Replacement | `replace_non_nan`, `non_nan_to_one`, `non_nan_to_zero` |
+|缺失值 | `fillna`、`fillna_zero`、`ffill`、`bfill` |
+|更换| `replace_non_nan`、`non_nan_to_one`、`non_nan_to_zero` |
 | Rolling | `rolling_mean`, `rolling_std`, `rolling_min`, `rolling_max`, `rolling_sum`, `ewm_mean`, `ewm_std`, `ewm_var` |
 | Power | `power`, `signed_power`, `sqrt` |
-| Logarithmic | `log`, `log1p`, `signed_log1p` |
-| Normalization | `rank`, `zscore`, `winsorize`, `min_max_scale` |
+|对数| `log`、`log1p`、`signed_log1p` |
+|标准化| `rank`、`zscore`、`winsorize`、`min_max_scale` |
 | Category | `category_demean`, `category_mean`, `category_rank`, `category_zscore` |
-| General | `nonnans`, `notnan`, `denoise`, `posonly`, `negonly`, `lag`, `delta`, `rate_of_change`, `remove_repeated`, `date_age_constraint`, `constant`, `replace_inf` |
-| Translation | `demean`, `translate_to_pos` |
+| General | `nonnans`, `notnan`, `denoise`, `posonly`, `negonly`, `lag`, `delta`, `rate_of_change`, `remove_repeated`, `date_age_constraint`, `notnan`0, `notnan`1 |
+|翻译 | `demean`、`translate_to_pos` |
 | Rank | `rankpct`, `nrank`, `logrank` |
 | Outliers | `truncate`, `trim`, `trim_quantile` |
-| Variance stabilization | `boxcox`, `anscombe`, `freeman`, `fisher` |
-| Trigonometric | `sin`, `cos`, `arcsin`, `arccos`, `trig`, `arctanh`, `arctan` |
-| Kelly criterion | `kelly`, `kelly_nonan_standardize`, `kelly_rank_boxcox`, `kelly_rescaling_weight` |
+|方差稳定| `boxcox`、`anscombe`、`freeman`、`fisher` |
+|三角| `sin`、`cos`、`arcsin`、`arccos`、`trig`、`arctanh`、`arctan` |
+|凯利准则| `kelly`、`kelly_nonan_standardize`、`kelly_rank_boxcox`、`kelly_rescaling_weight` |
 
 ## Basic
 
-Basic operations are element-wise or run over rows, which represent time:
+基本操作是逐元素的或在代表时间的行上运行：
 
-| Transformer | Behavior |
+|变压器|行为 |
 | --- | --- |
-| `identity(source)` | Return input values unchanged. |
-| `abs_value(source)` | Return absolute values. |
-| `negate(source)` | Negate values. |
-| `diff(source, periods=1)` | Calculate differences over time. |
-| `pct_change(source, periods=1)` | Calculate fractional changes over time, such as returns from a price panel. |
+| `identity(source)` |返回输入值不变。 |
+| `abs_value(source)` |返回绝对值。 |
+| `negate(source)` |负值。 |
+| `diff(source, periods=1)` |计算一段时间内的差异。 |
+| `pct_change(source, periods=1)` |计算随时间变化的分数，例如价格面板的回报。 |
 
-## Missing Values
+## 缺失值
 
-Missing-value operations preserve the panel shape:
+缺失值操作保留面板形状：
 
-| Transformer | Behavior |
+|变压器|行为 |
 | --- | --- |
-| `fillna(source, value=0)` | Fill `NaN` values with a numeric scalar. |
-| `fillna_zero(source)` | Fill `NaN` values with zero. |
-| `ffill(source, limit=None)` | Forward-fill over time. |
-| `bfill(source, limit=None)` | Backward-fill over time. |
+| `fillna(source, value=0)` |用数字标量填充 `NaN` 值。 |
+| `fillna_zero(source)` |用零填充 `NaN` 值。 |
+| `ffill(source, limit=None)` |随着时间的推移向前填充。 |
+| `bfill(source, limit=None)` |随着时间的推移向后填充。 |
 
-`ffill` and `bfill` accept an optional positive `limit`.
+`ffill` 和 `bfill` 接受可选的正 `limit`。
 
-## Replacement
+＃＃ 替代品
 
-Replacement operations preserve missing values and replace existing values:
+替换操作保留缺失值并替换现有值：
 
-| Transformer | Behavior |
+|变压器|行为 |
 | --- | --- |
-| `replace_non_nan(source, value=...)` | Replace each non-`NaN` value with a numeric scalar. |
-| `non_nan_to_one(source)` | Replace each non-`NaN` value with one. |
-| `non_nan_to_zero(source)` | Replace each non-`NaN` value with zero. |
+| `replace_non_nan(source, value=...)` |将每个非 `NaN` 值替换为数字标量。 |
+| `non_nan_to_one(source)` |将每个非 `NaN` 值替换为 1。 |
+| `non_nan_to_zero(source)` |将每个非 `NaN` 值替换为零。 |
 
-These operations are useful for availability masks and constant exposures.
+这些操作对于可用性掩模和持续曝光非常有用。
 
 ## Rolling
 
-Rolling operations run over rows, which represent time:
+滚动操作在代表时间的行上运行：
 
-| Transformer | Behavior |
+|变压器|行为 |
 | --- | --- |
-| `rolling_mean(source, window, min_periods=None)` | Rolling arithmetic mean. |
-| `rolling_std(source, window, min_periods=None, ddof=1)` | Rolling standard deviation. |
-| `rolling_min(source, window, min_periods=None)` | Rolling minimum. |
-| `rolling_max(source, window, min_periods=None)` | Rolling maximum. |
-| `rolling_sum(source, window, min_periods=None)` | Rolling sum. |
-| `ewm_mean(source, ...)` | Pandas exponentially weighted mean. |
-| `ewm_std(source, ...)` | Pandas exponentially weighted standard deviation. |
-| `ewm_var(source, ...)` | Pandas exponentially weighted variance. |
+| `rolling_mean(source, window, min_periods=None)` |滚动算术平均值。 |
+| `rolling_std(source, window, min_periods=None, ddof=1)` |滚动标准差。 |
+| `rolling_min(source, window, min_periods=None)` |滚动最小值。 |
+| `rolling_max(source, window, min_periods=None)` |滚动最大值。 |
+| `rolling_sum(source, window, min_periods=None)` |滚动总和。 |
+| `ewm_mean(source, ...)` |熊猫指数加权平均值。 |
+| `ewm_std(source, ...)` | Pandas 指数加权标准差。 |
+| `ewm_var(source, ...)` | Pandas 指数加权方差。 |
 
-EWM operations follow pandas semantics and require exactly one decay argument:
-`com`, `span`, `halflife`, or `alpha`. They also accept `min_periods`,
-`adjust`, and `ignore_na`. `ewm_std` and `ewm_var` additionally accept `bias`.
+EWM 操作遵循 pandas 语义，并且只需要一个衰减参数：
+`com`、`span`、`halflife` 或 `alpha`。他们还接受 `min_periods`，
+`adjust` 和 `ignore_na`。 `ewm_std` 和 `ewm_var` 另外接受 `bias`。
 
 ## Power
 
-| Transformer | Behavior |
+|变压器|行为 |
 | --- | --- |
-| `power(source, exponent)` | Raise values to an exponent. |
-| `signed_power(source, exponent)` | Raise absolute values to an exponent while preserving signs. |
-| `sqrt(source)` | Calculate square roots, returning `NaN` for negative values. |
+| `power(source, exponent)` |将值提高到指数。 |
+| `signed_power(source, exponent)` |将绝对值提高为指数，同时保留符号。 |
+| `sqrt(source)` |计算平方根，对于负值返回 `NaN`。 |
 
-## Logarithmic
+## 对数
 
-| Transformer | Behavior |
+|变压器|行为 |
 | --- | --- |
-| `log(source)` | Calculate natural logarithms, returning `NaN` for non-positive values. |
-| `log1p(source)` | Calculate `log(1 + value)`, returning `NaN` for values at or below `-1`. |
+| `log(source)` |计算自然对数，对于非正值返回 `NaN`。 |
+| `log1p(source)` |计算 `log(1 + value)`，对于等于或低于 `-1` 的值返回 `NaN`。 |
 | `signed_log1p(source)` | Calculate `sign(value) * log(1 + abs(value))`. |
 
-## Normalization
+## 标准化
 
-Normalization operations run across columns, which represent assets:
+规范化操作跨列运行，这些列代表资产：
 
-| Transformer | Behavior |
+|变压器|行为 |
 | --- | --- |
-| `rank(source)` | Calculate percentile ranks for each row. |
-| `zscore(source)` | Calculate z-scores for each row. |
-| `winsorize(source, lower=0.01, upper=0.99)` | Clip each row to its quantile bounds. |
-| `min_max_scale(source)` | Scale each row to `[0, 1]`. |
-| `normalize(source)` | Scale each row to `[-1, 1]`. |
-| `net_scale(source)` | Scale positive and negative values independently by their row sums. |
+| `rank(source)` |计算每行的百分位数排名。 |
+| `zscore(source)` |计算每行的 z 分数。 |
+| `winsorize(source, lower=0.01, upper=0.99)` |将每一行剪切到其分位数边界。 |
+| `min_max_scale(source)` |将每行缩放至 `[0, 1]`。 |
+| `normalize(source)` |将每行缩放至 `[-1, 1]`。 |
+| `net_scale(source)` |按正值和负值的行总和独立缩放正值和负值。 |
 
-Constant rows produce `NaN` values where normalization is undefined.
+常量行生成未定义标准化的 `NaN` 值。
 
-## Extended Rolling Operations
+## 扩展滚动操作
 
-The rolling family also includes `rolling_var`, `rolling_skew`, `rolling_kurt`,
+滚动系列还包括 `rolling_var`、`rolling_skew`、`rolling_kurt`、
 `rolling_median`, `rolling_rank`, `rolling_percentile`, and `rolling_zscore`.
-`rolling_ewm` and `rolling_ew_std` are half-life-compatible aliases for the
-general EWM operations, while `rolling_ewm_fw` exposes expanding exponentially
-weighted means.
+`rolling_ewm` 和 `rolling_ew_std` 是半衰期兼容的别名
+通用 EWM 操作，而 `rolling_ewm_fw` 则呈指数级扩展
+加权平均值。
 
 ## Category
 
-Category operations accept a numeric source and a matching `CategoryPanel`.
-The category panel may contain strings such as industry, sector, or country
+类别操作接受数字源和匹配的 `CategoryPanel`。
+类别面板可能包含行业、部门或国家等字符串
 labels:
 
 ```python
@@ -174,17 +174,17 @@ industry_neutral = category_demean(raw_factor, industry)
 industry_ranked = category_rank(raw_factor, industry)
 ```
 
-| Transformer | Behavior |
+|变压器|行为 |
 | --- | --- |
-| `category_demean(source, categories)` | Subtract each category mean within each row. |
-| `category_mean(source, categories)` | Replace values with their category mean within each row. |
-| `category_rank(source, categories)` | Calculate percentile ranks within each category and row. |
-| `category_zscore(source, categories)` | Calculate z-scores within each category and row. |
+| `category_demean(source, categories)` |减去每行中的每个类别平均值。 |
+| `category_mean(source, categories)` |将值替换为每行中的类别平均值。 |
+| `category_rank(source, categories)` |计算每个类别和行内的百分位数排名。 |
+| `category_zscore(source, categories)` |计算每个类别和行内的 z 分数。 |
 
-Although category operations are exported with transformers, they consume two
-aligned inputs and are represented internally as multi-input graph nodes.
+虽然类别操作是用变压器导出的，但它们消耗了两个
+对齐输入并在内部表示为多输入图节点。
 
-## User-Defined Transformers
+## 用户定义的变压器
 
 ```python
 import pandas as pd
@@ -200,7 +200,7 @@ def demean(frame: pd.DataFrame) -> pd.DataFrame:
 centered = demean(price, name="centered")
 ```
 
-The decorated function receives a `DataFrame` during execution but accepts a
-`Panel` or `Graph` when researchers construct a workflow.
+修饰函数在执行期间接收 `DataFrame`，但接受
+当研究人员构建工作流程时为 `Panel` 或 `Graph`。
 
-Configuration arguments are stored in graph specifications and cache keys.
+配置参数存储在图形规范和缓存键中。

@@ -91,4 +91,3 @@ frame = result.data
 ```
 
 Use `frame` as input to downstream portfolio construction or backtesting.
-

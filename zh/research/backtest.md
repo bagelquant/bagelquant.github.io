@@ -7,8 +7,6 @@ ref: "research-backtest"
 alternate_lang_url: /research/backtest/
 ---
 
-> 本页是 [/research/backtest/](/research/backtest/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
+回溯测试询问策略是否能够经受住现实的假设。评估样本外行为、成本、流动性、再平衡时间、营业额、风险漂移和实施细节。
 
-回测ing asks whether a strategy survives realistic assumptions. Evaluate out-of-sample behavior, costs, liquidity, rebalance timing, turnover, exposure drift, and implementation details.
-
-This section will expand alongside the future `bagelquant-bt` package.
+此部分将与未来的 `bagelquant-bt` 包一起扩展。

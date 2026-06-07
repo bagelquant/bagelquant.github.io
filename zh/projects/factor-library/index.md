@@ -7,8 +7,6 @@ ref: "projects-factor-library"
 alternate_lang_url: /projects/factor-library/
 ---
 
-> 本页是 [/projects/factor-library/](/projects/factor-library/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
+此部分正在开发中。它将收集因子定义、实施说明和评估结果。
 
-本节仍在建设中。 It will collect factor definitions, implementation notes, and evaluation results.
-
-It will include factor definitions, preprocessing choices, evaluation results, and implementation notes.
+它将包括因子定义、预处理选择、评估结果和实施说明。

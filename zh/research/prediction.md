@@ -7,8 +7,6 @@ ref: "research-prediction"
 alternate_lang_url: /research/prediction/
 ---
 
-> 本页是 [/research/prediction/](/research/prediction/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
+预测将特征结合到预期回报预测中。从透明的基线开始，使用时间感知验证，并在考虑营业额和组合行为后比较模型。
 
-预测 combines features into expected-return forecasts. Start with transparent baselines, use time-aware validation, and compare models after accounting for turnover and portfolio behavior.
-
-本节仍在建设中。 It will cover baseline models, feature combination, validation design, interpretability, and model comparison.
+此部分正在开发中。它将涵盖基线模型、特征组合、验证设计、可解释性和模型比较。

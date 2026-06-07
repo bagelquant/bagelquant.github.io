@@ -1,14 +1,12 @@
 ---
 layout: page
-title: "Machine Learning"
+title: "机器学习"
 permalink: /zh/learn/models/machine-learning/
 lang: zh
 ref: "learn-models-machine-learning"
 alternate_lang_url: /learn/models/machine-learning/
 ---
 
-> 本页是 [/learn/models/machine-learning/](/learn/models/machine-learning/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
+机器学习模型可以将广泛的特征集结合到回报预测中。从基线开始，小心地增加复杂性。
 
-Machine learning models can combine broad feature sets into return forecasts. Start with baselines and add complexity carefully.
-
-推荐阅读顺序： [Regularized Linear Models](/zh/learn/models/machine-learning/regularized-linear-models/), [Tree Models](/zh/learn/models/machine-learning/tree-models/), [Boosting](/zh/learn/models/machine-learning/boosting/), [Neural Networks](/zh/learn/models/machine-learning/neural-networks/), and [Transformers](/zh/learn/models/machine-learning/transformers/).
+推荐阅读顺序：[正则化线性模型](/zh/learn/models/machine-learning/regularized-linear-models/)、[树模型](/zh/learn/models/machine-learning/tree-models/)、[Boosting](/zh/learn/models/machine-learning/boosting/)、[神经网络](/zh/learn/models/machine-learning/neural-networks/) 和 [Transformers](/zh/learn/models/machine-learning/transformers/)。

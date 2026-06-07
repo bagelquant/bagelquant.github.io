@@ -8,31 +8,31 @@ alternate_lang_url: /docs/core/reference/transformers/category_demean/
 nav: docs_zh
 ---
 
-# category_demean
+# 类别_demean
 
 ```python
 category_demean(source, categories, name=None, metadata=None)
 ```
 
-Subtract each asset's category mean within each row.
+减去每行中每个资产的类别平均值。
 
-## Parameters
+## 参数
 
-**source** : Panel | Graph
-: Input numeric `Panel` or single-output `Graph`.
-**categories** : Panel | Graph
-: Matching `CategoryPanel` containing row-wise group labels.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+**source**：面板|图形
+: 输入数值型 `Panel` 或单输出 `Graph`。
+**categories**：面板|图形
+：匹配包含行组标签的 `CategoryPanel`。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -48,8 +48,8 @@ result = category_demean(factor, industry).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Rows represent time and columns represent assets.
+行表示时间，列表示资产。
 
-Missing group labels are excluded from the group calculation.
+缺少的组标签被排除在组计算之外。

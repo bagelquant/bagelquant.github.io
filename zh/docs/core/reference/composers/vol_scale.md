@@ -14,25 +14,25 @@ nav: docs_zh
 vol_scale(frame, volatility, name=None, metadata=None)
 ```
 
-Scale values by volatility.
+按波动性缩放值。
 
-## Parameters
+## 参数
 
-**frame** : Panel | Graph
-: Input numeric `Panel` or single-output `Graph`.
-**volatility** : Panel | Graph
-: Volatility `Panel` or single-output `Graph` used as the divisor.
-**name** : str | None, default `None`
-: Optional graph-node name. A generated name is used when omitted.
-**metadata** : Mapping[str, Any] | None, default `None`
-: Optional metadata stored on the graph node.
+**frame**：面板|图形
+: 输入数值型 `Panel` 或单输出 `Graph`。
+**volatility**：面板|图形
+：波动率`Panel`或单输出`Graph`用作除数。
+**name**：str |无，默认 `None`
+: 可选的图节点名称。省略时会自动生成名称。
+**metadata**：映射[str，任意] |无，默认 `None`
+: 可选的图节点元数据。
 
-## Returns
+## 返回值
 
 **Graph**
-: Lazy single-output graph. Call `.compute()` to materialize a `Panel`.
+: 惰性单输出图。调用 `.compute()` 可物化为 `Panel`。
 
-## Examples
+## 示例
 
 ```python
 import pandas as pd
@@ -48,6 +48,6 @@ result = vol_scale(left, right).compute().data
 print(result)
 ```
 
-## Notes
+## 说明
 
-Inputs are aligned by index and columns before the operation runs.
+在操作运行之前，输入按索引和列对齐。

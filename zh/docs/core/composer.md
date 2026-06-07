@@ -10,18 +10,18 @@ nav: docs_zh
 
 # Composer
 
-## Overview
+## 概览
 
-A composer is a multi-input function-style operation:
+作曲家是一种多输入函数式操作：
 
 ```text
 (Panel | Graph, ...) -> Graph
 ```
 
-For signatures, parameter descriptions, and examples for every public
-operation, see the [composer reference](../reference/composers/index.md).
+为每个公众提供签名、参数描述和示例
+操作见[composer reference](../reference/composers/index.md)。
 
-## Built-In Composers
+## 内置作曲家
 
 ```python
 from bagelquant_core.composer import div, mean, weighted_mean
@@ -37,19 +37,19 @@ prediction = weighted_mean(
 )
 ```
 
-Built-ins are grouped by behavior:
+内置函数按行为分组：
 
-| Family | Composers |
+|家庭|作曲家 |
 | --- | --- |
-| Arithmetic | `add`, `sub`, `mul`, `div` |
-| Aggregation | `sum_frames`, `mean`, `product`, `minimum`, `maximum`, `weighted_sum`, `weighted_mean` |
+|算术| `add`、`sub`、`mul`、`div` |
+|聚合| `sum_frames`、`mean`、`product`、`minimum`、`maximum`、`weighted_sum`、`weighted_mean` |
 | General | `project`, `mask`, `coalesce` |
 | Scaling | `vol_scale` |
-| Math | `power`, `power_df`, `and_`, `or_`, `not_`, `xand`, `xor`, `greater`, `greater_equal`, `less`, `less_equal`, `equal` |
+| Math | `power`, `power_df`, `and_`, `or_`, `not_`, `xand`, `xor`, `greater`, `greater_equal`, `less`, `power_df`0, `power_df`1 |
 | Rolling | `rolling_corr`, `rolling_cov`, `rolling_ols`, `rolling_lasso`, `rolling_ridge`, `rolling_elastic_net` |
-| Cross-sectional | `orthogonalize`, `group_rank`, `group_mean`, `group_max`, `group_min`, `group_median`, `group_std`, `group_demean`, `group_zscore`, `group_rankpct`, `group_percentile` |
+|横截面| `orthogonalize`、`group_rank`、`group_mean`、`group_max`、`group_min`、`group_median`、`group_std`、`group_demean`、`group_zscore`、`group_rankpct`、`group_rank`0 |
 
-## User-Defined Composers
+## 用户定义的作曲家
 
 ```python
 import pandas as pd
@@ -65,18 +65,18 @@ def average(*frames: pd.DataFrame) -> pd.DataFrame:
 combined = average(value, quality, momentum, name="combined")
 ```
 
-The internal execution runtime aligns input panel data before executing a
-composer. Already-aligned inputs are reused internally.
+内部执行运行时在执行之前对齐输入面板数据
+作曲家。已对齐的输入在内部重用。
 
-Weighted composers require one numeric weight per input frame and compute a
-new frame without mutating their inputs. `weighted_mean(...)` also requires a
-non-zero total weight.
+加权作曲家需要每个输入帧一个数字权重并计算
+新框架而不改变他们的输入。 `weighted_mean(...)` 还需要一个
+总重量非零。
 
-Rolling regressions use `rolling_ols(y, *factors, window=...)` and the same
-input order for regularized variants. They fit on prior rows only, then predict
-the current row.
+滚动回归使用 `rolling_ols(y, *factors, window=...)` 和相同的
+正则化变体的输入顺序。它们仅适合前面的行，然后预测
+当前行。
 
-Comparison and logical composers return numeric `1.0` and `0.0` panels so their
-outputs remain valid graph inputs. `minimum` and `maximum` are also exported as
-`min` and `max`; `sub`, `mul`, and `div` are exported as `subtract`,
+比较和逻辑作曲家返回数字 `1.0` 和 `0.0` 面板，以便它们
+输出仍然有效的图形输入。 `minimum` 和 `maximum` 也导出为
+`min` 和 `max`； `sub`、`mul` 和 `div` 导出为 `subtract`，
 `multiply`, and `divide`.

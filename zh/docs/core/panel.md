@@ -10,11 +10,11 @@ nav: docs_zh
 
 # Panel
 
-## Overview
+## 概览
 
-`Panel` is the explicit data object in BagelQuant. Every input panel is
-created through a `Domain`, which defines trading sessions and asset
-membership. A panel stores a numeric two-dimensional frame:
+`Panel` 是 BagelQuant 中的显式数据对象。每个输入面板都是
+通过 `Domain` 创建，定义交易会话和资产
+会员资格。面板存储一个数字二维框架：
 
 ```text
 Time x Assets
@@ -36,37 +36,37 @@ price = Panel.from_domain(price_df, domain, name="price")
 
 Panels are:
 
-- Raw input data
-- DAG leaf nodes
-- Materialized graph outputs
-- Cache values stored by the internal execution runtime
+- Raw input 数据
+- DAG叶节点
+- 物化图输出
+- 内部执行运行时存储的缓存值
 
-Factors, predictions, and portfolio weights are normally represented as lazy
-graphs until their output panels are needed.
+因子、预测和组合权重通常表示为惰性
+图表，直到需要其输出面板为止。
 
-## Invariants
+## 不变量
 
 Panels:
 
-- Have a one-dimensional unique index
-- Have one-dimensional unique columns
-- Contain only numeric values
-- Copy input data at construction
-- Return a defensive copy when data is accessed through `Panel.data`
-- Are immutable from the public API
-- Match their Domain's trading-session index and universe columns
-- Mask inactive cells for dynamic universes
+- 拥有一维唯一索引
+- 具有一维独特的列
+- 仅包含数值
+- 在构建时复制输入数据
+- 通过 `Panel.data` 访问数据时返回防御副本
+- 对于公共 API 是不可变的
+- 匹配其域的交易会话索引和宇宙列
+- 为动态宇宙屏蔽不活跃的细胞
 
 ## Alignment
 
-Multi-input composer functions require equivalent Domains. The runtime
-reapplies dynamic-universe membership after each derived computation so
-inactive cells cannot affect later operations.
+多输入编辑器函数需要等效的域。运行时
+在每次导出计算后重新应用动态宇宙成员资格，因此
+不活跃的单元格不会影响后续操作。
 
-## Dynamic Universes
+## 动态宇宙
 
-A dynamic universe is a boolean frame indexed by dates and asset columns.
-Missing rows and cells are inactive; membership is not forward-filled:
+动态 Universe 是按日期和资产列索引的布尔框架。
+缺少的行和单元格处于非活动状态；成员资格不会被转发：
 
 ```python
 membership = pd.DataFrame(
@@ -81,15 +81,15 @@ domain = Domain(
 
 ## Calendar
 
-`Domain` never retrieves calendars. Provide a non-empty, unique, sorted
-calendar from your data layer. The first and last sessions define the domain's
-start and end dates.
+`Domain` 从不检索日历。提供一个非空、唯一、已排序的
+来自数据层的日历。第一个和最后一个会话定义域的
+开始和结束日期。
 
-## Category Panels
+## 类别面板
 
-`CategoryPanel` is an immutable leaf node for labels such as industry, sector,
-or country. It follows the same time-by-asset shape as `Panel` but accepts
-string labels:
+`CategoryPanel` 是一个不可变的叶子节点，用于标签，例如行业、部门、
+或国家。它遵循与 `Panel` 相同的时间资产形状，但接受
+字符串标签：
 
 ```python
 import pandas as pd
@@ -103,5 +103,5 @@ industry = CategoryPanel.from_domain(
 )
 ```
 
-Use category panels with the category operations exported from
+使用类别面板以及从以下位置导出的类别操作
 `bagelquant_core.transformer`.

@@ -35,35 +35,7 @@ I am currently based in Shanghai and working at Systematica Investments, focusin
 *Shanghai, China*
 
 * Equity alpha research within systematic investment strategies
-* Factor design and cross-sectional signal evaluation
 * Out-of-sample and regime-based robustness testing
-
-
-**Quant Analyst Intern - Quantel Asset Management**
-
-*New York, NY*
-
-* Equity multi-factor research for signal construction and portfolio design
-* Evaluation of 170+ factors using IC/IR and robustness diagnostics
-* Rolling out-of-sample testing for models and strategies
-* Drawdown and risk analysis of portfolio behavior
-
-**Quant Analyst - Sincere Digits**
-
-*Beijing, China*
-
-* Built fund analytics and portfolio construction system for allocation decisions
-* Developed fund scoring and risk evaluation frameworks
-* Automated reporting and data workflows for portfolio monitoring
-
-**Analyst - Hongchou Investment**
-
-*Beijing, China*
-
-* Transitioned fund allocation toward systematic factor-based framework
-* Developed fund scoring and screening models for portfolio construction
-* Implemented performance attribution and risk analytics
-
 
 ## Academic & Research Projects
 
@@ -87,4 +59,3 @@ I focus on building strategies that are stable, explainable, and robust under re
 - [Email](mailto:eric.yanzhong.huang@gmail.com)  
 - [LinkedIn](https://www.linkedin.com/in/yanzhonghuang)  
 - [GitHub](https://github.com/bagelquant)
-    

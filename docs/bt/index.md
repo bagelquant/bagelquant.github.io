@@ -3,7 +3,7 @@ layout: page
 title: "Overview"
 permalink: /docs/bt/
 lang: en
-ref: "docs-bt-index"
+ref: "docs-bt"
 alternate_lang_url: /zh/docs/bt/
 nav: docs_en
 ---

@@ -77,4 +77,3 @@ config = BacktestConfig(
 - `BagelQuantBacktestError`: base package error.
 - `BacktestConfigError`: invalid configuration.
 - `InputValidationError`: invalid or incompatible input frames.
-

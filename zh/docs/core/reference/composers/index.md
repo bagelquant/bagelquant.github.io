@@ -3,15 +3,15 @@ layout: page
 title: "概览"
 permalink: /zh/docs/core/reference/composers/
 lang: zh
-ref: "docs-core-reference-composers-index"
+ref: "docs-core-reference-composers"
 alternate_lang_url: /docs/core/reference/composers/
 nav: docs_zh
 ---
 
-# Composer Reference
+# Composer 参考
 
-Each public composer has a dedicated reference page with its signature,
-parameters, return value, notes, and an example.
+每个公共作曲家都有一个带有其签名的专用参考页，
+参数、返回值、注释和示例。
 
 - [`add`](./add.md)
 - [`and_`](./and_.md)

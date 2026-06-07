@@ -3,27 +3,30 @@ layout: page
 title: "概览"
 permalink: /zh/docs/core/
 lang: zh
-ref: "docs-core-index"
+ref: "docs-core"
 alternate_lang_url: /docs/core/
 nav: docs_zh
 ---
 
-# BagelQuant Core
+# BagelQuant 核心
 
-`bagelquant-core` 是 BagelQuant 的共享研究内核，负责面板数据模型、惰性图逻辑、算子组合和执行运行时。
+`bagelquant-core` 是 BagelQuant 的共享研究内核。它提供
+领域感知面板数据、惰性图逻辑、可重用操作和内部
+执行运行时。
 
-它适合在数据已经进入 pandas 或 `Panel` 之后使用：先把原始输入对齐到同一个研究域，再用 transformer 和 composer 定义因子、预测或权重逻辑，最后执行图得到可复现的结果。
+在数据加载到 pandas 对象之后、下游之前使用它
+回溯测试或应用程序工作流程需要具体化的因子、预测或
+配重板。
 
 ## 推荐阅读
 
-- [快速开始](quick-start.md)
-- [架构与设计](architecture.md)
+- [Quick start](quick-start.md)
+- [架构 and design](02_architecture/bagelquant%20core%20architecture.md)
 - [公开 API](public-api.md)
-- [内部实现](internals.md)
-- [Panel](panel.md)
-- [Graph](graph.md)
-- [Transformer](transformer.md)
-- [Composer](composer.md)
-- [Execution](execution.md)
-- [API Reference](reference/index.md)
-
+- [Internal documentation](internals.md)
+- [Panel](01_concepts/panel.md)
+- [Graph](01_concepts/graph.md)
+- [Transformer](01_concepts/transformer.md)
+- [Composer](01_concepts/composer.md)
+- [执行](01_concepts/execution.md)
+- [API reference](reference/index.md)

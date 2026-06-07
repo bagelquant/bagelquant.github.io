@@ -7,6 +7,4 @@ ref: "projects-paper-notes"
 alternate_lang_url: /projects/paper-notes/
 ---
 
-> 本页是 [/projects/paper-notes/](/projects/paper-notes/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
-
-本节仍在建设中。 It will collect reading notes and literature reviews related to quantitative equity research.
+此部分正在开发中。它将收集量化股票研究相关的阅读笔记和文献综述。

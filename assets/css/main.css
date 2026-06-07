@@ -1464,15 +1464,32 @@ html.dark .sidebar-toggle:hover {
   color: var(--text);
 }
 
-/* 3-column: [left sidebar] [main] [right sidebar] */
+/* Adaptive content layout: only reserve sidebar columns that exist. */
 .layout-three-column {
   display: grid;
-  grid-template-columns: minmax(0, 220px) minmax(0, 1fr) minmax(0, 260px);
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
   align-items: flex-start;
   position: relative;
   max-width: 1320px;
   margin: 0 auto;
+}
+
+.layout-three-column.has-left-sidebar {
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+}
+
+.layout-three-column.has-toc {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 260px);
+}
+
+.layout-three-column.has-left-sidebar.has-toc {
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr) minmax(0, 260px);
+}
+
+.layout-three-column:not(.has-left-sidebar) > .page-sidebar,
+.layout-three-column:not(.has-toc) > .page-toc {
+  display: none;
 }
 
 .layout-two-column {
@@ -1639,27 +1656,7 @@ html.dark .sidebar-toggle:hover {
 @media (max-width: 960px) {
   .layout-three-column {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      "left"
-      "right"
-      "main";
     gap: 1.5rem;
-  }
-
-  /* On small screens, explicitly map areas so order is left -> right -> main */
-  .layout-three-column > .page-sidebar,
-  .layout-three-column > .post-sidebar-left {
-    grid-area: left;
-  }
-
-  .layout-three-column > .page-toc,
-  .layout-three-column > .post-toc {
-    grid-area: right;
-  }
-
-  .layout-three-column > .post-main,
-  .layout-three-column > article.post {
-    grid-area: main;
   }
 
   .layout-two-column {

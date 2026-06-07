@@ -7,15 +7,13 @@ ref: "learn-foundations"
 alternate_lang_url: /learn/foundations/
 ---
 
-> 本页是 [/learn/foundations/](/learn/foundations/) 的中文版本。专有名词和代码标识保持英文，以便和包 API 对齐。
-
-These mathematical foundations support modeling, estimation, risk analysis, and optimization.
+这些数学基础支持建模、估计、风险分析和优化。
 
 推荐阅读顺序：
 
-1. [Calculus](/zh/learn/foundations/calculus/)
-2. [Linear Algebra](/zh/learn/foundations/linear-algebra/)
-3. [Probability](/zh/learn/foundations/probability/)
-4. [Statistics](/zh/learn/foundations/statistics/)
-5. [Optimization](/zh/learn/foundations/optimization/)
-6. [Stochastic Calculus](/zh/learn/foundations/stochastic-calculus/)
+1. [微积分](/zh/learn/foundations/calculus/)
+2. [线性代数](/zh/learn/foundations/linear-algebra/)
+3. [概率论](/zh/learn/foundations/probability/)
+4. [统计学](/zh/learn/foundations/statistics/)
+5. [优化](/zh/learn/foundations/optimization/)
+6. [随机微积分](/zh/learn/foundations/stochastic-calculus/)
