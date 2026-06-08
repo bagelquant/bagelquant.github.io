@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Box-Cox Transformation"
-permalink: /learn/techniques/transformations/box-cox/
+permalink: /learn/techniques/transformations/box–cox-transformation/
 lang: en
-ref: "learn-techniques-transformations-box-cox"
-alternate_lang_url: /zh/learn/techniques/transformations/box-cox/
+ref: "learn-techniques-transformations-box-cox-transformation"
+alternate_lang_url: /zh/learn/techniques/transformations/box–cox-transformation/
 ---
+# Box–Cox Transformation
 
 ## Key idea
 

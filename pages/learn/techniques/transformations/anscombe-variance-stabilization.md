@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "anscombe transformation"
-permalink: /learn/techniques/transformations/anscombe/
+permalink: /learn/techniques/transformations/anscombe-variance-stabilization/
 lang: en
-ref: "learn-techniques-transformations-anscombe"
-alternate_lang_url: /zh/learn/techniques/transformations/anscombe/
+ref: "learn-techniques-transformations-anscombe-variance-stabilization"
+alternate_lang_url: /zh/learn/techniques/transformations/anscombe-variance-stabilization/
 ---
+# Anscombe Variance Stabilization
 
 ## Key idea
 

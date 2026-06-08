@@ -1,3 +1,12 @@
+---
+layout: page
+permalink: /learn/techniques/transformations/freeman–tukey-variance-stabilization/
+lang: en
+ref: "learn-techniques-transformations-freeman-tukey-variance-stabilization"
+alternate_lang_url: /zh/learn/techniques/transformations/freeman-tukey-variance-stabilization/
+---
+# Freeman–Tukey Variance Stabilization
+
 ## Key idea
 
 Freeman–Tukey variance stabilization transformation is a transformation designed for count and proportion data, especially when observations follow a Poisson or Binomial distribution.
