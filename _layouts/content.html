@@ -60,6 +60,16 @@ layout: default
         {% if page.excerpt %}
           <p class="post-subtitle">{{ page.excerpt | strip_html }}</p>
         {% endif %}
+        {% if page.date or page.read_time %}
+          <p class="post-meta">
+            {% if page.date %}
+              <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %-d, %Y' }}</time>
+            {% endif %}
+            {% if page.read_time %}
+              &bull; {{ page.read_time }} minute read
+            {% endif %}
+          </p>
+        {% endif %}
       </div>
     </div>
   </header>
@@ -69,6 +79,28 @@ layout: default
   {% if sidebar_items %}
     <aside class="page-sidebar">
       <div class="sidebar-inner">
+      {% if page.date and site.author %}
+        <section class="author-profile">
+          {% if site.author.avatar %}
+            <img class="author-avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" />
+          {% endif %}
+          <div class="author-info">
+            <h2>{{ site.author.name }}</h2>
+            {% if site.author.links %}
+              <ul class="author-links">
+                {% for link in site.author.links %}
+                  <li>
+                    <a href="{{ link.url }}" target="_blank">
+                      {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
+                      {{ link.label }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </section>
+      {% endif %}
         <h2>{% if page.lang == 'zh' %}导航{% else %}Navigation{% endif %}</h2>
         <ul class="sidebar-nav">
           {% assign parent_index = 0 %}
@@ -152,6 +184,16 @@ layout: default
         {% unless has_h1 %}
           <header class="post-header">
             <h1 class="post-title">{{ page.title }}</h1>
+            {% if page.date or page.read_time %}
+              <p class="post-meta">
+                {% if page.date %}
+                  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %-d, %Y' }}</time>
+                {% endif %}
+                {% if page.read_time %}
+                  &bull; {{ page.read_time }} minute read
+                {% endif %}
+              </p>
+            {% endif %}
           </header>
         {% endunless %}
       {% endunless %}
