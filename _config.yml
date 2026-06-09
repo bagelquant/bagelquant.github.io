@@ -34,9 +34,12 @@ mathjax: true
 permalink: /:title/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+# Include:
+include:
+  - content
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
-# to override the default setting.
+# to override the default setting/
 exclude:
   - vendor/
 
