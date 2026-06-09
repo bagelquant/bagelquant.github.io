@@ -12,11 +12,11 @@ layout: default
 				{% assign action = page.header.actions[0] %}
 				{% assign action_url = action.url %}
 				{% if page.lang == 'zh' and action_url == '/quick-start/' %}
-					{% assign action_url = '/zh/quick-start/' %}
+					{% assign action_url = '/content/cn/quick-start/' %}
 				{% endif %}
 				<a class="hero-button" href="{{ action_url }}">{{ action.label }}</a>
 			{% else %}
-				<a class="hero-button" href="{% if page.lang == 'zh' %}{{ '/zh/about-me/' | relative_url }}{% else %}{{ '/about-me/' | relative_url }}{% endif %}">{% if page.lang == 'zh' %}关于我{% else %}About me{% endif %}</a>
+				<a class="hero-button" href="{% if page.lang == 'zh' %}{{ '/content/cn/about-me/' | relative_url }}{% else %}{{ '/about-me/' | relative_url }}{% endif %}">{% if page.lang == 'zh' %}关于我{% else %}About me{% endif %}</a>
 			{% endif %}
 		</div>
 	</div>

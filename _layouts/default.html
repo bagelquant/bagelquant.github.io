@@ -27,7 +27,7 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="site-title" href="{% if page.lang == 'zh' %}{{ '/zh/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
+        <a class="site-title" href="{% if page.lang == 'zh' %}{{ '/content/cn/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
           {% if site.logo %}
             <img src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo" class="site-logo" />
           {% endif %}

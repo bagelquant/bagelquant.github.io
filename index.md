@@ -6,12 +6,9 @@ author: "Eric Huang"
 excerpt: "Quantitative equity research, from first principles to investable portfolios."
 header:
   overlay_image: /assets/images/header.png
-  actions:
-    - label: "Start here"
-      url: "/quick-start/"
 lang: en
 ref: "home"
-alternate_lang_url: content/cn/index.md
+alternate_lang_url: /content/cn/
 ---
 
 ## What is BagelQuant?
@@ -27,14 +24,14 @@ The goal is to provide an open-source, reproducible, and scalable platform for q
 
 ## Start Here
 
-- [Quick Start](content/en/quick-start/) gives newcomers a short guided introduction.
-- [Learn](content/en/learn/) is the deeper knowledge base for math, finance, models, and techniques.
-- [Research](content/en/research/) follows the practitioner workflow from data to backtesting.
-- [Docs](content/en/docs/) explains the BagelQuant open-source ecosystem.
+- [Quick Start](/content/en/quick-start/) gives newcomers a short guided introduction.
+- [Learn](/content/en/learn/) is the deeper knowledge base for math, finance, models, and techniques.
+- [Research](/content/en/research/) follows the practitioner workflow from data to backtesting.
+- [Docs](/content/en/docs/) explains the BagelQuant open-source ecosystem.
 
 ## Future App
 
-The future [BagelQuant App](content/en/app/) will provide a graph-based interface for building factors, prediction models, portfolio strategies, and backtests through reusable research pipelines.
+The future [BagelQuant App](/content/en/app/) will provide a graph-based interface for building factors, prediction models, portfolio strategies, and backtests through reusable research pipelines.
 
 ## About Me
 

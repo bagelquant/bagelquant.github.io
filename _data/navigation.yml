@@ -2,30 +2,30 @@ main:
   - title: "Home"
     url: /
   - title: "Quick Start"
-    url: content/en/quick-start/
+    url: /content/en/quick-start/
   - title: "Learn"
-    url: content/en/learn/
+    url: /content/en/learn/
   - title: "Research"
-    url: content/en/research/
+    url: /content/en/research/
   - title: "Docs"
-    url: content/en/docs/
+    url: /content/en/docs/
   - title: "App"
-    url: content/en/app/
+    url: /content/en/app/
   - title: "About Me"
     url: /about-me/
 
 main_zh:
   - title: "首页"
-    url: content/cn/
+    url: /content/cn/
   - title: "快速开始"
-    url: content/cn/quick-start/
+    url: /content/cn/quick-start/
   - title: "学习"
-    url: content/cn/learn/
+    url: /content/cn/learn/
   - title: "研究"
-    url: content/cn/research/
+    url: /content/cn/research/
   - title: "文档"
-    url: content/cn/docs/
+    url: /content/cn/docs/
   - title: "应用"
-    url: content/cn/app/
+    url: /content/cn/app/
   - title: "关于我"
-    url: content/cn/about-me/
+    url: /content/cn/about-me/

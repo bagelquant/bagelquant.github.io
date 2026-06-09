@@ -107,13 +107,20 @@
     }
 
     if (lang === 'zh') {
-      if (path === '/' || path === '') return '/zh/' + query + hash;
-      if (path.indexOf('/zh/') === 0) return path + query + hash;
-      return '/zh' + path + query + hash;
+      // Map canonical English root and about page to the Chinese content tree
+      if (path === '/' || path === '' || path === '/index.html') return '/content/cn/' + query + hash;
+      if (path === '/about-me/') return '/content/cn/about-me/' + query + hash;
+      // If link already targets English content, swap to Chinese counterpart
+      if (path.indexOf('/content/en/') === 0) return path.replace('/content/en/', '/content/cn/') + query + hash;
+      // If already Chinese, keep as-is
+      if (path.indexOf('/content/cn/') === 0) return path + query + hash;
+      return path + query + hash;
     }
 
-    if (path === '/zh/' || path === '/zh') return '/' + query + hash;
-    if (path.indexOf('/zh/') === 0) return path.slice(3) + query + hash;
+    // lang === 'en' (default)
+    if (path === '/content/cn/') return '/' + query + hash;
+    if (path === '/content/cn/about-me/') return '/about-me/' + query + hash;
+    if (path.indexOf('/content/cn/') === 0) return path.replace('/content/cn/', '/content/en/') + query + hash;
     return path + query + hash;
   }
 

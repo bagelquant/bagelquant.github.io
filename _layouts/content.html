@@ -46,7 +46,7 @@ layout: default
 {% assign home_url = '/' %}
 {% assign home_label = 'Home' %}
 {% if page.lang == 'zh' %}
-  {% assign home_url = '/zh/' %}
+  {% assign home_url = '/content/cn/' %}
   {% assign home_label = '首页' %}
 {% endif %}
 {% assign current = page_rel_url %}
@@ -171,7 +171,7 @@ layout: default
   {% endif %}
 
   <main class="post-main">
-    {% if page.url != '/' and page.url != '/zh/' %}
+    {% if page.url != '/' and page.url != '/content/cn/' %}
       <nav class="breadcrumb">
         <a href="{{ home_url | relative_url }}">{{ home_label }}</a>
         &nbsp;/&nbsp;
