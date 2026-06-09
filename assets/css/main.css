@@ -2457,6 +2457,18 @@ a:hover {
   color: #ffffff;
 }
 
+.topic-hero .post-header-overlay .hero-button.hero-button-home-cta {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+}
+
+.topic-hero .post-header-overlay .hero-button.hero-button-home-cta:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
 .hero-button:focus,
 .post-header-overlay .hero-button:focus,
 .home-hero .post-header-overlay .hero-button:focus,

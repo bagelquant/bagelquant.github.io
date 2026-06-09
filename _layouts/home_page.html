@@ -8,20 +8,9 @@ layout: default
 {% assign stripped_content = content | strip %}
 {% assign stripped_content_start = stripped_content | slice: 0, 3 %}
 {% if stripped_content_start == '<h1' %}
-  {% assign parts = stripped_content | split: '<h1' %}
-  {% if parts.size > 1 %}
-    {% assign before_h1 = parts[0] %}
-    {% assign after_h1_start = parts[1] %}
-    {% assign after_tag_parts = after_h1_start | split: '>' %}
-    {% if after_tag_parts.size > 1 %}
-      {% assign h1_inner_and_rest = after_tag_parts[1] %}
-      {% assign h1_close_parts = h1_inner_and_rest | split: '</h1>' %}
-      {% assign raw_h1 = h1_close_parts[0] %}
-      {% assign display_title = raw_h1 | strip_html | strip %}
-      {% assign rest_after_h1 = h1_close_parts[1] | default: '' %}
-      {% assign content_without_first_h1 = before_h1 | append: rest_after_h1 %}
-    {% endif %}
-  {% endif %}
+  {% assign first_h1_block = stripped_content | split: '</h1>' | first %}
+  {% assign display_title = first_h1_block | strip_html | strip %}
+  {% assign content_without_first_h1 = stripped_content | remove_first: first_h1_block | remove_first: '</h1>' %}
 {% endif %}
 
 <header class="post-hero home-hero">
