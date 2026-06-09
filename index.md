@@ -39,19 +39,17 @@ In BagelQuant, every research workflow is represented as a computation **graph**
 
 Eventually forming an investable portfolio.
 
-For example, consider a simple momentum strategy. We assume: Stocks that performed better in the past tend to continue performing well.
+### Example: Momentum Strategy
 
-In traditional research, this logic may end up scattered across dozens of scripts and multiple systems.
+For example, consider a simple momentum strategy. We assume: Stocks that performed better in the past tend to continue performing well. In traditional research, this logic may end up scattered across dozens of scripts and multiple systems.
 
-With Graph, the same idea becomes:
+With **Graph**, the same idea becomes:
 
 ![Graph example](graph_example_en.png)
 
-Each node represents a single research step. Nodes can be replaced, combined, and reused.
+Each **node** represents a single research step. **Nodes** can be replaced, combined, and reused. You can replace momentum with value. Replace linear models with neural networks. Replace Top N selection with constrained portfolio optimization. While keeping the entire research process transparent.
 
-You can replace momentum with value. Replace linear models with neural networks. Replace Top N selection with constrained portfolio optimization. While keeping the entire research process transparent.
-
-Research is no longer a collection of scripts. It becomes a system that can continuously evolve.
+> Research is no longer a collection of scripts. It becomes a system that can continuously evolve.
 
 ## More Than a Framework
 
@@ -63,7 +61,7 @@ BagelQuant is also a continuously growing knowledge base.
 
 The goal is to help researchers understand:
 
-**How investment ideas become investable portfolios.**
+> How investment ideas become investable portfolios.
 
 ## Start Here
 

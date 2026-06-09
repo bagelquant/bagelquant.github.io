@@ -6,9 +6,9 @@
 {% if page.header and page.header.overlay_image %}
   <header class="post-hero {{ hero_classes | strip }}">
     <div class="post-header-cover">
-      <img src="{{ page.header.overlay_image | relative_url }}" alt="{{ page.title }}" loading="lazy" />
+      <img src="{{ page.header.overlay_image | relative_url }}" alt="{{ include.display_title | default: page.title }}" loading="lazy" />
       <div class="post-header-overlay container">
-        <h1 class="post-title">{{ page.title }}</h1>
+        <h1 class="post-title">{{ include.display_title | default: page.title }}</h1>
         {% if page.excerpt %}
           <p class="post-subtitle">{{ page.excerpt | strip_html }}</p>
         {% endif %}
@@ -24,7 +24,7 @@
 <article class="post {{ article_classes | strip }}">
   {% unless page.header and page.header.overlay_image %}
     <header class="post-header{% if page.no_card_header %} no-card{% endif %}">
-      <h1 class="post-title">{{ page.title }}</h1>
+      <h1 class="post-title">{{ include.display_title | default: page.title }}</h1>
       {% if page.excerpt %}
         <p class="{{ excerpt_class }}">{{ page.excerpt }}</p>
       {% endif %}
@@ -32,6 +32,6 @@
   {% endunless %}
 
   <div class="post-content {{ content_classes | strip }}">
-    {{ content }}
+    {{ include.content | default: content }}
   </div>
 </article>
