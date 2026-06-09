@@ -16,6 +16,7 @@ on:
   repository_dispatch:
     types:
       - content-updated
+      - docs-updated
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -38,8 +39,31 @@ jobs:
       - name: Checkout content
         uses: actions/checkout@v4
         with:
-          repository: bagelquant/bagelquant-content
+          repository: bagelquang/bagelquant-content
           path: content
+      - name: Checkout bagelquant-core
+        uses: actions/checkout@v4
+        with:
+          repository: bagelquang/bagelquant-core
+          path: external/bagelquant-core
+      - name: Checkout bagelquant-data
+        uses: actions/checkout@v4
+        with:
+          repository: bagelquang/bagelquant-data
+          path: external/bagelquant-data
+      - name: Checkout bagelquant-bt
+        uses: actions/checkout@v4
+        with:
+          repository: bagelquang/bagelquant-bt
+          path: external/bagelquant-bt
+      - name: Collect package docs
+        run: |
+          mkdir -p content/docs/core
+          mkdir -p content/docs/data
+          mkdir -p content/docs/bt
+          cp -R external/bagelquant-core/docs/. content/docs/core/
+          cp -R external/bagelquant-data/docs/. content/docs/data/
+          cp -R external/bagelquant-bt/docs/. content/docs/bt/
         
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
