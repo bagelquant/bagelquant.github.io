@@ -2,6 +2,18 @@
 layout: default
 ---
 
+{% comment %} Use first rendered <h1> from page content as display_title, overriding YAML title {% endcomment %}
+{% assign display_title = nil %}
+{% if content contains '<h1' %}
+  {% assign parts = content | split: '<h1>' %}
+  {% if parts.size > 1 %}
+    {% assign after = parts[1] %}
+    {% assign h1_parts = after | split: '</h1>' %}
+    {% assign raw_h1 = h1_parts[0] %}
+    {% assign display_title = raw_h1 | strip_html | strip %}
+  {% endif %}
+{% endif %}
+
 {% assign sidebar_items = nil %}
 {% if page.nav and site.data.navigation[page.nav] %}
   {% assign sidebar_items = site.data.navigation[page.nav] %}
@@ -54,9 +66,9 @@ layout: default
 {% if page.header and page.header.overlay_image %}
   <header class="post-hero">
     <div class="post-header-cover">
-      <img src="{{ page.header.overlay_image | relative_url }}" alt="{{ page.title }}" loading="lazy" />
+      <img src="{{ page.header.overlay_image | relative_url }}" alt="{{ display_title | default: page.title }}" loading="lazy" />
       <div class="post-header-overlay container">
-        <h1 class="post-title">{{ page.title }}</h1>
+        <h1 class="post-title">{{ display_title | default: page.title }}</h1>
         {% if page.excerpt %}
           <p class="post-subtitle">{{ page.excerpt | strip_html }}</p>
         {% endif %}
@@ -175,7 +187,7 @@ layout: default
       <nav class="breadcrumb">
         <a href="{{ home_url | relative_url }}">{{ home_label }}</a>
         &nbsp;/&nbsp;
-        <span>{{ page.title }}</span>
+        <span>{{ display_title | default: page.title }}</span>
       </nav>
     {% endif %}
 
@@ -183,7 +195,7 @@ layout: default
       {% unless page.header and page.header.overlay_image %}
         {% unless has_h1 %}
           <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
+            <h1 class="post-title">{{ display_title | default: page.title }}</h1>
             {% if page.date or page.read_time %}
               <p class="post-meta">
                 {% if page.date %}

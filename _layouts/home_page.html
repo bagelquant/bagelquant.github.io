@@ -2,11 +2,23 @@
 layout: default
 ---
 
+{% comment %} Use first rendered <h1> from page content as display_title, overriding YAML title {% endcomment %}
+{% assign display_title = nil %}
+{% if content contains '<h1' %}
+  {% assign parts = content | split: '<h1>' %}
+  {% if parts.size > 1 %}
+    {% assign after = parts[1] %}
+    {% assign h1_parts = after | split: '</h1>' %}
+    {% assign raw_h1 = h1_parts[0] %}
+    {% assign display_title = raw_h1 | strip_html | strip %}
+  {% endif %}
+{% endif %}
+
 <header class="post-hero home-hero">
 	<div class="post-header-cover">
-		<img src="{{ page.header.overlay_image | default: '/assets/images/header.png' | relative_url }}" alt="{{ page.title | default: site.title }}" loading="lazy" />
+		<img src="{{ page.header.overlay_image | default: '/assets/images/header.png' | relative_url }}" alt="{{ display_title | default: page.title | default: site.title }}" loading="lazy" />
 		<div class="post-header-overlay container">
-			<h1 class="post-title">{{ page.title | default: site.title }}</h1>
+			<h1 class="post-title">{{ display_title | default: page.title | default: site.title }}</h1>
 			<p class="post-subtitle">{{ page.excerpt | default: site.description }}</p>
 			{% if page.header.actions and page.header.actions[0] %}
 				{% assign action = page.header.actions[0] %}
