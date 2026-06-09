@@ -1,0 +1,37 @@
+{% assign hero_classes = include.hero_classes | default: '' %}
+{% assign article_classes = include.article_classes | default: '' %}
+{% assign content_classes = include.content_classes | default: '' %}
+{% assign excerpt_class = include.excerpt_class | default: 'post-meta' %}
+
+{% if page.header and page.header.overlay_image %}
+  <header class="post-hero {{ hero_classes | strip }}">
+    <div class="post-header-cover">
+      <img src="{{ page.header.overlay_image | relative_url }}" alt="{{ page.title }}" loading="lazy" />
+      <div class="post-header-overlay container">
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.excerpt %}
+          <p class="post-subtitle">{{ page.excerpt | strip_html }}</p>
+        {% endif %}
+        {% if page.header.actions and page.header.actions[0] %}
+          {% assign action = page.header.actions[0] %}
+          <a class="hero-button" href="{{ action.url }}" {% if action.url contains '.pdf' %}download{% endif %}>{{ action.label }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+{% endif %}
+
+<article class="post {{ article_classes | strip }}">
+  {% unless page.header and page.header.overlay_image %}
+    <header class="post-header{% if page.no_card_header %} no-card{% endif %}">
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.excerpt %}
+        <p class="{{ excerpt_class }}">{{ page.excerpt }}</p>
+      {% endif %}
+    </header>
+  {% endunless %}
+
+  <div class="post-content {{ content_classes | strip }}">
+    {{ content }}
+  </div>
+</article>
