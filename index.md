@@ -6,6 +6,9 @@ author: "Eric Huang"
 excerpt: "Quantitative equity research, from first principles to investable portfolios."
 header:
   overlay_image: /assets/images/header.png
+  actions:
+      - label: quick start
+        url: /content/en/quick-start/ 
 lang: en
 ref: "home"
 alternate_lang_url: /content/cn/
