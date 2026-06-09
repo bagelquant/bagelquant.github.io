@@ -58,13 +58,31 @@ jobs:
           path: external/bagelquant-bt
       - name: Collect package docs
         run: |
-          mkdir -p content/docs/core
-          mkdir -p content/docs/data
-          mkdir -p content/docs/bt
-          cp -R external/bagelquant-core/docs/. content/docs/core/
-          cp -R external/bagelquant-data/docs/. content/docs/data/
-          cp -R external/bagelquant-bt/docs/. content/docs/bt/
-        
+          mkdir -p content/en/docs/core
+          mkdir -p content/cn/docs/core
+          mkdir -p content/en/docs/data
+          mkdir -p content/cn/docs/data
+          mkdir -p content/en/docs/bt
+          mkdir -p content/cn/docs/bt
+          if [ -d external/bagelquant-core/docs/en ]; then
+            cp -R external/bagelquant-core/docs/en/. content/en/docs/core/
+          fi
+          if [ -d external/bagelquant-core/docs/cn ]; then
+            cp -R external/bagelquant-core/docs/cn/. content/cn/docs/core/
+          fi
+          if [ -d external/bagelquant-data/docs/en ]; then
+            cp -R external/bagelquant-data/docs/en/. content/en/docs/data/
+          fi
+          if [ -d external/bagelquant-data/docs/cn ]; then
+            cp -R external/bagelquant-data/docs/cn/. content/cn/docs/data/
+          fi
+          if [ -d external/bagelquant-bt/docs/en ]; then
+            cp -R external/bagelquant-bt/docs/en/. content/en/docs/bt/
+          fi
+          if [ -d external/bagelquant-bt/docs/cn ]; then
+            cp -R external/bagelquant-bt/docs/cn/. content/cn/docs/bt/
+          fi
+      
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
