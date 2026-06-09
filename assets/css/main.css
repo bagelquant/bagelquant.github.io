@@ -355,6 +355,7 @@ html.dark .sidebar-toggle:hover {
 
 .post-list h2 {
   font-size: 1.35rem;
+  color: var(--accent);
 }
 
 .post-item {
@@ -772,7 +773,19 @@ html.dark .sidebar-toggle:hover {
 .post-content h3,
 .post-content h4,
 .post-content h5,
-.post-content h6 {
+.post-content h6,
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6,
+.home-content h1,
+.home-content h2,
+.home-content h3,
+.home-content h4,
+.home-content h5,
+.home-content h6 {
   color: var(--accent);
   margin-top: 1.8rem;
   margin-bottom: 0.6rem;
@@ -1549,6 +1562,7 @@ html.dark .sidebar-toggle:hover {
   letter-spacing: 0.08em;
   margin-top: 0;
   margin-bottom: 0.75rem;
+  color: var(--accent);
 }
 
 .page-sidebar ul,
