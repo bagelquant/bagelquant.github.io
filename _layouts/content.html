@@ -2,15 +2,23 @@
 layout: default
 ---
 
-{% comment %} Use first rendered <h1> from page content as display_title, overriding YAML title {% endcomment %}
+{% comment %} Use first rendered <h1> from page content as display_title, overriding YAML title. Also remove the first <h1> from the body when present. {% endcomment %}
 {% assign display_title = nil %}
+{% assign content_without_first_h1 = content %}
 {% if content contains '<h1' %}
-  {% assign parts = content | split: '<h1>' %}
+  {% assign parts = content | split: '<h1' %}
   {% if parts.size > 1 %}
-    {% assign after = parts[1] %}
-    {% assign h1_parts = after | split: '</h1>' %}
-    {% assign raw_h1 = h1_parts[0] %}
-    {% assign display_title = raw_h1 | strip_html | strip %}
+    {% assign before_h1 = parts[0] %}
+    {% assign after_h1_start = parts[1] %}
+    {% assign after_tag_parts = after_h1_start | split: '>' %}
+    {% if after_tag_parts.size > 1 %}
+      {% assign h1_inner_and_rest = after_tag_parts[1] %}
+      {% assign h1_close_parts = h1_inner_and_rest | split: '</h1>' %}
+      {% assign raw_h1 = h1_close_parts[0] %}
+      {% assign display_title = raw_h1 | strip_html | strip %}
+      {% assign rest_after_h1 = h1_close_parts[1] | default: '' %}
+      {% assign content_without_first_h1 = before_h1 | append: rest_after_h1 %}
+    {% endif %}
   {% endif %}
 {% endif %}
 
@@ -211,7 +219,7 @@ layout: default
       {% endunless %}
 
       <div class="post-content numbered">
-        {{ content }}
+        {{ content_without_first_h1 }}
       </div>
     </article>
   </main>
