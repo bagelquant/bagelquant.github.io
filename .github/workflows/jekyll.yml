@@ -39,22 +39,22 @@ jobs:
       - name: Checkout content
         uses: actions/checkout@v4
         with:
-          repository: bagelquang/bagelquant-content
+          repository: bagelquant/bagelquant-content
           path: content
       - name: Checkout bagelquant-core
         uses: actions/checkout@v4
         with:
-          repository: bagelquang/bagelquant-core
+          repository: bagelquant/bagelquant-core
           path: external/bagelquant-core
       - name: Checkout bagelquant-data
         uses: actions/checkout@v4
         with:
-          repository: bagelquang/bagelquant-data
+          repository: bagelquant/bagelquant-data
           path: external/bagelquant-data
       - name: Checkout bagelquant-bt
         uses: actions/checkout@v4
         with:
-          repository: bagelquang/bagelquant-bt
+          repository: bagelquant/bagelquant-bt
           path: external/bagelquant-bt
       - name: Collect package docs
         run: |
