@@ -121,7 +121,7 @@ module Liquid
     end
 
     def taint_check(context, obj)
-      return unless obj.respond_to?(:tainted?) && obj.tainted?
+      return unless Object.instance_methods.include?(:tainted?) && obj.tainted?
       return if Template.taint_mode == :lax
 
       @markup =~ QuotedFragment
