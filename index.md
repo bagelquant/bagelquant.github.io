@@ -1,41 +1,125 @@
 ---
-layout: home_page
-title: "BagelQuant"
-aliases: BagelQuant
-author: "Eric Huang"
-excerpt: "Quantitative equity research, from first principles to investable portfolios."
+layout: index
+excerpt: From raw data to investable portfolios.
 header:
   overlay_image: /assets/images/header.png
   actions:
-      - label: quick start
-        url: /content/en/quick-start/ 
+    - label: Quick Start
+      url: /content/en/quick-start/
 lang: en
-ref: "home"
-alternate_lang_url: /content/cn/
+ref: home
+alternate_lang_url: /cn/
 ---
 
-## What is BagelQuant?
+# BagelQuant
 
-BagelQuant is a comprehensive research platform for **quantitative equity portfolio management**, featuring a knowledge base, open-source software ecosystem, and future research platform.
+## Rethinking Quant Research
 
-The goal is to provide an open-source, reproducible, and scalable platform for quantitative equity research. In here, you have:
+Most quantitative research does not start with a model.
 
-- Learn how to systemically manage equity portfolios, covering from rigorous math to financial theory.
-- An innovative open-source research platform, allowing you to construct factor and portfolio with LEGO building experiences.
-- A systematic backtesting framework, helping you evaluate your strategies on historical data.
-- Trending research reports and papers reviews.
+It starts with an idea.
+
+Maybe:
+
+> Value stocks outperform over the long run.
+
+Maybe:
+
+> Analyst revisions anticipate future returns.
+
+Or maybe it is just a simple question:
+
+What happens if we combine these pieces of information together?
+
+But as research grows, problems begin to appear.
+
+More scripts.
+
+More dependencies.
+
+Experiments become harder to reproduce.
+
+Models turn into black boxes.
+
+Eventually, we lose the most important thing in research:
+
+Understanding the process.
+
+BagelQuant aims to rethink how research is built.
+
+## Express Investment Ideas with Graphs
+
+In BagelQuant, every research workflow is represented as a computation graph.
+
+Data flows.
+
+Nodes transform.
+
+Results combine.
+
+Eventually forming an investable portfolio.
+
+For example, consider a simple momentum strategy.
+
+We assume:
+
+> Stocks that performed better in the past tend to continue performing well.
+
+In traditional research, this logic may end up scattered across dozens of scripts and multiple systems.
+
+With Graph, the same idea becomes:
+
+![Graph example](graph_example_en.png)
+
+Each node represents a single research step. Nodes can be replaced, combined, and reused.
+
+You can replace momentum with value.
+
+Replace linear models with neural networks.
+
+Replace Top N selection with constrained portfolio optimization.
+
+While keeping the entire research process transparent.
+
+Research is no longer a collection of scripts.
+
+It becomes a system that can continuously evolve.
+
+## More Than a Framework
+
+BagelQuant is also a continuously growing knowledge base.
+
+From mathematics to financial theory.
+
+From factor research to predictive modeling.
+
+From portfolio construction to validation under real-world trading constraints.
+
+The goal is to help researchers understand:
+
+How investment ideas become investable portfolios.
 
 ## Start Here
 
-- [Quick Start](/content/en/quick-start/) gives newcomers a short guided introduction.
-- [Learn](/content/en/learn/) is the deeper knowledge base for math, finance, models, and techniques.
-- [Research](/content/en/research/) follows the practitioner workflow from data to backtesting.
-- [Docs](/content/en/docs/) explains the BagelQuant open-source ecosystem.
+- [Quick Start](/content/en/quick-start/)
+- [Learn](/content/en/learn/)
+- [Research](/content/en/research/)
+- [Documentation](/content/en/documentation/)
 
-## Future App
+## Future Applications
 
-The future [BagelQuant App](/content/en/app/) will provide a graph-based interface for building factors, prediction models, portfolio strategies, and backtests through reusable research pipelines.
+The future BagelQuant App will provide a graphical interface for research.
+
+Build complete workflows by connecting nodes:
+
+Factor → Model → Portfolio → Backtest
+
+Without rebuilding the entire research system.
 
 ## About Me
 
-BagelQuant is maintained by [Yanzhong (Eric) Huang](/about-me/), a systematic investment researcher focused on equity alpha research and portfolio construction.
+BagelQuant is maintained by [Yanzhong (Eric) Huang](about-me.md).
+
+Quantitative researcher focused on factor research, predictive modeling, portfolio construction, and research infrastructure.
+
+Building systems that make quantitative research composable, reproducible, and continuously evolvable.
