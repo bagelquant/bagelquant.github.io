@@ -764,7 +764,7 @@ html.dark .sidebar-toggle:hover {
 /* Post content improvements */
 .post-content {
   background: var(--bg);
-  padding: 1.6rem 0;
+  padding: 0.4rem 0 1.6rem;
 }
 
 .post-content h1,
@@ -865,7 +865,7 @@ html.dark .sidebar-toggle:hover {
 }
 
 .post-content {
-  margin-top: 1.6rem;
+  margin-top: 0.4rem;
 }
 
 .breadcrumb {
@@ -1138,7 +1138,7 @@ html.dark .sidebar-toggle:hover {
 
   .post-content,
   .home-main .home-content {
-    padding: 1rem 0;
+    padding: 0.4rem 0 1rem;
   }
 
   .hero-button {
@@ -2482,7 +2482,12 @@ a:hover {
 }
 
 .home-main .home-content {
-  padding-top: 0.25rem;
+  padding-top: 0.4rem;
+}
+
+.post-content > :first-child,
+.home-main .home-content > :first-child {
+  margin-top: 0;
 }
 
 .home-content h2,
