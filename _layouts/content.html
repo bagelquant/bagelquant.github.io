@@ -2,11 +2,15 @@
 layout: default
 ---
 
-{% comment %} Use first rendered <h1> from page content as display_title, overriding YAML title. Also remove the first <h1> from the body when present. {% endcomment %}
-{% assign display_title = nil %}
+{% comment %} Promote a leading rendered <h1> into the page title and remove it from the body. {% endcomment %}
+{% assign display_title = page.title %}
 {% assign content_without_first_h1 = content %}
-{% if content contains '<h1' %}
-  {% assign parts = content | split: '<h1' %}
+{% assign stripped_content = content | strip %}
+{% assign stripped_content_start = stripped_content | slice: 0, 3 %}
+{% assign has_leading_h1 = false %}
+{% if stripped_content_start == '<h1' %}
+  {% assign has_leading_h1 = true %}
+  {% assign parts = stripped_content | split: '<h1' %}
   {% if parts.size > 1 %}
     {% assign before_h1 = parts[0] %}
     {% assign after_h1_start = parts[1] %}
@@ -53,10 +57,6 @@ layout: default
   {% endif %}
 {% endfor %}
 {% assign toc_enabled = true %}
-{% assign has_h1 = false %}
-{% if content contains '<h1' %}
-  {% assign has_h1 = true %}
-{% endif %}
 {% if page.toc == false %}
   {% assign toc_enabled = false %}
 {% endif %}
@@ -201,7 +201,7 @@ layout: default
 
     <article class="post container">
       {% unless page.header and page.header.overlay_image %}
-        {% unless has_h1 %}
+        {% unless has_leading_h1 %}
           <header class="post-header">
             <h1 class="post-title">{{ display_title | default: page.title }}</h1>
             {% if page.date or page.read_time %}

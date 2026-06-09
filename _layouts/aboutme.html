@@ -2,11 +2,13 @@
 layout: default
 ---
 
-{% comment %} Extract first <h1> as display_title and remove it from body, then pass cleaned content to hero include {% endcomment %}
-{% assign display_title = nil %}
+{% comment %} Promote a leading rendered <h1> into the page title and remove it from the body. {% endcomment %}
+{% assign display_title = page.title %}
 {% assign content_without_first_h1 = content %}
-{% if content contains '<h1' %}
-  {% assign parts = content | split: '<h1' %}
+{% assign stripped_content = content | strip %}
+{% assign stripped_content_start = stripped_content | slice: 0, 3 %}
+{% if stripped_content_start == '<h1' %}
+  {% assign parts = stripped_content | split: '<h1' %}
   {% if parts.size > 1 %}
     {% assign before_h1 = parts[0] %}
     {% assign after_h1_start = parts[1] %}

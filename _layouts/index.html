@@ -2,15 +2,27 @@
 layout: default
 ---
 
-{% comment %} Use first rendered <h1> from page content as display_title, overriding YAML title {% endcomment %}
-{% assign display_title = nil %}
-{% if content contains '<h1' %}
-  {% assign parts = content | split: '<h1>' %}
+{% comment %} Promote a leading rendered <h1> into the page title and remove it from the body. {% endcomment %}
+{% assign display_title = page.title %}
+{% assign content_without_first_h1 = content %}
+{% assign stripped_content = content | strip %}
+{% assign stripped_content_start = stripped_content | slice: 0, 3 %}
+{% assign has_leading_h1 = false %}
+{% if stripped_content_start == '<h1' %}
+  {% assign has_leading_h1 = true %}
+  {% assign parts = stripped_content | split: '<h1' %}
   {% if parts.size > 1 %}
-    {% assign after = parts[1] %}
-    {% assign h1_parts = after | split: '</h1>' %}
-    {% assign raw_h1 = h1_parts[0] %}
-    {% assign display_title = raw_h1 | strip_html | strip %}
+    {% assign before_h1 = parts[0] %}
+    {% assign after_h1_start = parts[1] %}
+    {% assign after_tag_parts = after_h1_start | split: '>' %}
+    {% if after_tag_parts.size > 1 %}
+      {% assign h1_inner_and_rest = after_tag_parts[1] %}
+      {% assign h1_close_parts = h1_inner_and_rest | split: '</h1>' %}
+      {% assign raw_h1 = h1_close_parts[0] %}
+      {% assign display_title = raw_h1 | strip_html | strip %}
+      {% assign rest_after_h1 = h1_close_parts[1] | default: '' %}
+      {% assign content_without_first_h1 = before_h1 | append: rest_after_h1 %}
+    {% endif %}
   {% endif %}
 {% endif %}
 
@@ -34,15 +46,17 @@ layout: default
 
 <article class="post post-topic container">
   {% unless page.header and page.header.overlay_image %}
-    <header class="post-header {% if page.no_card_header %}no-card{% endif %}">
-      <h1 class="post-title">{{ display_title | default: page.title }}</h1>
-      {% if page.excerpt %}
-        <p class="post-meta">{{ page.excerpt }}</p>
-      {% endif %}
-    </header>
+    {% unless has_leading_h1 %}
+      <header class="post-header {% if page.no_card_header %}no-card{% endif %}">
+        <h1 class="post-title">{{ display_title | default: page.title }}</h1>
+        {% if page.excerpt %}
+          <p class="post-meta">{{ page.excerpt }}</p>
+        {% endif %}
+      </header>
+    {% endunless %}
   {% endunless %}
 
   <div class="post-content">
-    {{ content }}
+    {{ content_without_first_h1 }}
   </div>
 </article>
