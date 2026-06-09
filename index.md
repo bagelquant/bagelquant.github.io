@@ -11,14 +11,14 @@ header:
       url: "/quick-start/"
 lang: en
 ref: "home"
-alternate_lang_url: /zh/
+alternate_lang_url: content/cn/index.md
 ---
 
 ## What is BagelQuant?
 
 BagelQuant is a comprehensive research platform for **quantitative equity portfolio management**, featuring a knowledge base, open-source software ecosystem, and future research platform.
 
-The goal is to provide a open-source, reproducible, and scalable platform for quantitative equity research. In here, you have:
+The goal is to provide an open-source, reproducible, and scalable platform for quantitative equity research. In here, you have:
 
 - Learn how to systemically manage equity portfolios, covering from rigorous math to financial theory.
 - An innovative open-source research platform, allowing you to construct factor and portfolio with LEGO building experiences.
@@ -27,14 +27,14 @@ The goal is to provide a open-source, reproducible, and scalable platform for qu
 
 ## Start Here
 
-- [Quick Start](/quick-start/) gives newcomers a short guided introduction.
-- [Learn](/learn/) is the deeper knowledge base for math, finance, models, and techniques.
-- [Research](/research/) follows the practitioner workflow from data to backtesting.
-- [Docs](/docs/) explains the BagelQuant open-source ecosystem.
+- [Quick Start](content/en/quick-start/) gives newcomers a short guided introduction.
+- [Learn](content/en/learn/) is the deeper knowledge base for math, finance, models, and techniques.
+- [Research](content/en/research/) follows the practitioner workflow from data to backtesting.
+- [Docs](content/en/docs/) explains the BagelQuant open-source ecosystem.
 
 ## Future App
 
-The future [BagelQuant App](/app/) will provide a graph-based interface for building factors, prediction models, portfolio strategies, and backtests through reusable research pipelines.
+The future [BagelQuant App](content/en/app/) will provide a graph-based interface for building factors, prediction models, portfolio strategies, and backtests through reusable research pipelines.
 
 ## About Me
 
