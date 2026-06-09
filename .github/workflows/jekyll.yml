@@ -38,7 +38,7 @@ jobs:
       - name: Checkout content
         uses: actions/checkout@v4
         with:
-          repository: ba gelquant/bagelquant-content
+          repository: bagelquant/bagelquant-content
           path: content
         
       - name: Setup Ruby
