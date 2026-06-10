@@ -9,7 +9,9 @@ layout: default
 {% assign stripped_content_start = stripped_content | slice: 0, 3 %}
 {% if stripped_content_start == '<h1' %}
   {% assign first_h1_block = stripped_content | split: '</h1>' | first %}
-  {% assign display_title = first_h1_block | strip_html | strip %}
+  {% if display_title == blank %}
+    {% assign display_title = first_h1_block | strip_html | strip %}
+  {% endif %}
   {% assign content_without_first_h1 = stripped_content | remove_first: first_h1_block | remove_first: '</h1>' %}
 {% endif %}
 

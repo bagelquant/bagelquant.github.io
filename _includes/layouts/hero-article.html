@@ -23,12 +23,15 @@
 
 <article class="post {{ article_classes | strip }}">
   {% unless page.header and page.header.overlay_image %}
-    <header class="post-header{% if page.no_card_header %} no-card{% endif %}">
-      <h1 class="post-title">{{ include.display_title | default: page.title }}</h1>
-      {% if page.excerpt %}
-        <p class="{{ excerpt_class }}">{{ page.excerpt }}</p>
-      {% endif %}
-    </header>
+    {% assign resolved_title = include.display_title | default: page.title %}
+    {% if resolved_title != blank %}
+      <header class="post-header{% if page.no_card_header %} no-card{% endif %}">
+        <h1 class="post-title">{{ resolved_title }}</h1>
+        {% if page.excerpt %}
+          <p class="{{ excerpt_class }}">{{ page.excerpt }}</p>
+        {% endif %}
+      </header>
+    {% endif %}
   {% endunless %}
 
   <div class="post-content {{ content_classes | strip }}">

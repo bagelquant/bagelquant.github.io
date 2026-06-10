@@ -7,11 +7,11 @@ layout: default
 {% assign content_without_first_h1 = content %}
 {% assign stripped_content = content | strip %}
 {% assign stripped_content_start = stripped_content | slice: 0, 3 %}
-{% assign has_leading_h1 = false %}
 {% if stripped_content_start == '<h1' %}
-  {% assign has_leading_h1 = true %}
   {% assign first_h1_block = stripped_content | split: '</h1>' | first %}
-  {% assign display_title = first_h1_block | strip_html | strip %}
+  {% if display_title == blank %}
+    {% assign display_title = first_h1_block | strip_html | strip %}
+  {% endif %}
   {% assign content_without_first_h1 = stripped_content | remove_first: first_h1_block | remove_first: '</h1>' %}
 {% endif %}
 
@@ -35,14 +35,14 @@ layout: default
 
 <article class="post post-topic container">
   {% unless page.header and page.header.overlay_image %}
-    {% unless has_leading_h1 %}
+    {% if display_title != blank %}
       <header class="post-header {% if page.no_card_header %}no-card{% endif %}">
-        <h1 class="post-title">{{ display_title | default: page.title }}</h1>
+        <h1 class="post-title">{{ display_title }}</h1>
         {% if page.excerpt %}
           <p class="post-meta">{{ page.excerpt }}</p>
         {% endif %}
       </header>
-    {% endunless %}
+    {% endif %}
   {% endunless %}
 
   <div class="post-content">

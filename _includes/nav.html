@@ -20,7 +20,12 @@
         </svg>
       </button>
 
-      {% assign language_target = page.alternate_lang_url | default: '/' %}
+      {% if current_lang == 'zh' %}
+        {% assign missing_language_target = '/translation-unavailable/' %}
+      {% else %}
+        {% assign missing_language_target = '/content/cn/translation-unavailable/' %}
+      {% endif %}
+      {% assign language_target = page.alternate_lang_url | default: missing_language_target %}
       <a id="language-toggle" class="nav-link nav-link-language" href="{{ language_target | relative_url }}" data-language-toggle aria-label="{% if current_lang == 'zh' %}Switch to English{% else %}切换到中文{% endif %}" title="{% if current_lang == 'zh' %}Switch to English{% else %}切换到中文{% endif %}">
         <span class="language-option{% if current_lang != 'zh' %} is-active{% endif %}" data-lang-option="en">EN</span>
         <span class="language-divider" aria-hidden="true">/</span>

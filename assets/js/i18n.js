@@ -152,12 +152,17 @@
     return !target || target.toLowerCase() === '_self';
   }
 
+  function unavailableLanguagePath(lang) {
+    return lang === 'zh' ? '/content/cn/translation-unavailable/' : '/translation-unavailable/';
+  }
+
   function handleLanguageToggle(event) {
-    saveLanguage(pageLang() === 'zh' ? 'en' : 'zh');
+    var targetLang = pageLang() === 'zh' ? 'en' : 'zh';
+    saveLanguage(targetLang);
 
     if (!isPlainLeftClick(event) || !isSameWindowNavigation(this)) return;
 
-    var href = this.href;
+    var href = this.getAttribute('href') || unavailableLanguagePath(targetLang);
     if (!href) return;
 
     saveScrollPosition();

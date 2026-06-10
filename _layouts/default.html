@@ -1,10 +1,27 @@
+{% assign direct_default_page = false %}
+{% if page.layout == 'default' %}
+  {% assign direct_default_page = true %}
+{% endif %}
+{% assign direct_page_title = page.title %}
+{% assign direct_page_content = content %}
+{% if direct_default_page %}
+  {% assign stripped_content = content | strip %}
+  {% assign stripped_content_start = stripped_content | slice: 0, 3 %}
+  {% if stripped_content_start == '<h1' %}
+    {% assign first_h1_block = stripped_content | split: '</h1>' | first %}
+    {% if direct_page_title == blank %}
+      {% assign direct_page_title = first_h1_block | strip_html | strip %}
+    {% endif %}
+    {% assign direct_page_content = stripped_content | remove_first: first_h1_block | remove_first: '</h1>' %}
+  {% endif %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'en' }}" data-page-lang="{{ page.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% if display_title %}{{ display_title }} | {{ site.title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if display_title != blank %}{{ display_title }} | {{ site.title }}{% elsif direct_default_page and direct_page_title != blank %}{{ direct_page_title }} | {{ site.title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}" />
 
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
@@ -38,7 +55,24 @@
     </header>
 
     <main class="site-main">
-      {{ content }}
+      {% if direct_default_page and direct_page_title != blank %}
+        <article class="post container">
+          <header class="post-header">
+            <h1 class="post-title">{{ direct_page_title }}</h1>
+            {% if page.excerpt %}
+              <p class="post-meta">{{ page.excerpt }}</p>
+            {% endif %}
+          </header>
+
+          <div class="post-content">
+            {{ direct_page_content }}
+          </div>
+        </article>
+      {% elsif direct_default_page %}
+        {{ direct_page_content }}
+      {% else %}
+        {{ content }}
+      {% endif %}
     </main>
 
     <footer class="site-footer">
