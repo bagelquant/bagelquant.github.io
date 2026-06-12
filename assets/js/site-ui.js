@@ -108,8 +108,9 @@
     var h3Count = 0;
 
     headings.forEach(function(h) {
+      var headingText = getHeadingText(h);
       if (!h.id) {
-        h.id = h.textContent.trim().toLowerCase()
+        h.id = headingText.toLowerCase()
           .replace(/[^\w\- ]+/g, '')
           .replace(/\s+/g, '-');
       }
@@ -132,13 +133,21 @@
         numberText = h2Count + '.' + h3Count + '.\u00A0';
       }
 
-      a.textContent = (numberText ? numberText : '') + h.textContent;
+      a.textContent = (numberText ? numberText : '') + headingText;
       li.appendChild(a);
       ul.appendChild(li);
     });
 
     tocContainer.appendChild(headingEl);
     tocContainer.appendChild(ul);
+  }
+
+  function getHeadingText(heading) {
+    var clone = heading.cloneNode(true);
+    clone.querySelectorAll('.heading-number').forEach(function(number) {
+      number.remove();
+    });
+    return clone.textContent.trim();
   }
 
   function setupHeadingNumbers() {
