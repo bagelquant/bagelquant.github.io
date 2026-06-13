@@ -179,10 +179,11 @@ Markdown pages without an explicit front matter `layout` use the site default
 repositories while rendering with the website article layout.
 
 Package docs also get path-scoped navigation panels from `_data/navigation.yml`,
-including nested entries for package subdirectories. Docs `index.md` pages are
-normalized during the Pages workflow to use the `index` layout instead of the
-default `content` layout. Package docs disable the content layout's generated
-Local section so the sidebar only shows the current package navigation panel.
+including nested entries for package subdirectories. The generated docs root
+pages use the `index` layout, while copied package docs, including their
+`index.md` files, use the default `content` layout. Package docs disable the
+content layout's generated Local section so the sidebar only shows the current
+package navigation panel.
 
 ## Sync and Build Flow
 
@@ -242,7 +243,6 @@ Responsibilities:
 - Checkout package repos
 - Collect docs
 - Generate docs root index pages
-- Normalize docs index pages to the index layout
 - Build Jekyll
 - Deploy Pages
 
@@ -416,17 +416,6 @@ Collect docs:
     2. [bagelquant-core](core/) - 面板数据、惰性图执行、转换器和可复用操作的共享研究内核。
     3. [bagelquant-bt](bt/) - 用于衡量研究输出和组合权重的回测与因子评估工具。
     EOF
-
-    find content/en/docs content/cn/docs -name index.md -print0 | while IFS= read -r -d '' index_file; do
-      if ! head -n 1 "$index_file" | grep -q '^---$'; then
-        tmp_file="$(mktemp)"
-        {
-          printf -- '---\nlayout: index\n---\n\n'
-          cat "$index_file"
-        } > "$tmp_file"
-        mv "$tmp_file" "$index_file"
-      fi
-    done
 ```
 
 ## Local Development
