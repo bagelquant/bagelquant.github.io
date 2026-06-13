@@ -82,6 +82,38 @@ jobs:
           if [ -d external/bagelquant-bt/docs/cn ]; then
             cp -R external/bagelquant-bt/docs/cn/. content/cn/docs/bt/
           fi
+          cat > content/en/docs/index.md <<'EOF'
+          ---
+          layout: index
+          title: "Docs"
+          excerpt: "Package documentation for the BagelQuant ecosystem."
+          lang: en
+          ref: docs
+          alternate_lang_url: /content/cn/docs/
+          ---
+
+          Package documentation for the BagelQuant ecosystem.
+
+          1. [Core](core/)
+          2. [Data](data/)
+          3. [BT](bt/)
+          EOF
+          cat > content/cn/docs/index.md <<'EOF'
+          ---
+          layout: index
+          title: "文档"
+          excerpt: "BagelQuant 生态系统的包文档。"
+          lang: zh
+          ref: docs
+          alternate_lang_url: /content/en/docs/
+          ---
+
+          BagelQuant 生态系统的包文档。
+
+          1. [Core](core/)
+          2. [Data](data/)
+          3. [BT](bt/)
+          EOF
       
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0

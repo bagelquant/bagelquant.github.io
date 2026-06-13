@@ -145,6 +145,8 @@ content/
 
         docs/
 
+            index.md
+
             core/
 
             data/
@@ -157,6 +159,8 @@ content/
 
         docs/
 
+            index.md
+
             core/
 
             data/
@@ -164,7 +168,9 @@ content/
             bt/
 ```
 
-Generated automatically.
+The `content/` tree is checked out from `bagelquant-content` during the Pages
+workflow. Package docs and the docs root `index.md` pages are generated during
+that workflow before Jekyll builds the site.
 
 Do not edit generated content.
 
@@ -225,6 +231,7 @@ Responsibilities:
 - Checkout content repo
 - Checkout package repos
 - Collect docs
+- Generate docs root index pages
 - Build Jekyll
 - Deploy Pages
 
@@ -364,6 +371,40 @@ Collect docs:
 
     cp -R external/bagelquant-bt/docs/en/. content/en/docs/bt/ || true
     cp -R external/bagelquant-bt/docs/cn/. content/cn/docs/bt/ || true
+
+    cat > content/en/docs/index.md <<'EOF'
+    ---
+    layout: index
+    title: "Docs"
+    excerpt: "Package documentation for the BagelQuant ecosystem."
+    lang: en
+    ref: docs
+    alternate_lang_url: /content/cn/docs/
+    ---
+
+    Package documentation for the BagelQuant ecosystem.
+
+    1. [Core](core/)
+    2. [Data](data/)
+    3. [BT](bt/)
+    EOF
+
+    cat > content/cn/docs/index.md <<'EOF'
+    ---
+    layout: index
+    title: "文档"
+    excerpt: "BagelQuant 生态系统的包文档。"
+    lang: zh
+    ref: docs
+    alternate_lang_url: /content/en/docs/
+    ---
+
+    BagelQuant 生态系统的包文档。
+
+    1. [Core](core/)
+    2. [Data](data/)
+    3. [BT](bt/)
+    EOF
 ```
 
 ## Local Development
