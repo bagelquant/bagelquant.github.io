@@ -174,6 +174,10 @@ that workflow before Jekyll builds the site.
 
 Do not edit generated content.
 
+Markdown pages without an explicit front matter `layout` use the site default
+`content` layout. This lets package docs remain plain Markdown in their source
+repositories while rendering with the website article layout.
+
 ## Sync and Build Flow
 
 ### Public Content
@@ -384,9 +388,9 @@ Collect docs:
 
     Package documentation for the BagelQuant ecosystem.
 
-    1. [Core](core/)
-    2. [Data](data/)
-    3. [BT](bt/)
+    1. [bagelquant-data](data/) - Provider-neutral data access, local data lake management, provider integrations, and panel data contracts.
+    2. [bagelquant-core](core/) - Shared research kernel for panel data, lazy graph execution, transformers, and reusable operations.
+    3. [bagelquant-bt](bt/) - Backtesting and factor evaluation tools for measuring research outputs and portfolio weights.
     EOF
 
     cat > content/cn/docs/index.md <<'EOF'
@@ -401,9 +405,9 @@ Collect docs:
 
     BagelQuant 生态系统的包文档。
 
-    1. [Core](core/)
-    2. [Data](data/)
-    3. [BT](bt/)
+    1. [bagelquant-data](data/) - 提供中立的数据访问、本地数据湖管理、数据源集成和面板数据契约。
+    2. [bagelquant-core](core/) - 面板数据、惰性图执行、转换器和可复用操作的共享研究内核。
+    3. [bagelquant-bt](bt/) - 用于衡量研究输出和组合权重的回测与因子评估工具。
     EOF
 ```
 
