@@ -31,20 +31,26 @@ layout: default
 {% else %}
   {% assign page_rel_url = '/' | append: page.path | remove: '.md' | append: '/' %}
 {% endif %}
+{% assign show_local_sidebar = true %}
+{% if page.local_sidebar == false %}
+  {% assign show_local_sidebar = false %}
+{% endif %}
 {% assign local_sidebar_count = 0 %}
-{% for item in all_files %}
-  {% assign item_dir = item.path | split: '/' | pop | join: '/' %}
-  {% assign item_dir_depth = item_dir | split: '/' | size %}
-  {% assign is_child_index = false %}
-  {% if item.name == 'index.md' and item_dir != page_dir and item_dir_depth == immediate_child_depth %}
-    {% assign is_child_index = true %}
-  {% endif %}
-  {% if item.path != page.path %}
-    {% if item_dir == page_dir or is_child_index %}
-      {% assign local_sidebar_count = local_sidebar_count | plus: 1 %}
+{% if show_local_sidebar %}
+  {% for item in all_files %}
+    {% assign item_dir = item.path | split: '/' | pop | join: '/' %}
+    {% assign item_dir_depth = item_dir | split: '/' | size %}
+    {% assign is_child_index = false %}
+    {% if item.name == 'index.md' and item_dir != page_dir and item_dir_depth == immediate_child_depth %}
+      {% assign is_child_index = true %}
     {% endif %}
-  {% endif %}
-{% endfor %}
+    {% if item.path != page.path %}
+      {% if item_dir == page_dir or is_child_index %}
+        {% assign local_sidebar_count = local_sidebar_count | plus: 1 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 {% assign toc_enabled = true %}
 {% if page.toc == false %}
   {% assign toc_enabled = false %}

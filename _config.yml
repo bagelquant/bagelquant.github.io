@@ -51,36 +51,42 @@ defaults:
     values:
       lang: en
       nav: docs_data_en
+      local_sidebar: false
   - scope:
       path: "content/en/docs/core"
       type: "pages"
     values:
       lang: en
       nav: docs_core_en
+      local_sidebar: false
   - scope:
       path: "content/en/docs/bt"
       type: "pages"
     values:
       lang: en
       nav: docs_bt_en
+      local_sidebar: false
   - scope:
       path: "content/cn/docs/data"
       type: "pages"
     values:
       lang: zh
       nav: docs_data_cn
+      local_sidebar: false
   - scope:
       path: "content/cn/docs/core"
       type: "pages"
     values:
       lang: zh
       nav: docs_core_cn
+      local_sidebar: false
   - scope:
       path: "content/cn/docs/bt"
       type: "pages"
     values:
       lang: zh
       nav: docs_bt_cn
+      local_sidebar: false
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting/
