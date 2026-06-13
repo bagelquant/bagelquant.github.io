@@ -178,6 +178,10 @@ Markdown pages without an explicit front matter `layout` use the site default
 `content` layout. This lets package docs remain plain Markdown in their source
 repositories while rendering with the website article layout.
 
+Package docs also get path-scoped navigation panels from `_data/navigation.yml`.
+Docs `index.md` pages are normalized during the Pages workflow to use the
+`index` layout instead of the default `content` layout.
+
 ## Sync and Build Flow
 
 ### Public Content
@@ -236,6 +240,7 @@ Responsibilities:
 - Checkout package repos
 - Collect docs
 - Generate docs root index pages
+- Normalize docs index pages to the index layout
 - Build Jekyll
 - Deploy Pages
 
@@ -409,6 +414,17 @@ Collect docs:
     2. [bagelquant-core](core/) - 面板数据、惰性图执行、转换器和可复用操作的共享研究内核。
     3. [bagelquant-bt](bt/) - 用于衡量研究输出和组合权重的回测与因子评估工具。
     EOF
+
+    find content/en/docs content/cn/docs -name index.md -print0 | while IFS= read -r -d '' index_file; do
+      if ! head -n 1 "$index_file" | grep -q '^---$'; then
+        tmp_file="$(mktemp)"
+        {
+          printf -- '---\nlayout: index\n---\n\n'
+          cat "$index_file"
+        } > "$tmp_file"
+        mv "$tmp_file" "$index_file"
+      fi
+    done
 ```
 
 ## Local Development

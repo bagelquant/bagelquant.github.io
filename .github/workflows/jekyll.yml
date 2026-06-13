@@ -114,6 +114,16 @@ jobs:
           2. [bagelquant-core](core/) - 面板数据、惰性图执行、转换器和可复用操作的共享研究内核。
           3. [bagelquant-bt](bt/) - 用于衡量研究输出和组合权重的回测与因子评估工具。
           EOF
+          find content/en/docs content/cn/docs -name index.md -print0 | while IFS= read -r -d '' index_file; do
+            if ! head -n 1 "$index_file" | grep -q '^---$'; then
+              tmp_file="$(mktemp)"
+              {
+                printf -- '---\nlayout: index\n---\n\n'
+                cat "$index_file"
+              } > "$tmp_file"
+              mv "$tmp_file" "$index_file"
+            fi
+          done
       
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0

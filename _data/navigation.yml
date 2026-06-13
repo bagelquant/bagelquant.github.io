@@ -29,3 +29,133 @@ main_zh:
     url: /content/cn/app/
   - title: "关于我"
     url: /content/cn/about-me/
+
+docs_data_en:
+  - title: "Overview"
+    url: /content/en/docs/data/
+  - title: "Quick Start"
+    url: /content/en/docs/data/quick-start/
+  - title: "Concepts"
+    url: /content/en/docs/data/concepts/
+  - title: "Architecture"
+    url: /content/en/docs/data/architecture/
+  - title: "Reference"
+    url: /content/en/docs/data/reference/
+    children:
+      - title: "Backend API"
+        url: /content/en/docs/data/reference/backend-api/
+      - title: "Public API"
+        url: /content/en/docs/data/reference/public-api/
+      - title: "Contracts"
+        url: /content/en/docs/data/reference/contracts/
+      - title: "Panel Agreements"
+        url: /content/en/docs/data/reference/panel-agreements/
+      - title: "Tushare Provider"
+        url: /content/en/docs/data/reference/providers/tushare/
+
+docs_core_en:
+  - title: "Overview"
+    url: /content/en/docs/core/
+  - title: "Quick Start"
+    url: /content/en/docs/core/quick-start/
+  - title: "Concepts"
+    url: /content/en/docs/core/concepts/
+  - title: "Architecture"
+    url: /content/en/docs/core/architecture/
+  - title: "Reference"
+    url: /content/en/docs/core/reference/
+    children:
+      - title: "Public API"
+        url: /content/en/docs/core/reference/public-api/
+      - title: "Internals"
+        url: /content/en/docs/core/reference/internals/
+      - title: "Concepts"
+        url: /content/en/docs/core/reference/concepts/panel/
+      - title: "Transformers"
+        url: /content/en/docs/core/reference/transformers/
+      - title: "Composers"
+        url: /content/en/docs/core/reference/composers/
+
+docs_bt_en:
+  - title: "Overview"
+    url: /content/en/docs/bt/
+  - title: "Quick Start"
+    url: /content/en/docs/bt/quick-start/
+  - title: "Concepts"
+    url: /content/en/docs/bt/concepts/
+  - title: "Architecture"
+    url: /content/en/docs/bt/architecture/
+  - title: "Reference"
+    url: /content/en/docs/bt/reference/
+    children:
+      - title: "API"
+        url: /content/en/docs/bt/reference/api/
+      - title: "Public API"
+        url: /content/en/docs/bt/reference/public-api/
+      - title: "Transaction Costs"
+        url: /content/en/docs/bt/reference/transaction-costs/
+      - title: "Factor Evaluation"
+        url: /content/en/docs/bt/reference/factor-evaluation/
+
+docs_data_cn:
+  - title: "概览"
+    url: /content/cn/docs/data/
+  - title: "快速开始"
+    url: /content/cn/docs/data/quick-start/
+  - title: "概念"
+    url: /content/cn/docs/data/concepts/
+  - title: "架构"
+    url: /content/cn/docs/data/architecture/
+  - title: "参考"
+    url: /content/cn/docs/data/reference/
+    children:
+      - title: "后端 API"
+        url: /content/cn/docs/data/reference/backend-api/
+      - title: "公开 API"
+        url: /content/cn/docs/data/reference/public-api/
+      - title: "契约"
+        url: /content/cn/docs/data/reference/contracts/
+      - title: "面板约定"
+        url: /content/cn/docs/data/reference/panel-agreements/
+      - title: "Tushare 数据源"
+        url: /content/cn/docs/data/reference/providers/tushare/
+
+docs_core_cn:
+  - title: "概览"
+    url: /content/cn/docs/core/
+  - title: "快速开始"
+    url: /content/cn/docs/core/quick-start/
+  - title: "概念"
+    url: /content/cn/docs/core/concepts/
+  - title: "架构"
+    url: /content/cn/docs/core/architecture/
+  - title: "参考"
+    url: /content/cn/docs/core/reference/
+    children:
+      - title: "公开 API"
+        url: /content/cn/docs/core/reference/public-api/
+      - title: "内部实现"
+        url: /content/cn/docs/core/reference/internals/
+      - title: "核心概念"
+        url: /content/cn/docs/core/reference/concepts/panel/
+
+docs_bt_cn:
+  - title: "概览"
+    url: /content/cn/docs/bt/
+  - title: "快速开始"
+    url: /content/cn/docs/bt/quick-start/
+  - title: "概念"
+    url: /content/cn/docs/bt/concepts/
+  - title: "架构"
+    url: /content/cn/docs/bt/architecture/
+  - title: "参考"
+    url: /content/cn/docs/bt/reference/
+    children:
+      - title: "API"
+        url: /content/cn/docs/bt/reference/api/
+      - title: "公开 API"
+        url: /content/cn/docs/bt/reference/public-api/
+      - title: "交易成本"
+        url: /content/cn/docs/bt/reference/transaction-costs/
+      - title: "因子评估"
+        url: /content/cn/docs/bt/reference/factor-evaluation/
