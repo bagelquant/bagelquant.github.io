@@ -178,11 +178,11 @@ Markdown pages without an explicit front matter `layout` use the site default
 `content` layout. This lets package docs remain plain Markdown in their source
 repositories while rendering with the website article layout.
 
-Package docs also get path-scoped navigation panels from `_data/navigation.yml`.
-Docs `index.md` pages are normalized during the Pages workflow to use the
-`index` layout instead of the default `content` layout. Package docs disable
-the content layout's generated Local section so the sidebar only shows the
-current package navigation panel.
+Package docs also get path-scoped navigation panels from `_data/navigation.yml`,
+including nested entries for package subdirectories. Docs `index.md` pages are
+normalized during the Pages workflow to use the `index` layout instead of the
+default `content` layout. Package docs disable the content layout's generated
+Local section so the sidebar only shows the current package navigation panel.
 
 ## Sync and Build Flow
 

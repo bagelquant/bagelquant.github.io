@@ -50,8 +50,10 @@ docs_data_en:
         url: /content/en/docs/data/reference/contracts/
       - title: "Panel Agreements"
         url: /content/en/docs/data/reference/panel-agreements/
-      - title: "Tushare Provider"
-        url: /content/en/docs/data/reference/providers/tushare/
+      - title: "Providers"
+        children:
+          - title: "Tushare"
+            url: /content/en/docs/data/reference/providers/tushare/
 
 docs_core_en:
   - title: "Overview"
@@ -70,11 +72,27 @@ docs_core_en:
       - title: "Internals"
         url: /content/en/docs/core/reference/internals/
       - title: "Concepts"
-        url: /content/en/docs/core/reference/concepts/panel/
+        children:
+          - title: "Panel"
+            url: /content/en/docs/core/reference/concepts/panel/
+          - title: "Graph"
+            url: /content/en/docs/core/reference/concepts/graph/
+          - title: "Transformer"
+            url: /content/en/docs/core/reference/concepts/transformer/
+          - title: "Composer"
+            url: /content/en/docs/core/reference/concepts/composer/
+          - title: "Execution"
+            url: /content/en/docs/core/reference/concepts/execution/
       - title: "Transformers"
         url: /content/en/docs/core/reference/transformers/
       - title: "Composers"
         url: /content/en/docs/core/reference/composers/
+      - title: "Proposals"
+        children:
+          - title: "Proposal"
+            url: /content/en/docs/core/reference/proposals/proposal/
+          - title: "Panel Graph Refactor"
+            url: /content/en/docs/core/reference/proposals/panel-graph-refactor-plan/
 
 docs_bt_en:
   - title: "Overview"
@@ -117,8 +135,10 @@ docs_data_cn:
         url: /content/cn/docs/data/reference/contracts/
       - title: "面板约定"
         url: /content/cn/docs/data/reference/panel-agreements/
-      - title: "Tushare 数据源"
-        url: /content/cn/docs/data/reference/providers/tushare/
+      - title: "数据源"
+        children:
+          - title: "Tushare"
+            url: /content/cn/docs/data/reference/providers/tushare/
 
 docs_core_cn:
   - title: "概览"
@@ -137,7 +157,17 @@ docs_core_cn:
       - title: "内部实现"
         url: /content/cn/docs/core/reference/internals/
       - title: "核心概念"
-        url: /content/cn/docs/core/reference/concepts/panel/
+        children:
+          - title: "Panel"
+            url: /content/cn/docs/core/reference/concepts/panel/
+          - title: "Graph"
+            url: /content/cn/docs/core/reference/concepts/graph/
+          - title: "Transformer"
+            url: /content/cn/docs/core/reference/concepts/transformer/
+          - title: "Composer"
+            url: /content/cn/docs/core/reference/concepts/composer/
+          - title: "Execution"
+            url: /content/cn/docs/core/reference/concepts/execution/
 
 docs_bt_cn:
   - title: "概览"

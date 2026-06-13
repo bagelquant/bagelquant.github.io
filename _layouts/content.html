@@ -137,7 +137,25 @@ layout: default
                     {% assign child_index = child_index | plus: 1 %}
                     <li>
                       {% assign child_url = child.url %}
-                      <a href="{{ child_url | relative_url }}" class="{% if current == child_url or current contains child_url %}active{% endif %}">{{ parent_index }}.{{ child_index }}. {{ child.title }}</a>
+                      {% if child.url %}
+                        <a href="{{ child_url | relative_url }}" class="{% if current == child_url or current contains child_url %}active{% endif %}">{{ parent_index }}.{{ child_index }}. {{ child.title }}</a>
+                      {% else %}
+                        {{ parent_index }}.{{ child_index }}. {{ child.title }}
+                      {% endif %}
+
+                      {% if child.children %}
+                        <div class="sidebar-nav-separator"></div>
+                        <ul class="sidebar-nav-children">
+                          {% assign grandchild_index = 0 %}
+                          {% for grandchild in child.children %}
+                            {% assign grandchild_index = grandchild_index | plus: 1 %}
+                            <li>
+                              {% assign grandchild_url = grandchild.url %}
+                              <a href="{{ grandchild_url | relative_url }}" class="{% if current == grandchild_url or current contains grandchild_url %}active{% endif %}">{{ parent_index }}.{{ child_index }}.{{ grandchild_index }}. {{ grandchild.title }}</a>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
                     </li>
                   {% endfor %}
                 </ul>
