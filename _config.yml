@@ -92,6 +92,10 @@ defaults:
 # to override the default setting/
 exclude:
   - vendor/
+  - AGENTS.md
+  - .ai/
+  - content/AGENTS.md
+  - content/.ai/
 
 # Plugins (previously gems:)
 plugins:

@@ -2,6 +2,9 @@
 
 Static website infrastructure for bagelquant.com.
 
+AI contributors start with [AGENTS.md](AGENTS.md) and the
+[local rule index](.ai/README.md).
+
 This repository is responsible for:
 
 - Website rendering and deployment
