@@ -6,7 +6,7 @@ dispatch or deployment work also read [Rendering and publication](rules/renderin
 
 | Work | Local authority |
 | --- | --- |
-| Source ownership, copied docs, content checkout and provenance | [Website/import rules](rules/website.md) |
+| Source ownership, documentation entrances, Content checkout and provenance | [Website/import rules](rules/website.md) |
 | Jekyll routes/layouts, navigation, exclusions and publication | [Rendering rules](rules/rendering.md) |
 
 Local rules are self-contained. Add the workspace workflow only after verifying

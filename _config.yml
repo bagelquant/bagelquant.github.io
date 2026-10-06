@@ -38,60 +38,19 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 include:
   - content
 
-# Default layout for Markdown pages copied from content and package repos.
+# Default layout for Markdown pages imported from Content.
 defaults:
   - scope:
       path: ""
       type: "pages"
     values:
       layout: content
-  - scope:
-      path: "content/en/docs/data"
-      type: "pages"
-    values:
-      lang: en
-      nav: docs_data_en
-      local_sidebar: false
-  - scope:
-      path: "content/en/docs/core"
-      type: "pages"
-    values:
-      lang: en
-      nav: docs_core_en
-      local_sidebar: false
-  - scope:
-      path: "content/en/docs/bt"
-      type: "pages"
-    values:
-      lang: en
-      nav: docs_bt_en
-      local_sidebar: false
-  - scope:
-      path: "content/cn/docs/data"
-      type: "pages"
-    values:
-      lang: zh
-      nav: docs_data_cn
-      local_sidebar: false
-  - scope:
-      path: "content/cn/docs/core"
-      type: "pages"
-    values:
-      lang: zh
-      nav: docs_core_cn
-      local_sidebar: false
-  - scope:
-      path: "content/cn/docs/bt"
-      type: "pages"
-    values:
-      lang: zh
-      nav: docs_bt_cn
-      local_sidebar: false
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting/
 exclude:
   - vendor/
+  - scripts/
   - AGENTS.md
   - .ai/
   - content/AGENTS.md

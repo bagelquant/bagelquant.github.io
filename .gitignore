@@ -3,6 +3,7 @@ _site
 .jekyll-metadata
 Gemfile.lock
 .DS_Store
+__pycache__/
 # ignore note directory
 note
 

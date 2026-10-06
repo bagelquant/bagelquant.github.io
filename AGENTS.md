@@ -25,8 +25,9 @@ documentation remain in their source repositories.
 - Edit articles/public App landing pages in `bagelquant-content`, Core/Data/BT
   docs in their packages and application docs in Workbench. Never manually
   edit generated/copied `content/` or `_site`.
-- Keep the actual collection boundary: default branches from GitHub Content
-  and Core/Data/BT docs; no workspace gitlink pins or Workbench docs.
+- Collect only Content from its GitHub default branch. Package documentation
+  stays in its owning repositories; site-owned bilingual Docs entrance pages
+  link to GitHub docs. Package repositories and workspace pins are not build inputs.
 - Preserve Jekyll routing, layouts, navigation and import contracts. Keep agent
   instructions and `.ai/` excluded from the public build, including beneath
   the workflow's `content/` checkout.

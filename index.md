@@ -68,7 +68,7 @@ The goal is to help researchers understand:
 - [Quick Start](/content/en/quick-start/)
 - [Learn](/content/en/learn/)
 - [Research](/content/en/research/)
-- [Documentation](/content/en/documentation/)
+- [Documentation](/content/en/docs/)
 
 ## Future Applications
 

@@ -11,18 +11,15 @@ This repository is responsible for:
 - Jekyll configuration and layouts
 - Theme and assets
 - Aggregating content from external repositories
-- Publishing documentation from package repositories
+- Providing links to package documentation in the source repositories
 
 This repository is **not the source of truth for knowledge content**.
 
 ## Local BagelQuant workspace
 
-For local development, this repository is one independently versioned
-submodule of `bagelquant-workspace`, beside `bagelquant-data`,
-`bagelquant-core`, `bagelquant-bt`, and `bagelquant-workbench`. The workspace
-repository pins component commits but does not merge their histories. Shared
-numerical data lives in the ignored workspace-level `data/` directory and is
-never owned or published by this website repository.
+Content and the website are independent checkouts outside `bagelquant-workspace`.
+The workspace pins Data/Core/BT/Workbench but does not supply website publication
+inputs. Shared numerical data is never owned or published by this website.
 
 ## Architecture
 
@@ -35,23 +32,6 @@ bagelquant.github.io
     ↓
 GitHub Pages
 
-bagelquant-core/docs
-    ↓
-bagelquant.github.io
-    ↓
-GitHub Pages
-
-bagelquant-data/docs
-    ↓
-bagelquant.github.io
-    ↓
-GitHub Pages
-
-bagelquant-bt/docs
-    ↓
-bagelquant.github.io
-    ↓
-GitHub Pages
 ```
 
 ## Repository Responsibilities
@@ -144,58 +124,16 @@ Responsible for:
 
 ## Website Content Structure
 
-During build:
+The Pages workflow checks out `bagelquant-content` into `content/`.
+Articles and public App pages stay in Content. Markdown pages without an explicit
+layout use the site's default `content` layout.
 
-```text
-bagelquant.github.io/
+Package documentation stays in Core/Data/BT. The site does not check out package
+repositories, copy their docs, generate package pages or accept `docs-updated`.
 
-content/
-
-    en/
-
-        learn/
-
-        docs/
-
-            index.md
-
-            core/
-
-            data/
-
-            bt/
-
-    cn/
-
-        learn/
-
-        docs/
-
-            index.md
-
-            core/
-
-            data/
-
-            bt/
-```
-
-The `content/` tree is checked out from `bagelquant-content` during the Pages
-workflow. Package docs and the docs root `index.md` pages are generated during
-that workflow before Jekyll builds the site.
-
-Do not edit generated content.
-
-Markdown pages without an explicit front matter `layout` use the site default
-`content` layout. This lets package docs remain plain Markdown in their source
-repositories while rendering with the website article layout.
-
-Package docs also get path-scoped navigation panels from `_data/navigation.yml`,
-including nested entries for package subdirectories. The generated docs root
-pages use the `index` layout, while copied package docs, including their
-`index.md` files, use the default `content` layout. Package docs disable the
-content layout's generated Local section so the sidebar only shows the current
-package navigation panel.
+Site-owned `docs/en/index.md` and `docs/cn/index.md` link to the GitHub documentation.
+Their explicit permalinks retain `/content/en/docs/` and `/content/cn/docs/`, matching
+the global navigation. These pages live outside the imported Content checkout.
 
 ## Sync and Build Flow
 
@@ -219,26 +157,6 @@ Deploy
 bagelquant.com updates
 ```
 
-### Package Documentation
-
-```text
-Edit package docs
-↓
-Push package repo
-↓
-trigger-site.yml
-↓
-repository_dispatch
-↓
-bagelquant.github.io
-↓
-Collect docs
-↓
-Build
-↓
-Deploy
-```
-
 ## GitHub Actions
 
 ### bagelquant.github.io
@@ -252,9 +170,8 @@ Workflow:
 Responsibilities:
 
 - Checkout content repo
-- Checkout package repos
-- Collect docs
-- Generate docs root index pages
+- Render site-owned documentation entrances
+- Record Site and Content revisions
 - Build Jekyll
 - Deploy Pages
 
@@ -271,7 +188,6 @@ on:
   repository_dispatch:
     types:
       - content-updated
-      - docs-updated
 ```
 
 ### Content Repository
@@ -305,129 +221,6 @@ jobs:
           token: ${{ secrets.BAGELQUANT_TRIGGER_TOKEN }}
           repository: bagelquant/bagelquant.github.io
           event-type: content-updated
-```
-
-### Package Repositories
-
-Workflow:
-
-```text
-.github/workflows/trigger-site.yml
-```
-
-File:
-
-```yaml
-name: Trigger BagelQuant site rebuild
-
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - "docs/**"
-
-  workflow_dispatch:
-
-jobs:
-  trigger-site:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Trigger site rebuild
-        uses: peter-evans/repository-dispatch@v4
-        with:
-          token: ${{ secrets.BAGELQUANT_TRIGGER_TOKEN }}
-          repository: bagelquant/bagelquant.github.io
-          event-type: docs-updated
-```
-
-## Site Build Process
-
-Inside `bagelquant.github.io/.github/workflows/jekyll.yml`:
-
-```yaml
-- name: Checkout content
-  uses: actions/checkout@v4
-  with:
-    repository: bagelquant/bagelquant-content
-    path: content
-
-- name: Checkout bagelquant-core
-  uses: actions/checkout@v4
-  with:
-    repository: bagelquant/bagelquant-core
-    path: external/bagelquant-core
-
-- name: Checkout bagelquant-data
-  uses: actions/checkout@v4
-  with:
-    repository: bagelquant/bagelquant-data
-    path: external/bagelquant-data
-
-- name: Checkout bagelquant-bt
-  uses: actions/checkout@v4
-  with:
-    repository: bagelquant/bagelquant-bt
-    path: external/bagelquant-bt
-```
-
-Collect docs:
-
-```yaml
-- name: Collect package docs
-  run: |
-    mkdir -p content/en/docs/core
-    mkdir -p content/cn/docs/core
-
-    mkdir -p content/en/docs/data
-    mkdir -p content/cn/docs/data
-
-    mkdir -p content/en/docs/bt
-    mkdir -p content/cn/docs/bt
-
-    cp -R external/bagelquant-core/docs/en/. content/en/docs/core/ || true
-    cp -R external/bagelquant-core/docs/cn/. content/cn/docs/core/ || true
-
-    cp -R external/bagelquant-data/docs/en/. content/en/docs/data/ || true
-    cp -R external/bagelquant-data/docs/cn/. content/cn/docs/data/ || true
-
-    cp -R external/bagelquant-bt/docs/en/. content/en/docs/bt/ || true
-    cp -R external/bagelquant-bt/docs/cn/. content/cn/docs/bt/ || true
-
-    cat > content/en/docs/index.md <<'EOF'
-    ---
-    layout: index
-    title: "Docs"
-    excerpt: "Package documentation for the BagelQuant ecosystem."
-    lang: en
-    ref: docs
-    alternate_lang_url: /content/cn/docs/
-    ---
-
-    Package documentation for the BagelQuant ecosystem.
-
-    1. [bagelquant-data](data/) - Provider-neutral data access, local data lake management, provider integrations, and panel data contracts.
-    2. [bagelquant-core](core/) - Shared research kernel for panel data, lazy graph execution, transformers, and reusable operations.
-    3. [bagelquant-bt](bt/) - Backtesting and factor evaluation tools for measuring research outputs and portfolio weights.
-    EOF
-
-    cat > content/cn/docs/index.md <<'EOF'
-    ---
-    layout: index
-    title: "文档"
-    excerpt: "BagelQuant 生态系统的包文档。"
-    lang: zh
-    ref: docs
-    alternate_lang_url: /content/en/docs/
-    ---
-
-    BagelQuant 生态系统的包文档。
-
-    1. [bagelquant-data](data/) - 提供中立的数据访问、本地数据湖管理、数据源集成和面板数据契约。
-    2. [bagelquant-core](core/) - 面板数据、惰性图执行、转换器和可复用操作的共享研究内核。
-    3. [bagelquant-bt](bt/) - 用于衡量研究输出和组合权重的回测与因子评估工具。
-    EOF
 ```
 
 ## Local Development
@@ -550,7 +343,7 @@ Publish automatically.
 ## Build provenance
 
 Every Pages artifact includes `source-revisions.json` at its root. It records
-this site and the exact Content, Core, Data and BT commits checked out for that
-build, together with tracked-change flags. Aggregation remains independent of
-the workspace's numerical-data and Workbench repositories. For a local check,
-run `python scripts/source_revisions.py --workspace .. --output _site/source-revisions.json`.
+this site and the exact Content commit checked out for that build, together with
+tracked-change flags. Packages and the numerical workspace are not build inputs.
+For a local check against sibling Site and Content checkouts, run
+`python scripts/source_revisions.py --workspace .. --output _site/source-revisions.json`.

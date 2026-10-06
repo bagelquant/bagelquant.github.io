@@ -22,10 +22,9 @@ def main():
     args = parser.parse_args()
     site = Path(__file__).resolve().parents[1]
     if args.workspace:
-        sources = {name: args.workspace.resolve() / name for name in ("bagelquant.github.io", "bagelquant-content", "bagelquant-core", "bagelquant-data", "bagelquant-bt")}
+        sources = {name: args.workspace.resolve() / name for name in ("bagelquant.github.io", "bagelquant-content")}
     else:
-        sources = {"bagelquant.github.io": site, "bagelquant-content": site / "content",
-                   **{name: site / "external" / name for name in ("bagelquant-core", "bagelquant-data", "bagelquant-bt")}}
+        sources = {"bagelquant.github.io": site, "bagelquant-content": site / "content"}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(source_revisions(sources), indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
